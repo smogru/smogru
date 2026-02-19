@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <title>CasinoScope — Честные обзоры онлайн казино 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        :root{
+            --bg:#08060e;
+            --accent:#f97316;--accent-l:#fdba74;
+            --rose:#fb7185;--rose-l:#fda4af;
+            --amber:#fbbf24;--amber-l:#fde68a;
+            --teal:#2dd4bf;--green:#34d399;
+            --white:#fff;--text:#f5e6d3;--muted:#b8a08a;
+            --card-bg:rgba(255,255,255,0);
+            --card-border:rgba(255,255,255,0.07);
+            --card-blur:blur(14px) saturate(1.6);
+        }
+        html{scroll-behavior:smooth}
+        body{
+            font-family:'Inter',-apple-system,sans-serif;
+            background:var(--bg);color:var(--text);
+            line-height:1.5;overflow-x:hidden;
+            -webkit-font-smoothing:antialiased;
+            letter-spacing:0.01em;
+            padding-top:env(safe-area-inset-top);
+            padding-bottom:env(safe-area-inset-bottom);
+        }
+        h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
+        a{text-decoration:none;color:inherit}
+        .container{max-width:1200px;margin:0 auto;padding:0 18px}
+
+        /* Scroll progress */
+        .scroll-progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--rose),var(--amber));z-index:10001;transform-origin:left;transform:scaleX(0);width:100%;pointer-events:none}
+
+        /* Reduced motion */
+        @media(prefers-reduced-motion:reduce){
+            *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+            .blob,.shooting-star,.orbit,.star{display:none}
+            .reveal{opacity:1;transform:none}
+        }
+        /* Fallback no backdrop */
+        @supports not(backdrop-filter:blur(1px)){
+            .cc,.ios-f,.island,.fc,.tc,.mc,.gc,.fi,.mob-menu,.pb,.calc,.cw,.f-wrap{background:rgba(20,15,30,.92)!important}
+        }
+
+        /* ====== BG ====== */
+        .bg-wrap{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;contain:strict}
+        .bg-mesh{position:absolute;inset:0;contain:strict;background:radial-gradient(ellipse 70% 50% at 10% 15%,rgba(249,115,22,.2) 0%,transparent 50%),radial-gradient(ellipse 50% 70% at 90% 80%,rgba(251,113,133,.16) 0%,transparent 50%),radial-gradient(ellipse 40% 40% at 50% 40%,rgba(251,191,36,.07) 0%,transparent 40%),linear-gradient(180deg,#08060e 0%,#14060e 35%,#0e0810 65%,#08060e 100%)}
+        .blob{position:absolute;border-radius:50%;filter:blur(60px);animation:bm var(--d) ease-in-out infinite alternate;will-change:transform;contain:layout style paint}
+        .b1{width:500px;height:500px;top:-10%;left:-5%;background:radial-gradient(circle,rgba(249,115,22,.25),transparent 70%);--d:10s}
+        .b2{width:400px;height:400px;bottom:-5%;right:-5%;background:radial-gradient(circle,rgba(251,113,133,.18),transparent 70%);--d:13s}
+        .b3{width:300px;height:300px;top:40%;left:55%;background:radial-gradient(circle,rgba(251,191,36,.12),transparent 70%);--d:16s}
+        @keyframes bm{0%{transform:translate(0,0) scale(1) rotate(0)}50%{transform:translate(40px,-30px) scale(1.1) rotate(180deg)}100%{transform:translate(-20px,35px) scale(.95) rotate(360deg)}}
+        .shooting-star{position:absolute;width:80px;height:1px;background:linear-gradient(90deg,rgba(251,191,36,.6),transparent);border-radius:1px;animation:shoot var(--d) linear infinite;opacity:0;transform:rotate(-35deg)}
+        @keyframes shoot{0%{opacity:0;transform:translateX(-100px) translateY(-50px) rotate(-35deg)}10%{opacity:1}30%{opacity:0;transform:translateX(400px) translateY(200px) rotate(-35deg)}100%{opacity:0}}
+        .orbit{position:absolute;border-radius:50%;border:1px solid rgba(249,115,22,.04);animation:os var(--d) linear infinite}
+        .o1{width:500px;height:500px;top:50%;left:50%;transform:translate(-50%,-50%);--d:50s}
+        .o2{width:800px;height:800px;top:50%;left:50%;transform:translate(-50%,-50%);--d:75s;border-color:rgba(251,113,133,.03)}
+        .od{position:absolute;width:4px;height:4px;border-radius:50%;background:rgba(249,115,22,.4);box-shadow:0 0 8px rgba(249,115,22,.3)}
+        .o1 .od{top:0;left:50%;transform:translate(-50%,-50%)}
+        .o2 .od{top:50%;right:0;transform:translate(50%,-50%);background:rgba(251,113,133,.35)}
+        @keyframes os{0%{transform:translate(-50%,-50%) rotate(0)}100%{transform:translate(-50%,-50%) rotate(360deg)}}
+        .star{position:absolute;background:white;border-radius:50%;animation:tw var(--d) ease-in-out infinite;opacity:0}
+        @keyframes tw{0%,100%{opacity:0;transform:scale(1)}50%{opacity:var(--o);transform:scale(1.4)}}
+        canvas#pc{position:fixed;inset:0;z-index:0;pointer-events:none}
+        .cg{position:fixed;width:350px;height:350px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(249,115,22,.07),rgba(251,113,133,.04) 40%,transparent 70%);transform:translate(-50%,-50%);opacity:0;transition:opacity .5s}
+        body:hover .cg{opacity:1}
+
+        /* ====== iOS FOLDER ====== */
+        .ios-f{position:relative;z-index:1;margin:0 4px 14px;padding:32px 28px;border-radius:26px;background:var(--card-bg);backdrop-filter:var(--card-blur);-webkit-backdrop-filter:var(--card-blur);border:1px solid var(--card-border);overflow:hidden}
+        .ios-f::before{content:'';position:absolute;top:-1px;left:50%;transform:translateX(-50%);width:110px;height:5px;background:var(--bg);border-radius:0 0 12px 12px;box-shadow:0 1px 0 rgba(255,255,255,.04)}
+        .ios-f::after{content:'';position:absolute;top:0;left:0;right:0;height:80px;background:linear-gradient(180deg,rgba(255,255,255,.012),transparent);pointer-events:none;border-radius:26px 26px 0 0}
+
+        /* ====== NAV ====== */
+        .island{position:fixed;top:calc(8px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);z-index:10000;padding:5px 10px;border-radius:100px;display:flex;align-items:center;gap:3px;background:rgba(255,255,255,0);backdrop-filter:var(--card-blur);-webkit-backdrop-filter:var(--card-blur);border:1px solid var(--card-border);box-shadow:0 4px 24px rgba(0,0,0,.4);transition:all .4s;max-width:97vw;min-width:min(700px,96vw)}
+        .island.scrolled{background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.1);box-shadow:0 8px 32px rgba(0,0,0,.5)}
+        .i-logo{display:flex;align-items:center;gap:7px;padding:9px 16px;font-family:'Space Grotesk';font-weight:700;font-size:16px;white-space:nowrap}
+        .i-logo-icon{width:30px;height:30px;background:linear-gradient(135deg,var(--accent),var(--rose));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;animation:iconPulse 3s ease-in-out infinite}
+        @keyframes iconPulse{0%,100%{box-shadow:0 0 0 rgba(249,115,22,0)}50%{box-shadow:0 0 16px rgba(249,115,22,.3)}}
+        .i-logo span{background:linear-gradient(135deg,var(--accent-l),var(--rose-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .i-div{width:1px;height:20px;background:rgba(255,255,255,.06);flex-shrink:0}
+        .i-links{display:flex;gap:2px;flex:1;justify-content:center}
+        .i-link{padding:9px 18px;border-radius:100px;font-size:14px;font-weight:500;color:var(--muted);transition:all .3s;white-space:nowrap;position:relative;overflow:hidden;min-height:40px;display:flex;align-items:center}
+        .i-link::before{content:'';position:absolute;inset:0;border-radius:inherit;background:linear-gradient(135deg,rgba(249,115,22,.12),rgba(251,113,133,.08));opacity:0;transition:opacity .3s}
+        .i-link:hover{color:var(--white)}.i-link:hover::before{opacity:1}
+        .i-link.active{color:var(--white)}.i-link.active::before{opacity:1}
+        .i-age{background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.12);color:#fca5a5;padding:5px 14px;border-radius:100px;font-size:11px;font-weight:700;flex-shrink:0}
+        .i-burger{display:none;background:none;border:none;cursor:pointer;padding:10px;flex-direction:column;gap:5px}
+        .i-burger span{width:20px;height:2px;background:var(--white);border-radius:2px;transition:all .3s;display:block}
+        .i-burger.on span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+        .i-burger.on span:nth-child(2){opacity:0}
+        .i-burger.on span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+        .mob-menu{display:none;position:fixed;top:60px;left:50%;transform:translateX(-50%);padding:8px;border-radius:22px;z-index:9999;flex-direction:column;gap:2px;width:calc(100vw - 24px);max-width:360px;background:rgba(255,255,255,0);backdrop-filter:var(--card-blur);-webkit-backdrop-filter:var(--card-blur);border:1px solid var(--card-border);box-shadow:0 12px 40px rgba(0,0,0,.5);animation:di .3s ease}
+        .mob-menu.on{display:flex}
+        .mob-menu a{display:flex;align-items:center;padding:16px 20px;border-radius:14px;font-size:16px;font-weight:500;transition:all .2s;min-height:48px}
+        .mob-menu a:hover,.mob-menu a:active{background:rgba(255,255,255,.04)}
+        @keyframes di{from{opacity:0;transform:translateX(-50%) translateY(-8px) scale(.96)}to{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}}
+
+        /* ====== HERO ====== */
+        .hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:70px 18px 30px;z-index:1}
+        .hero-layout{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;max-width:1200px;margin:0 auto;width:100%}
+        .hero-left{position:relative;z-index:2}
+        .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 18px;border-radius:100px;font-size:14px;color:var(--accent-l);margin-bottom:18px;background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.12);animation:fadeInDown .7s ease}
+        .pd{width:7px;height:7px;background:var(--green);border-radius:50%;position:relative}
+        .pd::after{content:'';position:absolute;inset:-3px;border-radius:50%;background:var(--green);opacity:.4;animation:pr 2s ease-out infinite}
+        @keyframes pr{0%{transform:scale(1);opacity:.4}100%{transform:scale(2.5);opacity:0}}
+        .hero h1{font-size:clamp(38px,6vw,66px);font-weight:900;line-height:1.05;margin-bottom:16px;letter-spacing:-2px;animation:fadeInUp .7s ease .1s both}
+        .gt{background:linear-gradient(135deg,var(--accent-l),var(--rose-l),var(--amber-l));background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gs 4s ease infinite}
+        @keyframes gs{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+        .hero p{font-size:18px;color:var(--muted);max-width:480px;margin-bottom:24px;animation:fadeInUp .7s ease .2s both}
+        .hero-btns{display:flex;gap:12px;flex-wrap:wrap;animation:fadeInUp .7s ease .3s both}
+        .btn{display:inline-flex;align-items:center;gap:8px;padding:16px 32px;border-radius:100px;font-weight:700;font-size:16px;cursor:pointer;border:none;font-family:'Inter';position:relative;overflow:hidden;transition:all .4s cubic-bezier(.22,1,.36,1);min-height:48px}
+        .btn-glow{background:linear-gradient(135deg,var(--accent),var(--rose));color:white;box-shadow:0 4px 20px rgba(249,115,22,.3)}
+        .btn-glow:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 8px 30px rgba(249,115,22,.45)}
+        .btn-glow:active{transform:translateY(1px) scale(.98);transition-duration:.1s}
+        .btn-glow::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent,rgba(255,255,255,.15),transparent);opacity:0;transition:opacity .3s}
+        .btn-glow:hover::after{opacity:1}
+        .btn-ghost{color:white;background:rgba(255,255,255,0);backdrop-filter:var(--card-blur);border:1px solid var(--card-border)}
+        .btn-ghost:hover{background:rgba(255,255,255,.04);transform:translateY(-3px)}
+        .btn-ghost:active{transform:translateY(1px) scale(.98);transition-duration:.1s}
+        .btn span{position:relative;z-index:1}
+        .hero-trust{display:flex;align-items:center;gap:16px;margin-top:20px;animation:fadeInUp .7s ease .4s both;flex-wrap:wrap}
+        .ti{display:flex;align-items:center;gap:4px;font-size:13px;color:var(--muted)}
+        .hero-stats{display:flex;gap:28px;margin-top:26px;animation:fadeInUp .7s ease .5s both}
+        .hs{text-align:left}
+        .hs-n{font-family:'Space Grotesk';font-size:34px;font-weight:900;background:linear-gradient(135deg,var(--accent-l),var(--rose-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .hs-l{font-size:12px;color:var(--muted);margin-top:2px}
+
+        .hero-right{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;min-height:400px;animation:fadeInUp .9s ease .3s both}
+        .float-scene{position:relative;width:100%;height:400px;perspective:1200px}
+        .fc{position:absolute;border-radius:20px;padding:18px;background:var(--card-bg);backdrop-filter:var(--card-blur);-webkit-backdrop-filter:var(--card-blur);border:1px solid var(--card-border);box-shadow:0 12px 36px rgba(0,0,0,.3);transition:all .5s cubic-bezier(.22,1,.36,1);cursor:default}
+        .fc:hover{z-index:10;transform:scale(1.1)!important;border-color:rgba(255,255,255,.15);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+        .fc1{width:170px;top:6%;left:5%;animation:f1 6s ease-in-out infinite}
+        .fc2{width:162px;top:2%;right:4%;animation:f2 7s ease-in-out infinite}
+        .fc3{width:165px;bottom:10%;left:2%;animation:f3 8s ease-in-out infinite}
+        .fc4{width:155px;bottom:6%;right:6%;animation:f4 6.5s ease-in-out infinite}
+        .fcb{width:200px;top:50%;left:50%;transform:translate(-50%,-50%);border-color:rgba(251,191,36,.15);z-index:5;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 60px rgba(251,191,36,.05);animation:f5 5s ease-in-out infinite}
+        @keyframes f1{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-14px) rotate(1deg)}}
+        @keyframes f2{0%,100%{transform:translateY(0) rotate(2deg)}50%{transform:translateY(-18px) rotate(-1deg)}}
+        @keyframes f3{0%,100%{transform:translateY(0) rotate(1deg)}50%{transform:translateY(-12px) rotate(-2deg)}}
+        @keyframes f4{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-16px) rotate(1deg)}}
+        @keyframes f5{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-52%) scale(1.03)}}
+        .fc-e{font-size:28px;margin-bottom:6px}
+        .fc-n{font-family:'Space Grotesk';font-weight:700;font-size:15px;margin-bottom:3px}
+        .fc-r{font-size:12px;color:var(--amber)}
+        .fc-b{font-size:11px;color:var(--muted);margin-top:3px}
+        .fcb .fc-e{font-size:38px}.fcb .fc-n{font-size:22px}.fcb .fc-r{font-size:14px}
+        .fc-h{margin-top:6px;padding:5px 12px;border-radius:100px;background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.12);font-size:11px;font-weight:700;color:var(--amber-l);display:inline-block}
+
+        .casino-img{width:100%;height:120px;border-radius:14px;object-fit:cover;margin-bottom:10px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);display:block}
+
+        /* ====== SECTION ====== */
+        .section{padding:8px 0;position:relative;z-index:1}
+        .sh{text-align:center;margin-bottom:26px}
+        .sh h2{font-size:clamp(28px,4.5vw,44px);font-weight:900;margin-bottom:10px;letter-spacing:-.5px}
+        .sh p{font-size:16px;color:var(--muted);max-width:500px;margin:0 auto}
+        .sl{display:inline-flex;align-items:center;gap:5px;padding:5px 16px;border-radius:100px;font-size:13px;font-weight:600;color:var(--accent-l);margin-bottom:12px;background:rgba(249,115,22,.07);border:1px solid rgba(249,115,22,.1);letter-spacing:.06em}
+
+        /* TRUST */
+        .trust-bar{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:18px;z-index:1;position:relative}
+        .tc{display:flex;align-items:center;gap:7px;padding:10px 18px;border-radius:100px;background:var(--card-bg);backdrop-filter:var(--card-blur);border:1px solid var(--card-border);transition:all .3s}
+        .tc:hover{border-color:rgba(255,255,255,.1);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.2)}
+        .tc-i{font-size:20px}
+        .tc-t{font-weight:600;font-size:13px}
+        .tc-s{font-size:10px;color:var(--muted)}
+
+        /* PROMO */
+        .pb{border-radius:20px;padding:20px 24px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--card-bg);backdrop-filter:var(--card-blur);border:1px solid rgba(251,191,36,.1);flex-wrap:wrap;position:relative;overflow:hidden}
+        .pb::before{content:'';position:absolute;top:0;left:-100%;width:200%;height:100%;background:linear-gradient(90deg,transparent,rgba(251,191,36,.03),transparent);animation:shimmer 4s ease infinite}
+        @keyframes shimmer{0%{left:-100%}100%{left:100%}}
+        .pb-l{display:flex;align-items:center;gap:12px;position:relative;z-index:1}
+        .pb-i{font-size:24px}
+        .pb-t{font-weight:600;font-size:16px}
+        .pb-t small{display:block;font-size:12px;color:var(--muted);font-weight:400}
+
+        /* CASINO CARDS — with glassmorphism 2.0 */
+        .cc-wrap{display:flex;flex-direction:column;gap:14px}
+        .cc-hero{border-radius:22px;padding:28px;display:grid;grid-template-columns:200px 1fr 240px;gap:24px;align-items:center;position:relative;overflow:hidden;background:var(--card-bg);backdrop-filter:var(--card-blur);-webkit-backdrop-filter:var(--card-blur);border:1px solid rgba(251,191,36,.12);box-shadow:0 4px 28px rgba(0,0,0,.25);transition:all .5s cubic-bezier(.22,1,.36,1);will-change:auto}
+        .cc-hero:hover{transform:translateY(-4px);border-color:rgba(251,191,36,.2);box-shadow:0 16px 50px rgba(0,0,0,.35),0 0 60px rgba(251,191,36,.06),inset 0 1px 0 rgba(255,255,255,.06);will-change:transform,box-shadow}
+        /* Glassmorphism inner shine */
+        .cc-hero>.glass-shine{position:absolute;top:0;left:0;right:0;height:45%;background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);pointer-events:none;border-radius:22px 22px 0 0}
+
+        .cc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+        .cc{border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden;background:var(--card-bg);backdrop-filter:var(--card-blur);-webkit-backdrop-filter:var(--card-blur);border:1px solid var(--card-border);box-shadow:0 4px 20px rgba(0,0,0,.15);transition:all .5s cubic-bezier(.22,1,.36,1);will-change:auto}
+        /* Glassmorphism double layer */
+        .cc::before{content:'';position:absolute;inset:0;border-radius:inherit;background:linear-gradient(135deg,rgba(255,255,255,.04) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,.02) 100%);pointer-events:none;z-index:0}
+        .cc::after{content:'';position:absolute;top:0;left:0;right:0;height:40%;background:linear-gradient(180deg,rgba(255,255,255,.015),transparent);pointer-events:none;z-index:0}
+        .cc:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.1);box-shadow:0 14px 40px rgba(0,0,0,.25),0 0 40px rgba(249,115,22,.05),inset 0 1px 0 rgba(255,255,255,.05);will-change:transform,box-shadow}
+
+        .rk{position:absolute;top:12px;left:12px;width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:white;z-index:2}
+        .rk1{background:linear-gradient(135deg,var(--amber),#f97316);box-shadow:0 3px 10px rgba(251,191,36,.3)}
+        .rk2{background:linear-gradient(135deg,#94a3b8,#64748b)}.rk3{background:linear-gradient(135deg,#d97706,#b45309)}
+        .rk4,.rk5{background:linear-gradient(135deg,var(--accent),var(--rose))}
+        .bb{position:absolute;top:12px;right:12px;padding:5px 14px;border-radius:100px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:linear-gradient(135deg,var(--amber),#f97316);color:#000;box-shadow:0 3px 10px rgba(251,191,36,.2);z-index:2;animation:badgePulse 2s ease-in-out infinite}
+        @keyframes badgePulse{0%,100%{box-shadow:0 3px 10px rgba(251,191,36,.2)}50%{box-shadow:0 3px 20px rgba(251,191,36,.4)}}
+        .hcl{text-align:center;position:relative;z-index:1}
+        .hci{width:80px;height:80px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:38px;margin:0 auto 12px;background:var(--card-bg);backdrop-filter:var(--card-blur);border:1px solid rgba(255,255,255,.06);transition:all .5s}
+        .cc-hero:hover .hci{transform:scale(1.08) rotate(3deg)}
+        .hcn{font-family:'Space Grotesk';font-size:26px;font-weight:900;margin-bottom:4px}
+        .hcr{display:flex;align-items:center;justify-content:center;gap:6px}
+        .hcs{color:var(--amber);font-size:15px;letter-spacing:1px}
+        .hcv{font-weight:900;font-size:22px;background:linear-gradient(135deg,var(--amber),#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .hcc{position:relative;z-index:1}
+        .hcf{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
+        .cf{padding:10px;border-radius:12px;text-align:center;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);transition:all .3s}
+        .cf:hover{background:rgba(255,255,255,.04);transform:translateY(-2px)}
+        .cfl{font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+        .cfv{font-weight:700;font-size:15px;margin-top:2px}
+        .ct{display:flex;gap:5px;flex-wrap:wrap}
+        .tag{padding:4px 10px;border-radius:100px;font-size:11px;font-weight:500;transition:all .3s cubic-bezier(.22,1,.36,1)}
+        .tag:hover{transform:translateY(-2px) scale(1.06);box-shadow:0 4px 12px rgba(0,0,0,.15)}
+        .tg{background:rgba(52,211,153,.06);color:#6ee7b7;border:1px solid rgba(52,211,153,.08)}
+        .tg:hover{background:rgba(52,211,153,.12);border-color:rgba(52,211,153,.2)}
+        .tr{background:rgba(248,113,113,.06);color:#fca5a5;border:1px solid rgba(248,113,113,.08)}
+        .hcright{position:relative;z-index:1;display:flex;flex-direction:column;gap:7px}
+        .cb{border-radius:14px;padding:12px;text-align:center;background:rgba(251,191,36,.04);border:1px solid rgba(251,191,36,.08)}
+        .cbl{font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--amber)}
+        .cbv{font-family:'Space Grotesk';font-size:18px;font-weight:800;color:var(--amber-l);margin-top:2px}
+        .pbox{border-radius:14px;padding:12px;text-align:center;background:rgba(249,115,22,.04);border:1px dashed rgba(249,115,22,.12)}
+        .pbl{font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent-l);margin-bottom:2px}
+        .pbc{font-family:'Space Grotesk';font-size:24px;font-weight:900;background:linear-gradient(135deg,var(--accent-l),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;cursor:pointer;transition:all .3s}
+        .pbc:hover{transform:scale(1.05)}
+        .pbd{font-size:10px;color:var(--muted);margin-top:3px;line-height:1.3}
+        .pbcp{margin-top:5px;padding:5px 14px;border-radius:100px;font-size:10px;font-weight:600;color:var(--white);background:rgba(249,115,22,.1);border:1px solid rgba(249,115,22,.1);cursor:pointer;transition:all .3s;display:inline-block}
+        .pbcp:hover{background:rgba(249,115,22,.18)}
+        .pbcp.copied{background:rgba(52,211,153,.12);border-color:rgba(52,211,153,.15);color:#6ee7b7}
+
+        /* CTA buttons with pulse */
+        .cbtn{display:flex;align-items:center;justify-content:center;gap:7px;padding:14px 22px;border-radius:14px;font-weight:700;font-size:14px;color:white;background:linear-gradient(135deg,var(--accent),var(--rose));box-shadow:0 4px 16px rgba(249,115,22,.25);transition:all .4s cubic-bezier(.22,1,.36,1);position:relative;overflow:hidden;white-space:nowrap;min-height:48px}
+        .cbtn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent);transition:left .5s}
+        .cbtn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(249,115,22,.4)}
+        .cbtn:hover::before{left:100%}
+        .cbtn:active{transform:translateY(1px) scale(.98);transition-duration:.1s}
+        .cbtn-gold{background:linear-gradient(135deg,var(--amber),#f97316);box-shadow:0 4px 16px rgba(251,191,36,.25);animation:ctaPulse 2.5s ease-in-out infinite}
+        .cbtn-gold:hover{box-shadow:0 8px 28px rgba(251,191,36,.4);animation:none}
+        @keyframes ctaPulse{0%,100%{box-shadow:0 4px 16px rgba(251,191,36,.25)}50%{box-shadow:0 4px 28px rgba(251,191,36,.45)}}
+        .crb{display:flex;align-items:center;justify-content:center;gap:5px;padding:9px;border-radius:10px;font-size:12px;font-weight:600;color:var(--accent-l);background:rgba(249,115,22,.05);border:1px solid rgba(249,115,22,.06);cursor:pointer;transition:all .3s;min-height:44px}
+        .crb:hover{background:rgba(249,115,22,.1)}
+        .ctp{display:flex;align-items:center;gap:12px}
+        .ci{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;background:var(--card-bg);backdrop-filter:var(--card-blur);border:1px solid rgba(255,255,255,.05);transition:all .4s}
+        .cc:hover .ci{transform:scale(1.08) rotate(3deg)}
+        .cin h3{font-family:'Space Grotesk';font-size:18px;font-weight:700;margin-bottom:3px}
+        .cra{display:flex;align-items:center;gap:4px}
+        .crs{color:var(--amber);font-size:12px;letter-spacing:1px}
+        .crn{font-weight:800;font-size:15px;background:linear-gradient(135deg,var(--amber),#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .cfe{display:flex;gap:6px;flex-wrap:wrap}
+        .cbt{display:flex;gap:8px;align-items:center;margin-top:auto;flex-wrap:wrap}
+
+        /* CALC */
+        .calc{border-radius:22px;padding:28px;margin-top:18px;background:var(--card-bg);backdrop-filter:var(--card-blur);border:1px solid rgba(251,191,36,.08)}
+        .calc-l{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+        .calc-l h3{font-size:24px;font-weight:900;margin-bottom:10px}
+        .calc-l>div:first-child p{color:var(--muted);font-size:15px;margin-bottom:16px}
+        .cig{position:relative;margin-bottom:14px}
+        .cil{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;display:block}
+        .cinp{width:100%;padding:14px 18px 14px 40px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);color:var(--white);font-size:20px;font-weight:700;font-family:'Space Grotesk';outline:none;transition:all .3s}
+        .cinp:focus{border-color:rgba(251,191,36,.2);box-shadow:0 0 14px rgba(251,191,36,.06)}
+        .cii{position:absolute;left:14px;bottom:15px;font-size:16px;color:var(--amber)}
+        .cpt{display:inline-flex;align-items:center;gap:5px;padding:6px 14px;border-radius:100px;font-size:13px;font-weight:600;background:rgba(249,115,22,.06);border:1px solid rgba(249,115,22,.08);color:var(--accent-l)}
+        .crc{border-radius:18px;padding:26px;text-align:center;background:rgba(255,255,255,.015);border:1px solid rgba(255,255,255,.04)}
+        .crc-l{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:6px}
+        .crc-t{font-family:'Space Grotesk';font-size:44px;font-weight:900;background:linear-gradient(135deg,var(--amber),#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:14px;transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+        .cbd{display:flex;flex-direction:column;gap:6px;text-align:left;margin-top:14px}
+        .cbr{display:flex;justify-content:space-between;align-items:center;padding:9px 14px;border-radius:9px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.03)}
+        .cbr-l{font-size:13px;color:var(--muted)}
+        .cbr-v{font-weight:700;font-size:14px;color:var(--amber-l)}
+
+        /* COMPARISON */
+        .cw{border-radius:22px;overflow:hidden;overflow-x:auto;background:var(--card-bg);backdrop-filter:var(--card-blur);border:1px solid var(--card-border);position:relative}
+        .ctb{width:100%;border-collapse:collapse}
+        .ctb th{padding:14px 16px;text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:rgba(249,115,22,.02);border-bottom:1px solid rgba(255,255,255,.04);white-space:nowrap}
+        .ctb td{padding:12px 16px;font-size:14px;border-bottom:1px solid rgba(255,255,255,.03);transition:all .3s}
+        /* Подсветка лучшего */
+        .ctb tbody tr:first-child{background:rgba(251,191,36,.03)}
+        .ctb tbody tr:first-child td{border-bottom-color:rgba(251,191,36,.1)}
+        .ctb tr:hover td{background:rgba(249,115,22,.015)}
+        .tn{display:flex;align-items:center;gap:8px;font-weight:600;font-size:15px}
+        .tni{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;background:rgba(249,115,22,.05)}
+        .by{background:rgba(52,211,153,.06);color:#6ee7b7;padding:3px 9px;border-radius:100px;font-size:11px;font-weight:600}
+        .bn{background:rgba(248,113,113,.05);color:#fca5a5;padding:3px 9px;border-radius:100px;font-size:11px;font-weight:600}
+        .tb{padding:9px 18px;border-radius:100px;font-size:12px;font-weight:600;color:white;background:linear-gradient(135deg,var(--accent),var(--rose));transition:all .3s;white-space:nowrap;min-height:40px;display:inline-flex;align-items:center}
+        .tb:hover{transform:scale(1.06);box-shadow:0 4px 14px rgba(249,115,22,.3)}
+        .tb:active{transform:scale(.97);transition-duration:.1s}
+
+        /* METHOD */
+        .mg{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+        .mc{border-radius:20px;padding:28px 20px;text-align:center;background:var(--card-bg);backdrop-filter:var(--card-blur);border:1px solid var(--card-border);transition:all .5s cubic-bezier(.22,1,.36,1);position:relative;overflow:hidden;will-change:auto}
+        .mc::after{content:'';position:absolute;top:0;left:0;right:0;height:45%;background:linear-gradient(180deg,rgba(255,255,255,.01),transparent);pointer-events:none}
+        .mc:hover{transform:translateY(-6px);border-color:rgba(249,115,22,.1);box-shadow:0 16px 40px rgba(0,0,0,.18),0 0 30px rgba(249,115,22,.04);will-change:transform,box-shadow}
+        .mi{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 14px;background:rgba(249,115,22,.06);border:1px solid rgba(249,115,22,.06);transition:all .5s}
+        .mc:hover .mi{transform:scale(1.15) rotate(5deg)}
+        .mc h3{font-size:16px;font-weight:700;margin-bottom:5px;position:relative;z-index:1}
+        .mc p{font-size:13px;color:var(--muted);line-height:1.5;position:relative;z-index:1}
+        .mw{display:inline-block;margin-top:12px;padding:4px 12px;border-radius:100px;font-size:12px;font-weight:700;background:rgba(249,115,22,.05);color:var(--accent-l);border:1px solid rgba(249,115,22,.06);position:relative;z-index:1}
+
+        /* GUIDES */
+        .gg{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+        .gc{border-radius:20px;overflow:hidden;background:var(--card-bg);backdrop-filter:var(--card-blur);border:1px solid var(--card-border);transition:all .5s cubic-bezier(.22,1,.36,1);will-change:auto}
+        .gc:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(0,0,0,.25),0 0 30px rgba(249,115,22,.04);border-color:rgba(255,255,255,.1);will-change:transform,box-shadow}
+        .gim{height:160px;display:flex;align-items:center;justify-content:center;font-size:44px;position:relative;transition:all .5s}
+        .gc:hover .gim{transform:scale(1.05)}
+        .gim::after{content:'';position:absolute;bottom:0;left:0;right:0;height:50px;background:linear-gradient(transparent,rgba(8,6,14,.8))}
+        .gi1{background:linear-gradient(135deg,#f97316,#fb7185)}.gi2{background:linear-gradient(135deg,#f59e0b,#ef4444)}.gi3{background:linear-gradient(135deg,#2dd4bf,#3b82f6)}.gi4{background:linear-gradient(135deg,#f97316,#ec4899)}.gi5{background:linear-gradient(135deg,#2dd4bf,#f97316)}.gi6{background:linear-gradient(135deg,#fbbf24,#f97316)}
+        .gbd{padding:18px}
+        .gtg{display:inline-block;padding:3px 10px;border-radius:100px;font-size:10px;font-weight:600;margin-bottom:6px;background:rgba(249,115,22,.06);color:var(--accent-l);letter-spacing:.06em}
+        .gc h3{font-size:15px;margin-bottom:4px;font-weight:700}
+        .gc p{font-size:13px;color:var(--muted);line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+        .gc .g-tips{margin-top:8px;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px}
+        .gc .g-tips li{font-size:12px;color:var(--muted);display:flex;align-items:flex-start;gap:5px;line-height:1.4}
+        .gc .g-tips li::before{content:'→';color:var(--accent-l);font-weight:700;flex-shrink:0}
+
+        /* FAQ */
+        .fl{max-width:750px;margin:0 auto;display:flex;flex-direction:column;gap:8px}
+        .fi{border-radius:18px;overflow:hidden;background:var(--card-bg);backdrop-filter:var(--card-blur);border:1px solid var(--card-border);transition:all .4s}
+        .fi:hover{border-color:rgba(255,255,255,.1)}
+        .fi.on{border-color:rgba(249,115,22,.15);box-shadow:0 6px 24px rgba(0,0,0,.15)}
+        .fq{padding:18px 22px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:600;font-size:15px;gap:14px;transition:all .3s;min-height:56px}
+        .fq:hover{color:var(--accent-l)}
+        .fic{width:28px;height:28px;min-width:28px;border-radius:8px;background:rgba(249,115,22,.06);display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--accent-l);transition:all .4s}
+        .fi.on .fic{transform:rotate(45deg);background:rgba(249,115,22,.12)}
+        .fa{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.22,1,.36,1)}
+        .fa-i{padding:0 22px 18px;color:var(--muted);font-size:14px;line-height:1.7}
+
+        /* MODAL */
+        .mo{position:fixed;inset:0;z-index:20000;background:rgba(8,6,14,.85);backdrop-filter:blur(12px);display:none;align-items:center;justify-content:center;padding:16px;opacity:0;transition:opacity .3s}
+        .mo.show{display:flex;opacity:1}
+        .modal{max-width:620px;width:100%;max-height:85vh;overflow-y:auto;border-radius:26px;padding:32px;position:relative;background:rgba(14,10,20,.95);backdrop-filter:var(--card-blur);border:1px solid var(--card-border);box-shadow:0 25px 70px rgba(0,0,0,.5);animation:mI .35s ease}
+        @keyframes mI{from{opacity:0;transform:translateY(20px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+        .mx{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:15px;color:var(--muted);transition:all .3s;min-height:44px;min-width:44px}
+        .mx:hover{background:rgba(248,113,113,.1);color:var(--rose)}
+        .mh{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+        .mhi{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:28px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04)}
+        .mht{font-size:24px;font-weight:900}
+        .ms{margin-bottom:18px}
+        .ms h4{font-size:15px;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+        .mfg{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+        .mf{padding:12px;border-radius:10px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.03);display:flex;justify-content:space-between;align-items:center}
+        .mfl{font-size:12px;color:var(--muted)}.mfv{font-weight:700;font-size:13px}
+        .mpc{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+        .mp,.mco{list-style:none;display:flex;flex-direction:column;gap:5px}
+        .mp li,.mco li{font-size:12px;display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:8px}
+        .mp li{background:rgba(52,211,153,.04);color:#6ee7b7}
+        .mco li{background:rgba(248,113,113,.04);color:#fca5a5}
+
+        /* STICKY */
+        .sb{position:fixed;bottom:0;left:0;right:0;z-index:9998;padding:12px 18px;padding-bottom:calc(12px + env(safe-area-inset-bottom));background:rgba(8,6,14,.92);backdrop-filter:var(--card-blur);border-top:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;gap:14px;transform:translateY(100%);transition:transform .5s cubic-bezier(.22,1,.36,1)}
+        .sb.show{transform:translateY(0)}
+        .sb-t{font-size:14px;font-weight:600;display:flex;align-items:center;gap:6px}
+        .sb-c{font-family:'Space Grotesk';font-weight:800;font-size:16px;background:linear-gradient(135deg,var(--accent-l),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .sb-b{padding:10px 22px;border-radius:100px;font-size:14px;font-weight:700;color:#000;background:linear-gradient(135deg,var(--amber),#f97316);box-shadow:0 3px 12px rgba(251,191,36,.25);transition:all .3s;border:none;cursor:pointer;font-family:'Inter';min-height:44px}
+        .sb-b:hover{transform:scale(1.06)}
+        .sb-b:active{transform:scale(.97);transition-duration:.1s}
+        .sb-x{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--muted);cursor:pointer;font-size:18px;padding:8px;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center}
+
+        /* FOOTER */
+        .footer{padding:40px 0 90px;position:relative;z-index:1;border-top:1px solid rgba(255,255,255,.04)}
+        .fd{border-radius:18px;padding:16px 20px;margin-bottom:28px;font-size:12px;color:var(--muted);line-height:1.7;background:rgba(248,113,113,.03);border:1px solid rgba(248,113,113,.05)}
+        .fd strong{color:#fca5a5}
+        .f-wrap{border-radius:22px;padding:28px;background:rgba(255,255,255,0);backdrop-filter:var(--card-blur);-webkit-backdrop-filter:var(--card-blur);border:1px solid var(--card-border);margin-bottom:20px}
+        .fg{display:grid;grid-template-columns:2fr 1fr 1fr;gap:28px}
+        .fa2 .fl2{display:flex;align-items:center;gap:8px;margin-bottom:12px;font-family:'Space Grotesk';font-weight:700;font-size:18px}
+        .fa2 p{font-size:13px;color:var(--muted);line-height:1.5}
+        .fcl h4{font-size:14px;margin-bottom:12px;color:var(--white)}
+        .fls{list-style:none;display:flex;flex-direction:column;gap:7px}
+        .fls a{color:var(--muted);font-size:13px;transition:all .3s;display:inline-flex;align-items:center;min-height:32px}
+        .fls a:hover{color:var(--accent-l);transform:translateX(3px)}
+        .fbt{padding-top:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+        .fbt p{font-size:12px;color:var(--muted)}
+        .fag{background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.1);color:#fca5a5;padding:4px 12px;border-radius:100px;font-size:10px;font-weight:700}
+
+        .scroll-top{position:fixed;bottom:68px;right:20px;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transform:translateY(16px);transition:all .4s;z-index:999;border:none;color:white;font-size:17px;background:linear-gradient(135deg,var(--accent),var(--rose));box-shadow:0 4px 16px rgba(249,115,22,.3)}
+        .scroll-top.show{opacity:1;transform:translateY(0)}
+        .scroll-top:hover{transform:translateY(-3px)}
+        .scroll-top:active{transform:translateY(1px) scale(.95);transition-duration:.1s}
+
+        /* Reveal with spring */
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+        @keyframes fadeInDown{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:translateY(0)}}
+        .reveal{opacity:0;transform:translateY(40px) scale(.97);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.34,1.56,.64,1)}
+        .reveal.vis{opacity:1;transform:translateY(0) scale(1)}
+        .d1{transition-delay:.06s}.d2{transition-delay:.12s}.d3{transition-delay:.18s}.d4{transition-delay:.24s}.d5{transition-delay:.3s}
+
+        /* ====== MOBILE ====== */
+        @media(max-width:1024px){
+            .hero-layout{grid-template-columns:1fr;text-align:center}
+            .hero-left{order:1}.hero-right{order:2;min-height:300px}
+            .hero p{margin:0 auto 22px}.hero-btns{justify-content:center}.hero-trust{justify-content:center}.hero-stats{justify-content:center}.hs{text-align:center}
+            .cc-hero{grid-template-columns:1fr;text-align:center}
+            .hcf{grid-template-columns:repeat(2,1fr)}
+            .cc-grid{grid-template-columns:1fr}
+            .calc-l{grid-template-columns:1fr}
+            .mg{grid-template-columns:repeat(2,1fr)}
+            .gg{grid-template-columns:repeat(2,1fr)}
+            .fg{grid-template-columns:1fr 1fr}
+            .ct{justify-content:center}
+            .mfg,.mpc{grid-template-columns:1fr}
+        }
+        @media(max-width:768px){
+            .i-links{display:none}.i-burger{display:flex}
+            .island{min-width:auto;padding:4px 8px}
+            .hero{padding:65px 12px 24px}
+            .hero-stats{flex-wrap:wrap;gap:18px}
+            .mg,.gg{grid-template-columns:1fr}
+            .fg{grid-template-columns:1fr}
+            .cbt{flex-direction:column;width:100%}
+            .cbt .cb,.cbt .cbtn{width:100%}
+            .pb{flex-direction:column;text-align:center;gap:10px}
+            .pb .cbtn{width:100%}
+            .ios-f{margin:0 4px 12px;padding:20px 14px;border-radius:20px}
+            .cc-hero{padding:18px;gap:16px}
+            .cc{padding:18px}
+            .hcright{gap:6px}
+            .hcright .cbtn,.hcright .crb{width:100%}
+            .section{padding:4px 0}
+            .container{padding:0 12px}
+            .f-wrap{padding:20px 16px}
+            .casino-img{height:100px}
+            /* Таблица — fade hint */
+            .cw::after{content:'';position:absolute;right:0;top:0;bottom:0;width:40px;background:linear-gradient(90deg,transparent,rgba(8,6,14,.8));z-index:2;pointer-events:none}
+        }
+        @media(max-width:480px){
+            .hero-btns{flex-direction:column;align-items:center;width:100%}
+            .btn{width:100%;justify-content:center;padding:14px 24px;font-size:15px}
+            .hcf{grid-template-columns:1fr 1fr;gap:6px}
+            .float-scene{height:250px}
+            .fc1,.fc2,.fc3,.fc4{width:100px;padding:10px}.fcb{width:140px;padding:12px}
+            .fc-e{font-size:22px}.fc-n{font-size:12px}.fcb .fc-e{font-size:30px}.fcb .fc-n{font-size:17px}
+            .sb{flex-wrap:wrap;gap:8px;padding:10px 14px;padding-bottom:calc(10px + env(safe-area-inset-bottom))}
+            .sb-t{font-size:12px}.sb-b{padding:8px 16px;font-size:12px}
+            .hero h1{font-size:32px;letter-spacing:-1.5px}
+            .hero p{font-size:15px}
+            .sh h2{font-size:24px}
+            .calc{padding:20px 14px}
+            .calc-l h3{font-size:20px}
+            .cinp{font-size:18px;padding:12px 14px 12px 36px}
+            .crc-t{font-size:36px}
+            .modal{padding:20px;border-radius:20px}
+            .mht{font-size:20px}
+            .trust-bar{gap:6px;padding:12px}
+            .tc{padding:8px 12px;gap:5px}
+            .tc-t{font-size:12px}
+            .casino-img{height:80px;border-radius:10px}
+        }
+        @media(max-width:360px){
+            .hero h1{font-size:28px}
+            .hs-n{font-size:28px}
+            .fc1,.fc2,.fc3,.fc4{width:85px;padding:8px}.fcb{width:120px;padding:10px}
+            .float-scene{height:220px}
+        }
+        ::-webkit-scrollbar{width:6px}
+        ::-webkit-scrollbar-track{background:transparent}
+        ::-webkit-scrollbar-thumb{background:rgba(249,115,22,.14);border-radius:3px}
+    </style>
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<div class="bg-wrap">
+    <div class="bg-mesh"></div>
+    <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+    <div class="orbit o1"><div class="od"></div></div>
+    <div class="orbit o2"><div class="od"></div></div>
+    <div class="shooting-star" style="top:15%;left:20%;--d:6s;animation-delay:0s"></div>
+    <div class="shooting-star" style="top:35%;left:50%;--d:8s;animation-delay:3s"></div>
+    <div class="shooting-star" style="top:60%;left:10%;--d:7s;animation-delay:5s"></div>
+    <div id="starsLayer"></div>
+</div>
+<canvas id="pc"></canvas>
+<div class="cg" id="cursorGlow"></div>
+
+<nav class="island" id="island">
+    <div class="i-logo"><div class="i-logo-icon">🎯</div>Casino<span>Scope</span></div>
+    <div class="i-div"></div>
+    <div class="i-links">
+        <a href="#top" class="i-link active">Топ Казино</a>
+        <a href="#compare" class="i-link">Сравнение</a>
+        <a href="#method" class="i-link">Методология</a>
+        <a href="#guides" class="i-link">Гайды</a>
+        <a href="#faq" class="i-link">FAQ</a>
+    </div>
+    <div class="i-div"></div>
+    <div class="i-age">18+</div>
+    <button class="i-burger" id="burger" onclick="toggleMob()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-menu" id="mobMenu">
+    <a href="#top" onclick="closeMob()">🏆 Топ Казино</a>
+    <a href="#compare" onclick="closeMob()">📊 Сравнение</a>
+    <a href="#method" onclick="closeMob()">🔍 Методология</a>
+    <a href="#guides" onclick="closeMob()">📚 Гайды</a>
+    <a href="#faq" onclick="closeMob()">❓ FAQ</a>
+</div>
+
+<section class="hero">
+    <div class="hero-layout">
+        <div class="hero-left">
+            <div class="hero-badge"><span class="pd"></span>Обновлено: Февраль 2026</div>
+            <h1>Честные обзоры<br><span class="gt">онлайн казино</span></h1>
+            <p>Независимые рейтинги и экспертные оценки лучших площадок для игроков из России и СНГ</p>
+            <div class="hero-btns">
+                <a href="#top" class="btn btn-glow"><span>🏆 Смотреть рейтинг</span></a>
+                <a href="#method" class="btn btn-ghost"><span>📊 Методология</span></a>
+            </div>
+            <div class="hero-trust">
+                <div class="ti"><span>🔒</span>SSL защита</div>
+                <div class="ti"><span>✅</span>Проверено</div>
+                <div class="ti"><span>🎯</span>Лицензии</div>
+            </div>
+            <div class="hero-stats">
+                <div class="hs"><div class="hs-n" data-count="5">0</div><div class="hs-l">Казино в рейтинге</div></div>
+                <div class="hs"><div class="hs-n" data-count="50">0</div><div class="hs-l">Критериев оценки</div></div>
+                <div class="hs"><div class="hs-n" data-count="2026">0</div><div class="hs-l">Актуальные данные</div></div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="float-scene" id="floatScene">
+                <div class="fc fc1"><div class="fc-e">🎰</div><div class="fc-n">Arkada</div><div class="fc-r">★★★★★ 9.4</div><div class="fc-b">Бонус до 200%</div></div>
+                <div class="fc fc2"><div class="fc-e">🐱</div><div class="fc-n">CatCasino</div><div class="fc-r">★★★★★ 9.2</div><div class="fc-b">Бонус до 325%</div></div>
+                <div class="fc fcb"><div class="fc-e">🏆</div><div class="fc-n">1win</div><div class="fc-r">★★★★★ 9.8</div><div class="fc-b">Бонус до 500%</div><div class="fc-h">👑 #1 в рейтинге</div></div>
+                <div class="fc fc3"><div class="fc-e">☄️</div><div class="fc-n">Kometa</div><div class="fc-r">★★★★☆ 9.0</div><div class="fc-b">Бонус до 255%</div></div>
+                <div class="fc fc4"><div class="fc-e">🎩</div><div class="fc-n">Kent</div><div class="fc-r">★★★★☆ 8.8</div><div class="fc-b">Бонус до 150%</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="trust-bar reveal">
+    <div class="tc"><div class="tc-i">🛡️</div><div><div class="tc-t">Лицензированные</div><div class="tc-s">Только проверенные</div></div></div>
+    <div class="tc"><div class="tc-i">⚡</div><div><div class="tc-t">Быстрые выплаты</div><div class="tc-s">Вывод от 15 мин</div></div></div>
+    <div class="tc"><div class="tc-i">🔒</div><div><div class="tc-t">Безопасность</div><div class="tc-s">256-bit SSL</div></div></div>
+    <div class="tc"><div class="tc-i">💬</div><div><div class="tc-t">Поддержка 24/7</div><div class="tc-s">Чат и email</div></div></div>
+</div>
+
+<section class="section" id="top">
+    <div class="container">
+        <div class="ios-f">
+            <div class="sh reveal"><div class="sl">🏆 Рейтинг</div><h2>Лучшие казино 2026</h2><p>Каждое казино проверено по 50+ критериям</p></div>
+            <div class="pb reveal"><div class="pb-l"><div class="pb-i">🎁</div><div class="pb-t">Актуальный промокод SMOG для 1win<small>+500% к первым 4 депозитам + 70 фриспинов</small></div></div><a href="https://lkts.pro/5024" target="_blank" rel="noopener" class="cbtn cbtn-gold">Забрать бонус →</a></div>
+            <div class="cc-wrap">
+                <div class="cc-hero reveal"><div class="glass-shine"></div><div class="rk rk1">1</div><div class="bb">⭐ Лучший выбор</div>
+                    <div class="hcl"><img class="casino-img" src="https://placehold.co/400x200/1a1a2e/f97316?text=1win" alt="1win"><div class="hci">🏆</div><div class="hcn">1win</div><div class="hcr"><div class="hcs">★★★★★</div><span class="hcv">9.8</span></div></div>
+                    <div class="hcc"><div class="hcf"><div class="cf"><div class="cfl">Игры</div><div class="cfv">10,000+</div></div><div class="cf"><div class="cfl">Вывод</div><div class="cfv">до 24ч</div></div><div class="cf"><div class="cfl">Поддержка</div><div class="cfv">24/7</div></div><div class="cf"><div class="cfl">Live</div><div class="cfv">200+</div></div></div><div class="ct"><span class="tag tg">✓ Огромный выбор</span><span class="tag tg">✓ Быстрые выплаты</span><span class="tag tg">✓ Приложение</span><span class="tag tg">✓ Криптовалюты</span><span class="tag tg">✓ Live-казино</span><span class="tag tg">✓ Ставки</span></div></div>
+                    <div class="hcright"><div class="cb"><div class="cbl">Приветственный бонус</div><div class="cbv">До 500%</div></div><div class="pbox"><div class="pbl">Промокод</div><div class="pbc" onclick="copyPromo()">SMOG</div><div class="pbd">+500% к первым 4 депозитам + 70FS</div><div class="pbcp" id="promoCopy" onclick="copyPromo()">📋 Скопировать</div></div><a href="https://lkts.pro/5024" target="_blank" rel="noopener" class="cbtn cbtn-gold">Перейти на сайт →</a><div class="crb" onclick="openModal('1win')">📖 Подробный обзор</div></div>
+                </div>
+                <div class="cc-grid">
+                    <div class="cc reveal d1"><div class="rk rk2">2</div><img class="casino-img" src="https://placehold.co/400x200/1a1a2e/f97316?text=Arkada" alt="Arkada"><div class="ctp"><div class="ci">🎰</div><div class="cin"><h3>Arkada Casino</h3><div class="cra"><div class="crs">★★★★★</div><span class="crn">9.4</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Игры</div><div class="cfv">5,000+</div></div><div class="cf"><div class="cfl">Вывод</div><div class="cfv">до 24ч</div></div><div class="cf"><div class="cfl">Поддержка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ Стильный дизайн</span><span class="tag tg">✓ Щедрые бонусы</span><span class="tag tr">✕ Новое казино</span></div><div class="cbt"><div class="cb"><div class="cbl">Бонус</div><div class="cbv">До 200%</div></div><a href="https://grid-cyberlane.com/s98fda0f8" target="_blank" rel="noopener" class="cbtn">Перейти →</a></div><div class="crb" onclick="openModal('arkada')">📖 Обзор</div></div>
+                    <div class="cc reveal d2"><div class="rk rk3">3</div><img class="casino-img" src="https://placehold.co/400x200/1a1a2e/fb7185?text=CatCasino" alt="CatCasino"><div class="ctp"><div class="ci">🐱</div><div class="cin"><h3>CatCasino</h3><div class="cra"><div class="crs">★★★★★</div><span class="crn">9.2</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Игры</div><div class="cfv">4,000+</div></div><div class="cf"><div class="cfl">Вывод</div><div class="cfv">до 48ч</div></div><div class="cf"><div class="cfl">Поддержка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ Турниры</span><span class="tag tg">✓ Лояльность</span><span class="tag tr">✕ Вывод до 48ч</span></div><div class="cbt"><div class="cb"><div class="cbl">Бонус</div><div class="cbv">До 325%</div></div><a href="https://catchthecatthree.com/sb716b632" target="_blank" rel="noopener" class="cbtn">Перейти →</a></div><div class="crb" onclick="openModal('catcasino')">📖 Обзор</div></div>
+                    <div class="cc reveal d3"><div class="rk rk4">4</div><img class="casino-img" src="https://placehold.co/400x200/1a1a2e/2dd4bf?text=Kometa" alt="Kometa"><div class="ctp"><div class="ci">☄️</div><div class="cin"><h3>Kometa</h3><div class="cra"><div class="crs">★★★★☆</div><span class="crn">9.0</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Игры</div><div class="cfv">3,500+</div></div><div class="cf"><div class="cfl">Вывод</div><div class="cfv">до 24ч</div></div><div class="cf"><div class="cfl">Поддержка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ Космическая тема</span><span class="tag tg">✓ Кэшбэк</span><span class="tag tr">✕ Меньше игр</span></div><div class="cbt"><div class="cb"><div class="cbl">Бонус</div><div class="cbv">До 255%</div></div><a href="https://searing-path.com/s2e02d62f" target="_blank" rel="noopener" class="cbtn">Перейти →</a></div><div class="crb" onclick="openModal('kometa')">📖 Обзор</div></div>
+                    <div class="cc reveal d4"><div class="rk rk5">5</div><img class="casino-img" src="https://placehold.co/400x200/1a1a2e/fbbf24?text=Kent" alt="Kent"><div class="ctp"><div class="ci">🎩</div><div class="cin"><h3>Kent</h3><div class="cra"><div class="crs">★★★★☆</div><span class="crn">8.8</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Игры</div><div class="cfv">3,000+</div></div><div class="cf"><div class="cfl">Вывод</div><div class="cfv">до 48ч</div></div><div class="cf"><div class="cfl">Поддержка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ VIP программа</span><span class="tag tg">✓ Элегантный UI</span><span class="tag tr">✕ Меньше акций</span></div><div class="cbt"><div class="cb"><div class="cbl">Бонус</div><div class="cbv">До 150%</div></div><a href="https://mealmenalc.com/s4882a91c" target="_blank" rel="noopener" class="cbtn">Перейти →</a></div><div class="crb" onclick="openModal('kent')">📖 Обзор</div></div>
+                </div>
+            </div>
+            <div class="calc reveal"><div class="calc-l"><div><h3>💰 Калькулятор бонуса 1win</h3><p>Узнай сколько получишь с промокодом SMOG</p><div class="cig"><label class="cil">Сумма первого депозита</label><div style="position:relative"><span class="cii">₽</span><input type="number" class="cinp" id="calcInput" placeholder="1000" value="1000" oninput="calcBonus()"></div></div><div class="cpt">🎫 Промокод SMOG активен</div></div><div><div class="crc"><div class="crc-l">Итого на счёте</div><div class="crc-t" id="calcTotal">6,000 ₽</div><div class="cbd"><div class="cbr"><span class="cbr-l">Ваш депозит</span><span class="cbr-v" id="calcDeposit">1,000 ₽</span></div><div class="cbr"><span class="cbr-l">Бонус +500%</span><span class="cbr-v" id="calcBonusVal">5,000 ₽</span></div><div class="cbr"><span class="cbr-l">Фриспины</span><span class="cbr-v">70 FS 🎰</span></div></div><a href="https://lkts.pro/5024" target="_blank" rel="noopener" class="cbtn cbtn-gold" style="width:100%;justify-content:center;margin-top:14px">Забрать бонус →</a></div></div></div></div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="compare"><div class="container"><div class="ios-f"><div class="sh reveal"><div class="sl">📊 Сравнение</div><h2>Сравнительная таблица</h2><p>Быстрое сравнение по ключевым параметрам</p></div><div class="cw reveal"><table class="ctb"><thead><tr><th>Казино</th><th>Рейтинг</th><th>Игры</th><th>Вывод</th><th>Live</th><th>Приложение</th><th>Крипто</th><th></th></tr></thead><tbody><tr><td><div class="tn"><div class="tni">🏆</div>1win</div></td><td><span class="crn">9.8</span></td><td>10,000+</td><td>до 24ч</td><td><span class="by">✓</span></td><td><span class="by">✓</span></td><td><span class="by">✓</span></td><td><a href="https://lkts.pro/5024" target="_blank" rel="noopener" class="tb">Играть →</a></td></tr><tr><td><div class="tn"><div class="tni">🎰</div>Arkada</div></td><td><span class="crn">9.4</span></td><td>5,000+</td><td>до 24ч</td><td><span class="by">✓</span></td><td><span class="by">✓</span></td><td><span class="by">✓</span></td><td><a href="https://grid-cyberlane.com/s98fda0f8" target="_blank" rel="noopener" class="tb">Играть →</a></td></tr><tr><td><div class="tn"><div class="tni">🐱</div>CatCasino</div></td><td><span class="crn">9.2</span></td><td>4,000+</td><td>до 48ч</td><td><span class="by">✓</span></td><td><span class="bn">✕</span></td><td><span class="by">✓</span></td><td><a href="https://catchthecatthree.com/sb716b632" target="_blank" rel="noopener" class="tb">Играть →</a></td></tr><tr><td><div class="tn"><div class="tni">☄️</div>Kometa</div></td><td><span class="crn">9.0</span></td><td>3,500+</td><td>до 24ч</td><td><span class="by">✓</span></td><td><span class="by">✓</span></td><td><span class="bn">✕</span></td><td><a href="https://searing-path.com/s2e02d62f" target="_blank" rel="noopener" class="tb">Играть →</a></td></tr><tr><td><div class="tn"><div class="tni">🎩</div>Kent</div></td><td><span class="crn">8.8</span></td><td>3,000+</td><td>до 48ч</td><td><span class="by">✓</span></td><td><span class="bn">✕</span></td><td><span class="bn">✕</span></td><td><a href="https://mealmenalc.com/s4882a91c" target="_blank" rel="noopener" class="tb">Играть →</a></td></tr></tbody></table></div></div></div></section>
+
+<section class="section" id="method"><div class="container"><div class="ios-f"><div class="sh reveal"><div class="sl">🔍 Прозрачность</div><h2>Как мы оцениваем</h2><p>Методология на основе реального опыта</p></div><div class="mg"><div class="mc reveal"><div class="mi">🛡️</div><h3>Безопасность</h3><p>Лицензии, шифрование и репутация</p><span class="mw">25%</span></div><div class="mc reveal d1"><div class="mi">🎁</div><h3>Бонусы</h3><p>Щедрость и условия отыгрыша</p><span class="mw">20%</span></div><div class="mc reveal d2"><div class="mi">🎮</div><h3>Выбор игр</h3><p>Количество и качество контента</p><span class="mw">20%</span></div><div class="mc reveal d3"><div class="mi">💳</div><h3>Платежи</h3><p>Методы вывода и скорость</p><span class="mw">15%</span></div><div class="mc reveal d4"><div class="mi">💬</div><h3>Поддержка</h3><p>Скорость и качество помощи</p><span class="mw">10%</span></div><div class="mc reveal d5"><div class="mi">📱</div><h3>Мобильная версия</h3><p>Удобство и приложение</p><span class="mw">10%</span></div></div></div></div></section>
+
+<section class="section" id="guides"><div class="container"><div class="ios-f"><div class="sh reveal"><div class="sl">📚 Обучение</div><h2>Полезные гайды</h2><p>Практические советы для умной игры</p></div><div class="gg"><div class="gc reveal"><div class="gim gi1">🎯</div><div class="gbd"><span class="gtg">Для новичков</span><h3>Как выбрать казино</h3><p>На что смотреть перед регистрацией</p><ul class="g-tips"><li>Проверьте наличие лицензии</li><li>Изучите скорость выплат</li><li>Прочитайте условия бонусов</li></ul></div></div><div class="gc reveal d1"><div class="gim gi2">🎰</div><div class="gbd"><span class="gtg">Слоты</span><h3>RTP и волатильность</h3><p>Два главных показателя слота</p><ul class="g-tips"><li>RTP 96%+ — лучшая отдача</li><li>Низкая вол. — частые выплаты</li><li>Высокая вол. — крупные призы</li></ul></div></div><div class="gc reveal d2"><div class="gim gi3">🃏</div><div class="gbd"><span class="gtg">Стратегии</span><h3>Основы блэкджека</h3><p>Базовая стратегия для снижения преимущества</p><ul class="g-tips"><li>Стойте на 17+ всегда</li><li>Удваивайте на 11</li><li>Делите тузы и восьмёрки</li></ul></div></div><div class="gc reveal d3"><div class="gim gi4">🛡️</div><div class="gbd"><span class="gtg">Безопасность</span><h3>Защита аккаунта</h3><p>Простые правила безопасности</p><ul class="g-tips"><li>Уникальный сложный пароль</li><li>Двухфакторная аутентификация</li><li>Не заходите с публичного Wi-Fi</li></ul></div></div><div class="gc reveal d4"><div class="gim gi5">🎁</div><div class="gbd"><span class="gtg">Бонусы</span><h3>Как работают вейджеры</h3><p>Главное о бонусах</p><ul class="g-tips"><li>Вейджер x30 = 30× сумму бонуса</li><li>Слоты — 100% к отыгрышу</li><li>Читайте макс. ставку</li></ul></div></div><div class="gc reveal d5"><div class="gim gi6">📊</div><div class="gbd"><span class="gtg">Ответственная игра</span><h3>Контроль банкролла</h3><p>Играйте умно</p><ul class="g-tips"><li>Определите бюджет ДО игры</li><li>Никогда на заёмные средства</li><li>Ставьте лимиты на депозиты</li></ul></div></div></div></div></div></section>
+
+<section class="section" id="faq"><div class="container"><div class="ios-f"><div class="sh reveal"><div class="sl">❓ Помощь</div><h2>Частые вопросы</h2><p>Ответы на популярные вопросы</p></div><div class="fl"><div class="fi reveal"><div class="fq" onclick="toggleFaq(this)"><span>Как вы выбираете казино для рейтинга?</span><div class="fic">+</div></div><div class="fa"><div class="fa-i">Мы проверяем 50+ критериев: лицензия, репутация, скорость выплат, качество поддержки и ассортимент игр.</div></div></div><div class="fi reveal d1"><div class="fq" onclick="toggleFaq(this)"><span>Можно ли доверять обзорам?</span><div class="fic">+</div></div><div class="fa"><div class="fa-i">Мы указываем плюсы и минусы. Сайт содержит партнёрские ссылки, но это не влияет на оценки.</div></div></div><div class="fi reveal d2"><div class="fq" onclick="toggleFaq(this)"><span>Как использовать промокод SMOG?</span><div class="fic">+</div></div><div class="fa"><div class="fa-i">Перейдите на 1win, при регистрации введите SMOG. Получите бонус к первым 4 депозитам и фриспины.</div></div></div><div class="fi reveal d3"><div class="fq" onclick="toggleFaq(this)"><span>Что такое вейджер бонуса?</span><div class="fic">+</div></div><div class="fa"><div class="fa-i">Вейджер x30 = ставок в 30 раз больше суммы бонуса. Чем ниже — тем выгоднее.</div></div></div><div class="fi reveal d4"><div class="fq" onclick="toggleFaq(this)"><span>Как быстро выводятся деньги?</span><div class="fic">+</div></div><div class="fa"><div class="fa-i">Кошельки — от 15 минут, карты — 1-3 дня, переводы — 3-5 дней.</div></div></div><div class="fi reveal d5"><div class="fq" onclick="toggleFaq(this)"><span>Безопасно ли играть?</span><div class="fic">+</div></div><div class="fa"><div class="fa-i">В лицензированных казино — да. Но играйте ответственно и только на средства, которые готовы потерять.</div></div></div></div></div></div></section>
+
+<footer class="footer"><div class="container"><div class="fd"><strong>⚠️ 18+</strong> — CasinoScope — независимый информационный ресурс. Сайт содержит партнёрские ссылки. Играйте ответственно.</div><div class="f-wrap"><div class="fg"><div class="fa2"><div class="fl2"><div class="i-logo-icon" style="animation:none">🎯</div>Casino<span style="background:linear-gradient(135deg,var(--accent-l),var(--rose-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent">Scope</span></div><p>Независимые обзоры онлайн казино. Проверено по 50+ критериям.</p></div><div class="fcl"><h4>Казино</h4><ul class="fls"><li><a href="#top">Рейтинг</a></li><li><a href="#compare">Сравнение</a></li></ul></div><div class="fcl"><h4>Информация</h4><ul class="fls"><li><a href="#method">Методология</a></li><li><a href="#guides">Гайды</a></li><li><a href="#faq">FAQ</a></li><li><a href="#">Конфиденциальность</a></li></ul></div></div></div><div class="fbt"><p>© 2026 CasinoScope. Все права защищены.</p><span class="fag">18+</span></div></div></footer>
+
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<div class="sb" id="stickyBar"><div class="sb-t">🎁 Промокод <span class="sb-c">SMOG</span> — +500%</div><a href="https://lkts.pro/5024" target="_blank" rel="noopener" class="sb-b">Забрать →</a><button class="sb-x" onclick="closeSB()">✕</button></div>
+<div class="mo" id="modalOverlay" onclick="closeModal(event)"><div class="modal" onclick="event.stopPropagation()"><div class="mx" onclick="closeModalForce()">✕</div><div id="modalBody"></div></div></div>
+<script>
+// Stars
+!function(){const e=document.getElementById('starsLayer');for(let i=0;i<80;i++){const s=document.createElement('div');s.className='star';s.style.cssText=`position:absolute;left:${Math.random()*100}%;top:${Math.random()*100}%;width:${1+Math.random()*1.2}px;height:${1+Math.random()*1.2}px;--d:${3+Math.random()*4}s;--o:${.15+Math.random()*.4};animation-delay:${Math.random()*5}s`;e.appendChild(s)}}();
+
+// Particles
+const cvs=document.getElementById('pc'),cx=cvs.getContext('2d');let pts=[],mx=innerWidth/2,my=innerHeight/2;const isM=matchMedia('(max-width:768px)').matches,pC=isM?20:50;
+function rz(){cvs.width=innerWidth;cvs.height=innerHeight}rz();addEventListener('resize',rz);
+addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;const g=document.getElementById('cursorGlow');if(g){g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'}});
+class P{constructor(){this.reset()}reset(){this.x=Math.random()*cvs.width;this.y=Math.random()*cvs.height;this.s=Math.random()*1.1+.3;this.vx=(Math.random()-.5)*.12;this.vy=(Math.random()-.5)*.12;this.o=Math.random()*.2+.04;this.h=Math.random()>.5?25:350}update(){this.x+=this.vx;this.y+=this.vy;if(!isM){const dx=mx-this.x,dy=my-this.y,d=Math.sqrt(dx*dx+dy*dy);if(d<160){this.x-=dx*.0012;this.y-=dy*.0012;this.o=Math.min(.35,this.o+.006)}else this.o=Math.max(.04,this.o-.001)}if(this.x<0||this.x>cvs.width)this.vx*=-1;if(this.y<0||this.y>cvs.height)this.vy*=-1}draw(){cx.beginPath();cx.arc(this.x,this.y,this.s,0,Math.PI*2);cx.fillStyle=`hsla(${this.h},70%,65%,${this.o})`;cx.fill()}}
+for(let i=0;i<pC;i++)pts.push(new P);
+function dl(){if(isM)return;for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<80){cx.beginPath();cx.moveTo(pts[i].x,pts[i].y);cx.lineTo(pts[j].x,pts[j].y);cx.strokeStyle=`rgba(249,115,22,${.025*(1-d/80)})`;cx.lineWidth=.4;cx.stroke()}}}
+function an(){cx.clearRect(0,0,cvs.width,cvs.height);pts.forEach(p=>{p.update();p.draw()});dl();requestAnimationFrame(an)}an();
+
+// Scroll progress + effects
+let sbClosed=false;
+const sp=document.getElementById('scrollProgress');
+addEventListener('scroll',()=>{
+    const y=scrollY;
+    const h=document.body.scrollHeight-innerHeight;
+    if(sp&&h>0)sp.style.transform=`scaleX(${y/h})`;
+    document.getElementById('scrollTop').classList.toggle('show',y>300);
+    document.getElementById('island').classList.toggle('scrolled',y>60);
+    if(!sbClosed)document.getElementById('stickyBar').classList.toggle('show',y>500);
+    const s=['top','compare','method','guides','faq'];
+    const l=document.querySelectorAll('.i-link');let c='';
+    s.forEach(id=>{const e=document.getElementById(id);if(e&&y>=e.offsetTop-160)c=id});
+    l.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+c));
+},{passive:true});
+function closeSB(){sbClosed=true;document.getElementById('stickyBar').classList.remove('show')}
+
+// Parallax folders
+if(!isM){
+    addEventListener('scroll',()=>{
+        document.querySelectorAll('.ios-f').forEach(f=>{
+            const r=f.getBoundingClientRect();
+            const o=(r.top/innerHeight-.5)*6;
+            f.style.transform=`translateY(${o}px)`;
+        });
+    },{passive:true});
+}
+
+// Reveal
+const rO=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.06,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.reveal').forEach(e=>rO.observe(e));
+
+// Count
+const cO=new IntersectionObserver(e=>{e.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,t=+el.dataset.count,d=1600,st=performance.now();!function s(n){const p=Math.min((n-st)/d,1);el.textContent=Math.floor(t*(1-Math.pow(1-p,3)))+(t===50?'+':'');if(p<1)requestAnimationFrame(s)}(st);cO.unobserve(el)})},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(e=>cO.observe(e));
+
+// Menu
+function toggleMob(){document.getElementById('burger').classList.toggle('on');document.getElementById('mobMenu').classList.toggle('on')}
+function closeMob(){document.getElementById('burger').classList.remove('on');document.getElementById('mobMenu').classList.remove('on')}
+
+// FAQ
+function toggleFaq(e){const i=e.parentElement,a=i.querySelector('.fa'),w=i.classList.contains('on');document.querySelectorAll('.fi').forEach(f=>{f.classList.remove('on');f.querySelector('.fa').style.maxHeight='0'});if(!w){i.classList.add('on');a.style.maxHeight=a.scrollHeight+'px'}}
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t){window.scrollTo({top:t.offsetTop-55,behavior:'smooth'});closeMob()}})});
+
+// 3D Tilt + magnetic (desktop)
+if(!isM){
+    function addT(s,i=3){document.querySelectorAll(s).forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.transform=`perspective(800px) rotateX(${(e.clientY-r.top-r.height/2)/r.height*-i}deg) rotateY(${(e.clientX-r.left-r.width/2)/r.width*i}deg) translateY(-3px)`});c.addEventListener('mouseleave',()=>{c.style.transform=''})})}
+    addT('.cc-hero',2);addT('.cc',3);addT('.mc',4);addT('.gc',3);
+    const fs=document.getElementById('floatScene');
+    if(fs)addEventListener('mousemove',e=>{const x=(e.clientX/innerWidth-.5)*10,y=(e.clientY/innerHeight-.5)*10;fs.style.transform=`rotateY(${x*.5}deg) rotateX(${-y*.5}deg)`});
+    document.querySelectorAll('.cbtn,.cbtn-gold,.tb,.btn-glow,.sb-b').forEach(b=>{
+        b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.08}px,${(e.clientY-r.top-r.height/2)*.08}px) scale(1.03)`});
+        b.addEventListener('mouseleave',()=>{b.style.transform=''});
+    });
+}
+
+// Copy
+function copyPromo(){navigator.clipboard.writeText('SMOG').then(()=>{const b=document.getElementById('promoCopy');b.textContent='✅ Скопировано!';b.classList.add('copied');setTimeout(()=>{b.textContent='📋 Скопировать';b.classList.remove('copied')},2e3)}).catch(()=>{const t=document.createElement('textarea');t.value='SMOG';document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);const b=document.getElementById('promoCopy');b.textContent='✅ Скопировано!';b.classList.add('copied');setTimeout(()=>{b.textContent='📋 Скопировать';b.classList.remove('copied')},2e3)})}
+
+// Calc with animation
+function calcBonus(){let v=parseInt(document.getElementById('calcInput').value)||0;if(v<0)v=0;if(v>1e7)v=1e7;const b=v*5;document.getElementById('calcDeposit').textContent=v.toLocaleString()+' ₽';document.getElementById('calcBonusVal').textContent=b.toLocaleString()+' ₽';const total=document.getElementById('calcTotal');total.textContent=(v+b).toLocaleString()+' ₽';total.style.transform='scale(1.08)';setTimeout(()=>total.style.transform='',250)}
+
+// Modal
+const cd={'1win':{icon:'🏆',name:'1win',rating:'9.8',stars:'★★★★★',link:'https://lkts.pro/5024',features:[{l:'Игры',v:'10,000+'},{l:'Провайдеры',v:'100+'},{l:'Вывод',v:'до 24ч'},{l:'Поддержка',v:'24/7'},{l:'Лицензия',v:'Кюрасао'},{l:'Приложение',v:'iOS/Android'},{l:'Крипто',v:'BTC,ETH,USDT'},{l:'Live',v:'200+'}],pros:['10,000+ игр','Выплаты до 24ч','iOS/Android','Криптовалюты','Live 200+','Ставки','SMOG +500%'],cons:['Верификация для крупных сумм'],desc:'1win — крупнейшее онлайн казино СНГ с 10,000+ играми.'},'arkada':{icon:'🎰',name:'Arkada Casino',rating:'9.4',stars:'★★★★★',link:'https://grid-cyberlane.com/s98fda0f8',features:[{l:'Игры',v:'5,000+'},{l:'Провайдеры',v:'70+'},{l:'Вывод',v:'до 24ч'},{l:'Поддержка',v:'24/7'},{l:'Лицензия',v:'Кюрасао'},{l:'Моб.',v:'Адаптивный'}],pros:['Стильный дизайн','Щедрые бонусы','70+ провайдеров','Быстрый вывод'],cons:['Новое казино','Нет приложения'],desc:'Arkada — современная платформа с элегантным дизайном.'},'catcasino':{icon:'🐱',name:'CatCasino',rating:'9.2',stars:'★★★★★',link:'https://catchthecatthree.com/sb716b632',features:[{l:'Игры',v:'4,000+'},{l:'Провайдеры',v:'60+'},{l:'Вывод',v:'до 48ч'},{l:'Поддержка',v:'24/7'},{l:'Лицензия',v:'Кюрасао'},{l:'Моб.',v:'Адаптивный'}],pros:['Уникальный дизайн','Турниры','Лояльность','Широкий выбор'],cons:['Вывод до 48ч','Нет приложения'],desc:'CatCasino — казино с кошачьей тематикой.'},'kometa':{icon:'☄️',name:'Kometa',rating:'9.0',stars:'★★★★☆',link:'https://searing-path.com/s2e02d62f',features:[{l:'Игры',v:'3,500+'},{l:'Провайдеры',v:'50+'},{l:'Вывод',v:'до 24ч'},{l:'Поддержка',v:'24/7'},{l:'Лицензия',v:'Кюрасао'},{l:'Приложение',v:'Есть'}],pros:['Космическая тема','Быстрая регистрация','Кэшбэк','Приложение'],cons:['Меньше игр','Ограничены платежи'],desc:'Kometa — космическая тематика и кэшбэк.'},'kent':{icon:'🎩',name:'Kent',rating:'8.8',stars:'★★★★☆',link:'https://mealmenalc.com/s4882a91c',features:[{l:'Игры',v:'3,000+'},{l:'Провайдеры',v:'45+'},{l:'Вывод',v:'до 48ч'},{l:'Поддержка',v:'24/7'},{l:'Лицензия',v:'Кюрасао'},{l:'Моб.',v:'Адаптивный'}],pros:['Элегантный UI','VIP программа','Удобная моб.'],cons:['Вывод до 48ч','Меньше акций','Нет приложения'],desc:'Kent — VIP программа для постоянных игроков.'}};
+
+function openModal(id){const d=cd[id];if(!d)return;let f='';d.features.forEach(x=>{f+=`<div class="mf"><span class="mfl">${x.l}</span><span class="mfv">${x.v}</span></div>`});let p='',c='';d.pros.forEach(x=>{p+=`<li>✅ ${x}</li>`});d.cons.forEach(x=>{c+=`<li>⚠️ ${x}</li>`});document.getElementById('modalBody').innerHTML=`<div class="mh"><div class="mhi">${d.icon}</div><div><div class="mht">${d.name}</div><div style="display:flex;align-items:center;gap:5px;margin-top:3px"><span style="color:var(--amber)">${d.stars}</span><span style="font-weight:900;font-size:18px;background:linear-gradient(135deg,var(--amber),#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent">${d.rating}</span></div></div></div><div class="ms"><h4>📋 Описание</h4><p style="color:var(--muted);font-size:14px;line-height:1.6">${d.desc}</p></div><div class="ms"><h4>⚙️ Характеристики</h4><div class="mfg">${f}</div></div><div class="ms"><h4>📊 Плюсы и минусы</h4><div class="mpc"><ul class="mp">${p}</ul><ul class="mco">${c}</ul></div></div><div style="margin-top:18px"><a href="${d.link}" target="_blank" rel="noopener" class="cbtn cbtn-gold" style="width:100%;justify-content:center">Перейти на сайт →</a></div>`;document.getElementById('modalOverlay').classList.add('show');document.body.style.overflow='hidden'}
+function closeModal(e){if(e.target.id==='modalOverlay')closeModalForce()}
+function closeModalForce(){document.getElementById('modalOverlay').classList.remove('show');document.body.style.overflow=''}
+addEventListener('keydown',e=>{if(e.key==='Escape')closeModalForce()});
+</script>
+</body>
+</html>
