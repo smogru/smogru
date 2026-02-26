@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
     <style>
-       *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+      *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
     --bg:#08060e;
     --accent:#f97316;--accent-l:#fdba74;
@@ -39,7 +39,6 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 a{text-decoration:none;color:inherit}
 .container{max-width:1140px;margin:0 auto;padding:0 16px}
 
-/* ====== AVATAR ====== */
 .i-avatar{
     width:36px;height:36px;border-radius:11px;
     object-fit:cover;flex-shrink:0;
@@ -215,7 +214,7 @@ body:hover .cg{opacity:1}
 .fcb .fc-e{font-size:1.875rem}.fcb .fc-n{font-size:1.125rem}.fcb .fc-r{font-size:.75rem}
 .fc-h{margin-top:4px;padding:3px 8px;border-radius:100px;background:linear-gradient(135deg,rgba(251,191,36,.1),rgba(251,191,36,.03));border:1px solid rgba(251,191,36,.14);font-size:.625rem;font-weight:700;color:var(--amber-l);display:inline-block}
 
-/* ====== CASINO IMAGES 1200x600 ====== */
+/* ====== CASINO IMAGES ====== */
 .casino-img-wrap{
     width:100%;aspect-ratio:1200/600;border-radius:14px;overflow:hidden;
     margin-bottom:10px;
@@ -351,7 +350,7 @@ body:hover .cg{opacity:1}
 .cbr{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-radius:10px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.04)}
 .cbr-l{font-size:.875rem;color:var(--muted)}.cbr-v{font-weight:700;font-size:.938rem;color:var(--amber-l)}
 
-/* ====== TABLE — без чёрного градиента ====== */
+/* ====== TABLE ====== */
 .cw{border-radius:24px;overflow:hidden;overflow-x:auto;background:var(--card-bg);backdrop-filter:var(--card-blur);-webkit-backdrop-filter:var(--card-blur);border:1px solid var(--card-border);position:relative;box-shadow:var(--shadow-sm)}
 .ctb{width:100%;border-collapse:collapse}
 .ctb th{padding:16px 18px;text-align:left;font-weight:600;font-size:.688rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:rgba(249,115,22,.02);border-bottom:1px solid rgba(255,255,255,.04);white-space:nowrap}
@@ -481,7 +480,6 @@ body:hover .cg{opacity:1}
 /* ====== MOBILE 768 ====== */
 @media(max-width:768px){
     .i-links{display:none}.i-burger{display:flex}
-    /* 1. Меню меньше */
     .island{min-width:auto;padding:4px 8px}
     .i-logo{padding:6px 10px;font-size:.875rem;gap:7px}
     .i-avatar{width:28px;height:28px;border-radius:8px;border-width:1.5px}
@@ -494,205 +492,215 @@ body:hover .cg{opacity:1}
 
     .hero-badge,.security-badges,.hero-right{display:none!important}
 
-    /* 2. Герой + trust bar внутри одной карточки на мобиле — через CSS уменьшаем отступы */
-    .hero{min-height:auto;padding:68px 8px 10px}
-    .hero h1{margin-top:8px;font-size:1.625rem;letter-spacing:-1.5px}
-    .hero p{font-size:.813rem;margin-bottom:14px;line-height:1.6}
+    /* 3. Герой в карточке */
+    .hero{min-height:auto;padding:68px 6px 6px}
+    .hero-layout{gap:0}
+    .hero-left{
+        background:var(--card-bg);
+        backdrop-filter:var(--card-blur);-webkit-backdrop-filter:var(--card-blur);
+        border:1px solid var(--card-border);
+        border-radius:20px;padding:20px 16px;
+        box-shadow:var(--shadow-md);
+    }
+    .hero h1{margin-top:0;font-size:1.5rem;letter-spacing:-1.2px;margin-bottom:10px}
+    .hero p{font-size:.813rem;margin-bottom:14px;line-height:1.5}
     .hero-btns{gap:6px}
-    .hero-btns .btn{padding:11px 18px;font-size:.75rem;min-height:40px}
-    .hero-trust{gap:8px;margin-top:10px}
-    .ti{font-size:.688rem;gap:2px}
-    .hero-stats{gap:14px;margin-top:14px;flex-wrap:wrap}
-    .hs-n{font-size:1.5rem}
-    .hs-l{font-size:.625rem}
+    .hero-btns .btn{padding:11px 20px;font-size:.813rem;min-height:42px}
+    .hero-trust{gap:10px;margin-top:12px}
+    .ti{font-size:.75rem;gap:3px}
+    .hero-stats{gap:16px;margin-top:14px;flex-wrap:wrap;justify-content:center}
+    .hs-n{font-size:1.625rem}
+    .hs-l{font-size:.688rem}
 
-    /* Trust bar компактнее */
-    .trust-bar{padding:4px;gap:3px}
-    .tc{padding:6px 8px;gap:4px;border-radius:8px}
-    .tc-i{font-size:.813rem}
-    .tc-t{font-size:.625rem}
-    .tc-s{font-size:.5rem}
+    /* Trust bar */
+    .trust-bar{padding:6px;gap:4px}
+    .tc{padding:8px 10px;gap:5px;border-radius:10px}
+    .tc-i{font-size:1rem}
+    .tc-t{font-size:.75rem}
+    .tc-s{font-size:.625rem}
 
-    /* 1win компактная 4:3 */
-    .cc-hero{padding:12px;gap:8px;border-radius:16px;grid-template-columns:1fr;text-align:center}
-    .cc-hero .rk{width:22px;height:22px;font-size:.563rem;border-radius:5px;top:6px;left:6px}
-    .cc-hero .bb{padding:3px 8px;font-size:.5rem;top:6px;right:6px}
-    .cc-hero .casino-img-wrap{aspect-ratio:4/3;border-radius:10px;margin-bottom:5px}
-    .cc-hero .hci{width:40px;height:40px;border-radius:12px;font-size:1.25rem;margin-bottom:5px}
-    .cc-hero .hcn{font-size:1.063rem;margin-bottom:2px}
-    .cc-hero .hcr{gap:3px}
-    .cc-hero .hcs{font-size:.688rem}
-    .cc-hero .hcv{font-size:.938rem}
-    .cc-hero .verified-badge{font-size:.5rem;padding:2px 6px;margin-top:3px}
-    .cc-hero .hcf{grid-template-columns:repeat(4,1fr);gap:3px;margin-bottom:6px}
-    .cc-hero .cf{padding:5px 3px;border-radius:6px}
-    .cc-hero .cfl{font-size:.438rem}
-    .cc-hero .cfv{font-size:.625rem;margin-top:1px}
-    .cc-hero .ct{gap:2px;justify-content:center}
-    .cc-hero .tag{font-size:.5rem;padding:2px 5px}
-    .hcright{gap:4px}
-    .hcright .cb{padding:6px;border-radius:8px}
-    .hcright .cbl{font-size:.438rem}
-    .hcright .cbv{font-size:.813rem}
-    .hcright .pbox{padding:6px;border-radius:8px}
-    .hcright .pbl{font-size:.438rem}
-    .hcright .pbc{font-size:1rem}
-    .hcright .pbd{font-size:.5rem;margin-top:1px}
-    .hcright .pbcp{font-size:.563rem;padding:3px 10px;margin-top:2px}
-    .hcright .cbtn{padding:8px 14px;font-size:.688rem;min-height:34px;border-radius:8px}
-    .hcright .crb{padding:5px;font-size:.625rem;min-height:28px;border-radius:6px}
+    /* 2. 1win фотка меньше */
+    .cc-hero{padding:14px;gap:10px;border-radius:16px;grid-template-columns:1fr;text-align:center}
+    .cc-hero .casino-img-wrap{aspect-ratio:16/7;border-radius:12px;margin-bottom:6px}
+    .cc-hero .rk{width:24px;height:24px;font-size:.625rem;border-radius:6px;top:8px;left:8px}
+    .cc-hero .bb{padding:4px 10px;font-size:.563rem;top:8px;right:8px}
+    .cc-hero .hci{width:44px;height:44px;border-radius:12px;font-size:1.375rem;margin-bottom:6px}
+    .cc-hero .hcn{font-size:1.125rem;margin-bottom:2px}
+    .cc-hero .hcr{gap:4px}
+    .cc-hero .hcs{font-size:.75rem}
+    .cc-hero .hcv{font-size:1rem}
+    .cc-hero .verified-badge{font-size:.563rem;padding:2px 7px;margin-top:4px}
+    .cc-hero .hcf{grid-template-columns:repeat(4,1fr);gap:4px;margin-bottom:8px}
+    .cc-hero .cf{padding:7px 4px;border-radius:8px}
+    .cc-hero .cfl{font-size:.5rem}
+    .cc-hero .cfv{font-size:.75rem;margin-top:1px}
+    .cc-hero .ct{gap:3px;justify-content:center}
+    .cc-hero .tag{font-size:.625rem;padding:3px 7px}
+    .hcright{gap:5px}
+    .hcright .cb{padding:8px;border-radius:10px}
+    .hcright .cbl{font-size:.5rem}
+    .hcright .cbv{font-size:.938rem}
+    .hcright .pbox{padding:8px;border-radius:10px}
+    .hcright .pbl{font-size:.5rem}
+    .hcright .pbc{font-size:1.125rem}
+    .hcright .pbd{font-size:.625rem;margin-top:1px}
+    .hcright .pbcp{font-size:.688rem;padding:4px 12px;margin-top:3px}
+    .hcright .cbtn{padding:10px 16px;font-size:.75rem;min-height:38px;border-radius:10px}
+    .hcright .crb{padding:6px;font-size:.688rem;min-height:32px;border-radius:8px}
     .hcright .cbtn,.hcright .crb{width:100%}
 
-    /* Казино 2 колонки 4:3 */
-    .cc-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-    .cc-grid .cc{padding:10px;border-radius:12px}
-    .cc-grid .cc .casino-img-wrap{aspect-ratio:4/3;border-radius:8px;margin-bottom:5px}
-    .cc-grid .cc .ci{width:30px;height:30px;border-radius:8px;font-size:.938rem}
-    .cc-grid .cc .cin h3{font-size:.75rem}
-    .cc-grid .cc .crn{font-size:.688rem}
-    .cc-grid .cc .crs{font-size:.625rem}
-    .cc-grid .cc .cf{padding:4px 3px;border-radius:5px}
-    .cc-grid .cc .cfv{font-size:.625rem}
-    .cc-grid .cc .cfl{font-size:.438rem}
-    .cc-grid .cc .tag{font-size:.5rem;padding:2px 5px}
-    .cc-grid .cc .cbtn{padding:7px 8px;font-size:.625rem;min-height:30px;border-radius:6px}
-    .cc-grid .cc .cb{padding:5px;border-radius:6px}
-    .cc-grid .cc .cbv{font-size:.75rem}
-    .cc-grid .cc .crb{padding:4px;font-size:.563rem;min-height:26px;border-radius:5px}
-    .cc-grid .cc .rk{width:20px;height:20px;font-size:.5rem;border-radius:5px;top:5px;left:5px}
-    .cc-grid .cc .ctp{gap:6px}
-    .cc-grid .cc .cfe{gap:2px}
-    .cc-grid .cc .ct{gap:2px}
-    .cc-grid .cc .cbt{gap:3px}
+    /* 1. Казино карточки — читаемые */
+    .cc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .cc-grid .cc{padding:12px;border-radius:14px}
+    .cc-grid .cc .casino-img-wrap{aspect-ratio:4/3;border-radius:10px;margin-bottom:6px}
+    .cc-grid .cc .ci{width:34px;height:34px;border-radius:9px;font-size:1.125rem}
+    .cc-grid .cc .cin h3{font-size:.875rem}
+    .cc-grid .cc .crn{font-size:.813rem}
+    .cc-grid .cc .crs{font-size:.75rem}
+    .cc-grid .cc .cf{padding:6px 4px;border-radius:7px}
+    .cc-grid .cc .cfv{font-size:.75rem}
+    .cc-grid .cc .cfl{font-size:.5rem}
+    .cc-grid .cc .tag{font-size:.625rem;padding:3px 7px}
+    .cc-grid .cc .cbtn{padding:9px 12px;font-size:.75rem;min-height:36px;border-radius:8px}
+    .cc-grid .cc .cb{padding:7px;border-radius:8px}
+    .cc-grid .cc .cbv{font-size:.875rem}
+    .cc-grid .cc .crb{padding:6px;font-size:.688rem;min-height:32px;border-radius:7px}
+    .cc-grid .cc .rk{width:22px;height:22px;font-size:.563rem;border-radius:6px;top:6px;left:6px}
+    .cc-grid .cc .ctp{gap:8px}
+    .cc-grid .cc .cfe{gap:3px}
+    .cc-grid .cc .ct{gap:3px}
+    .cc-grid .cc .cbt{gap:4px}
 
-    /* Прозрачность 3 колонки */
-    .mg{grid-template-columns:repeat(3,1fr);gap:5px}
-    .mg .mc{padding:10px 6px;border-radius:10px}
-    .mg .mc .mi{width:32px;height:32px;border-radius:8px;font-size:1rem;margin-bottom:5px}
-    .mg .mc h3{font-size:.688rem}
-    .mg .mc p{font-size:.563rem;line-height:1.3}
-    .mg .mc .mw{font-size:.563rem;padding:2px 6px;margin-top:4px}
+    /* 1. Прозрачность — 2 колонки, читаемые шрифты */
+    .mg{grid-template-columns:repeat(2,1fr);gap:8px}
+    .mg .mc{padding:16px 12px;border-radius:14px}
+    .mg .mc .mi{width:42px;height:42px;border-radius:12px;font-size:1.25rem;margin-bottom:8px}
+    .mg .mc h3{font-size:.875rem}
+    .mg .mc p{font-size:.75rem;line-height:1.5}
+    .mg .mc .mw{font-size:.688rem;padding:4px 10px;margin-top:6px}
 
-    /* 6. Гайды 3 колонки — показываем текст */
-    .gg{grid-template-columns:repeat(3,1fr);gap:5px}
-    .gg .gc .gim{height:70px;font-size:1.5rem}
-    .gg .gc .gbd{padding:7px}
-    .gg .gc .gtg{font-size:.438rem;padding:2px 5px;margin-bottom:3px}
-    .gg .gc h3{font-size:.625rem;margin-bottom:2px}
-    .gg .gc p{font-size:.563rem;-webkit-line-clamp:3;line-height:1.4}
-    .gg .gc .g-tips{margin-top:5px;gap:3px}
-    .gg .gc .g-tips li{font-size:.5rem;gap:3px;line-height:1.3}
-    .gg .gc .g-tips li::before{font-size:.5rem}
+    /* 1. Гайды — 2 колонки, читаемые шрифты, контент виден */
+    .gg{grid-template-columns:repeat(2,1fr);gap:8px}
+    .gg .gc .gim{height:100px;font-size:2rem}
+    .gg .gc .gbd{padding:12px}
+    .gg .gc .gtg{font-size:.563rem;padding:2px 8px;margin-bottom:5px}
+    .gg .gc h3{font-size:.813rem;margin-bottom:3px}
+    .gg .gc p{font-size:.75rem;-webkit-line-clamp:3;line-height:1.5}
+    .gg .gc .g-tips{margin-top:6px;gap:4px}
+    .gg .gc .g-tips li{font-size:.688rem;gap:4px;line-height:1.4}
+    .gg .gc .g-tips li::before{font-size:.688rem}
 
     /* Остальное */
     .fg{grid-template-columns:1fr}
     .cbt{flex-direction:column;width:100%}
     .cbt .cb,.cbt .cbtn{width:100%}
-    .pb{flex-direction:column;text-align:center;gap:6px;padding:10px;border-radius:10px}
-    .pb-i{font-size:1rem}
-    .pb-t{font-size:.75rem}
-    .pb-t small{font-size:.563rem}
-    .pb .cbtn{width:100%;padding:8px;font-size:.688rem;min-height:34px}
-    .ios-f{margin:0 2px 6px;padding:12px 6px;border-radius:14px}
+    .pb{flex-direction:column;text-align:center;gap:8px;padding:12px;border-radius:14px}
+    .pb-i{font-size:1.125rem}
+    .pb-t{font-size:.875rem}
+    .pb-t small{font-size:.688rem}
+    .pb .cbtn{width:100%;padding:10px;font-size:.75rem;min-height:38px}
+    .ios-f{margin:0 3px 8px;padding:14px 10px;border-radius:18px}
     .section{padding:2px 0}
     .container{padding:0 6px}
-    .f-wrap{padding:14px 10px}
-    .sh{margin-bottom:10px}
-    .sh h2{font-size:1.063rem}
-    .sh p{font-size:.688rem}
-    .sl{font-size:.563rem;padding:3px 8px}
-    .calc{padding:10px 6px;border-radius:12px;margin-top:8px}
-    .calc-l{grid-template-columns:1fr;gap:10px}
-    .calc-l h3{font-size:.938rem}
-    .calc-l>div:first-child p{font-size:.688rem;margin-bottom:8px}
-    .cinp{font-size:.938rem;padding:8px 12px 8px 30px;border-radius:10px}
-    .cii{font-size:.875rem;left:10px;bottom:10px}
+    .f-wrap{padding:16px 12px}
+    .sh{margin-bottom:12px}
+    .sh h2{font-size:1.125rem}
+    .sh p{font-size:.75rem}
+    .sl{font-size:.625rem;padding:4px 10px}
+    .calc{padding:12px 8px;border-radius:14px;margin-top:10px}
+    .calc-l{grid-template-columns:1fr;gap:12px}
+    .calc-l h3{font-size:1rem}
+    .calc-l>div:first-child p{font-size:.75rem;margin-bottom:8px}
+    .cinp{font-size:1rem;padding:10px 14px 10px 34px;border-radius:12px}
+    .cii{font-size:.938rem;left:10px;bottom:12px}
     .cpt{font-size:.688rem;padding:4px 10px}
-    .crc{padding:12px;border-radius:10px}
-    .crc-l{font-size:.563rem}
-    .crc-t{font-size:1.75rem;margin-bottom:8px}
+    .crc{padding:14px;border-radius:12px}
+    .crc-l{font-size:.625rem}
+    .crc-t{font-size:1.875rem;margin-bottom:8px}
     .cbd{gap:3px}
-    .cbr{padding:5px 8px;border-radius:6px}
-    .cbr-l{font-size:.625rem}.cbr-v{font-size:.688rem}
-    .fl .fi .fq{padding:10px 12px;font-size:.75rem;min-height:38px}
-    .fl .fi .fa-i{padding:0 12px 10px;font-size:.688rem}
-    .fic{width:22px;height:22px;min-width:22px;font-size:.688rem;border-radius:5px}
+    .cbr{padding:6px 10px;border-radius:7px}
+    .cbr-l{font-size:.688rem}.cbr-v{font-size:.75rem}
+    .fl .fi .fq{padding:12px 14px;font-size:.813rem;min-height:42px}
+    .fl .fi .fa-i{padding:0 14px 12px;font-size:.75rem}
+    .fic{width:24px;height:24px;min-width:24px;font-size:.75rem;border-radius:6px}
     .fl{gap:5px}
-    .fd{padding:10px 12px;font-size:.625rem;border-radius:10px;margin-bottom:12px}
-    .fg{gap:12px}
-    .fa2 .fl2{font-size:.875rem;gap:6px}
+    .fd{padding:12px 14px;font-size:.688rem;border-radius:12px;margin-bottom:14px}
+    .fg{gap:14px}
+    .fa2 .fl2{font-size:.938rem;gap:6px}
     .fa2 .fl2 .i-avatar{width:24px;height:24px}
-    .fa2 p{font-size:.688rem}
-    .fcl h4{font-size:.688rem;margin-bottom:6px}
-    .fls{gap:4px}
-    .fls a{font-size:.688rem;min-height:24px}
-    .fbt p{font-size:.625rem}
-
-    /* 5. Убираем чёрный градиент с таблицы */
+    .fa2 p{font-size:.75rem}
+    .fcl h4{font-size:.75rem;margin-bottom:8px}
+    .fls{gap:5px}
+    .fls a{font-size:.75rem;min-height:28px}
+    .fbt p{font-size:.688rem}
     .cw::after{display:none}
 }
 
 /* ====== MOBILE 480 ====== */
 @media(max-width:480px){
-    .hero{padding:64px 6px 8px}
-    .hero h1{font-size:1.375rem;letter-spacing:-1.2px}
+    .hero{padding:64px 4px 4px}
+    .hero-left{padding:16px 12px;border-radius:16px}
+    .hero h1{font-size:1.313rem;letter-spacing:-1px}
     .hero p{font-size:.75rem}
     .hero-btns{flex-direction:column;align-items:center;width:100%}
-    .btn{width:100%;justify-content:center;padding:10px 16px;font-size:.75rem;min-height:38px}
-    .hcf{grid-template-columns:repeat(2,1fr);gap:2px}
-    .cc-hero .hci{width:36px;height:36px;font-size:1.125rem}
-    .cc-hero .hcn{font-size:.938rem}
+    .btn{width:100%;justify-content:center;padding:10px 16px;font-size:.75rem;min-height:40px}
+    .hs-n{font-size:1.375rem}
+    .hcf{grid-template-columns:repeat(2,1fr);gap:3px}
 
-    .cc-grid{gap:5px}
-    .cc-grid .cc{padding:8px;border-radius:10px}
-    .cc-grid .cc .cin h3{font-size:.688rem}
-    .cc-grid .cc .ci{width:26px;height:26px;font-size:.813rem;border-radius:6px}
+    .cc-grid{gap:6px}
+    .cc-grid .cc{padding:10px;border-radius:12px}
+    .cc-grid .cc .cin h3{font-size:.813rem}
+    .cc-grid .cc .ci{width:30px;height:30px;font-size:1rem;border-radius:8px}
 
-    .mg .mc{padding:8px 5px;border-radius:8px}
-    .mg .mc .mi{width:28px;height:28px;font-size:.875rem;margin-bottom:4px;border-radius:7px}
-    .mg .mc h3{font-size:.625rem}
-    .mg .mc p{font-size:.5rem}
-    .mg .mc .mw{font-size:.5rem;padding:2px 4px}
+    .mg .mc{padding:14px 10px;border-radius:12px}
+    .mg .mc .mi{width:38px;height:38px;font-size:1.125rem;margin-bottom:6px;border-radius:10px}
+    .mg .mc h3{font-size:.813rem}
+    .mg .mc p{font-size:.688rem}
+    .mg .mc .mw{font-size:.625rem;padding:3px 8px}
 
-    .gg .gc .gim{height:55px;font-size:1.25rem}
-    .gg .gc .gbd{padding:5px}
-    .gg .gc h3{font-size:.563rem}
-    .gg .gc p{font-size:.5rem}
-    .gg .gc .g-tips li{font-size:.438rem}
+    .gg .gc .gim{height:85px;font-size:1.75rem}
+    .gg .gc .gbd{padding:10px}
+    .gg .gc h3{font-size:.75rem}
+    .gg .gc p{font-size:.688rem}
+    .gg .gc .g-tips li{font-size:.625rem}
 
     .sb{flex-wrap:wrap;gap:6px;padding:8px 10px;padding-bottom:calc(8px + env(safe-area-inset-bottom))}
-    .sb-t{font-size:.688rem}.sb-b{padding:7px 14px;font-size:.688rem;min-height:34px}
+    .sb-t{font-size:.75rem}.sb-b{padding:8px 18px;font-size:.75rem;min-height:38px}
 
-    .modal{padding:16px;border-radius:18px}
-    .mht{font-size:1.063rem}
-    .mhi{width:40px;height:40px;font-size:1.25rem;border-radius:12px}
-    .mh{gap:8px;margin-bottom:12px}
-    .ms h4{font-size:.813rem;margin-bottom:6px}
-    .mfg{gap:4px}
-    .mf{padding:6px 8px;border-radius:6px}
-    .mfl{font-size:.625rem}.mfv{font-size:.688rem}
-    .mpc{grid-template-columns:1fr;gap:6px}
-    .mp li,.mco li{font-size:.625rem;padding:5px 6px}
+    .modal{padding:18px;border-radius:20px}
+    .mht{font-size:1.125rem}
+    .mhi{width:44px;height:44px;font-size:1.375rem;border-radius:14px}
+    .mh{gap:10px;margin-bottom:14px}
+    .ms h4{font-size:.875rem;margin-bottom:8px}
+    .mfg{gap:5px}
+    .mf{padding:8px 10px;border-radius:8px}
+    .mfl{font-size:.688rem}.mfv{font-size:.75rem}
+    .mpc{grid-template-columns:1fr;gap:8px}
+    .mp li,.mco li{font-size:.688rem;padding:6px 8px}
 }
 
 /* ====== MOBILE 360 ====== */
 @media(max-width:360px){
-    .hero{padding:60px 4px 6px}
+    .hero{padding:60px 3px 3px}
+    .hero-left{padding:14px 10px;border-radius:14px}
     .hero h1{font-size:1.188rem}
     .hs-n{font-size:1.188rem}
 
-    .cc-hero .hci{width:32px;height:32px;font-size:1rem}
-    .cc-hero .hcn{font-size:.875rem}
+    .cc-hero .hci{width:38px;height:38px;font-size:1.125rem}
+    .cc-hero .hcn{font-size:1rem}
     .cc-hero .hcf{grid-template-columns:repeat(2,1fr)}
 
-    .cc-grid .cc{padding:6px;border-radius:8px}
-    .cc-grid .cc .cin h3{font-size:.625rem}
-    .cc-grid .cc .ci{width:22px;height:22px;font-size:.75rem}
+    .cc-grid .cc{padding:8px;border-radius:10px}
+    .cc-grid .cc .cin h3{font-size:.75rem}
+    .cc-grid .cc .ci{width:26px;height:26px;font-size:.875rem}
 
-    .mg .mc .mi{width:24px;height:24px;font-size:.75rem}
-    .mg .mc h3{font-size:.563rem}
-    .gg .gc .gim{height:45px;font-size:1rem}
-    .gg .gc h3{font-size:.5rem}
+    .mg .mc{padding:12px 8px}
+    .mg .mc .mi{width:34px;height:34px;font-size:1rem}
+    .mg .mc h3{font-size:.75rem}
+
+    .gg .gc .gim{height:70px;font-size:1.5rem}
+    .gg .gc h3{font-size:.688rem}
+    .gg .gc p{font-size:.625rem}
 }
 
 ::-webkit-scrollbar{width:6px}
