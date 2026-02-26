@@ -461,6 +461,16 @@ body:hover .cg{opacity:1}
 .reveal.vis{opacity:1;transform:translateY(0) scale(1)}
 .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
 
+/* ====== HERO MOBILE TRUST GRID (новый блок) ====== */
+.hero-trust-grid{
+    display:none; /* скрыт на десктопе */
+}
+
+/* ====== HERO MOBILE DATE BADGE (новый блок) ====== */
+.hero-date-mob{
+    display:none; /* скрыт на десктопе */
+}
+
 /* ====== DESKTOP 1024 ====== */
 @media(max-width:1024px){
     .hero-layout{grid-template-columns:1fr;text-align:center}
@@ -508,12 +518,41 @@ body:hover .cg{opacity:1}
         border-radius:22px;
         padding:28px 22px;
         box-shadow:var(--shadow-md);
+        position:relative;
     }
-    .hero h1{margin-top:0;font-size:1.5rem;letter-spacing:-1.2px;margin-bottom:10px}
+
+    /* ===== 3. ДАТА В ПРАВЫЙ ВЕРХНИЙ УГОЛ КАРТОЧКИ ===== */
+    .hero-date-mob{
+        display:inline-flex;
+        align-items:center;
+        gap:5px;
+        position:absolute;
+        top:12px;
+        right:12px;
+        padding:4px 10px;
+        border-radius:100px;
+        font-size:.625rem;
+        font-weight:600;
+        color:var(--green-l);
+        background:linear-gradient(135deg,rgba(34,197,94,.1),rgba(34,197,94,.03));
+        border:1px solid rgba(34,197,94,.15);
+        z-index:3;
+    }
+    .hero-date-mob .pd{
+        width:5px;height:5px;
+    }
+
+    /* ===== 3. ЗАГОЛОВОК БОЛЬШЕ ===== */
+    .hero h1{
+        margin-top:0;
+        font-size:1.875rem;
+        letter-spacing:-1.5px;
+        margin-bottom:10px;
+    }
     .hero p{font-size:.813rem;margin-bottom:14px;line-height:1.5}
     .hero-btns{gap:8px}
 
-    /* ===== 3. КНОПКА МЕТОДОЛОГИЯ КОРОЧЕ ===== */
+    /* ===== 1. КНОПКИ — рейтинг чуть короче, методология короткая ===== */
     .hero-btns .btn{
         padding:11px 18px;
         font-size:.813rem;
@@ -523,7 +562,7 @@ body:hover .cg{opacity:1}
         flex:none;
     }
     .hero-btns .btn-glow{
-        padding:11px 22px;
+        padding:11px 20px;
     }
     .hero-btns .btn-ghost{
         padding:11px 16px;
@@ -535,14 +574,43 @@ body:hover .cg{opacity:1}
     .hs-n{font-size:1.625rem}
     .hs-l{font-size:.688rem}
 
-    /* Trust bar */
-    .trust-bar{padding:6px 16px;gap:4px}
-    .tc{padding:8px 10px;gap:5px;border-radius:10px}
-    .tc-i{font-size:1rem}
-    .tc-t{font-size:.75rem}
-    .tc-s{font-size:.625rem}
+    /* ===== 2. TRUST GRID ПОД КАРТОЧКОЙ ===== */
+    .hero-trust-grid{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:6px;
+        margin-top:14px;
+    }
+    .hero-trust-grid .htg-item{
+        display:flex;
+        align-items:center;
+        gap:8px;
+        padding:10px 12px;
+        border-radius:12px;
+        background:var(--card-bg);
+        backdrop-filter:var(--card-blur);-webkit-backdrop-filter:var(--card-blur);
+        border:1px solid var(--card-border);
+    }
+    .hero-trust-grid .htg-icon{
+        font-size:1.125rem;
+        flex-shrink:0;
+    }
+    .hero-trust-grid .htg-title{
+        font-weight:700;
+        font-size:.75rem;
+        color:var(--white);
+        line-height:1.2;
+    }
+    .hero-trust-grid .htg-sub{
+        font-size:.625rem;
+        color:var(--green-l);
+        font-weight:500;
+    }
 
-    /* ===== 2. БОЛЬШЕ ОТСТУПОВ ОТ ГРАНЕЙ ===== */
+    /* Trust bar — скрыть оригинальный */
+    .trust-bar{display:none}
+
+    /* Отступы */
     .container{padding:0 16px}
     .ios-f{margin:0 4px 8px;padding:18px 16px;border-radius:20px}
 
@@ -598,7 +666,7 @@ body:hover .cg{opacity:1}
     .cc-grid .cc .ct{gap:3px}
     .cc-grid .cc .cbt{gap:4px}
 
-    /* Методология — 2 колонки */
+    /* Методология */
     .mg{grid-template-columns:repeat(2,1fr);gap:10px}
     .mg .mc{padding:18px 14px;border-radius:16px}
     .mg .mc .mi{width:42px;height:42px;border-radius:12px;font-size:1.25rem;margin-bottom:8px}
@@ -606,7 +674,7 @@ body:hover .cg{opacity:1}
     .mg .mc p{font-size:.75rem;line-height:1.5}
     .mg .mc .mw{font-size:.688rem;padding:4px 10px;margin-top:6px}
 
-    /* Гайды — 2 колонки */
+    /* Гайды */
     .gg{grid-template-columns:repeat(2,1fr);gap:10px}
     .gg .gc .gim{height:100px;font-size:2rem}
     .gg .gc .gbd{padding:14px}
@@ -665,10 +733,9 @@ body:hover .cg{opacity:1}
 @media(max-width:480px){
     .hero{padding:68px 18px 18px}
     .hero-left{padding:24px 18px;border-radius:20px}
-    .hero h1{font-size:1.313rem;letter-spacing:-1px}
+    .hero h1{font-size:1.625rem;letter-spacing:-1.2px}
     .hero p{font-size:.75rem}
 
-    /* Кнопки hero — колонкой, методология короткая */
     .hero-btns{
         flex-direction:column;
         align-items:center;
@@ -677,7 +744,7 @@ body:hover .cg{opacity:1}
     .hero-btns .btn-glow{
         width:100%;
         justify-content:center;
-        padding:11px 20px;
+        padding:11px 18px;
         font-size:.75rem;
         min-height:40px;
     }
@@ -727,13 +794,21 @@ body:hover .cg{opacity:1}
     .f-wrap{padding:16px 14px}
     .calc{padding:12px 10px}
     .pb{padding:12px 14px}
+
+    .hero-trust-grid{gap:5px;margin-top:12px}
+    .hero-trust-grid .htg-item{padding:8px 10px;border-radius:10px;gap:6px}
+    .hero-trust-grid .htg-title{font-size:.688rem}
+    .hero-trust-grid .htg-sub{font-size:.563rem}
+    .hero-trust-grid .htg-icon{font-size:1rem}
+
+    .hero-date-mob{font-size:.563rem;padding:3px 8px;top:10px;right:10px}
 }
 
 /* ====== MOBILE 360 ====== */
 @media(max-width:360px){
     .hero{padding:64px 14px 14px}
     .hero-left{padding:20px 14px;border-radius:16px}
-    .hero h1{font-size:1.188rem}
+    .hero h1{font-size:1.438rem}
     .hs-n{font-size:1.188rem}
 
     .container{padding:0 12px}
@@ -759,6 +834,8 @@ body:hover .cg{opacity:1}
         padding:9px 16px;
         font-size:.688rem;
     }
+
+    .hero-date-mob{font-size:.5rem;padding:3px 7px;top:8px;right:8px}
 }
 
 ::-webkit-scrollbar{width:6px}
@@ -784,7 +861,6 @@ body:hover .cg{opacity:1}
 <canvas id="pc"></canvas>
 <div class="cg" id="cursorGlow"></div>
 
-<!-- Заменить nav.island содержимое -->
 <nav class="island" id="island">
     <div class="i-logo"><img src="avatar.png" alt="Paytaoff" class="i-avatar"><span>Paytaoff</span></div>
     <div class="i-div"></div>
@@ -810,7 +886,10 @@ body:hover .cg{opacity:1}
 <section class="hero">
     <div class="hero-layout">
         <div class="hero-left">
-        <div class="hero-badge"><span class="pd"></span>Обновлено: Март 2026</div>
+            <!-- Дата в правый верхний угол (только мобил) -->
+            <div class="hero-date-mob"><span class="pd"></span> Март 2026</div>
+
+            <div class="hero-badge"><span class="pd"></span>Обновлено: Март 2026</div>
             <h1>Честные обзоры<br><span class="gt">онлайн казино</span></h1>
             <p>Независимые рейтинги и экспертные оценки лучших площадок для игроков из России и СНГ</p>
             <div class="hero-btns">
@@ -832,6 +911,38 @@ body:hover .cg{opacity:1}
                 <div class="security-badge license">📜 Лицензия Кюрасао</div>
                 <div class="security-badge">🛡️ Защита данных</div>
                 <div class="security-badge">✅ Независимый обзор</div>
+            </div>
+
+            <!-- Trust grid под карточкой (только мобил) -->
+            <div class="hero-trust-grid">
+                <div class="htg-item">
+                    <div class="htg-icon">🛡️</div>
+                    <div>
+                        <div class="htg-title">Лицензированные</div>
+                        <div class="htg-sub">✓ Проверено экспертами</div>
+                    </div>
+                </div>
+                <div class="htg-item">
+                    <div class="htg-icon">⚡</div>
+                    <div>
+                        <div class="htg-title">Быстрые выплаты</div>
+                        <div class="htg-sub">✓ Вывод от 15 мин</div>
+                    </div>
+                </div>
+                <div class="htg-item">
+                    <div class="htg-icon">🔒</div>
+                    <div>
+                        <div class="htg-title">Безопасность</div>
+                        <div class="htg-sub">✓ 256-bit шифрование</div>
+                    </div>
+                </div>
+                <div class="htg-item">
+                    <div class="htg-icon">💬</div>
+                    <div>
+                        <div class="htg-title">Поддержка 24/7</div>
+                        <div class="htg-sub">✓ Чат и email</div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="hero-right">
@@ -1045,16 +1156,16 @@ body:hover .cg{opacity:1}
         <div class="f-wrap">
             <div class="fg">
                 <div class="fa2">
-    <div class="fl2">
-        <img src="avatar.png" alt="Paytaoff" class="i-avatar" style="animation:none">
-        <span>Paytaoff</span>
-    </div>
-    <p>Независимые обзоры онлайн казино. Проверено по 50+ критериям.</p>
-    <div class="security-badges" style="margin-top:12px;justify-content:flex-start">
-        <div class="security-badge ssl">🔒 SSL</div>
-        <div class="security-badge">✅ Независимый обзор</div>
-    </div>
-             </div>
+                    <div class="fl2">
+                        <img src="avatar.png" alt="Paytaoff" class="i-avatar" style="animation:none">
+                        <span>Paytaoff</span>
+                    </div>
+                    <p>Независимые обзоры онлайн казино. Проверено по 50+ критериям.</p>
+                    <div class="security-badges" style="margin-top:12px;justify-content:flex-start">
+                        <div class="security-badge ssl">🔒 SSL</div>
+                        <div class="security-badge">✅ Независимый обзор</div>
+                    </div>
+                </div>
                 <div class="fcl"><h4>Казино</h4><ul class="fls"><li><a href="#top">Рейтинг 2026</a></li><li><a href="#compare">Сравнение</a></li></ul></div>
                 <div class="fcl"><h4>Информация</h4><ul class="fls"><li><a href="#method">Методология</a></li><li><a href="#guides">Гайды</a></li><li><a href="#faq">FAQ</a></li><li><a href="#">Конфиденциальность</a></li></ul></div>
             </div>
