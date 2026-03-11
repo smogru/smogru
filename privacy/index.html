@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <title>Политика конфиденциальности — Paytaoff</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#060810;--accent:#38bdf8;--accent-l:#7dd3fc;--rose:#a78bfa;--rose-l:#c4b5fd;--amber:#f59e0b;--amber-l:#fcd34d;--green:#34d399;--green-l:#6ee7b7;--white:#fff;--text:#dce8f5;--muted:#8a9bb5;--card-bg:linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.012));--card-border:rgba(255,255,255,.07);--card-blur:blur(20px) saturate(1.8);--shadow-sm:0 4px 20px rgba(0,0,0,.2);--nav-blur:blur(16px) saturate(1.6);--scale:0.95}
+html{scroll-behavior:smooth;font-size:calc(16px * var(--scale))}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;letter-spacing:0.01em;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
+a{text-decoration:none;color:inherit}
+.container{max-width:800px;margin:0 auto;padding:0 16px}
+.i-avatar{width:36px;height:36px;border-radius:11px;object-fit:cover;flex-shrink:0;border:2px solid rgba(56,189,248,.3);box-shadow:0 3px 12px rgba(56,189,248,.2);transition:all .3s}
+.bg-wrap{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;contain:strict}
+.bg-mesh{position:absolute;inset:0;contain:strict;background:radial-gradient(ellipse 70% 50% at 10% 15%,rgba(56,189,248,.14) 0%,transparent 50%),radial-gradient(ellipse 50% 70% at 90% 80%,rgba(167,139,250,.1) 0%,transparent 50%),linear-gradient(180deg,#060810 0%,#080c18 35%,#070a14 65%,#060810 100%)}
+.island{position:fixed;top:calc(8px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);z-index:10000;padding:6px 16px;border-radius:100px;display:flex;align-items:center;gap:8px;background:rgba(6,8,16,.5);backdrop-filter:var(--nav-blur);-webkit-backdrop-filter:var(--nav-blur);border:1px solid rgba(255,255,255,.08);box-shadow:0 4px 28px rgba(0,0,0,.25);transition:all .4s}
+.island.scrolled{background:rgba(6,8,16,.72);border-color:rgba(56,189,248,.12)}
+.i-logo{display:flex;align-items:center;gap:10px;padding:10px 18px;font-family:'Space Grotesk';font-weight:700;font-size:1.125rem;white-space:nowrap}
+.i-logo span{background:linear-gradient(135deg,var(--accent-l),var(--rose-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.i-div{width:1px;height:26px;background:rgba(255,255,255,.08);flex-shrink:0}
+.i-back{padding:10px 20px;border-radius:100px;font-size:.875rem;font-weight:600;color:var(--accent-l);background:rgba(56,189,248,.06);border:1px solid rgba(56,189,248,.12);transition:all .3s;display:flex;align-items:center;gap:5px}
+.i-back:hover{background:rgba(56,189,248,.12);transform:translateY(-1px)}
+.i-age{background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.12);color:#fca5a5;padding:8px 16px;border-radius:100px;font-size:.813rem;font-weight:700;flex-shrink:0}
+.page-hero{padding:120px 16px 40px;text-align:center;position:relative;z-index:1}
+.page-hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:900;margin-bottom:12px;letter-spacing:-1.5px}
+.page-hero .gt{background:linear-gradient(135deg,var(--accent-l),var(--rose-l),var(--amber-l));background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gs 4s ease infinite}
+@keyframes gs{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.page-hero p{font-size:1.063rem;color:var(--muted);max-width:540px;margin:0 auto;line-height:1.7}
+.page-icon{font-size:3rem;margin-bottom:16px;display:block}
+.update-date{display:inline-flex;align-items:center;gap:5px;padding:6px 16px;border-radius:100px;font-size:.813rem;color:var(--green-l);background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.12);margin-top:12px}
+.content{position:relative;z-index:1;padding-bottom:60px}
+.card{border-radius:24px;padding:32px;margin-bottom:16px;background:var(--card-bg);backdrop-filter:var(--card-blur);-webkit-backdrop-filter:var(--card-blur);border:1px solid var(--card-border);box-shadow:var(--shadow-sm)}
+.card h2{font-size:1.375rem;font-weight:800;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.card h3{font-size:1.063rem;font-weight:700;margin:16px 0 8px;color:var(--white)}
+.card p{color:var(--muted);font-size:.938rem;line-height:1.8;margin-bottom:12px}
+.card ul{color:var(--muted);font-size:.938rem;line-height:1.8;margin:10px 0 16px 20px;display:flex;flex-direction:column;gap:6px}
+.card a{color:var(--accent-l);border-bottom:1px solid rgba(56,189,248,.2);transition:all .3s}
+.card a:hover{border-bottom-color:var(--accent-l)}
+.footer-simple{padding:40px 0;border-top:1px solid rgba(56,189,248,.06);text-align:center;position:relative;z-index:1}
+.footer-simple p{font-size:.813rem;color:var(--muted)}
+.footer-simple a{color:var(--accent-l)}
+@media(max-width:768px){
+    .island{padding:4px 8px}.i-logo{padding:6px 10px;font-size:.875rem;gap:7px}.i-avatar{width:28px;height:28px;border-radius:8px}
+    .i-back{padding:6px 12px;font-size:.75rem}.i-age{padding:5px 10px;font-size:.625rem}.i-div{height:18px}
+    .page-hero{padding:90px 16px 24px}.page-hero h1{font-size:1.75rem}.page-hero p{font-size:.875rem}.page-icon{font-size:2.25rem}
+    .card{padding:20px 18px;border-radius:20px;margin-bottom:12px}.card h2{font-size:1.125rem}.card p,.card ul{font-size:.813rem}
+    .container{padding:0 14px}
+}
+@media(max-width:480px){.page-hero h1{font-size:1.5rem}.card{padding:16px 14px;border-radius:18px}.card h2{font-size:1rem;gap:7px}}
+    </style>
+</head>
+<body>
+
+<div class="bg-wrap"><div class="bg-mesh"></div></div>
+
+<nav class="island" id="island">
+    <a href="/" class="i-logo"><img src="../avatar.png" alt="Paytaoff" class="i-avatar"><span>Paytaoff</span></a>
+    <div class="i-div"></div>
+    <a href="/" class="i-back">← На главную</a>
+    <div class="i-div"></div>
+    <div class="i-age">18+</div>
+</nav>
+
+<section class="page-hero">
+    <span class="page-icon">🔒</span>
+    <h1>Политика <span class="gt">конфиденциальности</span></h1>
+    <p>Как мы собираем, используем и защищаем вашу информацию</p>
+    <div class="update-date">📅 Последнее обновление: Март 2026</div>
+</section>
+
+<div class="content">
+    <div class="container">
+
+        <div class="card">
+            <h2>1. Общие положения</h2>
+            <p>Настоящая Политика конфиденциальности описывает, как Paytaoff (далее — «мы», «наш сайт») собирает, использует и защищает информацию пользователей сайта.</p>
+            <p>Используя наш сайт, вы соглашаетесь с условиями данной Политики. Если вы не согласны — пожалуйста, покиньте сайт.</p>
+        </div>
+
+        <div class="card">
+            <h2>2. Какую информацию мы собираем</h2>
+            <h3>2.1. Автоматически собираемая информация</h3>
+            <p>При посещении сайта автоматически могут собираться:</p>
+            <ul>
+                <li>IP-адрес (анонимизированный)</li>
+                <li>Тип и версия браузера</li>
+                <li>Операционная система</li>
+                <li>Страницы, которые вы посещаете</li>
+                <li>Время и дата посещения</li>
+                <li>Источник перехода (реферер)</li>
+            </ul>
+            <h3>2.2. Cookies</h3>
+            <p>Наш сайт может использовать cookies — небольшие текстовые файлы, сохраняемые в вашем браузере. Cookies используются для:</p>
+            <ul>
+                <li>Корректной работы сайта</li>
+                <li>Запоминания пользовательских настроек</li>
+                <li>Анализа трафика (через сторонние сервисы аналитики)</li>
+            </ul>
+            <p>Вы можете отключить cookies в настройках браузера. Это может повлиять на функциональность сайта.</p>
+            <h3>2.3. Данные, которые мы НЕ собираем</h3>
+            <p>Мы <strong style="color:var(--white)">не собираем</strong>:</p>
+            <ul>
+                <li>Имена и фамилии</li>
+                <li>Адреса электронной почты (если вы не отправляете их нам добровольно)</li>
+                <li>Платёжные данные (номера карт, счетов)</li>
+                <li>Пароли и данные для входа в казино</li>
+                <li>Данные о финансовых транзакциях</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>3. Как мы используем информацию</h2>
+            <p>Собранная информация используется для:</p>
+            <ul>
+                <li>Улучшения работы сайта и пользовательского опыта</li>
+                <li>Анализа посещаемости и популярности контента</li>
+                <li>Обеспечения безопасности сайта</li>
+                <li>Соблюдения правовых обязательств</li>
+            </ul>
+            <p>Мы <strong style="color:var(--white)">не продаём</strong> и <strong style="color:var(--white)">не передаём</strong> вашу персональную информацию третьим лицам для маркетинговых целей.</p>
+        </div>
+
+        <div class="card">
+            <h2>4. Сторонние сервисы</h2>
+            <p>Наш сайт может использовать сторонние сервисы аналитики (например, Google Analytics) для сбора анонимной статистики посещений.</p>
+            <p>Наш сайт содержит ссылки на сторонние сайты (казино). Мы не несём ответственности за политику конфиденциальности этих сайтов. Рекомендуем ознакомиться с их условиями перед регистрацией.</p>
+        </div>
+
+        <div class="card">
+            <h2>5. Партнёрские ссылки</h2>
+            <p>Сайт содержит партнёрские (реферальные) ссылки. При переходе по таким ссылкам сторонние сайты могут устанавливать собственные cookies для отслеживания регистрации. Это стандартная практика партнёрского маркетинга.</p>
+            <p>Мы <strong style="color:var(--white)">не подменяем</strong> cookies, не используем iframe с невидимыми зонами и не применяем иные манипуляции с отслеживанием.</p>
+        </div>
+
+        <div class="card">
+            <h2>6. Безопасность данных</h2>
+            <p>Мы принимаем разумные меры для защиты информации:</p>
+            <ul>
+                <li>Сайт работает по протоколу HTTPS с SSL-шифрованием</li>
+                <li>Мы не храним персональные данные пользователей</li>
+                <li>Регулярно обновляем программное обеспечение</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>7. Права пользователей</h2>
+            <p>Вы имеете право:</p>
+            <ul>
+                <li>Запросить информацию о данных, которые мы можем хранить</li>
+                <li>Запросить удаление ваших данных</li>
+                <li>Отключить cookies в настройках браузера</li>
+                <li>Отказаться от использования сайта</li>
+            </ul>
+            <p>Для реализации этих прав свяжитесь с нами через <a href="https://t.me/paytaoff" target="_blank" rel="noopener">Telegram</a>.</p>
+        </div>
+
+        <div class="card">
+            <h2>8. Несовершеннолетние</h2>
+            <p>Наш сайт предназначен только для лиц <strong style="color:#fca5a5">старше 18 лет</strong>. Мы сознательно не собираем информацию о несовершеннолетних. Если нам станет известно, что мы получили данные несовершеннолетнего — мы немедленно их удалим.</p>
+        </div>
+
+        <div class="card">
+            <h2>9. Изменения политики</h2>
+            <p>Мы оставляем за собой право обновлять данную Политику. Актуальная версия всегда доступна на этой странице. Дата последнего обновления указана в верхней части документа.</p>
+            <p>Продолжение использования сайта после внесения изменений означает ваше согласие с обновлённой Политикой.</p>
+        </div>
+
+        <div class="card">
+            <h2>10. Контакты</h2>
+            <p>По вопросам конфиденциальности обращайтесь:</p>
+            <ul>
+                <li><strong style="color:var(--white)">Telegram:</strong> <a href="https://t.me/paytaoff" target="_blank" rel="noopener">@paytaoff</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<footer class="footer-simple">
+    <div class="container">
+        <p>© 2026 <a href="/">Paytaoff</a>. Все права защищены. <strong style="color:#fca5a5">18+</strong></p>
+        <p style="margin-top:8px"><a href="/">Главная</a> · <a href="/about/">О нас</a> · <a href="/responsible-gaming/">Ответственная игра</a> · <a href="/terms/">Условия</a></p>
+    </div>
+</footer>
+
+<script>
+addEventListener('scroll',()=>{document.getElementById('island').classList.toggle('scrolled',scrollY>60)},{passive:true});
+</script>
+</body>
+</html>
