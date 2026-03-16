@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <title>О проекте — Paytaoff</title>
+    <meta name="description" content="Paytaoff — независимый информационный ресурс с честными обзорами онлайн казино. Узнайте о нашей методологии и принципах. 18+">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#060810">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#060810;--accent:#38bdf8;--accent-l:#7dd3fc;--rose:#a78bfa;--rose-l:#c4b5fd;--amber:#f59e0b;--amber-l:#fcd34d;--green:#34d399;--green-l:#6ee7b7;--white:#fff;--text:#dce8f5;--muted:#8a9bb5;--card-bg:linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.012));--card-border:rgba(255,255,255,.07);--card-blur:blur(20px) saturate(1.8);--shadow-sm:0 4px 20px rgba(0,0,0,.2);--shadow-md:0 8px 32px rgba(0,0,0,.25);--shadow-glow:0 0 35px rgba(56,189,248,.06);--nav-blur:blur(16px) saturate(1.6);--scale:0.95}
+html{scroll-behavior:smooth;font-size:calc(16px * var(--scale))}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;letter-spacing:0.01em}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
+a{text-decoration:none;color:inherit}
+.container{max-width:800px;margin:0 auto;padding:0 16px}
+
+.i-avatar{width:36px;height:36px;border-radius:11px;object-fit:cover;flex-shrink:0;border:2px solid rgba(56,189,248,.3);box-shadow:0 3px 12px rgba(56,189,248,.2);transition:all .3s}
+.i-avatar:hover{border-color:rgba(56,189,248,.5);transform:scale(1.08)}
+
+.bg-wrap{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;contain:strict}
+.bg-mesh{position:absolute;inset:0;contain:strict;background:
+    radial-gradient(ellipse 70% 50% at 10% 15%,rgba(56,189,248,.14) 0%,transparent 50%),
+    radial-gradient(ellipse 50% 70% at 90% 80%,rgba(167,139,250,.1) 0%,transparent 50%),
+    linear-gradient(180deg,#060810 0%,#080c18 35%,#070a14 65%,#060810 100%)}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);animation:bm var(--d) ease-in-out infinite alternate;opacity:.5}
+.b1{width:450px;height:450px;top:-8%;left:-5%;background:radial-gradient(circle,rgba(56,189,248,.18),transparent 70%);--d:10s}
+.b2{width:380px;height:380px;bottom:-5%;right:-5%;background:radial-gradient(circle,rgba(167,139,250,.12),transparent 70%);--d:13s}
+@keyframes bm{0%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-20px) scale(1.08)}100%{transform:translate(-15px,25px) scale(.95)}}
+
+.island{position:fixed;top:calc(8px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);z-index:10000;padding:6px 16px;border-radius:100px;display:flex;align-items:center;gap:8px;background:rgba(6,8,16,.5);backdrop-filter:var(--nav-blur);-webkit-backdrop-filter:var(--nav-blur);border:1px solid rgba(255,255,255,.08);box-shadow:0 4px 28px rgba(0,0,0,.25);transition:all .4s}
+.island.scrolled{background:rgba(6,8,16,.72);border-color:rgba(56,189,248,.12)}
+.i-logo{display:flex;align-items:center;gap:10px;padding:10px 18px;font-family:'Space Grotesk';font-weight:700;font-size:1.125rem;white-space:nowrap}
+.i-logo span{background:linear-gradient(135deg,var(--accent-l),var(--rose-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.i-div{width:1px;height:26px;background:rgba(255,255,255,.08);flex-shrink:0}
+.i-back{padding:10px 20px;border-radius:100px;font-size:.875rem;font-weight:600;color:var(--accent-l);background:rgba(56,189,248,.06);border:1px solid rgba(56,189,248,.12);transition:all .3s;display:flex;align-items:center;gap:5px}
+.i-back:hover{background:rgba(56,189,248,.12);transform:translateY(-1px)}
+.i-age{background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.12);color:#fca5a5;padding:8px 16px;border-radius:100px;font-size:.813rem;font-weight:700;flex-shrink:0}
+
+.page-hero{padding:120px 16px 40px;text-align:center;position:relative;z-index:1}
+.page-hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:900;margin-bottom:12px;letter-spacing:-1.5px}
+.gt{background:linear-gradient(135deg,var(--accent-l),var(--rose-l),var(--amber-l));background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gs 4s ease infinite}
+@keyframes gs{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.page-hero p{font-size:1.063rem;color:var(--muted);max-width:540px;margin:0 auto;line-height:1.7}
+.page-icon{font-size:3rem;margin-bottom:16px;display:block}
+
+.content{position:relative;z-index:1;padding-bottom:60px}
+.card{border-radius:24px;padding:32px;margin-bottom:16px;background:var(--card-bg);backdrop-filter:var(--card-blur);-webkit-backdrop-filter:var(--card-blur);border:1px solid var(--card-border);box-shadow:var(--shadow-sm);position:relative;overflow:hidden;transition:all .4s}
+.card::after{content:'';position:absolute;top:0;left:0;right:0;height:70px;background:linear-gradient(180deg,rgba(56,189,248,.012),transparent);pointer-events:none;border-radius:24px 24px 0 0}
+.card:hover{border-color:rgba(56,189,248,.12);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.card h2{font-size:1.5rem;font-weight:800;margin-bottom:14px;display:flex;align-items:center;gap:10px;position:relative;z-index:1}
+.card h3{font-size:1.125rem;font-weight:700;margin:18px 0 10px;color:var(--white);position:relative;z-index:1}
+.card p{color:var(--muted);font-size:.938rem;line-height:1.8;margin-bottom:12px;position:relative;z-index:1}
+.card ul{color:var(--muted);font-size:.938rem;line-height:1.8;margin:10px 0 16px 20px;display:flex;flex-direction:column;gap:8px;position:relative;z-index:1}
+.card a{color:var(--accent-l);border-bottom:1px solid rgba(56,189,248,.2);transition:all .3s}
+.card a:hover{border-bottom-color:var(--accent-l)}
+
+.blue-card{border-color:rgba(56,189,248,.12)}.blue-card::after{background:linear-gradient(180deg,rgba(56,189,248,.02),transparent)}
+.green-card{border-color:rgba(34,197,94,.12)}.green-card::after{background:linear-gradient(180deg,rgba(34,197,94,.015),transparent)}
+.green-card h2{color:var(--green-l)}
+.warn-card{border-color:rgba(248,113,113,.12)}.warn-card::after{background:linear-gradient(180deg,rgba(248,113,113,.012),transparent)}
+
+.values-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+.value-item{padding:22px;border-radius:18px;background:rgba(56,189,248,.04);border:1px solid rgba(56,189,248,.08);transition:all .4s cubic-bezier(.22,1,.36,1)}
+.value-item:hover{transform:translateY(-4px);border-color:rgba(56,189,248,.18);box-shadow:var(--shadow-sm)}
+.value-icon{font-size:1.75rem;margin-bottom:8px}
+.value-title{font-weight:700;font-size:.938rem;margin-bottom:4px;color:var(--white)}
+.value-desc{font-size:.813rem;color:var(--muted);line-height:1.6}
+
+.footer-simple{padding:40px 0;border-top:1px solid rgba(56,189,248,.06);text-align:center;position:relative;z-index:1}
+.footer-simple p{font-size:.813rem;color:var(--muted)}
+.footer-simple a{color:var(--accent-l)}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1)}
+.reveal.vis{opacity:1;transform:translateY(0)}
+.rd1{transition-delay:.08s}.rd2{transition-delay:.16s}
+
+@media(max-width:768px){
+    .island{padding:4px 8px}.i-logo{padding:6px 10px;font-size:.875rem;gap:7px}.i-avatar{width:28px;height:28px;border-radius:8px}
+    .i-back{padding:6px 12px;font-size:.75rem}.i-age{padding:5px 10px;font-size:.625rem}.i-div{height:18px}
+    .page-hero{padding:90px 16px 24px}.page-hero h1{font-size:1.75rem}.page-hero p{font-size:.875rem}.page-icon{font-size:2.25rem}
+    .card{padding:20px 18px;border-radius:20px;margin-bottom:12px}.card h2{font-size:1.188rem}.card p,.card ul{font-size:.813rem}
+    .values-grid{grid-template-columns:1fr}.container{padding:0 14px}
+}
+@media(max-width:480px){
+    .page-hero h1{font-size:1.5rem}.card{padding:16px 14px;border-radius:18px}.card h2{font-size:1.063rem;gap:7px}
+    .value-item{padding:16px}
+}
+    </style>
+</head>
+<body>
+
+<div class="bg-wrap">
+    <div class="bg-mesh"></div>
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+</div>
+
+<nav class="island" id="island">
+    <a href="/" class="i-logo"><img src="../avatar.png" alt="Paytaoff" class="i-avatar"><span>Paytaoff</span></a>
+    <div class="i-div"></div>
+    <a href="/" class="i-back">← На главную</a>
+    <div class="i-div"></div>
+    <div class="i-age">18+</div>
+</nav>
+
+<section class="page-hero">
+    <span class="page-icon">ℹ️</span>
+    <h1>О проекте <span class="gt">Paytaoff</span></h1>
+    <p>Независимый информационный ресурс с честными обзорами онлайн казино</p>
+</section>
+
+<div class="content">
+    <div class="container">
+
+        <div class="card blue-card reveal">
+            <h2>🎯 Кто мы</h2>
+            <p>Paytaoff — это <strong style="color:var(--white)">независимый информационный ресурс</strong>, посвящённый обзорам онлайн казино. Мы не являемся казино, букмекерской конторой или игорным заведением.</p>
+            <p>Мы не принимаем ставки, не обрабатываем платежи и не предоставляем игровые услуги. Наша задача — собрать, проанализировать и предоставить объективную информацию, чтобы помочь пользователям принимать осознанные решения.</p>
+            <p>Мы <strong style="color:var(--white)">не являемся официальным представителем</strong> ни одного из представленных на сайте казино.</p>
+        </div>
+
+        <div class="card reveal rd1">
+            <h2>📊 Наша методология</h2>
+            <p>Каждое казино в нашем рейтинге проходит проверку по <strong style="color:var(--white)">50+ критериям</strong>, разделённым на 6 категорий:</p>
+            <ul>
+                <li><strong style="color:var(--white)">Безопасность (25%)</strong> — лицензии, SSL-шифрование, репутация, политика KYC</li>
+                <li><strong style="color:var(--white)">Бонусы (20%)</strong> — щедрость предложений, справедливость условий отыгрыша</li>
+                <li><strong style="color:var(--white)">Выбор игр (20%)</strong> — количество, разнообразие, качество провайдеров</li>
+                <li><strong style="color:var(--white)">Платежи (15%)</strong> — методы ввода/вывода, скорость обработки</li>
+                <li><strong style="color:var(--white)">Поддержка (10%)</strong> — доступность, скорость ответа, качество помощи</li>
+                <li><strong style="color:var(--white)">Мобильная версия (10%)</strong> — удобство, наличие приложения</li>
+            </ul>
+            <p>Мы указываем как плюсы, так и минусы каждого казино. Ни одно казино не получает искусственно завышенную оценку.</p>
+        </div>
+
+        <div class="card green-card reveal rd2">
+            <h2>✅ Наши принципы</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">🔍</div>
+                    <div class="value-title">Прозрачность</div>
+                    <div class="value-desc">Мы открыто указываем, что сайт содержит партнёрские ссылки. Наши обзоры объективны</div>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">⚖️</div>
+                    <div class="value-title">Честность</div>
+                    <div class="value-desc">Мы показываем и плюсы, и минусы. Не скрываем недостатки казино</div>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">🛡️</div>
+                    <div class="value-title">Безопасность</div>
+                    <div class="value-desc">Мы рекомендуем только лицензированные площадки с SSL-шифрованием</div>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">🤝</div>
+                    <div class="value-title">Ответственность</div>
+                    <div class="value-desc">Мы активно продвигаем ответственную игру и предоставляем ресурсы помощи</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card reveal">
+            <h2>💰 Партнёрские ссылки</h2>
+            <p>Наш сайт содержит <strong style="color:var(--white)">партнёрские (реферальные) ссылки</strong>. Это означает, что если вы переходите по ссылке на сайт казино и регистрируетесь, мы можем получить комиссионное вознаграждение.</p>
+            <p>Важно понимать:</p>
+            <ul>
+                <li>Наличие партнёрских ссылок <strong style="color:var(--white)">не влияет</strong> на наши оценки и рейтинги</li>
+                <li>Для вас переход по партнёрской ссылке <strong style="color:var(--white)">бесплатен</strong> и не увеличивает стоимость услуг</li>
+                <li>Партнёрские ссылки помогают нам поддерживать и развивать проект</li>
+                <li>Мы не гарантируем выигрыш и не побуждаем к азартным играм</li>
+            </ul>
+        </div>
+
+        <div class="card reveal">
+            <h2>📬 Контакты</h2>
+            <p>Связаться с нами можно через:</p>
+            <ul>
+                <li><strong style="color:var(--white)">Telegram канал:</strong> <a href="https://t.me/paytaoff" target="_blank" rel="noopener">@paytaoff</a></li>
+                <li><strong style="color:var(--white)">Сайт:</strong> <a href="https://www.paytaoff.ru">www.paytaoff.ru</a></li>
+            </ul>
+            <p>Мы открыты для предложений по улучшению сайта, сообщений об ошибках и вопросов пользователей.</p>
+        </div>
+
+        <div class="card warn-card reveal">
+            <h2 style="color:#fca5a5">⚠️ Дисклеймер</h2>
+            <p>Paytaoff — независимый информационный ресурс. Мы не являемся казино, не принимаем ставки и не обрабатываем платежи. Информация на сайте носит исключительно ознакомительный характер.</p>
+            <p>Азартные игры разрешены только лицам <strong style="color:#fca5a5">старше 18 лет</strong>. Азартные игры могут вызывать зависимость. <a href="/responsible-gaming/">Играйте ответственно</a>.</p>
+            <p>Мы не гарантируем точность, полноту или актуальность представленной информации. Условия казино могут изменяться. Перед регистрацией всегда проверяйте актуальные условия на официальном сайте казино.</p>
+        </div>
+
+    </div>
+</div>
+
+<footer class="footer-simple">
+    <div class="container">
+        <p>© 2026 <a href="/">Paytaoff</a>. Все права защищены. <strong style="color:#fca5a5">18+</strong></p>
+        <p style="margin-top:8px"><a href="/">Главная</a> · <a href="/responsible-gaming/">Ответственная игра</a> · <a href="/privacy/">Конфиденциальность</a> · <a href="/terms/">Условия</a></p>
+    </div>
+</footer>
+
+<script>
+addEventListener('scroll',()=>{document.getElementById('island').classList.toggle('scrolled',scrollY>60)},{passive:true});
+
+const rO=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.05,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(e=>rO.observe(e));
+
+if(!matchMedia('(max-width:768px)').matches){
+    document.querySelectorAll('.card,.value-item').forEach(c=>{
+        c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)/r.width*3;const y=(e.clientY-r.top-r.height/2)/r.height*-3;c.style.transform=`perspective(600px) rotateX(${y}deg) rotateY(${x}deg) translateY(-2px)`});
+        c.addEventListener('mouseleave',()=>{c.style.transform=''});
+    });
+}
+</script>
+</body>
+</html>
