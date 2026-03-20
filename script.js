@@ -106,7 +106,7 @@ addEventListener('scroll',()=>{
     document.getElementById('scrollTop').classList.toggle('show',y>300);
     document.getElementById('island').classList.toggle('scrolled',y>60);
     if(!sbClosed)document.getElementById('stickyBar').classList.toggle('show',y>500);
-    const s=['top','method','guides','help','faq'];
+    const s=['top','guide','help','faq'];
     const l=document.querySelectorAll('.i-link');
     let c='';
     s.forEach(id=>{const e=document.getElementById(id);if(e&&y>=e.offsetTop-160)c=id});
