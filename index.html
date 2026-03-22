@@ -20,14 +20,12 @@
 
 <div class="scroll-progress" id="scrollProgress"></div>
 
-<!-- КОСМИЧЕСКИЕ КОМЕТЫ -->
 <div class="comet comet-1"></div>
 <div class="comet comet-2"></div>
 <div class="comet comet-3"></div>
 <div class="comet comet-4"></div>
 <div class="comet comet-5"></div>
 
-<!-- КОСМИЧЕСКАЯ ТУМАННОСТЬ -->
 <div class="nebula nebula-1"></div>
 <div class="nebula nebula-2"></div>
 
@@ -53,7 +51,6 @@
 <div class="corner-glow corner-glow-tl"></div>
 <div class="corner-glow corner-glow-br"></div>
 
-<!-- КОСМИЧЕСКИЕ КОЛЬЦА ДЕКОР -->
 <div class="space-ring space-ring-1"></div>
 <div class="space-ring space-ring-2"></div>
 
@@ -86,7 +83,6 @@
     <div class="i-div"></div>
     <div class="i-age">18+</div>
 
-    <!-- МОБИЛЬНОЕ МЕНЮ НАВИГАЦИИ -->
     <div class="mob-nav-wrap" id="mobNavWrap">
         <button class="mob-nav-toggle" id="mobNavToggle" onclick="toggleMobNav()">
             <span>☰</span>
@@ -106,14 +102,8 @@
             <a href="javascript:void(0)" onclick="shareWebsite();closeMobNav()">🔗 Поделиться</a>
         </div>
     </div>
-
-    <button class="i-burger" id="burger" onclick="toggleMob()" style="display:none!important"><span></span><span></span><span></span></button>
 </nav>
 
-<div class="mob-menu" id="mobMenu" style="display:none!important">
-</div>
-
-<!-- EASTER EGG -->
 <div class="easter-egg" id="easterEgg">
     <div class="easter-egg-content">
         <div class="easter-egg-icon">🚀</div>
@@ -178,7 +168,6 @@
     <div class="tc"><div class="tc-i">💬</div><div><div class="tc-t">Поддержка 24/7</div><div class="tc-s">✓ Чат и email</div></div></div>
 </div>
 
-<!-- TOP CASINOS -->
 <section class="section" id="top">
     <div class="container">
         <div class="ios-f">
@@ -203,62 +192,31 @@
                     </div>
                     <div class="hcright">
                         <div class="cb"><div class="cbl">Приветственный бонус</div><div class="cbv">До 500% +70 FS</div></div>
-                        <div class="pbox"><div class="pbl">Промокод</div><div class="pbc" onclick="copyPromo()">SMOG</div><div class="pbd">Бонус к первым 4 депозитам + 70 фриспинов</div><div class="pbcp" id="promoCopy" onclick="copyPromo()">📋 Скопировать код</div></div>
+                        <div class="pbox"><div class="pbl">Промокод</div><div class="pbc" onclick="copyPromo('SMOG','promoCopy')">SMOG</div><div class="pbd">Бонус к первым 4 депозитам + 70 фриспинов</div><div class="pbcp" id="promoCopy" onclick="copyPromo('SMOG','promoCopy')">📋 Скопировать код</div></div>
                         <a href="https://lkts.pro/5024" target="_blank" rel="noopener" class="cbtn cbtn-gold ripple">Перейти на сайт →</a>
                         <a href="/reviews/1win/" class="crb">📖 Подробный обзор</a>
                     </div>
                 </div>
 
-                <!-- #2 MELLSTROY + #3 Lucky Bear — РЯДОМ -->
-                <div class="cc-duo">
-                    <div class="cc-hero mellstroy-hero reveal shine-effect">
-                        <div class="glass-shine"></div><div class="rk rk2">2</div><div class="bb bb-fire">🔥 Новинка</div>
-                        <div class="hcl">
-                            <div class="casino-img-wrap"><img class="casino-img" src="img/mellstroy.png" alt="Mellstroy Casino" loading="eager"></div>
-                            <div class="hci hci-mell">🔥</div><div class="hcn">MELLSTROY</div>
-                            <div class="hcr"><div class="hcs">★★★★★</div><span class="hcv">9.6</span></div>
-                            <div class="verified-badge" style="margin-top:7px">✓ Проверен</div>
-                        </div>
-                        <div class="hcc">
-                            <div class="hcf"><div class="cf"><div class="cfl">Игры</div><div class="cfv">8,000+</div></div><div class="cf"><div class="cfl">Вывод</div><div class="cfv">до 12ч</div></div><div class="cf"><div class="cfl">Поддержка</div><div class="cfv">24/7</div></div><div class="cf"><div class="cfl">FS</div><div class="cfv">400</div></div></div>
-                            <div class="ct"><span class="tag tg">✓ 550%</span><span class="tag tg">✓ 400 FS</span><span class="tag tg">✓ Крипто</span><span class="tag tg">✓ VIP</span></div>
-                        </div>
-                        <div class="hcright">
-                            <div class="cb cb-mell"><div class="cbl">Бонус</div><div class="cbv cbv-mell">До 550% +400 FS</div></div>
-                            <a href="https://mellehdw.life/?open=register&p=u7s2" target="_blank" rel="noopener" class="cbtn cbtn-mell ripple">🔥 Перейти →</a>
-                            <a href="/reviews/mellstroy/" class="crb">📖 Обзор</a>
-                        </div>
-                    </div>
+                <!-- #2-#7 ЕДИНАЯ СЕТКА -->
+                <div class="cc-grid cc-grid-6">
+                    <!-- #2 Mellstroy -->
+                    <div class="cc reveal d1 shine-effect"><div class="rk rk2">2</div><div class="bb bb-fire">🔥 Новинка</div><div class="casino-img-wrap"><img class="casino-img" src="img/mellstroy.png" alt="Mellstroy Casino" loading="eager"></div><div class="ctp"><div class="ci ci-mell">🔥</div><div class="cin"><h3>MELLSTROY</h3><div class="cra"><div class="crs">★★★★★</div><span class="crn">9.6</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Игры</div><div class="cfv">8,000+</div></div><div class="cf"><div class="cfl">Вывод</div><div class="cfv">до 12ч</div></div><div class="cf"><div class="cfl">Поддержка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ 550%</span><span class="tag tg">✓ 400 FS</span><span class="tag tg">✓ Крипто</span></div><div class="cbt"><div class="cb cb-mell"><div class="cbl">Бонус</div><div class="cbv cbv-mell">До 550% +400 FS</div></div><a href="https://mellehdw.life/?open=register&p=u7s2" target="_blank" rel="noopener" class="cbtn cbtn-mell ripple">🔥 Перейти →</a></div><a href="/reviews/mellstroy/" class="crb">📖 Обзор</a></div>
 
-                    <div class="cc-hero luckybear-hero reveal shine-effect">
-                        <div class="glass-shine"></div><div class="rk rk3">3</div><div class="bb bb-bear">🐻 Новинка</div>
-                        <div class="hcl">
-                            <div class="casino-img-wrap"><img class="casino-img" src="img/luckybear.png" alt="Lucky Bear Casino" loading="eager"></div>
-                            <div class="hci hci-bear">🐻</div><div class="hcn">Lucky Bear</div>
-                            <div class="hcr"><div class="hcs">★★★★★</div><span class="hcv">9.5</span></div>
-                            <div class="verified-badge" style="margin-top:7px">✓ Проверен</div>
-                        </div>
-                        <div class="hcc">
-                            <div class="hcf"><div class="cf"><div class="cfl">Игры</div><div class="cfv">7,000+</div></div><div class="cf"><div class="cfl">Вывод</div><div class="cfv">до 12ч</div></div><div class="cf"><div class="cfl">Поддержка</div><div class="cfv">24/7</div></div><div class="cf"><div class="cfl">FS</div><div class="cfv">250</div></div></div>
-                            <div class="ct"><span class="tag tg">✓ 360%</span><span class="tag tg">✓ 250 FS</span><span class="tag tg">✓ Крипто</span><span class="tag tg">✓ Быстро</span></div>
-                        </div>
-                        <div class="hcright">
-                            <div class="cb cb-bear"><div class="cbl">Бонус</div><div class="cbv cbv-bear">До 360% +250 FS</div></div>
-                            <a href="https://lb777.xyz/1GY28M" target="_blank" rel="noopener" class="cbtn cbtn-bear ripple">🐻 Перейти →</a>
-                            <a href="/reviews/luckybear/" class="crb">📖 Обзор</a>
-                        </div>
-                    </div>
-                </div>
+                    <!-- #3 Lucky Bear -->
+                    <div class="cc reveal d2 shine-effect"><div class="rk rk3">3</div><div class="bb bb-bear">🐻 Новинка</div><div class="casino-img-wrap"><img class="casino-img" src="img/luckybear.png" alt="Lucky Bear Casino" loading="eager"></div><div class="ctp"><div class="ci ci-bear">🐻</div><div class="cin"><h3>Lucky Bear</h3><div class="cra"><div class="crs">★★★★★</div><span class="crn">9.5</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Игры</div><div class="cfv">7,000+</div></div><div class="cf"><div class="cfl">Вывод</div><div class="cfv">до 12ч</div></div><div class="cf"><div class="cfl">Поддержка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ 360%</span><span class="tag tg">✓ 250 FS</span><span class="tag tg">✓ Крипто</span></div><div class="pbox pbox-mini"><div class="pbl">Промокод</div><div class="pbc" onclick="copyPromo('SMOG','promoCopyBear')">SMOG</div><div class="pbd">🎡 Первым 300 игрокам — прокрут колеса фортуны!</div><div class="pbcp" id="promoCopyBear" onclick="copyPromo('SMOG','promoCopyBear')">📋 Скопировать</div></div><div class="cbt"><div class="cb cb-bear"><div class="cbl">Бонус</div><div class="cbv cbv-bear">До 360% +250 FS</div></div><a href="https://lb777.xyz/1GY28M" target="_blank" rel="noopener" class="cbtn cbtn-bear ripple">🐻 Перейти →</a></div><a href="/reviews/luckybear/" class="crb">📖 Обзор</a></div>
 
-                <div class="cc-grid">
                     <!-- #4 Arkada -->
-                    <div class="cc reveal d1 shine-effect"><div class="rk rk4">4</div><div class="casino-img-wrap"><img class="casino-img" src="img/arkada.png" alt="Arkada" loading="lazy" style="animation-delay:.3s"></div><div class="ctp"><div class="ci">🎰</div><div class="cin"><h3>Arkada Casino</h3><div class="cra"><div class="crs">★★★★★</div><span class="crn">9.4</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Игры</div><div class="cfv">5,000+</div></div><div class="cf"><div class="cfl">Вывод</div><div class="cfv">до 24ч</div></div><div class="cf"><div class="cfl">Поддержка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ Стильный</span><span class="tag tg">✓ Щедрый</span><span class="tag tr">✕ Новое</span></div><div class="cbt"><div class="cb"><div class="cbl">Бонус</div><div class="cbv">До 200%</div></div><a href="https://grid-cyberlane.com/s98fda0f8" target="_blank" rel="noopener" class="cbtn ripple">Играть →</a></div><a href="/reviews/arkada/" class="crb">📖 Обзор</a></div>
+                    <div class="cc reveal d3 shine-effect"><div class="rk rk4">4</div><div class="casino-img-wrap"><img class="casino-img" src="img/arkada.png" alt="Arkada" loading="lazy"></div><div class="ctp"><div class="ci">🎰</div><div class="cin"><h3>Arkada Casino</h3><div class="cra"><div class="crs">★★★★★</div><span class="crn">9.4</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Игры</div><div class="cfv">5,000+</div></div><div class="cf"><div class="cfl">Вывод</div><div class="cfv">до 24ч</div></div><div class="cf"><div class="cfl">Поддержка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ Стильный</span><span class="tag tg">✓ Щедрый</span><span class="tag tr">✕ Новое</span></div><div class="cbt"><div class="cb"><div class="cbl">Бонус</div><div class="cbv">До 200%</div></div><a href="https://grid-cyberlane.com/s98fda0f8" target="_blank" rel="noopener" class="cbtn ripple">Играть →</a></div><a href="/reviews/arkada/" class="crb">📖 Обзор</a></div>
+
                     <!-- #5 CatCasino -->
-                    <div class="cc reveal d2 shine-effect"><div class="rk rk5">5</div><div class="casino-img-wrap"><img class="casino-img" src="img/catcasino.png" alt="CatCasino" loading="lazy" style="animation-delay:.4s"></div><div class="ctp"><div class="ci">🐱</div><div class="cin"><h3>CatCasino</h3><div class="cra"><div class="crs">★★★★★</div><span class="crn">9.2</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Игры</div><div class="cfv">4,000+</div></div><div class="cf"><div class="cfl">Вывод</div><div class="cfv">до 48ч</div></div><div class="cf"><div class="cfl">Поддержка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ Турниры</span><span class="tag tg">✓ Лояльность</span><span class="tag tr">✕ 48ч вывод</span></div><div class="cbt"><div class="cb"><div class="cbl">Бонус</div><div class="cbv">До 325%</div></div><a href="https://catchthecatthree.com/sb716b632" target="_blank" rel="noopener" class="cbtn ripple">Играть →</a></div><a href="/reviews/catcasino/" class="crb">📖 Обзор</a></div>
+                    <div class="cc reveal d4 shine-effect"><div class="rk rk5">5</div><div class="casino-img-wrap"><img class="casino-img" src="img/catcasino.png" alt="CatCasino" loading="lazy"></div><div class="ctp"><div class="ci">🐱</div><div class="cin"><h3>CatCasino</h3><div class="cra"><div class="crs">★★★★★</div><span class="crn">9.2</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Игры</div><div class="cfv">4,000+</div></div><div class="cf"><div class="cfl">Вывод</div><div class="cfv">до 48ч</div></div><div class="cf"><div class="cfl">Поддержка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ Турниры</span><span class="tag tg">✓ Лояльность</span><span class="tag tr">✕ 48ч вывод</span></div><div class="cbt"><div class="cb"><div class="cbl">Бонус</div><div class="cbv">До 325%</div></div><a href="https://catchthecatthree.com/sb716b632" target="_blank" rel="noopener" class="cbtn ripple">Играть →</a></div><a href="/reviews/catcasino/" class="crb">📖 Обзор</a></div>
+
                     <!-- #6 Kometa -->
-                    <div class="cc reveal d3 shine-effect"><div class="rk rk6">6</div><div class="casino-img-wrap"><img class="casino-img" src="img/kometa.png" alt="Kometa" loading="lazy" style="animation-delay:.5s"></div><div class="ctp"><div class="ci">☄️</div><div class="cin"><h3>Kometa</h3><div class="cra"><div class="crs">★★★★☆</div><span class="crn">9.0</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Игры</div><div class="cfv">3,500+</div></div><div class="cf"><div class="cfl">Вывод</div><div class="cfv">до 24ч</div></div><div class="cf"><div class="cfl">Поддержка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ Космос</span><span class="tag tg">✓ Кэшбэк</span><span class="tag tr">✕ Меньше</span></div><div class="cbt"><div class="cb"><div class="cbl">Бонус</div><div class="cbv">До 255%</div></div><a href="https://searing-path.com/s2e02d62f" target="_blank" rel="noopener" class="cbtn ripple">Играть →</a></div><a href="/reviews/kometa/" class="crb">📖 Обзор</a></div>
+                    <div class="cc reveal d5 shine-effect"><div class="rk rk6">6</div><div class="casino-img-wrap"><img class="casino-img" src="img/kometa.png" alt="Kometa" loading="lazy"></div><div class="ctp"><div class="ci">☄️</div><div class="cin"><h3>Kometa</h3><div class="cra"><div class="crs">★★★★☆</div><span class="crn">9.0</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Игры</div><div class="cfv">3,500+</div></div><div class="cf"><div class="cfl">Вывод</div><div class="cfv">до 24ч</div></div><div class="cf"><div class="cfl">Поддержка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ Космос</span><span class="tag tg">✓ Кэшбэк</span><span class="tag tr">✕ Меньше</span></div><div class="cbt"><div class="cb"><div class="cbl">Бонус</div><div class="cbv">До 255%</div></div><a href="https://searing-path.com/s2e02d62f" target="_blank" rel="noopener" class="cbtn ripple">Играть →</a></div><a href="/reviews/kometa/" class="crb">📖 Обзор</a></div>
+
                     <!-- #7 Kent -->
-                    <div class="cc reveal d4 shine-effect"><div class="rk rk7">7</div><div class="casino-img-wrap"><img class="casino-img" src="img/kent.png" alt="Kent" loading="lazy" style="animation-delay:.6s"></div><div class="ctp"><div class="ci">🎩</div><div class="cin"><h3>Kent</h3><div class="cra"><div class="crs">★★★★☆</div><span class="crn">8.8</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Игры</div><div class="cfv">3,000+</div></div><div class="cf"><div class="cfl">Вывод</div><div class="cfv">до 48ч</div></div><div class="cf"><div class="cfl">Поддержка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ VIP</span><span class="tag tg">✓ Элегантный</span><span class="tag tr">✕ Мало акций</span></div><div class="cbt"><div class="cb"><div class="cbl">Бонус</div><div class="cbv">До 150%</div></div><a href="https://mealmenalc.com/s4882a91c" target="_blank" rel="noopener" class="cbtn ripple">Играть →</a></div><a href="/reviews/kent/" class="crb">📖 Обзор</a></div>
+                    <div class="cc reveal d5 shine-effect"><div class="rk rk7">7</div><div class="casino-img-wrap"><img class="casino-img" src="img/kent.png" alt="Kent" loading="lazy"></div><div class="ctp"><div class="ci">🎩</div><div class="cin"><h3>Kent</h3><div class="cra"><div class="crs">★★★★☆</div><span class="crn">8.8</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Игры</div><div class="cfv">3,000+</div></div><div class="cf"><div class="cfl">Вывод</div><div class="cfv">до 48ч</div></div><div class="cf"><div class="cfl">Поддержка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ VIP</span><span class="tag tg">✓ Элегантный</span><span class="tag tr">✕ Мало акций</span></div><div class="cbt"><div class="cb"><div class="cbl">Бонус</div><div class="cbv">До 150%</div></div><a href="https://mealmenalc.com/s4882a91c" target="_blank" rel="noopener" class="cbtn ripple">Играть →</a></div><a href="/reviews/kent/" class="crb">📖 Обзор</a></div>
                 </div>
             </div>
 
@@ -277,7 +235,6 @@
     </div>
 </section>
 
-<!-- GID -->
 <section class="section" id="guide">
     <div class="container">
         <div class="ios-f">
@@ -304,7 +261,6 @@
     </div>
 </section>
 
-<!-- HELP -->
 <section class="section" id="help">
     <div class="container">
         <div class="ios-f">
@@ -319,7 +275,6 @@
     </div>
 </section>
 
-<!-- FAQ -->
 <section class="section" id="faq">
     <div class="container">
         <div class="ios-f">
@@ -328,9 +283,9 @@
                 <div class="fl">
                     <div class="fi reveal"><div class="fq" onclick="toggleFaq(this)"><span>Как вы выбираете казино?</span><div class="fic">+</div></div><div class="fa"><div class="fa-i">Проверяем 50+ критериев: лицензия, репутация, выплаты, поддержка.</div></div></div>
                     <div class="fi reveal d1"><div class="fq" onclick="toggleFaq(this)"><span>Можно ли доверять обзорам?</span><div class="fic">+</div></div><div class="fa"><div class="fa-i">Плюсы и минусы. Партнёрские ссылки не влияют на оценки.</div></div></div>
-                    <div class="fi reveal d2"><div class="fq" onclick="toggleFaq(this)"><span>Как использовать SMOG?</span><div class="fic">+</div></div><div class="fa"><div class="fa-i">На 1win при регистрации введите SMOG в поле промокода.</div></div></div>
+                    <div class="fi reveal d2"><div class="fq" onclick="toggleFaq(this)"><span>Как использовать SMOG?</span><div class="fic">+</div></div><div class="fa"><div class="fa-i">На 1win при регистрации введите SMOG в поле промокода. На Lucky Bear — SMOG даёт прокрут колеса фортуны первым 300 игрокам.</div></div></div>
                     <div class="fi reveal d3"><div class="fq" onclick="toggleFaq(this)"><span>Что такое MELLSTROY?</span><div class="fic">+</div></div><div class="fa"><div class="fa-i">Казино с бонусом 550% + 400 FS. Вывод до 12ч.</div></div></div>
-                    <div class="fi reveal d4"><div class="fq" onclick="toggleFaq(this)"><span>Что такое Lucky Bear?</span><div class="fic">+</div></div><div class="fa"><div class="fa-i">Казино с бонусом 360% + 250 FS, быстрый вывод, крипто.</div></div></div>
+                    <div class="fi reveal d4"><div class="fq" onclick="toggleFaq(this)"><span>Что такое Lucky Bear?</span><div class="fic">+</div></div><div class="fa"><div class="fa-i">Казино с бонусом 360% + 250 FS. Промокод SMOG даёт прокрут колеса фортуны первым 300 игрокам!</div></div></div>
                 </div>
                 <div class="fl">
                     <div class="fi reveal"><div class="fq" onclick="toggleFaq(this)"><span>Что такое вейджер?</span><div class="fic">+</div></div><div class="fa"><div class="fa-i">Количество раз для отыгрыша. x30 = проставить 30 раз.</div></div></div>
@@ -343,8 +298,6 @@
         </div>
     </div>
 </section>
-
-<!-- ТИКЕР УБРАН -->
 
 <footer class="footer">
     <div class="container">
