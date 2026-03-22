@@ -105,11 +105,7 @@ function shareWebsite(){
     }else{
         navigator.clipboard.writeText(location.href).then(()=>{
             const b=event.target.closest('.share-btn');
-            if(b){
-                const o=b.innerHTML;
-                b.innerHTML='✅ Скопировано!';
-                setTimeout(()=>b.innerHTML=o,2e3);
-            }
+            if(b){const o=b.innerHTML;b.innerHTML='✅ Скопировано!';setTimeout(()=>b.innerHTML=o,2e3)}
         }).catch(()=>prompt('Скопируйте:',location.href));
     }
 }
@@ -179,16 +175,10 @@ const cO=new IntersectionObserver(e=>{
 document.querySelectorAll('[data-count]').forEach(e=>cO.observe(e));
 
 // Mobile menu (old — disabled)
-function toggleMob(){
-    document.getElementById('burger').classList.toggle('on');
-    document.getElementById('mobMenu').classList.toggle('on');
-}
-function closeMob(){
-    document.getElementById('burger').classList.remove('on');
-    document.getElementById('mobMenu').classList.remove('on');
-}
+function toggleMob(){}
+function closeMob(){}
 
-// Mobile Nav Dropdown (NEW)
+// Mobile Nav Dropdown
 function toggleMobNav(){
     const dd=document.getElementById('mobNavDropdown');
     dd.classList.toggle('open');
@@ -213,17 +203,19 @@ function toggleFaq(el){
     }
 }
 
-// Copy promo
-function copyPromo(){
-    navigator.clipboard.writeText('SMOG').then(()=>{
-        const el=document.getElementById('promoCopy');
-        el.textContent='✅ Скопировано!';
-        el.classList.add('copied');
-        setTimeout(()=>{
-            el.textContent='📋 Скопировать код';
-            el.classList.remove('copied');
-        },2500);
-    }).catch(()=>prompt('Скопируйте промокод:','SMOG'));
+// Copy promo — универсальная
+function copyPromo(code,elId){
+    navigator.clipboard.writeText(code).then(()=>{
+        const el=document.getElementById(elId);
+        if(el){
+            el.textContent='✅ Скопировано!';
+            el.classList.add('copied');
+            setTimeout(()=>{
+                el.textContent='📋 Скопировать код';
+                el.classList.remove('copied');
+            },2500);
+        }
+    }).catch(()=>prompt('Скопируйте промокод:',code));
 }
 
 // Calculator
@@ -239,7 +231,7 @@ function calcBonus(){
     setTimeout(()=>totalEl.style.transform='scale(1)',300);
 }
 
-// Ripple effect
+// Ripple
 document.querySelectorAll('.ripple').forEach(btn=>{
     btn.addEventListener('click',function(e){
         const w=document.createElement('span');
@@ -254,19 +246,15 @@ document.querySelectorAll('.ripple').forEach(btn=>{
     });
 });
 
-// Easter Egg — Konami Code
+// Easter Egg — Konami
 let konamiSeq=[];
 const konamiCode=[38,38,40,40,37,39,37,39,66,65];
 document.addEventListener('keydown',e=>{
     konamiSeq.push(e.keyCode);
     konamiSeq=konamiSeq.slice(-10);
-    if(konamiSeq.join(',')==konamiCode.join(',')){
-        document.getElementById('easterEgg').classList.add('show');
-    }
+    if(konamiSeq.join(',')==konamiCode.join(','))document.getElementById('easterEgg').classList.add('show');
 });
-function closeEasterEgg(){
-    document.getElementById('easterEgg').classList.remove('show');
-}
+function closeEasterEgg(){document.getElementById('easterEgg').classList.remove('show')}
 
 // Logo tooltip + double click
 const logo=document.querySelector('.i-logo');
@@ -277,15 +265,11 @@ if(logo){
         tt.style.top=(e.clientY+10)+'px';
         tt.classList.add('show');
     });
-    logo.addEventListener('mouseleave',function(){
-        document.getElementById('logoTooltip').classList.remove('show');
-    });
-    logo.addEventListener('dblclick',function(){
-        document.getElementById('easterEgg').classList.add('show');
-    });
+    logo.addEventListener('mouseleave',function(){document.getElementById('logoTooltip').classList.remove('show')});
+    logo.addEventListener('dblclick',function(){document.getElementById('easterEgg').classList.add('show')});
 }
 
-// Float scene parallax on desktop
+// Float scene parallax
 if(!isM){
     const scene=document.getElementById('floatScene');
     if(scene){
