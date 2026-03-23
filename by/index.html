@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
     <title>ТОП онлайн казіно 2026 — Paytaoff | Сумленныя агляды</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#060810">
-    <meta name="description" content="Paytaoff — сумленныя агляды і рэйтынгі лепшых онлайн казіно 2026. 18+">
+    <meta name="description" content="Paytaoff — сумленныя агляды і рэйтынгі лепшых онлайн казіно 2026 для гульцоў з Беларусі. 18+">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
@@ -15,13 +18,44 @@
 <body>
 
 <div class="scroll-progress" id="scrollProgress"></div>
-<div class="comet comet-1"></div><div class="comet comet-2"></div><div class="comet comet-3"></div><div class="comet comet-4"></div><div class="comet comet-5"></div>
-<div class="nebula nebula-1"></div><div class="nebula nebula-2"></div>
-<div class="bg-wrap"><div class="bg-mesh"></div><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="orbit o1"><div class="od"></div></div><div class="orbit o2"><div class="od"></div></div><div class="orbit o3"><div class="od"></div></div><div class="shooting-star" style="top:15%;left:20%;--d:6s"></div><div class="shooting-star" style="top:35%;left:50%;--d:8s;animation-delay:3s"></div><div class="shooting-star" style="top:60%;left:10%;--d:7s;animation-delay:5s"></div><div class="shooting-star" style="top:80%;left:70%;--d:9s;animation-delay:7s"></div><div class="shooting-star" style="top:25%;left:85%;--d:7.5s;animation-delay:2s"></div><div class="shooting-star" style="top:45%;left:40%;--d:6.5s;animation-delay:1s"></div><div class="shooting-star" style="top:70%;left:60%;--d:8.5s;animation-delay:4s"></div><div class="shooting-star" style="top:10%;left:70%;--d:7s;animation-delay:6s"></div><div id="starsLayer"></div></div>
-<canvas id="pc"></canvas><div class="cg" id="cursorGlow"></div>
-<div class="corner-glow corner-glow-tl"></div><div class="corner-glow corner-glow-br"></div>
-<div class="space-ring space-ring-1"></div><div class="space-ring space-ring-2"></div>
 
+<!-- КОМЕТЫ -->
+<div class="comet comet-1"></div>
+<div class="comet comet-2"></div>
+<div class="comet comet-3"></div>
+<div class="comet comet-4"></div>
+<div class="comet comet-5"></div>
+
+<!-- ТУМАННОСТЬ -->
+<div class="nebula nebula-1"></div>
+<div class="nebula nebula-2"></div>
+
+<div class="bg-wrap">
+    <div class="bg-mesh"></div>
+    <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+    <div class="orbit o1"><div class="od"></div></div>
+    <div class="orbit o2"><div class="od"></div></div>
+    <div class="orbit o3"><div class="od"></div></div>
+    <div class="shooting-star" style="top:15%;left:20%;--d:6s;animation-delay:0s"></div>
+    <div class="shooting-star" style="top:35%;left:50%;--d:8s;animation-delay:3s"></div>
+    <div class="shooting-star" style="top:60%;left:10%;--d:7s;animation-delay:5s"></div>
+    <div class="shooting-star" style="top:80%;left:70%;--d:9s;animation-delay:7s"></div>
+    <div class="shooting-star" style="top:25%;left:85%;--d:7.5s;animation-delay:2s"></div>
+    <div class="shooting-star" style="top:45%;left:40%;--d:6.5s;animation-delay:1s"></div>
+    <div class="shooting-star" style="top:70%;left:60%;--d:8.5s;animation-delay:4s"></div>
+    <div class="shooting-star" style="top:10%;left:70%;--d:7s;animation-delay:6s"></div>
+    <div id="starsLayer"></div>
+</div>
+<canvas id="pc"></canvas>
+<div class="cg" id="cursorGlow"></div>
+
+<div class="corner-glow corner-glow-tl"></div>
+<div class="corner-glow corner-glow-br"></div>
+
+<div class="space-ring space-ring-1"></div>
+<div class="space-ring space-ring-2"></div>
+
+<!-- НАВІГАЦЫЯ -->
 <nav class="island" id="island">
     <div class="i-logo"><img src="../avatar.png" alt="Paytaoff" class="i-avatar"><span>Paytaoff</span></div>
     <div class="i-div"></div>
@@ -33,7 +67,7 @@
         <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="i-link i-link-tg">📱 Канал</a>
     </div>
     <div class="i-div"></div>
-    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">🌙</button>
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Змяніць тэму">🌙</button>
     <div class="i-div"></div>
     <button class="share-btn" onclick="shareWebsite()">🔗 Падзяліцца</button>
     <div class="i-div"></div>
@@ -50,14 +84,19 @@
     </div>
     <div class="i-div"></div>
     <div class="i-age">18+</div>
+
+    <!-- МАБІЛЬНАЕ МЕНЮ -->
     <div class="mob-nav-wrap" id="mobNavWrap">
-        <button class="mob-nav-toggle" id="mobNavToggle" onclick="toggleMobNav()"><span>☰</span><span class="mob-nav-label">Меню</span></button>
+        <button class="mob-nav-toggle" id="mobNavToggle" onclick="toggleMobNav()">
+            <span>☰</span>
+            <span class="mob-nav-label">Меню</span>
+        </button>
         <div class="mob-nav-dropdown" id="mobNavDropdown">
             <a href="#top" onclick="closeMobNav()">🏆 Рэйтынг</a>
             <a href="/guide.html" onclick="closeMobNav()">📖 Гід</a>
             <a href="#help" onclick="closeMobNav()">🛡️ Дапамога</a>
             <a href="#faq" onclick="closeMobNav()">❓ FAQ</a>
-            <a href="https://t.me/paytaoff" target="_blank" onclick="closeMobNav()">📱 Канал</a>
+            <a href="https://t.me/paytaoff" target="_blank" rel="noopener" onclick="closeMobNav()">📱 Канал</a>
             <div class="mob-nav-sep"></div>
             <a href="/about/" onclick="closeMobNav()">ℹ️ Пра праект</a>
             <a href="/responsible-gaming/" onclick="closeMobNav()">🛡️ Адказная гульня</a>
@@ -68,8 +107,17 @@
     </div>
 </nav>
 
-<div class="easter-egg" id="easterEgg"><div class="easter-egg-content"><div class="easter-egg-icon">🚀</div><h3>Сакрэт знойдзены!</h3><p>Касмічны бонус актываваны 🌌</p><button onclick="closeEasterEgg()" class="cbtn" style="margin-top:14px">Крута! ✨</button></div></div>
+<!-- EASTER EGG -->
+<div class="easter-egg" id="easterEgg">
+    <div class="easter-egg-content">
+        <div class="easter-egg-icon">🚀</div>
+        <h3>Сакрэт знойдзены!</h3>
+        <p>Ты знайшоў пасхалку! Касмічны бонус актываваны 🌌</p>
+        <button onclick="closeEasterEgg()" class="cbtn" style="margin-top:14px">Крута! ✨</button>
+    </div>
+</div>
 
+<!-- HERO -->
 <section class="hero">
     <div class="hero-layout">
         <div class="hero-left">
@@ -81,13 +129,22 @@
                 <a href="#top" class="btn btn-glow ripple"><span>🏆 Глядзець рэйтынг</span></a>
                 <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="btn btn-ghost ripple"><span>📱 Наш канал</span></a>
             </div>
-            <div class="hero-trust"><div class="ti"><span>🔒</span> SSL абарона</div><div class="ti"><span>✅</span> Правераны</div><div class="ti"><span>🎯</span> Ліцэнзіі</div></div>
+            <div class="hero-trust">
+                <div class="ti"><span>🔒</span> SSL абарона</div>
+                <div class="ti"><span>✅</span> Правераны</div>
+                <div class="ti"><span>🎯</span> Ліцэнзіі</div>
+            </div>
             <div class="hero-stats">
                 <div class="hs"><div class="hs-n" data-count="7">0</div><div class="hs-l">Казіно ў рэйтынгу</div></div>
                 <div class="hs"><div class="hs-n" data-count="50">0</div><div class="hs-l">Крытэрыяў ацэнкі</div></div>
                 <div class="hs"><div class="hs-n" data-count="2026">0</div><div class="hs-l">Актуальныя даныя</div></div>
             </div>
-            <div class="security-badges"><div class="security-badge ssl">🔒 256-bit SSL</div><div class="security-badge license">📜 Ліцэнзія Кюрасао</div><div class="security-badge">🛡️ Абарона даных</div><div class="security-badge">✅ Незалежны агляд</div></div>
+            <div class="security-badges">
+                <div class="security-badge ssl">🔒 256-bit SSL</div>
+                <div class="security-badge license">📜 Ліцэнзія Кюрасао</div>
+                <div class="security-badge">🛡️ Абарона даных</div>
+                <div class="security-badge">✅ Незалежны агляд</div>
+            </div>
             <div class="hero-trust-grid">
                 <div class="htg-item"><div class="htg-icon">🛡️</div><div><div class="htg-title">Ліцэнзаваныя</div><div class="htg-sub">✓ Правераны</div></div></div>
                 <div class="htg-item"><div class="htg-icon">⚡</div><div><div class="htg-title">Хуткія выплаты</div><div class="htg-sub">✓ ад 15 хв</div></div></div>
@@ -95,19 +152,39 @@
                 <div class="htg-item"><div class="htg-icon">💬</div><div><div class="htg-title">Падтрымка 24/7</div><div class="htg-sub">✓ Чат і email</div></div></div>
             </div>
         </div>
-        <div class="hero-right"><div class="float-scene" id="floatScene"><div class="fc fc1"><div class="fc-e">🎰</div><div class="fc-n">Arkada</div><div class="fc-r">★★★★★ 9.4</div></div><div class="fc fc2"><div class="fc-e">🐱</div><div class="fc-n">CatCasino</div><div class="fc-r">★★★★★ 9.2</div></div><div class="fc fcb"><div class="fc-e">🏆</div><div class="fc-n">1win</div><div class="fc-r">★★★★★ 9.8</div><div class="fc-h">👑 #1</div></div><div class="fc fc3"><div class="fc-e">☄️</div><div class="fc-n">Kometa</div><div class="fc-r">★★★★☆ 9.0</div></div><div class="fc fc4"><div class="fc-e">🐻</div><div class="fc-n">Lucky Bear</div><div class="fc-r">★★★★★ 9.5</div></div><div class="fc fc5"><div class="fc-e">🔥</div><div class="fc-n">Mellstroy</div><div class="fc-r">★★★★★ 9.6</div></div><div class="fc fc6"><div class="fc-e">🎩</div><div class="fc-n">Kent</div><div class="fc-r">★★★★☆ 8.8</div></div></div></div>
+        <div class="hero-right">
+            <div class="float-scene" id="floatScene">
+                <div class="fc fc1"><div class="fc-e">🎰</div><div class="fc-n">Arkada</div><div class="fc-r">★★★★★ 9.4</div></div>
+                <div class="fc fc2"><div class="fc-e">🐱</div><div class="fc-n">CatCasino</div><div class="fc-r">★★★★★ 9.2</div></div>
+                <div class="fc fcb"><div class="fc-e">🏆</div><div class="fc-n">1win</div><div class="fc-r">★★★★★ 9.8</div><div class="fc-h">👑 #1</div></div>
+                <div class="fc fc3"><div class="fc-e">☄️</div><div class="fc-n">Kometa</div><div class="fc-r">★★★★☆ 9.0</div></div>
+                <div class="fc fc4"><div class="fc-e">🐻</div><div class="fc-n">Lucky Bear</div><div class="fc-r">★★★★★ 9.5</div></div>
+                <div class="fc fc5"><div class="fc-e">🔥</div><div class="fc-n">Mellstroy</div><div class="fc-r">★★★★★ 9.6</div></div>
+                <div class="fc fc6"><div class="fc-e">🎩</div><div class="fc-n">Kent</div><div class="fc-r">★★★★☆ 8.8</div></div>
+            </div>
+        </div>
     </div>
 </section>
 
-<div class="trust-bar reveal"><div class="tc"><div class="tc-i">🛡️</div><div><div class="tc-t">Ліцэнзаваныя</div><div class="tc-s">✓ Правераны экспертамі</div></div></div><div class="tc"><div class="tc-i">⚡</div><div><div class="tc-t">Хуткія выплаты</div><div class="tc-s">✓ Вывад ад 15 хв</div></div></div><div class="tc"><div class="tc-i">🔒</div><div><div class="tc-t">Бяспека</div><div class="tc-s">✓ 256-bit шыфраванне</div></div></div><div class="tc"><div class="tc-i">💬</div><div><div class="tc-t">Падтрымка 24/7</div><div class="tc-s">✓ Чат і email</div></div></div></div>
+<!-- TRUST BAR -->
+<div class="trust-bar reveal">
+    <div class="tc"><div class="tc-i">🛡️</div><div><div class="tc-t">Ліцэнзаваныя</div><div class="tc-s">✓ Правераны экспертамі</div></div></div>
+    <div class="tc"><div class="tc-i">⚡</div><div><div class="tc-t">Хуткія выплаты</div><div class="tc-s">✓ Вывад ад 15 хв</div></div></div>
+    <div class="tc"><div class="tc-i">🔒</div><div><div class="tc-t">Бяспека</div><div class="tc-s">✓ 256-bit шыфраванне</div></div></div>
+    <div class="tc"><div class="tc-i">💬</div><div><div class="tc-t">Падтрымка 24/7</div><div class="tc-s">✓ Чат і email</div></div></div>
+</div>
 
-<!-- РЕЙТЫНГ -->
+<!-- РЭЙТЫНГ КАЗІНО -->
 <section class="section" id="top">
     <div class="container">
         <div class="ios-f">
             <div class="sh reveal"><div class="sl">🏆 Рэйтынг 2026</div><h2>Лепшыя казіно для гульцоў</h2><p>Кожнае казіно правераны па 50+ крытэрыях</p></div>
-            <div class="pb reveal"><div class="pb-l"><div class="pb-i">🎁</div><div class="pb-t">Промакод SMOG для 1win<small>Бонус да першых 4 дэпазітаў + 70 фрыспінаў</small></div></div><a href="https://lkts.pro/5024" target="_blank" rel="noopener" class="cbtn cbtn-gold">Падрабязней →</a></div>
+            <div class="pb reveal">
+                <div class="pb-l"><div class="pb-i">🎁</div><div class="pb-t">Промакод SMOG для 1win<small>Бонус да першых 4 дэпазітаў + 70 фрыспінаў</small></div></div>
+                <a href="https://lkts.pro/5024" target="_blank" rel="noopener" class="cbtn cbtn-gold">Падрабязней →</a>
+            </div>
             <div class="cc-wrap">
+
                 <!-- #1 1win -->
                 <div class="cc-hero reveal shine-effect">
                     <div class="glass-shine"></div><div class="rk rk1">1</div><div class="bb">⭐ Выбар рэдакцыі</div>
@@ -118,7 +195,12 @@
                         <div class="verified-badge" style="margin-top:7px">✓ Агляд правераны</div>
                     </div>
                     <div class="hcc">
-                        <div class="hcf"><div class="cf"><div class="cfl">Гульні</div><div class="cfv">10,000+</div></div><div class="cf"><div class="cfl">Вывад</div><div class="cfv">да 24г</div></div><div class="cf"><div class="cfl">Падтрымка</div><div class="cfv">24/7</div></div><div class="cf"><div class="cfl">Live</div><div class="cfv">200+</div></div></div>
+                        <div class="hcf">
+                            <div class="cf"><div class="cfl">Гульні</div><div class="cfv">10,000+</div></div>
+                            <div class="cf"><div class="cfl">Вывад</div><div class="cfv">да 24г</div></div>
+                            <div class="cf"><div class="cfl">Падтрымка</div><div class="cfv">24/7</div></div>
+                            <div class="cf"><div class="cfl">Live</div><div class="cfv">200+</div></div>
+                        </div>
                         <div class="ct"><span class="tag tg">✓ Вялікі выбар</span><span class="tag tg">✓ Хуткія выплаты</span><span class="tag tg">✓ Дадатак</span><span class="tag tg">✓ Крыптавалюты</span><span class="tag tg">✓ Live-казіно</span><span class="tag tg">✓ Стаўкі</span></div>
                     </div>
                     <div class="hcright">
@@ -129,8 +211,9 @@
                     </div>
                 </div>
 
-                <!-- #2-#7 -->
+                <!-- #2-#7 АДЗІНАЯ СЕТКА -->
                 <div class="cc-grid cc-grid-6">
+
                     <!-- #2 Mellstroy -->
                     <div class="cc reveal d1 shine-effect"><div class="rk rk2">2</div><div class="bb bb-fire">🔥 Навінка</div><div class="casino-img-wrap"><img class="casino-img" src="../img/mellstroy.png" alt="Mellstroy Casino" loading="eager"></div><div class="ctp"><div class="ci ci-mell">🔥</div><div class="cin"><h3>MELLSTROY</h3><div class="cra"><div class="crs">★★★★★</div><span class="crn">9.6</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Гульні</div><div class="cfv">8,000+</div></div><div class="cf"><div class="cfl">Вывад</div><div class="cfv">да 12г</div></div><div class="cf"><div class="cfl">Падтрымка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ 550%</span><span class="tag tg">✓ 400 FS</span><span class="tag tg">✓ Крыпта</span></div><div class="cbt"><div class="cb cb-mell"><div class="cbl">Бонус</div><div class="cbv cbv-mell">Да 550% +400 FS</div></div><a href="https://mellehdw.life/?open=register&p=u7s2" target="_blank" rel="noopener" class="cbtn cbtn-mell ripple">🔥 Перайсці →</a></div><a href="/reviews/mellstroy/" class="crb">📖 Агляд</a></div>
 
@@ -138,31 +221,66 @@
                     <div class="cc reveal d2 shine-effect"><div class="rk rk3">3</div><div class="bb bb-bear">🐻 Навінка</div><div class="casino-img-wrap"><img class="casino-img" src="../img/luckybear.png" alt="Lucky Bear Casino" loading="eager"></div><div class="ctp"><div class="ci ci-bear">🐻</div><div class="cin"><h3>Lucky Bear</h3><div class="cra"><div class="crs">★★★★★</div><span class="crn">9.5</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Гульні</div><div class="cfv">7,000+</div></div><div class="cf"><div class="cfl">Вывад</div><div class="cfv">да 12г</div></div><div class="cf"><div class="cfl">Падтрымка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ 360%</span><span class="tag tg">✓ 250 FS</span><span class="tag tg">✓ Крыпта</span></div><div class="pbox pbox-mini"><div class="pbl">Промакод</div><div class="pbc" onclick="copyPromo('SMOG','promoCopyBear')">SMOG</div><div class="pbd">🎡 Першым 300 гульцам — пракрут кола фартуны!</div><div class="pbcp" id="promoCopyBear" onclick="copyPromo('SMOG','promoCopyBear')">📋 Скапіяваць</div></div><div class="cbt"><div class="cb cb-bear"><div class="cbl">Бонус</div><div class="cbv cbv-bear">Да 360% +250 FS</div></div><a href="https://lb777.xyz/1GY28M" target="_blank" rel="noopener" class="cbtn cbtn-bear ripple">🐻 Перайсці →</a></div><a href="/reviews/luckybear/" class="crb">📖 Агляд</a></div>
 
                     <!-- #4 Arkada -->
-                    <div class="cc reveal d3 shine-effect"><div class="rk rk4">4</div><div class="casino-img-wrap"><img class="casino-img" src="../img/arkada.png" alt="Arkada" loading="lazy"></div><div class="ctp"><div class="ci">🎰</div><div class="cin"><h3>Arkada Casino</h3><div class="cra"><div class="crs">★★★★★</div><span class="crn">9.4</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Гульні</div><div class="cfv">5,000+</div></div><div class="cf"><div class="cfl">Вывад</div><div class="cfv">да 24г</div></div><div class="cf"><div class="cfl">Падтрымка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ Стыльны</span><span class="tag tg">✓ Шчодры</span><span class="tag tr">✕ Новае</span></div><div class="cbt"><div class="cb"><div class="cbl">Бонус</div><div class="cbv">Да 200%</div></div><a href="https://grid-cyberlane.com/s98fda0f8" target="_blank" rel="noopener" class="cbtn ripple">Гуляць →</a></div><a href="/reviews/arkada/" class="crb">📖 Агляд</a></div>
+                    <div class="cc reveal d3 shine-effect"><div class="rk rk4">4</div><div class="casino-img-wrap"><img class="casino-img" src="../img/arkada.png" alt="Arkada Casino" loading="lazy"></div><div class="ctp"><div class="ci">🎰</div><div class="cin"><h3>Arkada Casino</h3><div class="cra"><div class="crs">★★★★★</div><span class="crn">9.4</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Гульні</div><div class="cfv">5,000+</div></div><div class="cf"><div class="cfl">Вывад</div><div class="cfv">да 24г</div></div><div class="cf"><div class="cfl">Падтрымка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ Стыльны</span><span class="tag tg">✓ Шчодры</span><span class="tag tr">✕ Новае</span></div><div class="cbt"><div class="cb"><div class="cbl">Бонус</div><div class="cbv">Да 200%</div></div><a href="https://grid-cyberlane.com/s98fda0f8" target="_blank" rel="noopener" class="cbtn ripple">Гуляць →</a></div><a href="/reviews/arkada/" class="crb">📖 Агляд</a></div>
 
                     <!-- #5 CatCasino -->
                     <div class="cc reveal d4 shine-effect"><div class="rk rk5">5</div><div class="casino-img-wrap"><img class="casino-img" src="../img/catcasino.png" alt="CatCasino" loading="lazy"></div><div class="ctp"><div class="ci">🐱</div><div class="cin"><h3>CatCasino</h3><div class="cra"><div class="crs">★★★★★</div><span class="crn">9.2</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Гульні</div><div class="cfv">4,000+</div></div><div class="cf"><div class="cfl">Вывад</div><div class="cfv">да 48г</div></div><div class="cf"><div class="cfl">Падтрымка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ Турніры</span><span class="tag tg">✓ Лаяльнасць</span><span class="tag tr">✕ 48г вывад</span></div><div class="cbt"><div class="cb"><div class="cbl">Бонус</div><div class="cbv">Да 325%</div></div><a href="https://catchthecatthree.com/sb716b632" target="_blank" rel="noopener" class="cbtn ripple">Гуляць →</a></div><a href="/reviews/catcasino/" class="crb">📖 Агляд</a></div>
 
                     <!-- #6 Kometa -->
-                    <div class="cc reveal d5 shine-effect"><div class="rk rk6">6</div><div class="casino-img-wrap"><img class="casino-img" src="../img/kometa.png" alt="Kometa" loading="lazy"></div><div class="ctp"><div class="ci">☄️</div><div class="cin"><h3>Kometa</h3><div class="cra"><div class="crs">★★★★☆</div><span class="crn">9.0</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Гульні</div><div class="cfv">3,500+</div></div><div class="cf"><div class="cfl">Вывад</div><div class="cfv">да 24г</div></div><div class="cf"><div class="cfl">Падтрымка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ Космас</span><span class="tag tg">✓ Кэшбэк</span><span class="tag tr">✕ Менш</span></div><div class="cbt"><div class="cb"><div class="cbl">Бонус</div><div class="cbv">Да 255%</div></div><a href="https://searing-path.com/s2e02d62f" target="_blank" rel="noopener" class="cbtn ripple">Гуляць →</a></div><a href="/reviews/kometa/" class="crb">📖 Агляд</a></div>
+                    <div class="cc reveal d5 shine-effect"><div class="rk rk6">6</div><div class="casino-img-wrap"><img class="casino-img" src="../img/kometa.png" alt="Kometa Casino" loading="lazy"></div><div class="ctp"><div class="ci">☄️</div><div class="cin"><h3>Kometa</h3><div class="cra"><div class="crs">★★★★☆</div><span class="crn">9.0</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Гульні</div><div class="cfv">3,500+</div></div><div class="cf"><div class="cfl">Вывад</div><div class="cfv">да 24г</div></div><div class="cf"><div class="cfl">Падтрымка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ Космас</span><span class="tag tg">✓ Кэшбэк</span><span class="tag tr">✕ Менш</span></div><div class="cbt"><div class="cb"><div class="cbl">Бонус</div><div class="cbv">Да 255%</div></div><a href="https://searing-path.com/s2e02d62f" target="_blank" rel="noopener" class="cbtn ripple">Гуляць →</a></div><a href="/reviews/kometa/" class="crb">📖 Агляд</a></div>
 
                     <!-- #7 Kent -->
-                    <div class="cc reveal d5 shine-effect"><div class="rk rk7">7</div><div class="casino-img-wrap"><img class="casino-img" src="../img/kent.png" alt="Kent" loading="lazy"></div><div class="ctp"><div class="ci">🎩</div><div class="cin"><h3>Kent</h3><div class="cra"><div class="crs">★★★★☆</div><span class="crn">8.8</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Гульні</div><div class="cfv">3,000+</div></div><div class="cf"><div class="cfl">Вывад</div><div class="cfv">да 48г</div></div><div class="cf"><div class="cfl">Падтрымка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ VIP</span><span class="tag tg">✓ Элегантны</span><span class="tag tr">✕ Мала акцый</span></div><div class="cbt"><div class="cb"><div class="cbl">Бонус</div><div class="cbv">Да 150%</div></div><a href="https://mealmenalc.com/s4882a91c" target="_blank" rel="noopener" class="cbtn ripple">Гуляць →</a></div><a href="/reviews/kent/" class="crb">📖 Агляд</a></div>
+                    <div class="cc reveal d5 shine-effect"><div class="rk rk7">7</div><div class="casino-img-wrap"><img class="casino-img" src="../img/kent.png" alt="Kent Casino" loading="lazy"></div><div class="ctp"><div class="ci">🎩</div><div class="cin"><h3>Kent</h3><div class="cra"><div class="crs">★★★★☆</div><span class="crn">8.8</span></div></div></div><div class="cfe"><div class="cf"><div class="cfl">Гульні</div><div class="cfv">3,000+</div></div><div class="cf"><div class="cfl">Вывад</div><div class="cfv">да 48г</div></div><div class="cf"><div class="cfl">Падтрымка</div><div class="cfv">24/7</div></div></div><div class="ct"><span class="tag tg">✓ VIP</span><span class="tag tg">✓ Элегантны</span><span class="tag tr">✕ Мала акцый</span></div><div class="cbt"><div class="cb"><div class="cbl">Бонус</div><div class="cbv">Да 150%</div></div><a href="https://mealmenalc.com/s4882a91c" target="_blank" rel="noopener" class="cbtn ripple">Гуляць →</a></div><a href="/reviews/kent/" class="crb">📖 Агляд</a></div>
+
                 </div>
             </div>
 
-            <div class="tg-banner reveal"><div class="tg-banner-left"><div class="tg-banner-icon">✈️</div><div><div class="tg-banner-title">Падпісвайся на Telegram</div><div class="tg-banner-desc">Эксклюзіўныя промакоды і бонусы!</div></div></div><a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="tg-banner-btn ripple">📱 Падпісацца →</a></div>
+            <!-- TELEGRAM БАНЕР -->
+            <div class="tg-banner reveal">
+                <div class="tg-banner-left"><div class="tg-banner-icon">✈️</div><div><div class="tg-banner-title">Падпісвайся на Telegram</div><div class="tg-banner-desc">Эксклюзіўныя промакоды і бонусы!</div></div></div>
+                <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="tg-banner-btn ripple">📱 Падпісацца →</a>
+            </div>
 
-            <div class="calc reveal"><div class="calc-l"><div><h3>💰 Калькулятар бонусу 1win</h3><p>Разлічы бонус з промакодам SMOG</p><div class="cig"><label class="cil">Сума дэпазіту</label><div style="position:relative"><span class="cii">Br</span><input type="number" class="cinp" id="calcInput" placeholder="Увядзіце суму" oninput="calcBonus()"></div></div><div class="cpt">✅ Промакод SMOG</div></div><div><div class="crc"><div class="crc-l">Патэнцыйны бонус</div><div class="crc-t" id="calcTotal">0 Br</div><div class="cbd"><div class="cbr"><span class="cbr-l">Дэпазіт</span><span class="cbr-v" id="calcDeposit">0 Br</span></div><div class="cbr"><span class="cbr-l">Бонус</span><span class="cbr-v" id="calcBonusVal">0 Br</span></div><div class="cbr"><span class="cbr-l">Фрыспіны</span><span class="cbr-v">70 FS 🎰</span></div></div><a href="https://lkts.pro/5024" target="_blank" rel="noopener" class="cbtn cbtn-gold ripple" style="width:100%;justify-content:center;margin-top:14px">Падрабязней →</a></div></div></div></div>
+            <!-- КАЛЬКУЛЯТАР -->
+            <div class="calc reveal">
+                <div class="calc-l">
+                    <div>
+                        <h3>💰 Калькулятар бонусу 1win</h3>
+                        <p>Разлічы бонус з промакодам SMOG</p>
+                        <div class="cig">
+                            <label class="cil">Сума дэпазіту</label>
+                            <div style="position:relative">
+                                <span class="cii">Br</span>
+                                <input type="number" class="cinp" id="calcInput" placeholder="Увядзіце суму" oninput="calcBonus()">
+                            </div>
+                        </div>
+                        <div class="cpt">✅ Промакод SMOG</div>
+                    </div>
+                    <div>
+                        <div class="crc">
+                            <div class="crc-l">Патэнцыйны бонус</div>
+                            <div class="crc-t" id="calcTotal">0 Br</div>
+                            <div class="cbd">
+                                <div class="cbr"><span class="cbr-l">Дэпазіт</span><span class="cbr-v" id="calcDeposit">0 Br</span></div>
+                                <div class="cbr"><span class="cbr-l">Бонус</span><span class="cbr-v" id="calcBonusVal">0 Br</span></div>
+                                <div class="cbr"><span class="cbr-l">Фрыспіны</span><span class="cbr-v">70 FS 🎰</span></div>
+                            </div>
+                            <a href="https://lkts.pro/5024" target="_blank" rel="noopener" class="cbtn cbtn-gold ripple" style="width:100%;justify-content:center;margin-top:14px">Падрабязней →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- ГІД -->
+<!-- ГІД ДЛЯ ГУЛЬЦОЎ -->
 <section class="section" id="guide">
     <div class="container">
         <div class="ios-f">
             <div class="sh reveal"><div class="sl">📖 Гід для гульцоў</div><h2>Усё што трэба ведаць</h2><p>Метадалогія ацэнкі і практычныя парады</p></div>
+
+            <!-- Метадалогія -->
             <div class="guide-sub reveal"><h3 class="guide-sub-title">🔍 Як мы ацэньваем</h3></div>
             <div class="mg">
                 <div class="mc reveal shine-effect"><div class="mi">🛡️</div><h3>Бяспека</h3><p>Ліцэнзіі і шыфраванне</p><span class="mw">25%</span></div>
@@ -172,6 +290,8 @@
                 <div class="mc reveal d4 shine-effect"><div class="mi">💬</div><h3>Падтрымка</h3><p>Хуткасць і якасць</p><span class="mw">10%</span></div>
                 <div class="mc reveal d5 shine-effect"><div class="mi">📱</div><h3>Мабільная</h3><p>Зручнасць і дадатак</p><span class="mw">10%</span></div>
             </div>
+
+            <!-- Гайды -->
             <div class="guide-sub reveal" style="margin-top:28px"><h3 class="guide-sub-title">📚 Карысныя гайды</h3></div>
             <div class="gg">
                 <div class="gc reveal shine-effect"><div class="gim gi1">🎯</div><div class="gbd"><span class="gtg">Навічкам</span><h3>Як абраць казіно</h3><ul class="g-tips"><li>Праверце ліцэнзію</li><li>Вывучыце выплаты</li><li>Чытайце ўмовы</li></ul></div></div>
@@ -225,23 +345,56 @@
     </div>
 </section>
 
+<!-- ФУТЭР -->
 <footer class="footer">
     <div class="container">
         <div class="fd"><strong>⚠️ 18+</strong> — Paytaoff — незалежны рэсурс. Мы не казіно. Партнёрскія спасылкі. Гуляйце адказна.</div>
         <div class="f-wrap">
             <div class="fg">
-                <div class="fa2"><div class="fl2"><img src="../avatar.png" alt="Paytaoff" class="i-avatar" style="animation:none"><span>Paytaoff</span></div><p>Сумленныя агляды казіно. 50+ крытэрыяў.</p><div class="security-badges" style="margin-top:12px;justify-content:flex-start"><div class="security-badge ssl">🔒 SSL</div><div class="security-badge">✅ Незалежны</div></div></div>
-                <div class="fcl"><h4>Навігацыя</h4><ul class="fls"><li><a href="#top">Рэйтынг</a></li><li><a href="/guide.html">Гід</a></li><li><a href="#help">Дапамога</a></li><li><a href="#faq">FAQ</a></li></ul></div>
-                <div class="fcl"><h4>Інфармацыя</h4><ul class="fls"><li><a href="/about/">Пра праект</a></li><li><a href="/responsible-gaming/">🛡️ Адказная гульня</a></li><li><a href="/privacy/">Канфідэнцыяльнасць</a></li><li><a href="/terms/">Умовы</a></li><li><a href="https://t.me/paytaoff" target="_blank">📱 Telegram</a></li></ul></div>
+                <div class="fa2">
+                    <div class="fl2"><img src="../avatar.png" alt="Paytaoff" class="i-avatar" style="animation:none"><span>Paytaoff</span></div>
+                    <p>Сумленныя агляды казіно. 50+ крытэрыяў.</p>
+                    <div class="security-badges" style="margin-top:12px;justify-content:flex-start">
+                        <div class="security-badge ssl">🔒 SSL</div>
+                        <div class="security-badge">✅ Незалежны</div>
+                    </div>
+                </div>
+                <div class="fcl">
+                    <h4>Навігацыя</h4>
+                    <ul class="fls">
+                        <li><a href="#top">Рэйтынг</a></li>
+                        <li><a href="/guide.html">Гід</a></li>
+                        <li><a href="#help">Дапамога</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="fcl">
+                    <h4>Інфармацыя</h4>
+                    <ul class="fls">
+                        <li><a href="/about/">Пра праект</a></li>
+                        <li><a href="/responsible-gaming/">🛡️ Адказная гульня</a></li>
+                        <li><a href="/privacy/">Канфідэнцыяльнасць</a></li>
+                        <li><a href="/terms/">Умовы</a></li>
+                        <li><a href="https://t.me/paytaoff" target="_blank">📱 Telegram</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="fbt"><p>© 2026 Paytaoff</p><div style="display:flex;gap:8px;align-items:center"><button class="share-btn" onclick="shareWebsite()">🔗 Падзяліцца</button><span class="fag">18+</span></div></div>
+        <div class="fbt">
+            <p>© 2026 Paytaoff</p>
+            <div style="display:flex;gap:8px;align-items:center">
+                <button class="share-btn" onclick="shareWebsite()">🔗 Падзяліцца</button>
+                <span class="fag">18+</span>
+            </div>
+        </div>
     </div>
 </footer>
 
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <div class="sb" id="stickyBar"><div class="sb-t">🎁 <span class="sb-c">SMOG</span> для 1win</div><a href="https://lkts.pro/5024" target="_blank" class="sb-b">Падрабязней →</a><button class="sb-x" onclick="closeSB()">✕</button></div>
+
 <div class="logo-tooltip" id="logoTooltip">Двайны клік = 🎉</div>
+
 <script src="../script.js"></script>
 </body>
 </html>
