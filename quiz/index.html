@@ -4,280 +4,221 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
     <title>Какое казино тебе подходит? Тест — Paytaoff</title>
-    <meta name="description" content="Пройди тест из 8 вопросов и узнай какое онлайн казино подходит именно тебе. 18+">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="theme-color" content="#04050b">
+    <meta name="description" content="Пройди тест из 10 вопросов и узнай какое онлайн казино подходит именно тебе. Персональная рекомендация за 2 минуты. 18+">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#060810">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
-    
-<style>
+    <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-
 :root,[data-theme="dark"]{
-    --bg:#04050b;--bg2:#080a18;--bg3:#0c0f22;
-    --accent:#38bdf8;--accent-l:#7dd3fc;
-    --rose:#a78bfa;--rose-l:#c4b5fd;
-    --amber:#f59e0b;--amber-l:#fcd34d;
-    --green:#34d399;--green-l:#6ee7b7;
-    --white:#eef2ff;--text:#b8c8e8;--muted:#6b7da0;
-    --card-bg:rgba(12,15,38,.65);--card-bg2:rgba(10,12,30,.55);
-    --card-border:rgba(90,100,180,.1);
-    --glass-bg:linear-gradient(145deg,rgba(16,20,48,.75),rgba(10,12,32,.55));
-    --glass-border:rgba(60,90,220,.12);
-    --glass-shadow:0 20px 70px rgba(0,0,0,.5),0 0 50px rgba(60,40,160,.05);
-    --opt-bg:rgba(18,22,50,.55);--opt-border:rgba(80,90,180,.08);
-    --opt-hover:rgba(56,189,248,.14);--opt-sel-bg:rgba(56,100,248,.1);
-    --mesh1:rgba(70,50,200,.15);--mesh2:rgba(30,80,220,.1);--mesh3:rgba(100,50,180,.06);
-    --orb1:rgba(50,60,220,.2);--orb2:rgba(120,60,200,.15);--orb3:rgba(30,50,160,.08);
-    --tg-bg:linear-gradient(135deg,#2AABEE,#229ED9);
-    --scrollbar:rgba(70,80,180,.2);
-    --glow-1:transparent;--glow-2:transparent;
+    --bg:#060810;--text:#dce8f5;--muted:#8a9bb5;--white:#fff;
+    --purple:#7c3aed;--purple-l:#a78bfa;--indigo:#4f46e5;
+    --green:#34d399;--green-l:#6ee7b7;--amber:#f59e0b;--amber-l:#fcd34d;
+    --card:rgba(124,58,237,.06);--card-b:rgba(124,58,237,.12);
+    --glass:rgba(6,8,16,.6);--glass-b:rgba(124,58,237,.1);
+    --nav-bg:rgba(6,8,16,.5);
 }
-
 [data-theme="light"]{
-    --bg:#d8ddf2;--bg2:#d0d5ee;--bg3:#c8cde8;
-    --accent:#1a5fd4;--accent-l:#2563eb;
-    --rose:#6d28d9;--rose-l:#5b21b6;
-    --amber:#c2710a;--amber-l:#a65f08;
-    --green:#047857;--green-l:#065f46;
-    --white:#1e1b4b;--text:#2e2b60;--muted:#4c4980;
-    --card-bg:rgba(225,228,248,.6);--card-bg2:rgba(220,224,245,.55);
-    --card-border:rgba(99,102,241,.1);
-    --glass-bg:linear-gradient(145deg,rgba(235,238,255,.72),rgba(220,224,248,.5));
-    --glass-border:rgba(99,102,241,.13);
-    --glass-shadow:0 16px 50px rgba(40,30,100,.06),0 0 30px rgba(80,60,180,.03);
-    --opt-bg:rgba(225,228,250,.55);--opt-border:rgba(99,102,241,.09);
-    --opt-hover:rgba(80,70,160,.16);--opt-sel-bg:rgba(99,102,241,.1);
-    --mesh1:rgba(80,60,200,.1);--mesh2:rgba(40,80,200,.08);--mesh3:rgba(120,60,180,.05);
-    --orb1:rgba(80,60,200,.12);--orb2:rgba(120,60,180,.1);--orb3:rgba(40,60,160,.06);
-    --tg-bg:linear-gradient(135deg,#2AABEE,#229ED9);
-    --scrollbar:rgba(80,60,160,.15);
-    --glow-1:rgba(99,102,241,.2);--glow-2:rgba(56,150,248,.16);
+    --bg:#f5f0e8;--text:#2d3748;--muted:#64748b;--white:#1a1a2e;
+    --card:rgba(255,255,255,.9);--card-b:rgba(124,58,237,.2);
+    --glass:rgba(255,255,255,.85);--glass-b:rgba(124,58,237,.18);
+    --nav-bg:rgba(255,255,255,.75);
 }
-
-html{scroll-behavior:smooth;font-size:15.2px}
-body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;min-height:100vh;min-height:100dvh;transition:background .5s,color .5s}
-h1,h2,h3{font-family:'Space Grotesk',sans-serif;color:var(--white)}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;min-height:100vh;min-height:100dvh;transition:background .5s,color .5s}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif}
 a{text-decoration:none;color:inherit}
 
-/* BG */
 .world{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.world-m{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 10% 5%,var(--mesh1),transparent 55%),radial-gradient(ellipse 60% 70% at 90% 90%,var(--mesh2),transparent 55%),radial-gradient(ellipse 50% 50% at 50% 40%,var(--mesh3),transparent 50%),linear-gradient(180deg,var(--bg),var(--bg2) 35%,var(--bg3) 65%,var(--bg));transition:background .5s}
-.orb{position:absolute;border-radius:50%;filter:blur(110px);animation:ob var(--t) ease-in-out infinite alternate;opacity:.5;transition:background .5s}
-.ob1{width:550px;height:550px;top:-8%;left:-6%;background:radial-gradient(circle,var(--orb1),transparent 70%);--t:12s}
-.ob2{width:450px;height:450px;bottom:-6%;right:-8%;background:radial-gradient(circle,var(--orb2),transparent 70%);--t:15s}
-.ob3{width:350px;height:350px;top:45%;left:55%;background:radial-gradient(circle,var(--orb3),transparent 70%);--t:18s}
-@keyframes ob{0%{transform:translate(0,0) scale(1)}50%{transform:translate(35px,-25px) scale(1.08)}100%{transform:translate(-18px,30px) scale(.94)}}
-.dot{position:absolute;border-radius:50%;animation:tw var(--t) ease-in-out infinite;opacity:0}
-[data-theme="dark"] .dot{background:rgba(180,190,255,.4)}
-[data-theme="light"] .dot{background:rgba(60,50,140,.2)}
-@keyframes tw{0%,100%{opacity:0;transform:scale(1)}50%{opacity:var(--o);transform:scale(1.6)}}
-.glow{position:fixed;width:350px;height:350px;border-radius:50%;pointer-events:none;z-index:0;transform:translate(-50%,-50%);opacity:0;transition:opacity .4s}
+.world-m{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 20% 20%,rgba(124,58,237,.12),transparent 50%),radial-gradient(ellipse 50% 60% at 80% 80%,rgba(79,70,229,.08),transparent 50%),linear-gradient(180deg,var(--bg),var(--bg))}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5;animation:ob 12s ease-in-out infinite alternate}
+.ob1{width:400px;height:400px;top:-10%;left:-5%;background:rgba(124,58,237,.2)}
+.ob2{width:350px;height:350px;bottom:-5%;right:-5%;background:rgba(79,70,229,.15)}
+.ob3{width:300px;height:300px;top:40%;left:50%;background:rgba(30,27,75,.08)}
+@keyframes ob{0%{transform:translate(0,0) scale(1)}100%{transform:translate(30px,-20px) scale(1.1)}}
+[data-theme="light"] .world-m{background:radial-gradient(ellipse 60% 50% at 20% 20%,rgba(124,58,237,.08),transparent 50%),radial-gradient(ellipse 50% 60% at 80% 80%,rgba(79,70,229,.06),transparent 50%),linear-gradient(180deg,#f5f0e8,#efe8dc)}
+[data-theme="light"] .orb{opacity:.3}
+.dot{position:absolute;background:rgba(167,139,250,.4);border-radius:50%;animation:tw var(--d) ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:0;transform:scale(1)}50%{opacity:var(--o);transform:scale(1.4)}}
+[data-theme="light"] .dot{background:rgba(124,58,237,.35)}
+.glow{position:fixed;width:300px;height:300px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(124,58,237,.06),transparent 70%);transform:translate(-50%,-50%);opacity:0;transition:opacity .4s}
 body:hover .glow{opacity:1}
-[data-theme="dark"] .glow{background:radial-gradient(circle,rgba(50,60,220,.05),rgba(110,60,200,.02) 40%,transparent 70%)}
-[data-theme="light"] .glow{background:radial-gradient(circle,rgba(80,60,200,.04),transparent 60%)}
+[data-theme="light"] .glow{display:none}
 
-/* NAV */
-.nav{position:fixed;top:8px;left:50%;transform:translateX(-50%);z-index:10000;padding:5px 12px;border-radius:100px;display:flex;align-items:center;gap:6px;border:1px solid var(--card-border);transition:all .4s}
-[data-theme="dark"] .nav{background:rgba(6,8,18,.5);backdrop-filter:blur(16px) saturate(1.6);-webkit-backdrop-filter:blur(16px) saturate(1.6);box-shadow:0 4px 24px rgba(0,0,0,.15)}
-[data-theme="light"] .nav{background:rgba(225,228,248,.55);backdrop-filter:blur(16px) saturate(1.6);-webkit-backdrop-filter:blur(16px) saturate(1.6);box-shadow:0 4px 20px rgba(40,30,100,.06),-10px 0 30px rgba(99,102,241,.04),10px 0 30px rgba(56,150,248,.04)}
-.nav.sc{border-color:var(--glass-border)}
-[data-theme="dark"] .nav.sc{background:rgba(6,8,18,.85)}
-[data-theme="light"] .nav.sc{background:rgba(225,228,248,.88)}
-.nav-l{display:flex;align-items:center;gap:7px;padding:6px 10px;font-family:'Space Grotesk';font-weight:700;font-size:1rem;white-space:nowrap}
-.nav-l img{width:26px;height:26px;border-radius:7px;object-fit:cover;border:2px solid rgba(56,189,248,.25)}
-.nav-l span{background:linear-gradient(135deg,var(--accent-l),var(--rose-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-[data-theme="light"] .nav-l span{background:linear-gradient(135deg,var(--accent),var(--rose));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nav-s{width:1px;height:16px;background:var(--card-border)}
-.nav-b{padding:5px 12px;border-radius:100px;font-size:.72rem;font-weight:600;color:var(--accent-l);background:rgba(56,189,248,.04);border:1px solid rgba(56,189,248,.08);transition:all .3s;display:flex;align-items:center;gap:4px}
-[data-theme="light"] .nav-b{color:var(--accent);background:rgba(99,102,241,.06);border-color:rgba(99,102,241,.1)}
-.nav-b:hover{background:rgba(56,189,248,.1);transform:translateY(-1px)}
-.nav-a{background:rgba(248,80,80,.06);border:1px solid rgba(248,80,80,.08);color:#f87171;padding:4px 10px;border-radius:100px;font-size:.65rem;font-weight:700}
-.theme-btn{width:32px;height:32px;border-radius:50%;border:1px solid var(--card-border);background:var(--card-bg);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.95rem;transition:all .3s;flex-shrink:0}
-.theme-btn:hover{transform:scale(1.15) rotate(20deg);border-color:var(--accent)}
-.tg-nav{padding:5px 12px;border-radius:100px;font-size:.7rem;font-weight:700;color:#fff;background:var(--tg-bg);display:flex;align-items:center;gap:4px;transition:all .3s;white-space:nowrap}
-.tg-nav:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(42,171,238,.3)}
+.nav{position:fixed;top:8px;left:50%;transform:translateX(-50%);z-index:1000;padding:6px 16px;border-radius:100px;display:flex;align-items:center;gap:6px;background:var(--nav-bg);backdrop-filter:blur(16px) saturate(1.6);-webkit-backdrop-filter:blur(16px) saturate(1.6);border:1px solid var(--glass-b);box-shadow:0 4px 28px rgba(0,0,0,.25);max-width:97vw;transition:all .4s}
+.nav.scrolled{border-color:rgba(124,58,237,.2)}
+.nav-l{display:flex;align-items:center;gap:8px;padding:8px 14px;font-family:'Space Grotesk';font-weight:700;font-size:1rem;white-space:nowrap}
+.nav-l img{width:30px;height:30px;border-radius:9px;border:2px solid rgba(124,58,237,.3)}
+.nav-l span{background:linear-gradient(135deg,var(--purple-l),#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-s{width:1px;height:22px;background:rgba(124,58,237,.1);flex-shrink:0}
+.nav-b{padding:8px 14px;border-radius:100px;font-size:.75rem;font-weight:600;color:var(--muted);transition:all .3s;white-space:nowrap}
+.nav-b:hover{color:var(--white);background:rgba(124,58,237,.08)}
+.tg-nav{padding:8px 14px;border-radius:100px;font-size:.75rem;font-weight:600;color:var(--purple-l);transition:all .3s;white-space:nowrap}
+.tg-nav:hover{background:rgba(124,58,237,.08)}
+.theme-btn{width:32px;height:32px;border-radius:100px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.9rem;background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.1);transition:all .3s;flex-shrink:0}
+.theme-btn:hover{background:rgba(124,58,237,.14);transform:rotate(20deg) scale(1.1)}
+.nav-a{padding:6px 12px;border-radius:100px;font-size:.7rem;font-weight:700;color:#fca5a5;background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.12);flex-shrink:0}
+[data-theme="light"] .nav{border:2px solid rgba(124,58,237,.15)}
+[data-theme="light"] .nav-s{background:rgba(124,58,237,.12)}
 
-/* QUIZ */
-.qw{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;padding:65px 14px 24px;min-height:100vh;min-height:100dvh}
-.qb{max-width:540px;width:100%;transition:max-width .5s}
-.qb-wide{max-width:820px}
-
-.prog{margin-bottom:18px;opacity:0;transition:opacity .4s}.prog.on{opacity:1}
-.prog-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:5px}
-.prog-t{font-size:.68rem;color:var(--muted);font-weight:600}
-.prog-back{font-size:.68rem;color:var(--accent-l);font-weight:600;cursor:pointer;display:flex;align-items:center;gap:3px;padding:4px 10px;border-radius:100px;background:rgba(56,189,248,.04);border:1px solid rgba(56,189,248,.07);transition:all .3s;opacity:0;pointer-events:none}
+.qw{position:relative;z-index:1;min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:80px 16px 40px}
+.qb{width:100%;max-width:640px}
+.prog{margin-bottom:18px;opacity:0;transform:translateY(-10px);transition:all .4s}
+.prog.on{opacity:1;transform:translateY(0)}
+.prog-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.prog-t{font-size:.75rem;font-weight:600;color:var(--muted)}
+.prog-back{font-size:.75rem;font-weight:600;color:var(--purple-l);cursor:pointer;transition:all .3s;opacity:0;pointer-events:none}
 .prog-back.on{opacity:1;pointer-events:auto}
-.prog-back:hover{background:rgba(56,189,248,.1)}
-[data-theme="light"] .prog-back{color:var(--accent);background:rgba(99,102,241,.05);border-color:rgba(99,102,241,.1)}
-.prog-bar{height:4px;border-radius:2px;background:var(--opt-bg);overflow:hidden}
-.prog-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--accent),var(--rose));transition:width .6s cubic-bezier(.22,1,.36,1);box-shadow:0 0 10px rgba(56,189,248,.2);position:relative}
-.prog-fill::after{content:'';position:absolute;right:-1px;top:50%;transform:translateY(-50%);width:10px;height:10px;border-radius:50%;background:var(--accent-l);box-shadow:0 0 8px var(--accent)}
+.prog-back:hover{color:var(--white)}
+.prog-bar{height:4px;border-radius:4px;background:rgba(124,58,237,.1);overflow:hidden}
+.prog-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--purple),var(--indigo),var(--green));transition:width .5s cubic-bezier(.22,1,.36,1)}
 
-.scr{display:none}.scr.on{display:block;animation:scrIn .5s cubic-bezier(.22,1,.36,1) both}
-@keyframes scrIn{from{opacity:0;transform:translateX(35px) scale(.97)}to{opacity:1;transform:translateX(0) scale(1)}}
-.scr.back.on{animation:scrBack .5s cubic-bezier(.22,1,.36,1) both}
-@keyframes scrBack{from{opacity:0;transform:translateX(-35px) scale(.97)}to{opacity:1;transform:translateX(0) scale(1)}}
+.scr{display:none;animation:fadeUp .5s ease both}
+.scr.on{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+.glass{border-radius:24px;padding:32px 28px;background:var(--glass);backdrop-filter:blur(20px) saturate(1.6);-webkit-backdrop-filter:blur(20px) saturate(1.6);border:1px solid var(--glass-b);box-shadow:0 8px 32px rgba(0,0,0,.15),0 0 40px rgba(124,58,237,.05);transition:all .5s}
+[data-theme="light"] .glass{background:rgba(255,255,255,.92);border:2.5px solid rgba(124,58,237,.2);box-shadow:0 8px 32px rgba(0,0,0,.08)}
 
-/* Glass with CORNER GLOW */
-.glass{border-radius:26px;background:var(--glass-bg);backdrop-filter:blur(24px) saturate(1.8);-webkit-backdrop-filter:blur(24px) saturate(1.8);border:1px solid var(--glass-border);box-shadow:var(--glass-shadow);position:relative;overflow:hidden;transition:all .5s}
-.glass::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(100,80,220,.1),transparent)}
-.glass::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 0% 0%,var(--glow-1),transparent 65%),radial-gradient(ellipse 50% 50% at 100% 100%,var(--glow-2),transparent 65%);pointer-events:none;border-radius:inherit;z-index:0;transition:background .5s}
-
-/* Light theme extra box-shadow glow */
-[data-theme="light"] .glass{box-shadow:var(--glass-shadow),-25px -15px 50px rgba(99,102,241,.08),25px 15px 50px rgba(56,150,248,.06)}
-
-.intro{text-align:center;padding:36px 28px}
-.intro-i{font-size:4rem;margin-bottom:12px;display:block;animation:float 3s ease-in-out infinite;position:relative;z-index:1}
-@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-12px) rotate(3deg)}}
-.intro h1{font-size:clamp(1.7rem,5vw,2.4rem);font-weight:900;margin-bottom:8px;letter-spacing:-1px;position:relative;z-index:1}
-.gt{background:linear-gradient(135deg,var(--accent-l),var(--rose-l),var(--amber-l));background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gs 4s ease infinite}
-[data-theme="light"] .gt{background:linear-gradient(135deg,var(--accent),var(--rose),var(--amber));background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.intro{text-align:center}
+.intro-i{font-size:3.5rem;display:block;margin-bottom:14px;animation:bounce 2s ease-in-out infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.intro h1{font-size:clamp(1.5rem,5vw,2.5rem);font-weight:900;line-height:1.1;margin-bottom:12px;letter-spacing:-1.5px}
+.gt{background:linear-gradient(135deg,var(--purple-l),#8b5cf6,var(--amber-l));background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gs 4s ease infinite}
 @keyframes gs{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
-.intro p{color:var(--muted);font-size:.92rem;margin-bottom:16px;line-height:1.7;position:relative;z-index:1}
-.tg-banner{display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:14px;background:var(--tg-bg);margin-bottom:16px;position:relative;z-index:1;transition:all .3s;overflow:hidden}
-.tg-banner::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(45deg,transparent,rgba(255,255,255,.08),transparent);transform:rotate(45deg);animation:ctaS 4s ease-in-out infinite}
-.tg-banner:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(42,171,238,.3)}
-[data-theme="light"] .tg-banner{box-shadow:-20px -20px 40px rgba(99,102,241,.1),20px 20px 40px rgba(56,150,248,.08)}
-.tg-banner-icon{font-size:1.3rem;flex-shrink:0;position:relative;z-index:1}
-.tg-banner-text{flex:1;position:relative;z-index:1;text-align:left}
-.tg-banner-title{font-weight:700;font-size:.78rem;color:#fff;display:block}
-.tg-banner-sub{font-size:.65rem;color:rgba(255,255,255,.7)}
-.tg-banner-btn{padding:5px 12px;border-radius:100px;font-size:.65rem;font-weight:700;color:#2AABEE;background:#fff;flex-shrink:0;position:relative;z-index:1;transition:all .3s}
-.intro-tags{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:20px;position:relative;z-index:1}
-.itag{padding:6px 14px;border-radius:100px;font-size:.72rem;font-weight:600;background:var(--opt-bg);border:1px solid var(--opt-border);display:flex;align-items:center;gap:4px;transition:all .3s;position:relative;overflow:hidden}
-.itag:hover{transform:translateY(-2px);border-color:var(--opt-hover)}
-.itag::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 0% 0%,var(--glow-1),transparent 65%),radial-gradient(ellipse 70% 70% at 100% 100%,var(--glow-2),transparent 65%);pointer-events:none;border-radius:inherit;opacity:.5}
+.intro p{color:var(--muted);font-size:.938rem;margin-bottom:20px;line-height:1.6}
+.intro-tags{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.itag{padding:5px 12px;border-radius:100px;font-size:.688rem;font-weight:600;background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.1);color:var(--purple-l)}
+[data-theme="light"] .itag{background:rgba(124,58,237,.06);border:2px solid rgba(124,58,237,.18);color:#6d28d9}
 
-/* Question */
-.qc{padding:32px 26px}
-.qn{font-size:.68rem;color:var(--accent-l);font-weight:700;margin-bottom:5px;text-transform:uppercase;letter-spacing:.08em;position:relative;z-index:1}
-[data-theme="light"] .qn{color:var(--accent)}
-.qt{font-size:1.35rem;font-weight:800;margin-bottom:16px;letter-spacing:-.3px;position:relative;z-index:1;line-height:1.25}
-.qo{display:flex;flex-direction:column;gap:7px;position:relative;z-index:1}
-.opt{padding:13px 16px;border-radius:14px;background:var(--opt-bg);border:1px solid var(--opt-border);cursor:pointer;transition:all .35s cubic-bezier(.22,1,.36,1);display:flex;align-items:center;gap:10px;font-size:.88rem;font-weight:500;position:relative;overflow:hidden;-webkit-tap-highlight-color:transparent}
-.opt::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 0% 0%,var(--glow-1),transparent 65%),radial-gradient(ellipse 60% 60% at 100% 100%,var(--glow-2),transparent 65%);pointer-events:none;border-radius:inherit;opacity:0;transition:opacity .3s}
-.opt:hover{border-color:var(--opt-hover);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.06)}
-.opt:hover::after{opacity:.7}
-.opt:active{transform:scale(.97);transition-duration:.1s}
-.opt.sel{border-color:rgba(56,189,248,.28);background:var(--opt-sel-bg)}
-.opt.sel::after{opacity:.5}
-.opt.sel .chk{background:var(--accent);border-color:var(--accent);color:#fff;transform:scale(1.1)}
-.oi{font-size:1.25rem;flex-shrink:0;position:relative;z-index:1}.ot{flex:1;position:relative;z-index:1}
-.chk{margin-left:auto;width:20px;height:20px;border-radius:50%;border:2px solid var(--card-border);display:flex;align-items:center;justify-content:center;font-size:.58rem;transition:all .3s cubic-bezier(.22,1,.36,1);flex-shrink:0;position:relative;z-index:1}
+.tg-banner{display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:16px;background:linear-gradient(135deg,rgba(0,136,204,.08),rgba(0,170,255,.04));border:1px solid rgba(0,136,204,.15);margin-bottom:18px;transition:all .3s;text-align:left}
+.tg-banner:hover{transform:translateY(-2px);border-color:rgba(0,136,204,.3)}
+.tg-banner-icon{font-size:1.75rem;flex-shrink:0}
+.tg-banner-text{flex:1;display:flex;flex-direction:column;gap:2px}
+.tg-banner-title{font-weight:700;font-size:.813rem}
+.tg-banner-sub{font-size:.688rem;color:var(--muted)}
+.tg-banner-btn{padding:8px 16px;border-radius:100px;font-size:.688rem;font-weight:700;color:#fff;background:linear-gradient(135deg,#0088cc,#00aaff);white-space:nowrap;flex-shrink:0}
 
-/* CTA */
-.cta{display:flex;align-items:center;justify-content:center;gap:7px;padding:15px 30px;border-radius:100px;font-weight:800;font-size:.95rem;color:#fff;background:linear-gradient(135deg,var(--accent),var(--rose));box-shadow:0 4px 24px rgba(56,189,248,.3);transition:all .4s cubic-bezier(.22,1,.36,1);position:relative;overflow:hidden;width:100%;min-height:52px;cursor:pointer;border:none;font-family:'Inter'}
-.cta::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(45deg,transparent,rgba(255,255,255,.08),transparent);transform:rotate(45deg);animation:ctaS 3s ease-in-out infinite}
-@keyframes ctaS{0%{transform:translateX(-100%) rotate(45deg)}100%{transform:translateX(100%) rotate(45deg)}}
-.cta:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(56,189,248,.4)}
-.cta:active{transform:translateY(1px) scale(.97);transition-duration:.1s}
-.cta2{display:flex;align-items:center;justify-content:center;gap:5px;padding:12px 20px;border-radius:100px;font-weight:600;font-size:.82rem;color:var(--accent-l);background:var(--opt-bg);border:1px solid var(--opt-border);transition:all .3s;width:100%;margin-top:7px;cursor:pointer;font-family:'Inter'}
-[data-theme="light"] .cta2{color:var(--accent)}
-.cta2:hover{background:var(--opt-sel-bg)}
-.cta3{display:flex;align-items:center;justify-content:center;gap:4px;padding:10px;font-size:.75rem;color:var(--muted);cursor:pointer;border:none;background:none;width:100%;font-family:'Inter';transition:color .3s;margin-top:3px}
-.cta3:hover{color:var(--accent-l)}
-.share-btn{display:flex;align-items:center;justify-content:center;gap:6px;padding:12px 20px;border-radius:100px;font-weight:600;font-size:.82rem;color:#fff;background:linear-gradient(135deg,#7c3aed,#6366f1);border:none;transition:all .3s;width:100%;margin-top:7px;cursor:pointer;font-family:'Inter'}
-.share-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(99,102,241,.3)}
-.tg-cta{display:flex;align-items:center;justify-content:center;gap:6px;padding:12px 20px;border-radius:100px;font-weight:700;font-size:.82rem;color:#fff;background:var(--tg-bg);border:none;transition:all .3s;width:100%;margin-top:7px;cursor:pointer;font-family:'Inter'}
-.tg-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(42,171,238,.3)}
+.cta{display:block;width:100%;padding:16px;border-radius:16px;font-size:1rem;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--purple),var(--indigo));border:none;cursor:pointer;font-family:'Inter';transition:all .4s;position:relative;overflow:hidden;box-shadow:0 4px 22px rgba(124,58,237,.3)}
+.cta:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(124,58,237,.45)}
+.cta::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(45deg,transparent,rgba(255,255,255,.1),transparent);transform:rotate(45deg);animation:shine 3s ease-in-out infinite}
+@keyframes shine{0%{transform:translateX(-100%) rotate(45deg)}100%{transform:translateX(100%) rotate(45deg)}}
+.cta-green{background:linear-gradient(135deg,#059669,#34d399)!important;box-shadow:0 4px 22px rgba(5,150,105,.3)!important}
+.cta-green:hover{box-shadow:0 10px 36px rgba(5,150,105,.45)!important}
+.cta-tg{background:linear-gradient(135deg,#0088cc,#00aaff)!important;box-shadow:0 4px 22px rgba(0,136,204,.3)!important}
 
-/* RESULT — wide 4:3 */
-.res-wrap{display:flex;flex-direction:column;gap:14px;max-width:820px;margin:0 auto}
-.res{overflow:hidden}
-[data-theme="light"] .res{box-shadow:var(--glass-shadow),-30px -20px 60px rgba(99,102,241,.1),30px 20px 60px rgba(56,150,248,.08)}
-.res-inner{display:grid;grid-template-columns:1.35fr 1fr;gap:0}
-.res-img-side{position:relative;overflow:hidden}
-.res-img-side img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:1200/600}
-[data-theme="dark"] .res-img-side::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 50%,var(--bg))}
-[data-theme="light"] .res-img-side::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 50%,var(--bg))}
-.res-match-badge{position:absolute;top:12px;left:12px;display:flex;align-items:center;gap:4px;padding:5px 12px;border-radius:100px;font-size:.68rem;font-weight:700;background:rgba(34,197,94,.15);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(34,197,94,.18);color:var(--green-l);z-index:2}
-[data-theme="light"] .res-match-badge{background:rgba(34,197,94,.12);color:var(--green)}
-.res-info{padding:26px 22px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1}
-.res-n{font-family:'Space Grotesk';font-size:1.9rem;font-weight:900;margin-bottom:4px}
-.res-r{display:flex;align-items:center;gap:6px;margin-bottom:12px}
-.res-st{color:var(--amber);font-size:1rem;letter-spacing:2px}
-.res-sc{font-family:'Space Grotesk';font-size:1.5rem;font-weight:900;background:linear-gradient(135deg,var(--accent-l),var(--rose-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-[data-theme="light"] .res-sc{background:linear-gradient(135deg,var(--accent),var(--rose));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.qc{text-align:center}
+.qn{font-size:.688rem;font-weight:600;color:var(--purple-l);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.qt{font-family:'Space Grotesk';font-size:clamp(1.25rem,4vw,1.75rem);font-weight:800;margin-bottom:20px;line-height:1.2;letter-spacing:-.5px}
+.qo{display:flex;flex-direction:column;gap:8px}
+.opt{display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:14px;background:rgba(124,58,237,.04);border:1.5px solid rgba(124,58,237,.08);cursor:pointer;transition:all .3s;min-height:52px;position:relative}
+.opt:hover{background:rgba(124,58,237,.08);border-color:rgba(124,58,237,.18);transform:translateX(4px)}
+.opt:active{transform:scale(.98)}
+.opt.selected{background:rgba(124,58,237,.12);border-color:rgba(124,58,237,.3)}
+.opt.selected .chk{opacity:1;background:var(--purple);color:#fff}
+.oi{font-size:1.25rem;flex-shrink:0;width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:10px;background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.08)}
+.ot{flex:1;font-weight:600;font-size:.875rem;text-align:left}
+.chk{width:24px;height:24px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.688rem;font-weight:700;background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.1);opacity:.4;transition:all .3s;flex-shrink:0}
+[data-theme="light"] .opt{background:rgba(124,58,237,.03);border:2px solid rgba(124,58,237,.12)}
+[data-theme="light"] .opt:hover{background:rgba(124,58,237,.07);border-color:rgba(124,58,237,.22)}
+[data-theme="light"] .opt.selected{background:rgba(124,58,237,.1);border-color:rgba(124,58,237,.28)}
+[data-theme="light"] .oi{background:rgba(124,58,237,.06);border:2px solid rgba(124,58,237,.15)}
 
-.res-promo-inline{display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:12px;background:var(--opt-sel-bg);border:1px solid rgba(56,189,248,.08);margin-bottom:12px;position:relative;overflow:hidden}
-.res-promo-inline::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(56,189,248,.03),transparent);animation:sh 3s ease-in-out infinite}
-@keyframes sh{0%,100%{transform:translateX(-100%)}50%{transform:translateX(100%)}}
-.rpi-label{font-size:.68rem;color:var(--muted);font-weight:600;position:relative;z-index:1}
-.rpi-code{font-family:'Space Grotesk';font-size:1.15rem;font-weight:900;background:linear-gradient(135deg,var(--accent-l),var(--amber-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent;position:relative;z-index:1}
-[data-theme="light"] .rpi-code{background:linear-gradient(135deg,var(--accent),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.rpi-copy{padding:4px 11px;border-radius:100px;font-size:.65rem;font-weight:600;color:var(--white);background:var(--opt-bg);border:1px solid var(--opt-border);cursor:pointer;transition:all .3s;position:relative;z-index:1;margin-left:auto}
-.rpi-copy:hover{background:var(--opt-sel-bg)}
-.rpi-copy.copied{background:rgba(34,197,94,.12);border-color:rgba(34,197,94,.15);color:var(--green-l)}
+/* RESULT */
+.res{text-align:center}
+.res-i{font-size:3rem;margin-bottom:8px}
+.res-t{font-family:'Space Grotesk';font-size:clamp(1.25rem,4vw,1.75rem);font-weight:900;margin-bottom:6px;letter-spacing:-.5px}
+.res-sub{font-size:.813rem;color:var(--muted);margin-bottom:20px}
 
-.res-why{text-align:left;padding:14px;border-radius:14px;background:rgba(34,197,94,.03);border:1px solid rgba(34,197,94,.06);margin-bottom:12px}
-[data-theme="light"] .res-why{background:rgba(34,197,94,.05);border-color:rgba(34,197,94,.1)}
-.res-why h3{font-size:.82rem;color:var(--green-l);margin-bottom:8px;display:flex;align-items:center;gap:5px}
-[data-theme="light"] .res-why h3{color:var(--green)}
-.wl{list-style:none;display:flex;flex-direction:column;gap:3px}
-.wl li{font-size:.78rem;color:var(--green-l);display:flex;align-items:center;gap:5px;padding:3px 0}
-[data-theme="light"] .wl li{color:var(--green)}
+/* WINNER FULL CARD */
+.winner{border-radius:22px;padding:24px;background:rgba(124,58,237,.04);border:2px solid rgba(124,58,237,.18);margin-bottom:18px;position:relative;overflow:hidden;transition:all .3s}
+.winner:hover{border-color:rgba(124,58,237,.3);transform:translateY(-3px)}
+[data-theme="light"] .winner{background:rgba(255,255,255,.92);border:2.5px solid rgba(124,58,237,.22)}
+.winner-badge{position:absolute;top:14px;right:14px;padding:5px 14px;border-radius:100px;font-size:.625rem;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--amber),#f97316);box-shadow:0 3px 12px rgba(245,158,11,.4);z-index:2;text-transform:uppercase}
+.winner-match{position:absolute;top:14px;left:14px;padding:5px 12px;border-radius:100px;font-size:.625rem;font-weight:700;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.18);color:var(--green-l);z-index:2}
+[data-theme="light"] .winner-match{color:#059669;border-color:rgba(5,150,105,.25)}
+.winner-img{width:100%;aspect-ratio:1200/600;border-radius:16px;overflow:hidden;margin-bottom:16px;border:1px solid rgba(124,58,237,.1)}
+.winner-img img{width:100%;height:100%;object-fit:cover;display:block}
+.winner-head{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.winner-emoji{font-size:2rem;width:56px;height:56px;border-radius:18px;display:flex;align-items:center;justify-content:center;background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.1);flex-shrink:0}
+.winner-info{text-align:left;flex:1}
+.winner-name{font-family:'Space Grotesk';font-weight:900;font-size:1.375rem}
+.winner-rating{font-size:.813rem;color:var(--amber)}
+.winner-tags{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:12px}
+.winner-tag{padding:4px 10px;border-radius:100px;font-size:.625rem;font-weight:600;background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.12);color:var(--green-l)}
+[data-theme="light"] .winner-tag{color:#059669;border-color:rgba(5,150,105,.2)}
+.winner-bonus{padding:14px;border-radius:14px;background:linear-gradient(145deg,rgba(124,58,237,.08),rgba(124,58,237,.03));border:1px solid rgba(124,58,237,.14);margin-bottom:10px;text-align:center}
+.winner-bonus-l{font-size:.563rem;text-transform:uppercase;color:var(--purple-l);font-weight:600}
+.winner-bonus-v{font-family:'Space Grotesk';font-size:1.375rem;font-weight:800;color:var(--purple-l);margin-top:2px}
+.winner-promo{padding:12px;border-radius:12px;background:rgba(124,58,237,.04);border:1px dashed rgba(124,58,237,.16);text-align:center;margin-bottom:12px;cursor:pointer;transition:all .3s}
+.winner-promo:hover{background:rgba(124,58,237,.1)}
+.winner-promo-l{font-size:.563rem;text-transform:uppercase;color:var(--purple-l)}
+.winner-promo-c{font-family:'Space Grotesk';font-size:1.375rem;font-weight:900;background:linear-gradient(135deg,var(--purple-l),var(--amber-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.winner-promo-d{font-size:.625rem;color:var(--muted);margin-top:3px}
+.winner-btn{display:block;width:100%;padding:16px;border-radius:14px;font-size:1rem;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--purple),var(--indigo));text-align:center;transition:all .4s;box-shadow:0 4px 22px rgba(124,58,237,.35);position:relative;overflow:hidden}
+.winner-btn:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(124,58,237,.5)}
+.winner-btn::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(45deg,transparent,rgba(255,255,255,.1),transparent);transform:rotate(45deg);animation:shine 3s ease-in-out infinite}
+.winner-btn-mell{background:linear-gradient(135deg,#a78bfa,#f59e0b)!important;box-shadow:0 4px 22px rgba(167,139,250,.35)!important}
+.winner-btn-bear{background:linear-gradient(135deg,#34d399,#f59e0b)!important;box-shadow:0 4px 22px rgba(34,197,94,.35)!important}
 
-/* Others outside with glow */
-.oth h3{font-size:.82rem;color:var(--muted);margin-bottom:10px;text-align:center}
-.oth-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.oc{display:flex;flex-direction:column;align-items:center;padding:14px 10px;border-radius:16px;background:var(--card-bg);border:1px solid var(--card-border);transition:all .35s;text-align:center;position:relative;overflow:hidden}
-.oc::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 0% 0%,var(--glow-1),transparent 60%),radial-gradient(ellipse 50% 50% at 100% 100%,var(--glow-2),transparent 60%);pointer-events:none;border-radius:inherit;z-index:0}
-.oc:hover{border-color:var(--opt-hover);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
-[data-theme="light"] .oc:hover{box-shadow:-10px -8px 24px rgba(99,102,241,.06),10px 8px 24px rgba(56,150,248,.05)}
-.oc-img{width:100%;aspect-ratio:1200/600;border-radius:10px;overflow:hidden;margin-bottom:8px;position:relative;z-index:1}
+/* OTHER CASINOS */
+.others{margin-top:20px}
+.others-t{font-size:.813rem;font-weight:600;color:var(--muted);margin-bottom:12px;text-align:center}
+.others-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.oc{padding:14px;border-radius:16px;background:rgba(124,58,237,.03);border:1px solid rgba(124,58,237,.08);text-align:center;transition:all .3s;display:block}
+.oc:hover{border-color:rgba(124,58,237,.2);transform:translateY(-2px)}
+[data-theme="light"] .oc{border:2px solid rgba(124,58,237,.15);background:rgba(255,255,255,.8)}
+.oc-img{width:100%;aspect-ratio:1200/600;border-radius:10px;overflow:hidden;margin-bottom:8px;border:1px solid rgba(124,58,237,.06)}
 .oc-img img{width:100%;height:100%;object-fit:cover;display:block}
-.oc-n{font-weight:700;font-size:.82rem;margin-bottom:2px;position:relative;z-index:1}
-.oc-s{font-size:.68rem;color:var(--amber);margin-bottom:2px;position:relative;z-index:1}
-.oc-m{font-size:.62rem;color:var(--muted);margin-bottom:6px;position:relative;z-index:1}.oc-m strong{color:var(--green-l)}
-[data-theme="light"] .oc-m strong{color:var(--green)}
-.oc-btn{padding:6px 14px;border-radius:100px;font-size:.65rem;font-weight:600;color:#fff;background:linear-gradient(135deg,var(--accent),var(--rose));transition:all .3s;display:inline-block;position:relative;z-index:1}
-.oc-btn:hover{transform:scale(1.05)}
+.oc-e{font-size:1.25rem;margin-bottom:4px}
+.oc-n{font-weight:700;font-size:.75rem;margin-bottom:2px}
+.oc-r{font-size:.625rem;color:var(--amber);margin-bottom:4px}
+.oc-b{font-size:.625rem;font-weight:600;color:var(--purple-l);margin-bottom:6px}
+.oc-btn{display:block;padding:8px;border-radius:10px;font-size:.625rem;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--purple),var(--indigo))}
 
-/* Fun fact with glow */
-.fun-fact{padding:14px 16px;border-radius:14px;background:var(--opt-bg);border:1px solid var(--opt-border);text-align:center;margin-top:8px;position:relative;overflow:hidden}
-.fun-fact::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 45% 45% at 0% 100%,var(--glow-1),transparent 60%),radial-gradient(ellipse 45% 45% at 100% 0%,var(--glow-2),transparent 60%);pointer-events:none;border-radius:inherit}
-.fun-fact-icon{font-size:1.4rem;margin-bottom:4px;position:relative;z-index:1}
-.fun-fact-text{font-size:.75rem;color:var(--muted);line-height:1.5;position:relative;z-index:1}
-.fun-fact-text strong{color:var(--accent-l)}
-[data-theme="light"] .fun-fact-text strong{color:var(--accent)}
+.loading{text-align:center;padding:40px 20px}
+.loading-spinner{width:48px;height:48px;border:3px solid rgba(124,58,237,.1);border-top-color:var(--purple);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 16px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-t{font-weight:700;font-size:1rem;margin-bottom:6px}
+.loading-s{font-size:.75rem;color:var(--muted)}
 
-.disc{font-size:.55rem;color:var(--muted);margin-top:12px;line-height:1.4;opacity:.5;text-align:center}
-.disc a{color:var(--accent-l)}[data-theme="light"] .disc a{color:var(--accent)}
-.ft{padding:16px 0;text-align:center;position:relative;z-index:1}
-.ft p{font-size:.68rem;color:var(--muted)}.ft a{color:var(--accent-l)}[data-theme="light"] .ft a{color:var(--accent)}
-::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--scrollbar);border-radius:2px}
+.ft{position:relative;z-index:1;text-align:center;padding:20px 16px 30px;font-size:.688rem;color:var(--muted)}
+.ft a{color:var(--purple-l);font-weight:600}
 
 @media(max-width:768px){
-    .nav{padding:3px 6px;gap:4px}.nav-l{padding:4px 8px;font-size:.78rem;gap:5px}.nav-l img{width:22px;height:22px}
-    .nav-b{padding:4px 9px;font-size:.65rem}.nav-a{padding:3px 7px;font-size:.55rem}.nav-s{height:12px}
-    .theme-btn{width:28px;height:28px;font-size:.82rem}.tg-nav{padding:4px 9px;font-size:.62rem}
-    .qw{padding:52px 10px 16px}
-    .intro{padding:24px 16px}.intro-i{font-size:2.8rem}.intro h1{font-size:1.35rem}.intro p{font-size:.82rem}
-    .tg-banner{padding:9px 11px;gap:8px;border-radius:12px}
-    .qc{padding:22px 16px}.qt{font-size:1.12rem}.opt{padding:11px 12px;font-size:.8rem;gap:8px;border-radius:12px}.oi{font-size:1.05rem}.chk{width:18px;height:18px;font-size:.5rem}
-    .glass{border-radius:20px}
-    .res-wrap{max-width:100%}
-    .res-inner{grid-template-columns:1fr}
-    .res-img-side{aspect-ratio:1200/600}
-    .res-img-side img{aspect-ratio:1200/600}
-    [data-theme="dark"] .res-img-side::after{background:linear-gradient(180deg,transparent 40%,var(--bg))}
-    [data-theme="light"] .res-img-side::after{background:linear-gradient(180deg,transparent 40%,var(--bg))}
-    .res-info{padding:18px 16px}
-    .res-n{font-size:1.5rem}.res-sc{font-size:1.3rem}
-    .cta{padding:13px 22px;font-size:.85rem;min-height:46px}
-    .oth-grid{gap:6px}.oc{padding:10px 8px}.oc-n{font-size:.75rem}
+    .orb,.glow{display:none!important}
+    .world-m{background:linear-gradient(180deg,var(--bg),var(--bg))!important}
+    [data-theme="light"] .world-m{background:linear-gradient(180deg,#f5f0e8,#efe8dc)!important}
+    .glass{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(12,10,30,.85)!important}
+    [data-theme="light"] .glass{background:rgba(255,255,255,.95)!important}
+    .nav{padding:4px 10px;gap:4px}
+    .nav-l{padding:6px 8px;font-size:.813rem;gap:6px}
+    .nav-l img{width:24px;height:24px}
+    .nav-b,.tg-nav{padding:6px 10px;font-size:.625rem}
+    .nav-a{padding:4px 8px;font-size:.563rem}
+    .theme-btn{width:28px;height:28px;font-size:.75rem}
+    .qw{padding:65px 14px 30px}
+    .glass{padding:24px 18px;border-radius:20px}
+    .intro h1{font-size:1.5rem}
+    .tg-banner{flex-wrap:wrap;gap:10px;padding:12px 14px}
+    .tg-banner-btn{width:100%;text-align:center;padding:10px}
+    .opt{padding:12px 14px;min-height:46px}
+    .oi{width:32px;height:32px;font-size:1.063rem}
+    .ot{font-size:.813rem}
+    .others-grid{grid-template-columns:1fr 1fr;gap:6px}
+    .winner{padding:18px}
+    .winner-name{font-size:1.125rem}
+    .winner-bonus-v{font-size:1.125rem}
 }
-@media(max-width:480px){
-    .intro{padding:20px 12px}.intro-i{font-size:2.4rem}.intro h1{font-size:1.2rem}
-    .intro-tags{gap:4px}.itag{padding:5px 10px;font-size:.64rem}
-    .qc{padding:18px 12px}.qt{font-size:1rem;margin-bottom:12px}.opt{padding:9px 10px;font-size:.74rem}
-    .res-info{padding:14px 12px}.res-n{font-size:1.3rem}
-    .glass{border-radius:16px}
-    .oth-grid{gap:5px}.oc{padding:8px 6px;border-radius:12px}.oc-img{border-radius:8px}.oc-n{font-size:.7rem}.oc-btn{padding:5px 10px;font-size:.58rem}
-}    
-</style>
-
+@media(max-width:400px){
+    .nav-b,.tg-nav{display:none}
+    .nav-s:nth-child(4),.nav-s:nth-child(6){display:none}
+    .glass{padding:20px 14px}
+    .others-grid{gap:5px}
+    .oc{padding:10px}
+}
+    </style>
 </head>
 <body>
 
@@ -299,180 +240,233 @@ body:hover .glow{opacity:1}
 <div class="qw">
     <div class="qb" id="quizBox">
         <div class="prog" id="prog">
-            <div class="prog-top"><div class="prog-t">⏱ Вопрос <span id="progN">1</span> из 8</div><div class="prog-back" id="backBtn" onclick="goBack()">← Назад</div></div>
+            <div class="prog-top"><div class="prog-t">⏱ Вопрос <span id="progN">1</span> из 10</div><div class="prog-back" id="backBtn" onclick="goBack()">← Назад</div></div>
             <div class="prog-bar"><div class="prog-fill" id="progF" style="width:0%"></div></div>
         </div>
 
         <div class="scr on" id="s-intro"><div class="glass intro">
             <span class="intro-i">🎯</span>
             <h1>Какое казино<br><span class="gt">тебе подходит?</span></h1>
-            <p>8 вопросов — персональная рекомендация за 1 минуту</p>
+            <p>10 вопросов — персональная рекомендация за 2 минуты</p>
             <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="tg-banner">
                 <span class="tg-banner-icon">📱</span>
                 <span class="tg-banner-text"><span class="tg-banner-title">Подпишись на Paytaoff</span><span class="tg-banner-sub">Бонусы и промокоды каждый день</span></span>
                 <span class="tg-banner-btn">Подписаться</span>
             </a>
-            <div class="intro-tags"><div class="itag">⏱ 1 мин</div><div class="itag">🎯 8 вопросов</div><div class="itag">✅ Бесплатно</div><div class="itag">🔒 Анонимно</div></div>
+            <div class="intro-tags"><div class="itag">⏱ 2 мин</div><div class="itag">🎯 10 вопросов</div><div class="itag">✅ Бесплатно</div><div class="itag">🔒 Анонимно</div></div>
             <button class="cta" onclick="start()">Начать тест →</button>
             <p style="font-size:.6rem;color:var(--muted);margin-top:8px">18+. Информационный характер.</p>
         </div></div>
 
-        <div class="scr" id="s-q1"><div class="glass qc"><div class="qn">Вопрос 1 из 8</div><div class="qt">Что для тебя самое важное?</div><div class="qo">
-            <div class="opt" onclick="ans(1,'speed')"><span class="oi">⚡</span><span class="ot">Быстрый вывод</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(1,'bonus')"><span class="oi">🎁</span><span class="ot">Щедрый бонус</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(1,'games')"><span class="oi">🎮</span><span class="ot">Много игр</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(1,'safety')"><span class="oi">🛡️</span><span class="ot">Безопасность</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(1,'vip')"><span class="oi">👑</span><span class="ot">VIP</span><span class="chk">✓</span></div>
+        <div class="scr" id="s-q1"><div class="glass qc"><div class="qn">Вопрос 1 из 10</div><div class="qt">Что для тебя самое важное в казино?</div><div class="qo">
+            <div class="opt" onclick="ans(1,'speed')"><span class="oi">⚡</span><span class="ot">Быстрый вывод денег</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(1,'bonus')"><span class="oi">🎁</span><span class="ot">Щедрый приветственный бонус</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(1,'games')"><span class="oi">🎮</span><span class="ot">Огромный выбор игр</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(1,'safety')"><span class="oi">🛡️</span><span class="ot">Надёжность и безопасность</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(1,'vip')"><span class="oi">👑</span><span class="ot">VIP-программа и статус</span><span class="chk">✓</span></div>
         </div></div></div>
-        <div class="scr" id="s-q2"><div class="glass qc"><div class="qn">Вопрос 2 из 8</div><div class="qt">Во что играешь?</div><div class="qo">
-            <div class="opt" onclick="ans(2,'slots')"><span class="oi">🎰</span><span class="ot">Слоты</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(2,'live')"><span class="oi">🎥</span><span class="ot">Live казино</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(2,'sports')"><span class="oi">⚽</span><span class="ot">Спорт</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(2,'crash')"><span class="oi">🚀</span><span class="ot">Crash (Aviator)</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(2,'table')"><span class="oi">🃏</span><span class="ot">Карты</span><span class="chk">✓</span></div>
+        <div class="scr" id="s-q2"><div class="glass qc"><div class="qn">Вопрос 2 из 10</div><div class="qt">Во что ты обычно играешь?</div><div class="qo">
+            <div class="opt" onclick="ans(2,'slots')"><span class="oi">🎰</span><span class="ot">Слоты и автоматы</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(2,'live')"><span class="oi">🎥</span><span class="ot">Live-казино с дилером</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(2,'sports')"><span class="oi">⚽</span><span class="ot">Ставки на спорт</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(2,'crash')"><span class="oi">🚀</span><span class="ot">Crash-игры (Aviator, Lucky Jet)</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(2,'table')"><span class="oi">🃏</span><span class="ot">Карточные игры</span><span class="chk">✓</span></div>
         </div></div></div>
-        <div class="scr" id="s-q3"><div class="glass qc"><div class="qn">Вопрос 3 из 8</div><div class="qt">Чем пополняешь?</div><div class="qo">
-            <div class="opt" onclick="ans(3,'card')"><span class="oi">💳</span><span class="ot">Карта</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(3,'crypto')"><span class="oi">₿</span><span class="ot">Крипто</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(3,'ewallet')"><span class="oi">📱</span><span class="ot">Кошелёк</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(3,'sbp')"><span class="oi">🏦</span><span class="ot">СБП</span><span class="chk">✓</span></div>
+        <div class="scr" id="s-q3"><div class="glass qc"><div class="qn">Вопрос 3 из 10</div><div class="qt">Чем предпочитаешь пополнять?</div><div class="qo">
+            <div class="opt" onclick="ans(3,'card')"><span class="oi">💳</span><span class="ot">Банковская карта</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(3,'crypto')"><span class="oi">₿</span><span class="ot">Криптовалюта</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(3,'ewallet')"><span class="oi">📱</span><span class="ot">Электронный кошелёк</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(3,'sbp')"><span class="oi">🏦</span><span class="ot">СБП / перевод</span><span class="chk">✓</span></div>
         </div></div></div>
-        <div class="scr" id="s-q4"><div class="glass qc"><div class="qn">Вопрос 4 из 8</div><div class="qt">Устройство?</div><div class="qo">
-            <div class="opt" onclick="ans(4,'mobile')"><span class="oi">📱</span><span class="ot">Телефон</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(4,'pc')"><span class="oi">💻</span><span class="ot">ПК</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(4,'both')"><span class="oi">🔄</span><span class="ot">Оба</span><span class="chk">✓</span></div>
+        <div class="scr" id="s-q4"><div class="glass qc"><div class="qn">Вопрос 4 из 10</div><div class="qt">С какого устройства играешь?</div><div class="qo">
+            <div class="opt" onclick="ans(4,'mobile')"><span class="oi">📱</span><span class="ot">Только телефон</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(4,'pc')"><span class="oi">💻</span><span class="ot">Только компьютер</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(4,'both')"><span class="oi">🔄</span><span class="ot">И телефон, и ПК</span><span class="chk">✓</span></div>
         </div></div></div>
-        <div class="scr" id="s-q5"><div class="glass qc"><div class="qn">Вопрос 5 из 8</div><div class="qt">Тип бонуса?</div><div class="qo">
-            <div class="opt" onclick="ans(5,'bigbonus')"><span class="oi">💎</span><span class="ot">Макс. %</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(5,'cashback')"><span class="oi">💰</span><span class="ot">Кэшбэк</span><span class="chk">✓</span></div>
+        <div class="scr" id="s-q5"><div class="glass qc"><div class="qn">Вопрос 5 из 10</div><div class="qt">Какой тип бонуса привлекает?</div><div class="qo">
+            <div class="opt" onclick="ans(5,'bigbonus')"><span class="oi">💎</span><span class="ot">Максимальный % к депозиту</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(5,'cashback')"><span class="oi">💰</span><span class="ot">Кэшбэк на проигрыш</span><span class="chk">✓</span></div>
             <div class="opt" onclick="ans(5,'freespins')"><span class="oi">🎰</span><span class="ot">Фриспины</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(5,'tournament')"><span class="oi">🏆</span><span class="ot">Турниры</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(5,'tournament')"><span class="oi">🏆</span><span class="ot">Призовые турниры</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(5,'wheel')"><span class="oi">🎡</span><span class="ot">Колесо фортуны</span><span class="chk">✓</span></div>
         </div></div></div>
-        <div class="scr" id="s-q6"><div class="glass qc"><div class="qn">Вопрос 6 из 8</div><div class="qt">Скорость вывода?</div><div class="qo">
-            <div class="opt" onclick="ans(6,'instant')"><span class="oi">⚡</span><span class="ot">Мгновенно</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(6,'fast')"><span class="oi">🕐</span><span class="ot">За сутки</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(6,'normal')"><span class="oi">📅</span><span class="ot">Подожду</span><span class="chk">✓</span></div>
+        <div class="scr" id="s-q6"><div class="glass qc"><div class="qn">Вопрос 6 из 10</div><div class="qt">Как быстро нужен вывод?</div><div class="qo">
+            <div class="opt" onclick="ans(6,'instant')"><span class="oi">⚡</span><span class="ot">Мгновенно (до 15 мин)</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(6,'fast')"><span class="oi">🕐</span><span class="ot">В течение суток</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(6,'normal')"><span class="oi">📅</span><span class="ot">Могу подождать 2-3 дня</span><span class="chk">✓</span></div>
         </div></div></div>
-        <div class="scr" id="s-q7"><div class="glass qc"><div class="qn">Вопрос 7 из 8</div><div class="qt">Дизайн?</div><div class="qo">
-            <div class="opt" onclick="ans(7,'theme')"><span class="oi">🎨</span><span class="ot">Уникальная тема</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(7,'classic')"><span class="oi">🎩</span><span class="ot">Классика</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(7,'nocare')"><span class="oi">🤷</span><span class="ot">Не важно</span><span class="chk">✓</span></div>
+        <div class="scr" id="s-q7"><div class="glass qc"><div class="qn">Вопрос 7 из 10</div><div class="qt">Важен ли дизайн и атмосфера?</div><div class="qo">
+            <div class="opt" onclick="ans(7,'theme')"><span class="oi">🎨</span><span class="ot">Да, уникальная тематика</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(7,'classic')"><span class="oi">🎩</span><span class="ot">Классика и элегантность</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(7,'modern')"><span class="oi">🔥</span><span class="ot">Современный и модный</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(7,'nocare')"><span class="oi">🤷</span><span class="ot">Главное функционал</span><span class="chk">✓</span></div>
         </div></div></div>
-        <div class="scr" id="s-q8"><div class="glass qc"><div class="qn">Вопрос 8 из 8</div><div class="qt">Опыт?</div><div class="qo">
+        <div class="scr" id="s-q8"><div class="glass qc"><div class="qn">Вопрос 8 из 10</div><div class="qt">Какой у тебя опыт?</div><div class="qo">
             <div class="opt" onclick="ans(8,'newbie')"><span class="oi">🌱</span><span class="ot">Новичок</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(8,'medium')"><span class="oi">🎯</span><span class="ot">Средний</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(8,'pro')"><span class="oi">💎</span><span class="ot">Опытный</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(8,'medium')"><span class="oi">🎯</span><span class="ot">Средний — играю иногда</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(8,'pro')"><span class="oi">💎</span><span class="ot">Опытный — играю регулярно</span><span class="chk">✓</span></div>
         </div></div></div>
+        <div class="scr" id="s-q9"><div class="glass qc"><div class="qn">Вопрос 9 из 10</div><div class="qt">Размер депозита?</div><div class="qo">
+            <div class="opt" onclick="ans(9,'small')"><span class="oi">🪙</span><span class="ot">Минимальный (до 1000 ₽)</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(9,'medium')"><span class="oi">💵</span><span class="ot">Средний (1000-10000 ₽)</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(9,'big')"><span class="oi">💰</span><span class="ot">Крупный (10000+ ₽)</span><span class="chk">✓</span></div>
+        </div></div></div>
+        <div class="scr" id="s-q10"><div class="glass qc"><div class="qn">Вопрос 10 из 10</div><div class="qt">Что ещё важно?</div><div class="qo">
+            <div class="opt" onclick="ans(10,'app')"><span class="oi">📲</span><span class="ot">Мобильное приложение</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(10,'support')"><span class="oi">💬</span><span class="ot">Русская поддержка 24/7</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(10,'promo')"><span class="oi">🎁</span><span class="ot">Регулярные промоакции</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(10,'stream')"><span class="oi">📺</span><span class="ot">Связь со стримерами</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(10,'nothing')"><span class="oi">✅</span><span class="ot">Всё вышеперечисленное</span><span class="chk">✓</span></div>
+        </div></div></div>
+
+        <div class="scr" id="s-loading"><div class="glass loading">
+            <div class="loading-spinner"></div>
+            <div class="loading-t">Анализируем ответы...</div>
+            <div class="loading-s">Подбираем лучшее казино для тебя</div>
+        </div></div>
 
         <div class="scr" id="s-result"></div>
     </div>
 </div>
 
-<footer class="ft"><p>© 2026 <a href="/">Paytaoff</a> · <strong style="color:#f87171">18+</strong> · <a href="/responsible-gaming/">Ответственная игра</a></p></footer>
+<footer class="ft"><p>© 2026 <a href="/">Paytaoff</a> · <strong style="color:#f87171">18+</strong> · <a href="/responsible-gaming/">Ответственная игра</a> · <a href="/about/">О проекте</a></p></footer>
 
 <script>
-!function(){const c=document.getElementById('dots');for(let i=0;i<50;i++){const d=document.createElement('div');d.className='dot';d.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;width:${1+Math.random()*1.2}px;height:${1+Math.random()*1.2}px;--t:${3+Math.random()*4}s;--o:${.08+Math.random()*.2};animation-delay:${Math.random()*5}s`;c.appendChild(d)}}();
-addEventListener('mousemove',e=>{const g=document.getElementById('glow');g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'});
+!function(){const e=document.getElementById('dots');for(let i=0;i<40;i++){const d=document.createElement('div');d.className='dot';d.style.cssText=`position:absolute;left:${Math.random()*100}%;top:${Math.random()*100}%;width:${1+Math.random()*1.5}px;height:${1+Math.random()*1.5}px;--d:${3+Math.random()*4}s;--o:${.2+Math.random()*.4};animation-delay:${Math.random()*5}s;border-radius:50%`;e.appendChild(d)}}();
+addEventListener('mousemove',e=>{const g=document.getElementById('glow');if(g){g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'}});
 
-let theme=localStorage.getItem('pt-theme')||'dark';
-function applyTheme(t){document.documentElement.setAttribute('data-theme',t);document.getElementById('themeBtn').textContent=t==='dark'?'🌙':'☀️';document.querySelector('meta[name="theme-color"]').content=t==='dark'?'#04050b':'#d5d9f0';localStorage.setItem('pt-theme',t);theme=t}
-function toggleTheme(){applyTheme(theme==='dark'?'light':'dark')}
-applyTheme(theme);
+function toggleTheme(){const h=document.documentElement;const n=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',n);localStorage.setItem('theme',n);document.getElementById('themeBtn').textContent=n==='dark'?'🌙':'☀️'}
+(function(){const s=localStorage.getItem('theme');if(s){document.documentElement.setAttribute('data-theme',s);const b=document.getElementById('themeBtn');if(b)b.textContent=s==='dark'?'🌙':'☀️'}})();
 
-const facts=[
-    {icon:'🎲',text:'<strong>Знал?</strong> Сумма всех чисел на рулетке = 666'},
-    {icon:'🃏',text:'<strong>Факт:</strong> Базовая стратегия блэкджека снижает преимущество казино до 0.5%'},
-    {icon:'🎰',text:'<strong>Совет:</strong> Выбирай слоты с RTP 96%+'},
-    {icon:'💡',text:'<strong>Лайфхак:</strong> Ставь лимит ДО игры'},
-    {icon:'📊',text:'<strong>Факт:</strong> 80% не читают условия бонусов'},
-    {icon:'🏆',text:'<strong>Рекорд:</strong> Макс. онлайн выигрыш — €17.8 млн'},
-    {icon:'⏱',text:'<strong>Совет:</strong> Перерыв каждые 30 мин'},
-    {icon:'🔒',text:'<strong>Важно:</strong> Проверяй замочек SSL в адресе'}
-];
+const totalQ=10;
+let answers={},history=[];
 
-const C={
-    '1win':{name:'1win',rating:'9.8',stars:'★★★★★',promo:'SMOG',promoDesc:'Бонус к первым 4 депозитам',link:'https://lkts.pro/5024',rev:'/reviews/1win/',img:'/img/1win.png',
-        speed:8,bonus:10,games:10,safety:8,vip:5,slots:9,live:8,sports:10,crash:10,table:7,card:9,crypto:10,ewallet:9,sbp:8,mobile:10,pc:8,both:10,bigbonus:10,cashback:6,freespins:8,tournament:6,instant:7,fast:9,normal:8,theme:6,classic:7,nocare:10,newbie:7,medium:9,pro:10,
-        why:['10,000+ игр','Спорт + казино','Криптовалюты','iOS/Android','Crash: Aviator']},
-    'arkada':{name:'Arkada',rating:'9.4',stars:'★★★★★',promo:null,link:'https://grid-cyberlane.com/s98fda0f8',rev:'/reviews/arkada/',img:'/img/arkada.png',
-        speed:9,bonus:8,games:7,safety:9,vip:6,slots:9,live:7,sports:3,crash:7,table:7,card:9,crypto:8,ewallet:8,sbp:9,mobile:7,pc:9,both:8,bigbonus:8,cashback:7,freespins:9,tournament:6,instant:8,fast:9,normal:7,theme:8,classic:8,nocare:7,newbie:10,medium:8,pro:6,
-        why:['Для новичков','Стильный дизайн','5,000+ игр','Вывод 24ч','Просто']},
-    'catcasino':{name:'CatCasino',rating:'9.2',stars:'★★★★★',promo:null,link:'https://catchthecatthree.com/sb716b632',rev:'/reviews/catcasino/',img:'/img/catcasino.png',
-        speed:5,bonus:9,games:7,safety:7,vip:6,slots:10,live:6,sports:2,crash:6,table:6,card:8,crypto:7,ewallet:8,sbp:7,mobile:6,pc:8,both:7,bigbonus:9,cashback:6,freespins:10,tournament:10,instant:4,fast:6,normal:10,theme:10,classic:4,nocare:5,newbie:8,medium:9,pro:7,
-        why:['Кошачья тема','Турниры','Фриспины','Лояльность','4,000+ слотов']},
-    'kometa':{name:'Kometa',rating:'9.0',stars:'★★★★☆',promo:null,link:'https://searing-path.com/s2e02d62f',rev:'/reviews/kometa/',img:'/img/kometa.png',
-        speed:8,bonus:7,games:6,safety:8,vip:5,slots:7,live:6,sports:4,crash:8,table:6,card:8,crypto:4,ewallet:7,sbp:8,mobile:10,pc:7,both:8,bigbonus:7,cashback:10,freespins:7,tournament:6,instant:8,fast:8,normal:6,theme:10,classic:3,nocare:6,newbie:9,medium:7,pro:5,
-        why:['Лучший кэшбэк','Космос','Приложение','Быстро','Для мобильных']},
-    'kent':{name:'Kent',rating:'8.8',stars:'★★★★☆',promo:null,link:'https://mealmenalc.com/s4882a91c',rev:'/reviews/kent/',img:'/img/kent.png',
-        speed:5,bonus:5,games:5,safety:9,vip:10,slots:6,live:9,sports:3,crash:4,table:10,card:8,crypto:4,ewallet:6,sbp:7,mobile:6,pc:10,both:7,bigbonus:5,cashback:7,freespins:5,tournament:5,instant:4,fast:6,normal:10,theme:5,classic:10,nocare:6,newbie:4,medium:7,pro:10,
-        why:['VIP','Элегантность','Менеджер','Карты','Для опытных']}
+const casinos={
+    '1win':{name:'1win',emoji:'🏆',rating:'9.8',stars:'★★★★★',bonus:'До 500% +70 FS',promo:'SMOG',promoDesc:'Бонус к первым 4 депозитам + 70 фриспинов',url:'https://lkts.pro/5024',img:'../img/1win.png',btnClass:'',tags:['10000+ игр','Приложение','Крипто','Live','Ставки','24/7']},
+    'mellstroy':{name:'MELLSTROY',emoji:'🔥',rating:'9.6',stars:'★★★★★',bonus:'До 550% +400 FS',promo:null,promoDesc:null,url:'https://mellehdw.life/?open=register&p=u7s2',img:'../img/mellstroy.png',btnClass:'winner-btn-mell',tags:['8000+ игр','Крипто','VIP','Стример','400 FS']},
+    'luckybear':{name:'Lucky Bear',emoji:'🐻',rating:'9.5',stars:'★★★★★',bonus:'До 360% +250 FS',promo:'SMOG',promoDesc:'🎡 Первым 300 игрокам — прокрут колеса фортуны!',url:'https://lb777.xyz/1GY28M',img:'../img/luckybear.png',btnClass:'winner-btn-bear',tags:['7000+ игр','Крипто','Быстрый вывод','Колесо']},
+    'arkada':{name:'Arkada Casino',emoji:'🎰',rating:'9.4',stars:'★★★★★',bonus:'До 200%',promo:null,promoDesc:null,url:'https://grid-cyberlane.com/s98fda0f8',img:'../img/arkada.png',btnClass:'',tags:['5000+ игр','Стильный','Щедрый']},
+    'catcasino':{name:'CatCasino',emoji:'🐱',rating:'9.2',stars:'★★★★★',bonus:'До 325%',promo:null,promoDesc:null,url:'https://catchthecatthree.com/sb716b632',img:'../img/catcasino.png',btnClass:'',tags:['4000+ игр','Турниры','Лояльность']},
+    'kometa':{name:'Kometa',emoji:'☄️',rating:'9.0',stars:'★★★★☆',bonus:'До 255%',promo:null,promoDesc:null,url:'https://searing-path.com/s2e02d62f',img:'../img/kometa.png',btnClass:'',tags:['3500+ игр','Космос','Кэшбэк']},
+    'kent':{name:'Kent',emoji:'🎩',rating:'8.8',stars:'★★★★☆',bonus:'До 150%',promo:null,promoDesc:null,url:'https://mealmenalc.com/s4882a91c',img:'../img/kent.png',btnClass:'',tags:['3000+ игр','VIP','Элегантный']}
 };
 
-let A={},cur=0;const TQ=8;
-function show(id,dir){
-    const prev=document.querySelector('.scr.on');
-    if(prev){prev.classList.remove('on','back');prev.style.display='none'}
-    const el=document.getElementById(id);el.style.display='block';el.classList.remove('on','back');void el.offsetWidth;
-    if(dir==='back')el.classList.add('back');el.classList.add('on');
-    document.getElementById('quizBox').classList.toggle('qb-wide',id==='s-result');
-    window.scrollTo({top:0,behavior:'smooth'});
+function score(){
+    let s={};Object.keys(casinos).forEach(k=>s[k]=0);const a=answers;
+    if(a[1]==='speed'){s['1win']+=3;s.mellstroy+=3;s.luckybear+=3}
+    if(a[1]==='bonus'){s.mellstroy+=4;s['1win']+=3;s.luckybear+=2}
+    if(a[1]==='games'){s['1win']+=4;s.mellstroy+=2;s.catcasino+=2}
+    if(a[1]==='safety'){s['1win']+=3;s.kent+=3;s.arkada+=2}
+    if(a[1]==='vip'){s.kent+=4;s.mellstroy+=2;s['1win']+=1}
+    if(a[2]==='slots'){s['1win']+=3;s.arkada+=3;s.catcasino+=2;s.kometa+=2}
+    if(a[2]==='live'){s['1win']+=3;s.mellstroy+=2;s.kent+=2}
+    if(a[2]==='sports'){s['1win']+=5}
+    if(a[2]==='crash'){s['1win']+=3;s.mellstroy+=3;s.luckybear+=2}
+    if(a[2]==='table'){s.kent+=3;s['1win']+=2;s.catcasino+=1}
+    if(a[3]==='card'){s['1win']+=2;s.arkada+=2;s.kent+=2;s.catcasino+=2;s.kometa+=2}
+    if(a[3]==='crypto'){s.mellstroy+=4;s.luckybear+=4;s['1win']+=2}
+    if(a[3]==='ewallet'){s['1win']+=2;s.catcasino+=2;s.arkada+=1}
+    if(a[3]==='sbp'){s['1win']+=3;s.arkada+=2}
+    if(a[4]==='mobile'){s['1win']+=3;s.mellstroy+=2;s.luckybear+=2}
+    if(a[4]==='pc'){s.kent+=2;s.catcasino+=2;s.arkada+=2}
+    if(a[4]==='both'){s['1win']+=3;s.mellstroy+=1;s.arkada+=1}
+    if(a[5]==='bigbonus'){s.mellstroy+=4;s['1win']+=3;s.luckybear+=2}
+    if(a[5]==='cashback'){s.kometa+=4;s.catcasino+=2;s.kent+=1}
+    if(a[5]==='freespins'){s['1win']+=3;s.mellstroy+=3;s.luckybear+=2}
+    if(a[5]==='tournament'){s.catcasino+=4;s['1win']+=2}
+    if(a[5]==='wheel'){s.luckybear+=5;s.mellstroy+=1}
+    if(a[6]==='instant'){s['1win']+=3;s.mellstroy+=3;s.luckybear+=3}
+    if(a[6]==='fast'){s.arkada+=2;s.kometa+=2;s['1win']+=2}
+    if(a[6]==='normal'){s.catcasino+=2;s.kent+=2}
+    if(a[7]==='theme'){s.kometa+=3;s.mellstroy+=2;s.luckybear+=2}
+    if(a[7]==='classic'){s.kent+=4;s.arkada+=2}
+    if(a[7]==='modern'){s.mellstroy+=3;s['1win']+=2;s.luckybear+=2}
+    if(a[7]==='nocare'){s['1win']+=2;s.catcasino+=1;s.arkada+=1}
+    if(a[8]==='newbie'){s['1win']+=4;s.arkada+=2;s.luckybear+=2}
+    if(a[8]==='medium'){s.catcasino+=2;s.kometa+=2;s['1win']+=2;s.mellstroy+=2}
+    if(a[8]==='pro'){s.mellstroy+=3;s.kent+=3;s.luckybear+=2}
+    if(a[9]==='small'){s.arkada+=3;s.kometa+=2;s.luckybear+=2}
+    if(a[9]==='medium'){s['1win']+=3;s.catcasino+=2;s.mellstroy+=2}
+    if(a[9]==='big'){s.mellstroy+=4;s['1win']+=3;s.kent+=3}
+    if(a[10]==='app'){s['1win']+=4;s.mellstroy+=1}
+    if(a[10]==='support'){s['1win']+=3;s.catcasino+=2;s.arkada+=2}
+    if(a[10]==='promo'){s.catcasino+=3;s.kometa+=2;s.luckybear+=2}
+    if(a[10]==='stream'){s.mellstroy+=5;s.luckybear+=2}
+    if(a[10]==='nothing'){s['1win']+=3;s.mellstroy+=1;s.luckybear+=1}
+    return Object.entries(s).sort((a,b)=>b[1]-a[1]);
 }
-function updProg(q){document.getElementById('prog').classList.toggle('on',q>0);document.getElementById('progN').textContent=q;document.getElementById('progF').style.width=`${(q/TQ)*100}%`;document.getElementById('backBtn').classList.toggle('on',q>1)}
-function start(){A={};cur=1;updProg(1);show('s-q1')}
-function ans(q,v){document.querySelectorAll(`#s-q${q} .opt`).forEach(o=>o.classList.remove('sel'));event.currentTarget.classList.add('sel');A[q]=v;setTimeout(()=>{if(q<TQ){cur=q+1;updProg(cur);show(`s-q${q+1}`)}else calcResult()},400)}
-function goBack(){if(cur<=1)return;delete A[cur];cur--;document.querySelectorAll(`#s-q${cur} .opt`).forEach(o=>o.classList.remove('sel'));updProg(cur);show(`s-q${cur}`,'back')}
 
-function calcResult(){
-    updProg(TQ);document.getElementById('progF').style.width='100%';
-    const scores={};for(const[id,c] of Object.entries(C)){let s=0;for(const[q,v] of Object.entries(A))s+=(c[v]||5);scores[id]=s}
-    const sorted=Object.entries(scores).sort((a,b)=>b[1]-a[1]);
-    const wId=sorted[0][0],w=C[wId],maxS=sorted[0][1];
-    const matchPct=Math.min(99,Math.round((maxS/(TQ*10))*100));
-    const fact=facts[Math.floor(Math.random()*facts.length)];
+function show(id){document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));const el=document.getElementById(id);if(el){el.classList.add('on');el.scrollIntoView({behavior:'smooth',block:'start'})}}
+function updateProg(n){document.getElementById('progN').textContent=n;document.getElementById('progF').style.width=(n/totalQ*100)+'%';document.getElementById('backBtn').classList.toggle('on',n>1)}
+function start(){show('s-q1');document.getElementById('prog').classList.add('on');updateProg(1);history=['s-intro']}
+function ans(q,val){answers[q]=val;const opts=document.querySelectorAll(`#s-q${q} .opt`);opts.forEach(o=>o.classList.remove('selected'));event.currentTarget.classList.add('selected');history.push(`s-q${q}`);setTimeout(()=>{if(q<totalQ){show(`s-q${q+1}`);updateProg(q+1)}else{show('s-loading');setTimeout(()=>showResult(),1800)}},350)}
+function goBack(){if(history.length<2)return;history.pop();const target=history[history.length-1];show(target);const qNum=target.replace('s-q','');if(target==='s-intro'){document.getElementById('prog').classList.remove('on')}else{updateProg(parseInt(qNum))}}
 
-    let whyH='';w.why.forEach(t=>{whyH+=`<li>✅ ${t}</li>`});
-    let promoH='';
-    if(w.promo)promoH=`<div class="res-promo-inline"><span class="rpi-label">Промокод:</span><span class="rpi-code">${w.promo}</span><span class="rpi-copy" id="resCopy" onclick="copyCode()">📋</span></div>`;
+function showResult(){
+    const sorted=score();
+    const winnerKey=sorted[0][0],winnerScore=sorted[0][1];
+    const w=casinos[winnerKey];
+    const match=100;
+    const rest=sorted.slice(1);
 
-    let othH='';
-    for(let i=1;i<sorted.length;i++){
-        const c=C[sorted[i][0]];const m=Math.min(99,Math.round((sorted[i][1]/maxS)*100));
-        othH+=`<div class="oc"><div class="oc-img"><img src="${c.img}" alt="${c.name}"></div><div class="oc-n">${c.name}</div><div class="oc-s">${c.stars} ${c.rating}</div><div class="oc-m">Совпадение: <strong>${m}%</strong></div><a href="${c.link}" target="_blank" rel="noopener" class="oc-btn">Перейти →</a></div>`;
+    let h='<div class="glass res">';
+    h+='<div class="res-i">🎯</div>';
+    h+='<div class="res-t">Твой идеальный мэтч!</div>';
+    h+='<div class="res-sub">На основе твоих ответов мы подобрали лучшее казино</div>';
+
+    // WINNER FULL CARD
+    h+=`<div class="winner">`;
+    h+=`<div class="winner-badge">🏆 #1 Лучший выбор</div>`;
+    h+=`<div class="winner-match">${match}% мэтч</div>`;
+    h+=`<div class="winner-img"><img src="${w.img}" alt="${w.name}"></div>`;
+    h+=`<div class="winner-head">`;
+    h+=`<div class="winner-emoji">${w.emoji}</div>`;
+    h+=`<div class="winner-info"><div class="winner-name">${w.name}</div><div class="winner-rating">${w.stars} ${w.rating}</div></div>`;
+    h+=`</div>`;
+    h+=`<div class="winner-tags">${w.tags.map(t=>`<span class="winner-tag">✓ ${t}</span>`).join('')}</div>`;
+    h+=`<div class="winner-bonus"><div class="winner-bonus-l">Бонус</div><div class="winner-bonus-v">${w.bonus}</div></div>`;
+    if(w.promo){
+        h+=`<div class="winner-promo" onclick="navigator.clipboard.writeText('${w.promo}');this.querySelector('.winner-promo-l').textContent='✅ Скопировано!'">`;
+        h+=`<div class="winner-promo-l">📋 Промокод — нажми чтобы скопировать</div>`;
+        h+=`<div class="winner-promo-c">${w.promo}</div>`;
+        h+=`<div class="winner-promo-d">${w.promoDesc}</div></div>`;
     }
+    h+=`<a href="${w.url}" target="_blank" rel="noopener" class="winner-btn ${w.btnClass}">🏆 Перейти — лучший выбор для тебя →</a>`;
+    h+=`</div>`;
 
-    document.getElementById('s-result').innerHTML=`
-        <div class="res-wrap">
-            <div class="glass res"><div class="res-inner">
-                <div class="res-img-side"><img src="${w.img}" alt="${w.name}"><div class="res-match-badge">✅ ${matchPct}%</div></div>
-                <div class="res-info">
-                    <div class="res-n">${w.name}</div>
-                    <div class="res-r"><span class="res-st">${w.stars}</span><span class="res-sc">${w.rating}</span></div>
-                    ${promoH}
-                    <div class="res-why"><h3>✨ Почему ${w.name}:</h3><ul class="wl">${whyH}</ul></div>
-                    <a href="${w.link}" target="_blank" rel="noopener" class="cta">Перейти на ${w.name} →</a>
-                    <a href="${w.rev}" class="cta2">📖 Обзор</a>
-                    <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="tg-cta">📱 Подписаться на Paytaoff</a>
-                    <button class="share-btn" onclick="shareResult('${w.name}',${matchPct})">📤 Скинуть другу</button>
-                    <button class="cta3" onclick="restart()">🔄 Заново</button>
-                </div>
-            </div></div>
-            <div class="oth"><h3>Другие варианты:</h3><div class="oth-grid">${othH}</div></div>
-            <div class="fun-fact"><div class="fun-fact-icon">${fact.icon}</div><div class="fun-fact-text">${fact.text}</div></div>
-            <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="tg-banner" style="margin-top:6px"><span class="tg-banner-icon">📱</span><span class="tg-banner-text"><span class="tg-banner-title">Не потеряй нас!</span><span class="tg-banner-sub">Промокоды каждый день</span></span><span class="tg-banner-btn">Подписаться</span></a>
-            <p class="disc">Партнёрские ссылки. 18+. <a href="/responsible-gaming/">Ответственная игра</a>.</p>
-        </div>`;
+    // TG
+    h+=`<a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="tg-banner">`;
+    h+=`<span class="tg-banner-icon">📱</span>`;
+    h+=`<span class="tg-banner-text"><span class="tg-banner-title">Ещё больше бонусов в Telegram</span><span class="tg-banner-sub">Эксклюзивные промокоды каждый день</span></span>`;
+    h+=`<span class="tg-banner-btn">Подписаться</span></a>`;
+
+    // REST
+    h+=`<div class="others"><div class="others-t">Другие варианты для тебя:</div><div class="others-grid">`;
+    rest.forEach(item=>{
+        const key=item[0],sc=item[1],c=casinos[key];
+        const m=Math.min(Math.round(sc/winnerScore*100),99);
+        h+=`<a href="${c.url}" target="_blank" rel="noopener" class="oc">`;
+        h+=`<div class="oc-img"><img src="${c.img}" alt="${c.name}"></div>`;
+        h+=`<div class="oc-e">${c.emoji}</div>`;
+        h+=`<div class="oc-n">${c.name}</div>`;
+        h+=`<div class="oc-r">${c.stars} ${c.rating}</div>`;
+        h+=`<div class="oc-b">${c.bonus}</div>`;
+        h+=`<div class="oc-btn">${m}% мэтч → Перейти</div>`;
+        h+=`</a>`;
+    });
+    h+=`</div></div>`;
+
+    h+=`<button class="cta cta-green" onclick="retry()" style="margin-top:18px">🔄 Пройти тест заново</button>`;
+    h+=`<a href="/" class="cta cta-tg" style="margin-top:8px;display:block;text-align:center">🏆 Полный рейтинг казино →</a>`;
+    h+=`</div>`;
+
+    document.getElementById('s-result').innerHTML=h;
     show('s-result');
+    document.getElementById('prog').classList.remove('on');
 }
 
-function shareResult(name,pct){
-    const text=`🎯 Мне подходит ${name} (${pct}%)!\nУзнай своё:\nhttps://www.paytaoff.ru/quiz/`;
-    if(navigator.share){navigator.share({title:'Тест Paytaoff',text,url:'https://www.paytaoff.ru/quiz/'}).catch(()=>{})}
-    else{navigator.clipboard.writeText(text).then(()=>{event.target.textContent='✅ Скопировано!';setTimeout(()=>{event.target.textContent='📤 Скинуть другу'},2e3)})}
-}
-function copyCode(){
-    navigator.clipboard.writeText('SMOG').then(()=>{const b=document.getElementById('resCopy');b.textContent='✅';b.classList.add('copied');setTimeout(()=>{b.textContent='📋';b.classList.remove('copied')},2e3)}).catch(()=>{const t=document.createElement('textarea');t.value='SMOG';document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);const b=document.getElementById('resCopy');b.textContent='✅';b.classList.add('copied');setTimeout(()=>{b.textContent='📋';b.classList.remove('copied')},2e3)})}
-function restart(){A={};cur=0;updProg(0);document.querySelectorAll('.opt').forEach(o=>o.classList.remove('sel'));show('s-intro')}
-addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('sc',scrollY>30)},{passive:true});
+function retry(){answers={};history=[];show('s-intro');document.getElementById('prog').classList.remove('on')}
+addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',scrollY>30)},{passive:true});
 </script>
 </body>
 </html>
