@@ -64,11 +64,7 @@ body:hover .glow{opacity:1}
 [data-theme="light"] .nav-s{background:rgba(124,58,237,.12)}
 
 .qw{position:relative;z-index:1;min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:80px 16px 40px}
-.qb{
-    width:100%;
-    max-width:640px;
-    transition:max-width .35s ease;
-}
+.qb{width:100%;max-width:640px;transition:max-width .35s ease}
 .qb.result-wide{max-width:980px}
 
 .prog{margin-bottom:18px;opacity:0;transform:translateY(-10px);transition:all .4s}
@@ -113,21 +109,13 @@ body:hover .glow{opacity:1}
 .cta-green{background:linear-gradient(135deg,#059669,#34d399)!important;box-shadow:0 4px 22px rgba(5,150,105,.3)!important}
 .cta-green:hover{box-shadow:0 10px 36px rgba(5,150,105,.45)!important}
 .cta-tg{background:linear-gradient(135deg,#0088cc,#00aaff)!important;box-shadow:0 4px 22px rgba(0,136,204,.3)!important}
+.cta-bear{background:linear-gradient(135deg,#34d399,#f59e0b)!important;box-shadow:0 4px 22px rgba(34,197,94,.35)!important}
+.cta-bear:hover{box-shadow:0 10px 36px rgba(34,197,94,.45)!important}
 
-.qc{
-    text-align:center;
-    min-height:440px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-}
+.qc{text-align:center;min-height:440px;display:flex;flex-direction:column;justify-content:center}
 .qn{font-size:.688rem;font-weight:600;color:var(--purple-l);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
 .qt{font-family:'Space Grotesk';font-size:clamp(1.25rem,4vw,1.75rem);font-weight:800;margin-bottom:20px;line-height:1.2;letter-spacing:-.5px}
-.qo{
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-}
+.qo{display:flex;flex-direction:column;gap:8px}
 .opt{display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:14px;background:rgba(124,58,237,.04);border:1.5px solid rgba(124,58,237,.08);cursor:pointer;transition:all .3s;min-height:52px;position:relative}
 .opt:hover{background:rgba(124,58,237,.08);border-color:rgba(124,58,237,.18);transform:translateX(4px)}
 .opt:active{transform:scale(.98)}
@@ -176,6 +164,12 @@ body:hover .glow{opacity:1}
 .winner-btn-mell{background:linear-gradient(135deg,#a78bfa,#f59e0b)!important;box-shadow:0 4px 22px rgba(167,139,250,.35)!important}
 .winner-btn-bear{background:linear-gradient(135deg,#34d399,#f59e0b)!important;box-shadow:0 4px 22px rgba(34,197,94,.35)!important}
 
+.special-promo{margin:14px 0 18px;padding:18px;border-radius:20px;background:linear-gradient(145deg,rgba(52,211,153,.08),rgba(245,158,11,.05));border:1.5px solid rgba(52,211,153,.16);text-align:center}
+.special-promo-k{font-size:.625rem;text-transform:uppercase;letter-spacing:.08em;color:var(--green-l);font-weight:700;margin-bottom:6px}
+.special-promo-t{font-family:'Space Grotesk';font-size:1.2rem;font-weight:900;margin-bottom:6px}
+.special-promo-s{font-size:.75rem;color:var(--muted);margin-bottom:12px}
+[data-theme="light"] .special-promo{background:rgba(255,255,255,.94);border:2px solid rgba(34,197,94,.2)}
+
 .others{margin-top:20px}
 .others-t{font-size:.813rem;font-weight:600;color:var(--muted);margin-bottom:12px;text-align:center}
 .others-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
@@ -200,15 +194,9 @@ body:hover .glow{opacity:1}
 .ft a{color:var(--purple-l);font-weight:600}
 
 @media(min-width:769px){
-    .winner{
-        padding:28px 28px 24px;
-    }
-    .winner-img{
-        aspect-ratio:1400/560;
-    }
-    .others-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
+    .winner{padding:28px 28px 24px}
+    .winner-img{aspect-ratio:1400/560}
+    .others-grid{grid-template-columns:repeat(3,1fr)}
 }
 
 @media(max-width:768px){
@@ -216,13 +204,7 @@ body:hover .glow{opacity:1}
     .world-m{background:linear-gradient(180deg,var(--bg),var(--bg))!important}
     [data-theme="light"] .world-m{background:linear-gradient(180deg,#f5f0e8,#efe8dc)!important}
 
-    .glass{
-        backdrop-filter:none!important;
-        -webkit-backdrop-filter:none!important;
-        background:rgba(12,10,30,.85)!important;
-        padding:20px 14px;
-        border-radius:18px;
-    }
+    .glass{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(12,10,30,.85)!important;padding:20px 14px;border-radius:18px}
     [data-theme="light"] .glass{background:rgba(255,255,255,.95)!important}
 
     .nav{padding:4px 10px;gap:4px}
@@ -234,6 +216,7 @@ body:hover .glow{opacity:1}
 
     .qw{padding:65px 14px 30px}
     .qb{min-height:520px}
+    #s-intro .glass{margin-top:26px}
 
     .intro h1{font-size:1.5rem}
     .tg-banner{flex-wrap:wrap;gap:10px;padding:12px 14px}
@@ -243,28 +226,10 @@ body:hover .glow{opacity:1}
     .qt{font-size:1.15rem;margin-bottom:16px}
     .qo{gap:6px}
 
-    .opt{
-        padding:10px 12px;
-        min-height:42px;
-        border-radius:12px;
-        gap:10px;
-    }
-    .oi{
-        width:28px;
-        height:28px;
-        font-size:.95rem;
-        border-radius:8px;
-    }
-    .ot{
-        font-size:.75rem;
-        line-height:1.25;
-    }
-    .chk{
-        width:20px;
-        height:20px;
-        border-radius:6px;
-        font-size:.6rem;
-    }
+    .opt{padding:10px 12px;min-height:42px;border-radius:12px;gap:10px}
+    .oi{width:28px;height:28px;font-size:.95rem;border-radius:8px}
+    .ot{font-size:.75rem;line-height:1.25}
+    .chk{width:20px;height:20px;border-radius:6px;font-size:.6rem}
 
     .winner{padding:16px}
     .winner-img{margin-bottom:12px}
@@ -275,6 +240,9 @@ body:hover .glow{opacity:1}
     .winner-bonus-v{font-size:1rem}
     .winner-promo{padding:10px}
     .winner-promo-c{font-size:1.1rem}
+
+    .special-promo{padding:14px;border-radius:16px}
+    .special-promo-t{font-size:1rem}
 
     .others-grid{grid-template-columns:1fr 1fr;gap:6px}
     .oc{padding:10px;border-radius:12px}
@@ -429,48 +397,76 @@ const casinos={
     'kent':{name:'Kent',emoji:'🎩',rating:'8.8',stars:'★★★★☆',bonus:'До 150%',promo:null,promoDesc:null,url:'https://mealmenalc.com/s4882a91c',img:'../img/kent.png',btnClass:'',tags:['3000+ игр','VIP','Элегантный']}
 };
 
+function addPoints(scoreMap, payload){
+    Object.entries(payload).forEach(([key,val])=>scoreMap[key]+=val);
+}
+
 function score(){
     let s={};Object.keys(casinos).forEach(k=>s[k]=0);const a=answers;
-    if(a[1]==='speed'){s['1win']+=3;s.mellstroy+=3;s.luckybear+=3}
-    if(a[1]==='bonus'){s.mellstroy+=4;s['1win']+=3;s.luckybear+=2}
-    if(a[1]==='games'){s['1win']+=4;s.mellstroy+=2;s.catcasino+=2}
-    if(a[1]==='safety'){s['1win']+=3;s.kent+=3;s.arkada+=2}
-    if(a[1]==='vip'){s.kent+=4;s.mellstroy+=2;s['1win']+=1}
-    if(a[2]==='slots'){s['1win']+=3;s.arkada+=3;s.catcasino+=2;s.kometa+=2}
-    if(a[2]==='live'){s['1win']+=3;s.mellstroy+=2;s.kent+=2}
-    if(a[2]==='sports'){s['1win']+=5}
-    if(a[2]==='crash'){s['1win']+=3;s.mellstroy+=3;s.luckybear+=2}
-    if(a[2]==='table'){s.kent+=3;s['1win']+=2;s.catcasino+=1}
-    if(a[3]==='card'){s['1win']+=2;s.arkada+=2;s.kent+=2;s.catcasino+=2;s.kometa+=2}
-    if(a[3]==='crypto'){s.mellstroy+=4;s.luckybear+=4;s['1win']+=2}
-    if(a[3]==='ewallet'){s['1win']+=2;s.catcasino+=2;s.arkada+=1}
-    if(a[3]==='sbp'){s['1win']+=3;s.arkada+=2}
-    if(a[4]==='mobile'){s['1win']+=3;s.mellstroy+=2;s.luckybear+=2}
-    if(a[4]==='pc'){s.kent+=2;s.catcasino+=2;s.arkada+=2}
-    if(a[4]==='both'){s['1win']+=3;s.mellstroy+=1;s.arkada+=1}
-    if(a[5]==='bigbonus'){s.mellstroy+=4;s['1win']+=3;s.luckybear+=2}
-    if(a[5]==='cashback'){s.kometa+=4;s.catcasino+=2;s.kent+=1}
-    if(a[5]==='freespins'){s['1win']+=3;s.mellstroy+=3;s.luckybear+=2}
-    if(a[5]==='tournament'){s.catcasino+=4;s['1win']+=2}
-    if(a[5]==='wheel'){s.luckybear+=5;s.mellstroy+=1}
-    if(a[6]==='instant'){s['1win']+=3;s.mellstroy+=3;s.luckybear+=3}
-    if(a[6]==='fast'){s.arkada+=2;s.kometa+=2;s['1win']+=2}
-    if(a[6]==='normal'){s.catcasino+=2;s.kent+=2}
-    if(a[7]==='theme'){s.kometa+=3;s.mellstroy+=2;s.luckybear+=2}
-    if(a[7]==='classic'){s.kent+=4;s.arkada+=2}
-    if(a[7]==='modern'){s.mellstroy+=3;s['1win']+=2;s.luckybear+=2}
-    if(a[7]==='nocare'){s['1win']+=2;s.catcasino+=1;s.arkada+=1}
-    if(a[8]==='newbie'){s['1win']+=4;s.arkada+=2;s.luckybear+=2}
-    if(a[8]==='medium'){s.catcasino+=2;s.kometa+=2;s['1win']+=2;s.mellstroy+=2}
-    if(a[8]==='pro'){s.mellstroy+=3;s.kent+=3;s.luckybear+=2}
-    if(a[9]==='small'){s.arkada+=3;s.kometa+=2;s.luckybear+=2}
-    if(a[9]==='medium'){s['1win']+=3;s.catcasino+=2;s.mellstroy+=2}
-    if(a[9]==='big'){s.mellstroy+=4;s['1win']+=3;s.kent+=3}
-    if(a[10]==='app'){s['1win']+=4;s.mellstroy+=1}
-    if(a[10]==='support'){s['1win']+=3;s.catcasino+=2;s.arkada+=2}
-    if(a[10]==='promo'){s.catcasino+=3;s.kometa+=2;s.luckybear+=2}
-    if(a[10]==='stream'){s.mellstroy+=5;s.luckybear+=2}
-    if(a[10]==='nothing'){s['1win']+=3;s.mellstroy+=1;s.luckybear+=1}
+
+    if(a[1]==='speed') addPoints(s,{luckybear:4,'1win':2,mellstroy:2,arkada:1});
+    if(a[1]==='bonus') addPoints(s,{mellstroy:4,luckybear:2,arkada:2,'1win':1});
+    if(a[1]==='games') addPoints(s,{arkada:3,catcasino:3,'1win':2,mellstroy:1});
+    if(a[1]==='safety') addPoints(s,{kent:4,'1win':2,arkada:2,catcasino:1});
+    if(a[1]==='vip') addPoints(s,{kent:4,mellstroy:3,'1win':1});
+
+    if(a[2]==='slots') addPoints(s,{arkada:3,catcasino:3,'1win':2,kometa:2});
+    if(a[2]==='live') addPoints(s,{'1win':3,mellstroy:2,kent:2});
+    if(a[2]==='sports') addPoints(s,{'1win':6,mellstroy:1});
+    if(a[2]==='crash') addPoints(s,{luckybear:3,mellstroy:3,'1win':2});
+    if(a[2]==='table') addPoints(s,{kent:4,'1win':2,catcasino:1});
+
+    if(a[3]==='card') addPoints(s,{arkada:2,catcasino:2,kent:2,'1win':1,kometa:1});
+    if(a[3]==='crypto') addPoints(s,{mellstroy:4,luckybear:4,'1win':1});
+    if(a[3]==='ewallet') addPoints(s,{catcasino:2,'1win':2,arkada:1});
+    if(a[3]==='sbp') addPoints(s,{'1win':3,arkada:2,luckybear:1});
+
+    if(a[4]==='mobile') addPoints(s,{'1win':2,luckybear:2,mellstroy:2});
+    if(a[4]==='pc') addPoints(s,{kent:2,catcasino:2,arkada:3});
+    if(a[4]==='both') addPoints(s,{'1win':2,arkada:2,mellstroy:1,luckybear:1});
+
+    if(a[5]==='bigbonus') addPoints(s,{mellstroy:4,'1win':2,luckybear:2,arkada:1});
+    if(a[5]==='cashback') addPoints(s,{kometa:4,catcasino:2,kent:2});
+    if(a[5]==='freespins') addPoints(s,{mellstroy:3,'1win':2,luckybear:2,catcasino:1});
+    if(a[5]==='tournament') addPoints(s,{catcasino:4,'1win':2,arkada:1});
+    if(a[5]==='wheel') addPoints(s,{luckybear:6,mellstroy:1});
+
+    if(a[6]==='instant') addPoints(s,{luckybear:4,mellstroy:3,'1win':2});
+    if(a[6]==='fast') addPoints(s,{arkada:2,kometa:2,'1win':2,luckybear:1});
+    if(a[6]==='normal') addPoints(s,{catcasino:2,kent:2,kometa:1});
+
+    if(a[7]==='theme') addPoints(s,{kometa:3,luckybear:2,mellstroy:2});
+    if(a[7]==='classic') addPoints(s,{kent:4,arkada:2});
+    if(a[7]==='modern') addPoints(s,{mellstroy:3,luckybear:2,'1win':2});
+    if(a[7]==='nocare') addPoints(s,{'1win':1,catcasino:1,arkada:1,luckybear:1});
+
+    if(a[8]==='newbie') addPoints(s,{arkada:3,luckybear:2,'1win':2,catcasino:1});
+    if(a[8]==='medium') addPoints(s,{catcasino:2,kometa:2,'1win':2,mellstroy:2});
+    if(a[8]==='pro') addPoints(s,{mellstroy:3,kent:3,luckybear:2,'1win':1});
+
+    if(a[9]==='small') addPoints(s,{arkada:3,luckybear:2,kometa:2});
+    if(a[9]==='medium') addPoints(s,{catcasino:3,'1win':2,mellstroy:2});
+    if(a[9]==='big') addPoints(s,{mellstroy:4,kent:3,'1win':2});
+
+    if(a[10]==='app') addPoints(s,{'1win':3,mellstroy:1,luckybear:1});
+    if(a[10]==='support') addPoints(s,{'1win':2,catcasino:2,arkada:2,kent:1});
+    if(a[10]==='promo') addPoints(s,{catcasino:3,kometa:2,luckybear:2,mellstroy:1});
+    if(a[10]==='stream') addPoints(s,{mellstroy:5,luckybear:2});
+    if(a[10]==='nothing') addPoints(s,{'1win':1,mellstroy:1,luckybear:1,catcasino:1});
+
+    if(a[2]==='sports' && a[4]!=='pc') addPoints(s,{'1win':2});
+    if(a[3]==='crypto' && a[6]==='instant') addPoints(s,{luckybear:2,mellstroy:2});
+    if(a[5]==='wheel' && (a[8]==='newbie' || a[8]==='medium')) addPoints(s,{luckybear:2});
+    if(a[1]==='vip' && a[9]==='big') addPoints(s,{kent:3,mellstroy:2});
+    if(a[10]==='stream' && a[8]==='pro') addPoints(s,{mellstroy:2,luckybear:1});
+    if(a[1]==='games' && a[2]==='slots') addPoints(s,{arkada:2,catcasino:2,'1win':1});
+    if(a[7]==='classic' && a[2]==='table') addPoints(s,{kent:3});
+    if(a[8]==='newbie' && a[9]==='small') addPoints(s,{arkada:2,luckybear:1});
+    if(a[1]==='speed' && a[3]==='crypto') addPoints(s,{luckybear:2,mellstroy:1});
+    if(a[1]==='safety' && a[10]==='support') addPoints(s,{kent:2,arkada:1,'1win':1});
+
+    if(a[2]!=='sports') s['1win']=Math.max(0,s['1win']-1);
+
     return Object.entries(s).sort((a,b)=>b[1]-a[1]);
 }
 
@@ -525,7 +521,7 @@ function goBack(){
     if(history.length<2)return;
     history.pop();
     const target=history[history.length-1];
-    show(target, target==='s-intro' ? 'top' : 'keep');
+    show(target,target==='s-intro'?'top':'keep');
 
     const qNum=target.replace('s-q','');
     if(target==='s-intro'){
@@ -563,8 +559,10 @@ async function copyPromo(code, el){
 function showResult(){
     const sorted=score();
     const winnerKey=sorted[0][0],winnerScore=sorted[0][1];
+    const secondScore=sorted[1] ? sorted[1][1] : winnerScore;
     const w=casinos[winnerKey];
-    const match=100;
+    const bear=casinos['luckybear'];
+    const match=Math.max(86,Math.min(98,86+Math.round((winnerScore/(winnerScore+secondScore))*12)));
     const rest=sorted.slice(1);
 
     document.getElementById('quizBox').classList.add('result-wide');
@@ -592,6 +590,20 @@ function showResult(){
     }
     h+=`<a href="${w.url}" target="_blank" rel="noopener" class="winner-btn ${w.btnClass}">🏆 Перейти — лучший выбор для тебя →</a>`;
     h+=`</div>`;
+
+    if(winnerKey!=='luckybear'){
+        h+=`<div class="special-promo">`;
+        h+=`<div class="special-promo-k">спец-промокод</div>`;
+        h+=`<div class="special-promo-t">Lucky Bear — бонус отдельно от твоего мэтча</div>`;
+        h+=`<div class="special-promo-s">Даже если тебе выпало другое казино, промокод Lucky Bear всё равно доступен.</div>`;
+        h+=`<div class="winner-promo" onclick="copyPromo('${bear.promo}', this)">`;
+        h+=`<div class="winner-promo-l">📋 Промокод — нажми чтобы скопировать</div>`;
+        h+=`<div class="winner-promo-c">${bear.promo}</div>`;
+        h+=`<div class="winner-promo-d">${bear.promoDesc}</div>`;
+        h+=`</div>`;
+        h+=`<a href="${bear.url}" target="_blank" rel="noopener" class="cta cta-bear" style="margin-top:10px">🎡 Открыть Lucky Bear →</a>`;
+        h+=`</div>`;
+    }
 
     h+=`<a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="tg-banner">`;
     h+=`<span class="tg-banner-icon">📱</span>`;
