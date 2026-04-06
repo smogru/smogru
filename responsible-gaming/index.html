@@ -1,262 +1,429 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
     <title>Ответственная игра — Paytaoff</title>
+    <meta name="description" content="Правила ответственной игры, признаки потери контроля, инструменты самоконтроля и полезные ресурсы помощи. 18+">
+    <link rel="canonical" href="https://www.paytaoff.ru/responsible-gaming/">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="icon" href="/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#060810">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#060810">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-      *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{
-    --bg:#060810;--accent:#38bdf8;--accent-l:#7dd3fc;
-    --rose:#a78bfa;--rose-l:#c4b5fd;
-    --amber:#f59e0b;--amber-l:#fcd34d;
-    --green:#34d399;--green-l:#6ee7b7;
-    --white:#fff;--text:#dce8f5;--muted:#8a9bb5;
-    --card-bg:linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.012));
-    --card-border:rgba(255,255,255,.07);
-    --card-blur:blur(20px) saturate(1.8);
-    --shadow-sm:0 4px 20px rgba(0,0,0,.2);
-    --shadow-md:0 8px 32px rgba(0,0,0,.25);
-    --shadow-glow:0 0 35px rgba(56,189,248,.06);
-    --nav-blur:blur(16px) saturate(1.6);
-    --scale:0.95;
-}
-html{scroll-behavior:smooth;font-size:calc(16px * var(--scale))}
-body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;letter-spacing:0.01em;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}
-h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
-a{text-decoration:none;color:inherit}
-.container{max-width:800px;margin:0 auto;padding:0 16px}
+    <link rel="stylesheet" href="../style.css">
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108420102', 'ym');
 
-.i-avatar{width:36px;height:36px;border-radius:11px;object-fit:cover;flex-shrink:0;border:2px solid rgba(56,189,248,.3);box-shadow:0 3px 12px rgba(56,189,248,.2);transition:all .3s}
-.i-avatar:hover{border-color:rgba(56,189,248,.5);transform:scale(1.08)}
-
-.bg-wrap{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;contain:strict}
-.bg-mesh{position:absolute;inset:0;contain:strict;background:
-    radial-gradient(ellipse 70% 50% at 10% 15%,rgba(56,189,248,.14) 0%,transparent 50%),
-    radial-gradient(ellipse 50% 70% at 90% 80%,rgba(167,139,250,.1) 0%,transparent 50%),
-    linear-gradient(180deg,#060810 0%,#080c18 35%,#070a14 65%,#060810 100%)}
-
-.island{position:fixed;top:calc(8px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);z-index:10000;padding:6px 16px;border-radius:100px;display:flex;align-items:center;gap:8px;background:rgba(6,8,16,.5);backdrop-filter:var(--nav-blur);-webkit-backdrop-filter:var(--nav-blur);border:1px solid rgba(255,255,255,.08);box-shadow:0 4px 28px rgba(0,0,0,.25);transition:all .4s}
-.island.scrolled{background:rgba(6,8,16,.72);border-color:rgba(56,189,248,.12)}
-.i-logo{display:flex;align-items:center;gap:10px;padding:10px 18px;font-family:'Space Grotesk';font-weight:700;font-size:1.125rem;white-space:nowrap}
-.i-logo span{background:linear-gradient(135deg,var(--accent-l),var(--rose-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.i-div{width:1px;height:26px;background:rgba(255,255,255,.08);flex-shrink:0}
-.i-back{padding:10px 20px;border-radius:100px;font-size:.875rem;font-weight:600;color:var(--accent-l);background:rgba(56,189,248,.06);border:1px solid rgba(56,189,248,.12);transition:all .3s;display:flex;align-items:center;gap:5px}
-.i-back:hover{background:rgba(56,189,248,.12);transform:translateY(-1px)}
-.i-age{background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.12);color:#fca5a5;padding:8px 16px;border-radius:100px;font-size:.813rem;font-weight:700;flex-shrink:0}
-
-.page-hero{padding:120px 16px 40px;text-align:center;position:relative;z-index:1}
-.page-hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:900;margin-bottom:12px;letter-spacing:-1.5px}
-.page-hero .gt{background:linear-gradient(135deg,var(--accent-l),var(--rose-l),var(--amber-l));background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gs 4s ease infinite}
-@keyframes gs{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
-.page-hero p{font-size:1.063rem;color:var(--muted);max-width:540px;margin:0 auto;line-height:1.7}
-.page-icon{font-size:3rem;margin-bottom:16px;display:block}
-
-.content{position:relative;z-index:1;padding-bottom:60px}
-.card{border-radius:24px;padding:32px;margin-bottom:16px;background:var(--card-bg);backdrop-filter:var(--card-blur);-webkit-backdrop-filter:var(--card-blur);border:1px solid var(--card-border);box-shadow:var(--shadow-sm)}
-.card h2{font-size:1.5rem;font-weight:800;margin-bottom:14px;display:flex;align-items:center;gap:10px}
-.card h3{font-size:1.125rem;font-weight:700;margin:18px 0 10px;color:var(--white)}
-.card p{color:var(--muted);font-size:.938rem;line-height:1.8;margin-bottom:12px}
-.card ul,.card ol{color:var(--muted);font-size:.938rem;line-height:1.8;margin:10px 0 16px 20px;display:flex;flex-direction:column;gap:8px}
-.card li{padding-left:4px}
-.card a{color:var(--accent-l);border-bottom:1px solid rgba(56,189,248,.2);transition:all .3s}
-.card a:hover{border-bottom-color:var(--accent-l)}
-
-.warn-card{border-color:rgba(248,113,113,.15);background:linear-gradient(145deg,rgba(248,113,113,.04),rgba(248,113,113,.01))}
-.warn-card h2{color:#fca5a5}
-.green-card{border-color:rgba(34,197,94,.15);background:linear-gradient(145deg,rgba(34,197,94,.04),rgba(34,197,94,.01))}
-.green-card h2{color:var(--green-l)}
-.blue-card{border-color:rgba(56,189,248,.15);background:linear-gradient(145deg,rgba(56,189,248,.04),rgba(56,189,248,.01))}
-
-.help-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
-.help-item{padding:20px;border-radius:18px;background:rgba(56,189,248,.04);border:1px solid rgba(56,189,248,.08);text-align:center;transition:all .3s}
-.help-item:hover{transform:translateY(-3px);border-color:rgba(56,189,248,.18);box-shadow:var(--shadow-sm)}
-.help-icon{font-size:1.75rem;margin-bottom:8px}
-.help-name{font-weight:700;font-size:.938rem;margin-bottom:4px;color:var(--white)}
-.help-desc{font-size:.813rem;color:var(--muted);line-height:1.5}
-.help-link{display:inline-block;margin-top:8px;padding:6px 16px;border-radius:100px;font-size:.75rem;font-weight:600;color:var(--accent-l);background:rgba(56,189,248,.08);border:1px solid rgba(56,189,248,.14);transition:all .3s}
-.help-link:hover{background:rgba(56,189,248,.16)}
-
-.test-box{padding:24px;border-radius:20px;background:rgba(248,113,113,.04);border:1px solid rgba(248,113,113,.1);margin:16px 0}
-.test-box h3{color:#fca5a5;margin-top:0}
-.test-q{display:flex;flex-direction:column;gap:8px;margin:12px 0}
-.test-q label{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);cursor:pointer;font-size:.875rem;transition:all .3s}
-.test-q label:hover{background:rgba(56,189,248,.04);border-color:rgba(56,189,248,.1)}
-.test-q input{accent-color:var(--accent)}
-
-.footer-simple{padding:40px 0;border-top:1px solid rgba(56,189,248,.06);text-align:center;position:relative;z-index:1}
-.footer-simple p{font-size:.813rem;color:var(--muted)}
-.footer-simple a{color:var(--accent-l)}
-
-@media(max-width:768px){
-    .island{padding:4px 8px}.i-logo{padding:6px 10px;font-size:.875rem;gap:7px}.i-avatar{width:28px;height:28px;border-radius:8px}
-    .i-back{padding:6px 12px;font-size:.75rem}.i-age{padding:5px 10px;font-size:.625rem}.i-div{height:18px}
-    .page-hero{padding:90px 16px 24px}.page-hero h1{font-size:1.75rem}.page-hero p{font-size:.875rem}.page-icon{font-size:2.25rem}
-    .card{padding:20px 18px;border-radius:20px;margin-bottom:12px}.card h2{font-size:1.188rem}.card p,.card ul,.card ol{font-size:.813rem}
-    .help-grid{grid-template-columns:1fr}.help-item{padding:16px}
-    .container{padding:0 14px}
-}
-@media(max-width:480px){
-    .page-hero h1{font-size:1.5rem}.card{padding:16px 14px;border-radius:18px}.card h2{font-size:1.063rem;gap:7px}
-}
-    </style>
+    ym(108420102, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<!-- /Yandex.Metrika counter -->
 </head>
 <body>
+<noscript><div><img src="https://mc.yandex.ru/watch/108420102" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 
-<div class="bg-wrap"><div class="bg-mesh"></div></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<div class="comet comet-1"></div>
+<div class="comet comet-2"></div>
+<div class="comet comet-3"></div>
+<div class="comet comet-4"></div>
+<div class="comet comet-5"></div>
+
+<div class="nebula nebula-1"></div>
+<div class="nebula nebula-2"></div>
+
+<div class="bg-wrap">
+    <div class="bg-mesh"></div>
+    <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+    <div class="orbit o1"><div class="od"></div></div>
+    <div class="orbit o2"><div class="od"></div></div>
+    <div class="orbit o3"><div class="od"></div></div>
+    <div class="shooting-star" style="top:15%;left:20%;--d:6s;animation-delay:0s"></div>
+    <div class="shooting-star" style="top:35%;left:50%;--d:8s;animation-delay:3s"></div>
+    <div class="shooting-star" style="top:60%;left:10%;--d:7s;animation-delay:5s"></div>
+    <div class="shooting-star" style="top:80%;left:70%;--d:9s;animation-delay:7s"></div>
+    <div class="shooting-star" style="top:25%;left:85%;--d:7.5s;animation-delay:2s"></div>
+    <div class="shooting-star" style="top:45%;left:40%;--d:6.5s;animation-delay:1s"></div>
+    <div class="shooting-star" style="top:70%;left:60%;--d:8.5s;animation-delay:4s"></div>
+    <div class="shooting-star" style="top:10%;left:70%;--d:7s;animation-delay:6s"></div>
+    <div id="starsLayer"></div>
+</div>
+<canvas id="pc"></canvas>
+<div class="cg" id="cursorGlow"></div>
+
+<div class="corner-glow corner-glow-tl"></div>
+<div class="corner-glow corner-glow-br"></div>
+
+<div class="space-ring space-ring-1"></div>
+<div class="space-ring space-ring-2"></div>
 
 <nav class="island" id="island">
-    <a href="/" class="i-logo"><img src="../avatar.png" alt="Paytaoff" class="i-avatar"><span>Paytaoff</span></a>
+    <div class="i-logo"><a href="/" style="display:flex;align-items:center;gap:10px"><img src="../avatar.png" alt="Paytaoff" class="i-avatar"><span>Paytaoff</span></a></div>
     <div class="i-div"></div>
-    <a href="/" class="i-back">← На главную</a>
+    <div class="i-links">
+        <a href="/#top" class="i-link">🏆 Рейтинг</a>
+        <a href="/guide.html" class="i-link">📖 Гид</a>
+        <a href="#contact" class="i-link">🛡️ Помощь</a>
+        <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="i-link i-link-tg">📱 Канал</a>
+    </div>
+    <div class="i-div"></div>
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Сменить тему">🌙</button>
+    <div class="i-div"></div>
+    <button class="share-btn" onclick="shareWebsite()">🔗 Поделиться</button>
+    <div class="i-div"></div>
+    <div class="lang-wrap" id="langWrap">
+        <div class="lang-btn" onclick="toggleLang()"><span>🇷🇺</span><span>RU</span><span class="lang-arrow">▼</span></div>
+        <div class="lang-dd">
+            <a href="/" class="active">🇷🇺 Россия</a>
+            <a href="/ua/">🇺🇦 Україна</a>
+            <a href="/by/">🇧🇾 Беларусь</a>
+            <a href="/uz/">🇺🇿 O'zbekiston</a>
+            <a href="/az/">🇦🇿 Azərbaycan</a>
+            <a href="/kg/">🇰🇬 Кыргызстан</a>
+        </div>
+    </div>
     <div class="i-div"></div>
     <div class="i-age">18+</div>
+
+    <div class="mob-nav-wrap" id="mobNavWrap">
+        <button class="mob-nav-toggle" id="mobNavToggle" onclick="toggleMobNav()">
+            <span>☰</span>
+            <span class="mob-nav-label">Меню</span>
+        </button>
+        <div class="mob-nav-dropdown" id="mobNavDropdown">
+            <a href="/#top" onclick="closeMobNav()">🏆 Рейтинг</a>
+            <a href="/guide.html" onclick="closeMobNav()">📖 Гид</a>
+            <a href="#contact" onclick="closeMobNav()">🛡️ Помощь</a>
+            <a href="https://t.me/paytaoff" target="_blank" rel="noopener" onclick="closeMobNav()">📱 Канал</a>
+            <div class="mob-nav-sep"></div>
+            <a href="/about/" onclick="closeMobNav()">ℹ️ О проекте</a>
+            <a href="/responsible-gaming/" onclick="closeMobNav()">🛡️ Ответственная игра</a>
+            <a href="/privacy/" onclick="closeMobNav()">🔒 Конфиденциальность</a>
+            <a href="/terms/" onclick="closeMobNav()">📄 Условия</a>
+            <div class="mob-nav-sep"></div>
+            <a href="javascript:void(0)" onclick="toggleTheme();closeMobNav()">🎨 Сменить тему</a>
+            <a href="javascript:void(0)" onclick="shareWebsite();closeMobNav()">🔗 Поделиться</a>
+        </div>
+    </div>
 </nav>
 
-<section class="page-hero">
-    <span class="page-icon">🛡️</span>
-    <h1>Ответственная <span class="gt">игра</span></h1>
-    <p>Мы заботимся о благополучии наших пользователей и призываем к осознанному подходу к азартным играм</p>
+
+<section class="hero" style="min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:0 16px">
+    <div style="max-width:800px;margin:0 auto;width:100%">
+        <div class="ios-f reveal" style="text-align:center;padding:44px 34px">
+            <div class="hero-badge" style="margin:0 auto 18px"><span class="pd"></span>Ответственная игра</div>
+            <h1 style="font-size:clamp(28px,5vw,52px);font-weight:900;line-height:1.08;margin-bottom:14px;letter-spacing:-2px">Играйте <span class="gt">осознанно</span></h1>
+            <p style="font-size:1.063rem;color:var(--muted);max-width:620px;margin:0 auto 24px;line-height:1.7">Азартные игры — это форма развлечения, а не способ заработка. Наша задача — помочь вам контролировать риски, вовремя остановиться и выбирать безопасный подход.</p>
+            <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+                <a href="/#top" class="btn btn-glow ripple"><span>🏆 Смотреть рейтинг</span></a>
+                <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="btn btn-ghost ripple"><span>📱 Наш канал</span></a>
+            </div>
+            <div class="hero-trust" style="justify-content:center;margin-top:20px">
+                <div class="ti"><span>⚠️</span> Только 18+</div>
+                <div class="ti"><span>🧠</span> Контроль банкролла</div>
+                <div class="ti"><span>🛡️</span> Осознанный подход</div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<div class="content">
+<section class="section">
     <div class="container">
+        <div class="ios-f">
+            <div class="sh reveal">
+                <div class="sl">⚠️ Важно понимать</div>
+                <h2>Ключевой принцип</h2>
+                <p>Если вы решили играть, делайте это только на те средства, потерю которых вы реально можете себе позволить.</p>
+            </div>
 
-        <div class="card warn-card">
-            <h2>⚠️ Важно понимать</h2>
-            <p>Азартные игры — это форма развлечения, а <strong style="color:#fca5a5">не способ заработка</strong>. Казино всегда имеет математическое преимущество. Долгосрочно казино всегда выигрывает.</p>
-            <p>Если вы решили играть, делайте это осознанно и только на те средства, потерю которых вы можете себе позволить.</p>
-        </div>
-
-        <div class="card green-card">
-            <h2>✅ Принципы ответственной игры</h2>
-
-            <h3>1. Установите бюджет</h3>
-            <p>Перед началом игры определите сумму, которую вы готовы потратить. Никогда не превышайте установленный лимит.</p>
-
-            <h3>2. Установите временные рамки</h3>
-            <p>Ограничивайте время, проведённое за игрой. Делайте регулярные перерывы. Не играйте, когда устали или находитесь в стрессе.</p>
-
-            <h3>3. Никогда не играйте на заёмные средства</h3>
-            <p>Не берите кредиты, займы или деньги у друзей и семьи для азартных игр. Играйте только на свободные средства.</p>
-
-            <h3>4. Не пытайтесь отыграться</h3>
-            <p>Проигрыш — нормальная часть азартных игр. Попытки «отыграться» обычно приводят к ещё большим потерям.</p>
-
-            <h3>5. Не играйте под воздействием</h3>
-            <p>Алкоголь, наркотики и сильные эмоции ухудшают способность принимать решения. Играйте только в трезвом состоянии и спокойном расположении духа.</p>
-
-            <h3>6. Относитесь к игре как к развлечению</h3>
-            <p>Азартные игры должны приносить удовольствие, а не стресс. Если игра перестала быть развлечением — остановитесь.</p>
-        </div>
-
-        <div class="card warn-card">
-            <h2>🚨 Признаки игровой зависимости</h2>
-            <p>Если вы заметили у себя один или несколько из этих признаков, рекомендуем обратиться за помощью:</p>
-            <ul>
-                <li>Вы тратите на игру больше, чем планировали</li>
-                <li>Вы играете на деньги, предназначенные для других нужд</li>
-                <li>Вы занимаете деньги для игры</li>
-                <li>Вы лжёте о своей игровой активности</li>
-                <li>Вы чувствуете раздражение, когда не можете играть</li>
-                <li>Игра мешает работе, учёбе или отношениям</li>
-                <li>Вы пытаетесь отыграть потерянные деньги</li>
-                <li>Вы играете, чтобы справиться со стрессом или депрессией</li>
-                <li>Вы увеличиваете ставки, чтобы получить то же ощущение азарта</li>
-                <li>Вы не можете остановиться, даже когда выигрываете</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>🔧 Инструменты самоконтроля</h2>
-            <p>Большинство лицензированных казино предоставляют инструменты для контроля игровой активности:</p>
-            <ul>
-                <li><strong style="color:var(--white)">Лимиты на депозиты</strong> — ограничьте сумму, которую можете внести за день/неделю/месяц</li>
-                <li><strong style="color:var(--white)">Лимиты на ставки</strong> — установите максимальный размер одной ставки</li>
-                <li><strong style="color:var(--white)">Лимиты на проигрыши</strong> — установите максимальную сумму проигрыша</li>
-                <li><strong style="color:var(--white)">Лимиты на время</strong> — установите максимальное время сессии</li>
-                <li><strong style="color:var(--white)">Самоисключение</strong> — временная или постоянная блокировка аккаунта</li>
-                <li><strong style="color:var(--white)">Период охлаждения</strong> — перерыв от нескольких дней до нескольких месяцев</li>
-            </ul>
-            <p>Мы рекомендуем использовать эти инструменты ПЕРЕД началом игры.</p>
-        </div>
-
-        <div class="card blue-card">
-            <h2>📞 Куда обратиться за помощью</h2>
-            <p>Если вы или ваши близкие столкнулись с проблемой игровой зависимости, обратитесь за профессиональной помощью:</p>
-            <div class="help-grid">
-                <div class="help-item">
-                    <div class="help-icon">🌍</div>
-                    <div class="help-name">Gamblers Anonymous</div>
-                    <div class="help-desc">Международная организация помощи при игровой зависимости</div>
-                    <a href="https://www.gamblersanonymous.org" target="_blank" rel="noopener" class="help-link">gamblersanonymous.org</a>
-                </div>
-                <div class="help-item">
-                    <div class="help-icon">🛡️</div>
-                    <div class="help-name">GamCare</div>
-                    <div class="help-desc">Бесплатная поддержка и консультации</div>
-                    <a href="https://www.gamcare.org.uk" target="_blank" rel="noopener" class="help-link">gamcare.org.uk</a>
-                </div>
-                <div class="help-item">
-                    <div class="help-icon">🔒</div>
-                    <div class="help-name">GamStop</div>
-                    <div class="help-desc">Самоисключение из онлайн казино</div>
-                    <a href="https://www.gamstop.co.uk" target="_blank" rel="noopener" class="help-link">gamstop.co.uk</a>
-                </div>
-                <div class="help-item">
-                    <div class="help-icon">💬</div>
-                    <div class="help-name">BeGambleAware</div>
-                    <div class="help-desc">Информация и ресурсы для безопасной игры</div>
-                    <a href="https://www.begambleaware.org" target="_blank" rel="noopener" class="help-link">begambleaware.org</a>
+            <div class="calc reveal" style="margin-top:0">
+                <div class="calc-l" style="grid-template-columns:1fr">
+                    <div>
+                        <h3 style="font-size:1.375rem">Азартные игры не являются инвестицией</h3>
+                        <p style="color:var(--muted);line-height:1.8;margin-top:14px">
+                            Казино всегда имеет математическое преимущество. Любой выигрыш в краткосрочной перспективе не отменяет того, что долгосрочно игра связана с риском потери денег.
+                        </p>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px">
+                            <div class="cpt" style="text-align:center">❌ Не способ заработка</div>
+                            <div class="cpt" style="text-align:center">✅ Только развлечение</div>
+                            <div class="cpt" style="text-align:center">✅ Нужен лимит</div>
+                            <div class="cpt" style="text-align:center">✅ Нужны паузы</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="card">
-            <h2>👶 Защита несовершеннолетних</h2>
-            <p>Азартные игры разрешены <strong style="color:#fca5a5">только лицам старше 18 лет</strong>. Мы категорически против участия несовершеннолетних в азартных играх.</p>
-            <h3>Рекомендации для родителей:</h3>
-            <ul>
-                <li>Используйте программы родительского контроля на устройствах детей</li>
-                <li>Не оставляйте данные банковских карт в доступных местах</li>
-                <li>Обсуждайте с детьми тему азартных игр</li>
-                <li>Контролируйте использование интернета детьми</li>
-            </ul>
-            <p>Рекомендуемые программы фильтрации:</p>
-            <ul>
-                <li><a href="https://www.netnanny.com" target="_blank" rel="noopener">Net Nanny</a> — родительский контроль</li>
-                <li><a href="https://www.cyberpatrol.com" target="_blank" rel="noopener">CyberPatrol</a> — фильтрация контента</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>📋 Наша позиция</h2>
-            <p>Paytaoff — <strong style="color:var(--white)">независимый информационный ресурс</strong>. Мы не являемся казино и не принимаем ставки. Наша цель — предоставить объективную информацию для принятия осознанных решений.</p>
-            <p>Мы не гарантируем выигрыш и не побуждаем к азартным играм. Все обзоры и рейтинги основаны на объективных критериях и предназначены исключительно для информационных целей.</p>
-            <p>Сайт содержит партнёрские ссылки. При переходе по ссылкам и регистрации мы можем получать комиссию. Это не влияет на наши оценки.</p>
-            <p><strong style="color:var(--white)">Помните: лучшая стратегия — не играть вообще. Если вы решили играть — делайте это ответственно.</strong></p>
-        </div>
-
     </div>
-</div>
+</section>
 
-<footer class="footer-simple">
+<section class="section">
     <div class="container">
-        <p>© 2026 <a href="/">Paytaoff</a>. Все права защищены. <strong style="color:#fca5a5">18+</strong></p>
-        <p style="margin-top:8px"><a href="/">Главная</a> · <a href="/about/">О нас</a> · <a href="/privacy/">Конфиденциальность</a> · <a href="/terms/">Условия</a></p>
+        <div class="ios-f">
+            <div class="sh reveal">
+                <div class="sl">✅ Принципы</div>
+                <h2>Как играть безопаснее</h2>
+                <p>Базовые правила, которые помогают не терять контроль</p>
+            </div>
+
+            <div class="help-grid">
+                <div class="help-card reveal shine-effect">
+                    <div class="help-icon">💸</div>
+                    <h3>Установите бюджет</h3>
+                    <p>До начала игры определите сумму, которую готовы потратить. Никогда не превышайте этот лимит.</p>
+                </div>
+                <div class="help-card reveal d1 shine-effect">
+                    <div class="help-icon">⏱️</div>
+                    <h3>Ограничьте время</h3>
+                    <p>Фиксируйте длительность сессии. Делайте регулярные перерывы и не играйте уставшим.</p>
+                </div>
+                <div class="help-card reveal d2 shine-effect">
+                    <div class="help-icon">🚫</div>
+                    <h3>Не берите в долг</h3>
+                    <p>Никогда не играйте на кредитные, заёмные или последние деньги. Это один из главных красных флагов.</p>
+                </div>
+                <div class="help-card reveal d3 shine-effect">
+                    <div class="help-icon">🧯</div>
+                    <h3>Не отыгрывайтесь</h3>
+                    <p>Попытка срочно вернуть проигрыш чаще всего ведёт к ещё большим потерям и эмоциональным решениям.</p>
+                </div>
+                <div class="help-card reveal d4 shine-effect">
+                    <div class="help-icon">🍷</div>
+                    <h3>Не играйте под воздействием</h3>
+                    <p>Алкоголь, стресс и сильные эмоции ухудшают контроль и толкают к рискованным ставкам.</p>
+                </div>
+                <div class="help-card reveal d5 shine-effect">
+                    <div class="help-icon">🎯</div>
+                    <h3>Относитесь к игре как к развлечению</h3>
+                    <p>Если игра перестала приносить удовольствие и вызывает тревогу — это сигнал остановиться.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="ios-f">
+            <div class="sh reveal">
+                <div class="sl">🚨 Самопроверка</div>
+                <h2>Признаки, что пора сделать паузу</h2>
+                <p>Если вы замечаете у себя несколько пунктов сразу, лучше остановиться и обратиться за помощью</p>
+            </div>
+
+            <div class="gg">
+                <div class="gc reveal shine-effect">
+                    <div class="gim gi1">1</div>
+                    <div class="gbd">
+                        <span class="gtg">Поведение</span>
+                        <h3>Потратили больше, чем планировали</h3>
+                        <ul class="g-tips">
+                            <li>Играете дольше и чаще, чем хотели</li>
+                            <li>Увеличиваете суммы ставок без плана</li>
+                            <li>Откладываете важные траты ради игры</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gc reveal d1 shine-effect">
+                    <div class="gim gi2">2</div>
+                    <div class="gbd">
+                        <span class="gtg">Финансы</span>
+                        <h3>Появилось желание отыграться</h3>
+                        <ul class="g-tips">
+                            <li>Сразу после проигрыша хочется вернуть всё назад</li>
+                            <li>Появляются мысли о займах ради депозита</li>
+                            <li>Игра идёт вместо контроля расходов</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gc reveal d2 shine-effect">
+                    <div class="gim gi3">3</div>
+                    <div class="gbd">
+                        <span class="gtg">Эмоции</span>
+                        <h3>Игра стала способом уйти от проблем</h3>
+                        <ul class="g-tips">
+                            <li>Используете игру как антистресс</li>
+                            <li>Раздражаетесь, если не можете играть</li>
+                            <li>Скрываете активность от близких</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gc reveal d3 shine-effect">
+                    <div class="gim gi4">4</div>
+                    <div class="gbd">
+                        <span class="gtg">Последствия</span>
+                        <h3>Игра мешает обычной жизни</h3>
+                        <ul class="g-tips">
+                            <li>Страдают работа, учёба или отношения</li>
+                            <li>Падает концентрация и сон</li>
+                            <li>Теряется чувство меры даже при выигрыше</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="ios-f">
+            <div class="sh reveal">
+                <div class="sl">🛠️ Самоконтроль</div>
+                <h2>Инструменты, которые стоит включать заранее</h2>
+                <p>Лучше настроить ограничения до первой сессии, а не после серии неудачных решений</p>
+            </div>
+
+            <div class="help-grid">
+                <div class="help-card reveal shine-effect">
+                    <div class="help-icon">💳</div>
+                    <h3>Лимиты на депозиты</h3>
+                    <p>Ограничьте сумму пополнений на день, неделю и месяц, чтобы заранее зафиксировать рамки.</p>
+                </div>
+                <div class="help-card reveal d1 shine-effect">
+                    <div class="help-icon">🎲</div>
+                    <h3>Лимиты на ставки</h3>
+                    <p>Установите максимальный размер одной ставки и не меняйте его в эмоциональном состоянии.</p>
+                </div>
+                <div class="help-card reveal d2 shine-effect">
+                    <div class="help-icon">📉</div>
+                    <h3>Лимиты на проигрыш</h3>
+                    <p>Определите сумму, после которой сессия автоматически считается завершённой.</p>
+                </div>
+                <div class="help-card reveal d3 shine-effect">
+                    <div class="help-icon">⏳</div>
+                    <h3>Таймеры и паузы</h3>
+                    <p>Ставьте ограничения на время и выходите из игры по сигналу, даже если кажется, что “ещё чуть-чуть”.</p>
+                </div>
+                <div class="help-card reveal d4 shine-effect">
+                    <div class="help-icon">🔒</div>
+                    <h3>Самоисключение</h3>
+                    <p>Если чувствуете потерю контроля, используйте временную или постоянную блокировку аккаунта.</p>
+                </div>
+                <div class="help-card reveal d5 shine-effect">
+                    <div class="help-icon">🧊</div>
+                    <h3>Период охлаждения</h3>
+                    <p>Даже короткий перерыв в несколько дней может помочь вернуть контроль над решениями и эмоциями.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <div class="container">
+        <div class="ios-f">
+            <div class="sh reveal">
+                <div class="sl">🆘 Поддержка</div>
+                <h2>Куда обратиться за помощью</h2>
+                <p>Если проблема затрагивает вас или близких — лучше не откладывать и обратиться за внешней поддержкой</p>
+            </div>
+
+            <div class="mg" style="margin-top:18px;grid-template-columns:repeat(4,1fr)">
+                <div class="mc reveal shine-effect">
+                    <div class="mi">🤝</div>
+                    <h3>Gamblers Anonymous</h3>
+                    <p>Международная поддержка для людей с игровой зависимостью.</p>
+                    <a href="https://www.gamblersanonymous.org/" target="_blank" rel="noopener" class="help-link">Перейти →</a>
+                </div>
+                <div class="mc reveal d1 shine-effect">
+                    <div class="mi">💬</div>
+                    <h3>GamCare</h3>
+                    <p>Бесплатная консультационная помощь и материалы по самоконтролю.</p>
+                    <a href="https://www.gamcare.org.uk/" target="_blank" rel="noopener" class="help-link">Перейти →</a>
+                </div>
+                <div class="mc reveal d2 shine-effect">
+                    <div class="mi">🚫</div>
+                    <h3>GamStop</h3>
+                    <p>Сервис самоисключения для ограничения доступа к лицензированным сайтам.</p>
+                    <a href="https://www.gamstop.co.uk/" target="_blank" rel="noopener" class="help-link">Перейти →</a>
+                </div>
+                <div class="mc reveal d3 shine-effect">
+                    <div class="mi">🧠</div>
+                    <h3>BeGambleAware</h3>
+                    <p>Информация, тесты и материалы о рисках азартных игр.</p>
+                    <a href="https://www.begambleaware.org/" target="_blank" rel="noopener" class="help-link">Перейти →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="padding-bottom:20px">
+    <div class="container">
+        <div class="ios-f">
+            <div class="sh reveal">
+                <div class="sl">🎯 Полезный следующий шаг</div>
+                <h2>Сначала сравни, потом решай</h2>
+                <p>Если всё же рассматриваете игру, лучше сначала посмотреть рейтинг, условия бонусов и отзывы, а не действовать на эмоциях.</p>
+            </div>
+            <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px" class="reveal">
+                <a href="/quiz/" class="cbtn cbtn-gold ripple" style="padding:18px 40px;font-size:1.063rem">🎯 Пройти тест →</a>
+                <a href="/#top" class="cbtn ripple" style="padding:18px 40px;font-size:1.063rem;background:linear-gradient(135deg,#7c3aed,#4f46e5)">🏆 Открыть рейтинг →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="fd"><strong>⚠️ 18+</strong> — Paytaoff — независимый ресурс. Мы не казино. Партнёрские ссылки. Играйте ответственно.</div>
+        <div class="f-wrap">
+            <div class="fg">
+                <div class="fa2">
+                    <div class="fl2"><img src="../avatar.png" alt="Paytaoff" class="i-avatar" style="animation:none"><span>Paytaoff</span></div>
+                    <p>Честные обзоры казино. 50+ критериев.</p>
+                    <div class="security-badges" style="margin-top:12px;justify-content:flex-start">
+                        <div class="security-badge ssl">🔒 SSL</div>
+                        <div class="security-badge">✅ Независимый</div>
+                    </div>
+                </div>
+                <div class="fcl">
+                    <h4>Навигация</h4>
+                    <ul class="fls">
+                        <li><a href="/#top">Рейтинг</a></li>
+                        <li><a href="/guide.html">Гид</a></li>
+                        <li><a href="#contact">Помощь</a></li>
+                        <li><a href="/quiz/">Подбор казино</a></li>
+                    </ul>
+                </div>
+                <div class="fcl">
+                    <h4>Информация</h4>
+                    <ul class="fls">
+                        <li><a href="/about/">О проекте</a></li>
+                        <li><a href="/responsible-gaming/">🛡️ Ответственная игра</a></li>
+                        <li><a href="/privacy/">Конфиденциальность</a></li>
+                        <li><a href="/terms/">Условия</a></li>
+                        <li><a href="https://t.me/paytaoff" target="_blank" rel="noopener">📱 Telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="fbt">
+            <p>© 2026 Paytaoff</p>
+            <div style="display:flex;gap:8px;align-items:center">
+                <button class="share-btn" onclick="shareWebsite()">🔗 Поделиться</button>
+                <span class="fag">18+</span>
+            </div>
+        </div>
     </div>
 </footer>
 
-<script>
-addEventListener('scroll',()=>{document.getElementById('island').classList.toggle('scrolled',scrollY>60)},{passive:true});
-</script>
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<div class="logo-tooltip" id="logoTooltip">Двойной клик = 🎉</div>
+
+<script src="../script.js"></script>
 </body>
 </html>
+
