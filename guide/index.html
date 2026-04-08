@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
@@ -22,7 +24,6 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="/style.css">
 
     <!-- Yandex.Metrika counter -->
@@ -34,229 +35,392 @@
             k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
         })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108420102', 'ym');
 
-        ym(108420102, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+        ym(108420102, 'init', {
+            ssr:true,
+            webvisor:true,
+            clickmap:true,
+            ecommerce:"dataLayer",
+            referrer: document.referrer,
+            url: location.href,
+            accurateTrackBounce:true,
+            trackLinks:true
+        });
     </script>
     <!-- /Yandex.Metrika counter -->
 </head>
 <body>
+<noscript><div><img src="https://mc.yandex.ru/watch/108420102" style="position:absolute; left:-9999px;" alt=""></div></noscript>
 
-<div class="world">
-    <div class="world-m"></div>
-    <div class="orb ob1"></div>
-    <div class="orb ob2"></div>
-    <div class="orb ob3"></div>
-    <div id="dots"></div>
+<canvas id="pc"></canvas>
+<div class="cg" id="cursorGlow"></div>
+
+<div class="bg-wrap">
+    <div class="bg-mesh"></div>
+    <div id="starsLayer"></div>
 </div>
-<div class="glow" id="glow"></div>
 
-<nav class="nav" id="nav">
-    <a href="/" class="nav-l">
-        <img src="/avatar.png" alt="Paytaoff">
+<div id="scrollProgress" style="position:fixed;top:0;left:0;right:0;height:3px;transform-origin:left center;transform:scaleX(0);z-index:10001;background:linear-gradient(90deg,#7c3aed,#4f46e5)"></div>
+
+<nav class="island" id="island">
+    <a href="/" class="i-logo">
+        <img src="/avatar.png" alt="Paytaoff" style="width:30px;height:30px;border-radius:10px;">
         <span>Paytaoff</span>
     </a>
-    <div class="nav-s"></div>
-    <a href="/" class="nav-b">← Рейтинг</a>
-    <div class="nav-s"></div>
-    <a href="/quiz/" class="nav-b">Тест</a>
-    <div class="nav-s"></div>
-    <a href="/guide/" class="nav-b">Гид</a>
-    <div class="nav-s"></div>
-    <a href="/about/" class="nav-b">О проекте</a>
-    <div class="nav-s"></div>
-    <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="tg-nav">📱 Канал</a>
-    <div class="nav-s"></div>
-    <div class="theme-btn" id="themeBtn" onclick="toggleTheme()">🌙</div>
-    <div class="nav-s"></div>
-    <div class="nav-a">18+</div>
+
+    <div class="i-div"></div>
+
+    <div class="i-links">
+        <a href="#top" class="i-link active">Гид</a>
+        <a href="#guide" class="i-link">Статьи</a>
+        <a href="#help" class="i-link">Помощь</a>
+        <a href="#faq" class="i-link">FAQ</a>
+    </div>
+
+    <div class="i-div"></div>
+
+    <a href="/" class="i-link">Рейтинг</a>
+    <a href="/quiz/" class="i-link">Тест</a>
+    <a href="/about/" class="i-link">О проекте</a>
+
+    <div class="i-div"></div>
+
+    <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="i-link">📱 Канал</a>
+
+    <div class="i-div"></div>
+
+    <button type="button" class="theme-toggle" id="themeToggle" onclick="toggleTheme()">🌙</button>
+
+    <div class="i-div"></div>
+
+    <div class="i-age">18+</div>
+
+    <div class="lang-wrap" id="langWrap" style="display:none;"></div>
+
+    <div class="mob-nav-wrap">
+        <button type="button" class="mob-nav-toggle" onclick="toggleMobNav()">
+            <span>☰</span>
+            <span class="mob-nav-label">Меню</span>
+        </button>
+        <div class="mob-nav-dropdown" id="mobNavDropdown">
+            <a href="#top">Гид</a>
+            <a href="#guide">Статьи</a>
+            <a href="#help">Помощь</a>
+            <a href="#faq">FAQ</a>
+            <div class="mob-nav-sep"></div>
+            <a href="/">Рейтинг</a>
+            <a href="/quiz/">Тест</a>
+            <a href="/about/">О проекте</a>
+        </div>
+    </div>
 </nav>
 
-<div class="qw">
-    <div class="qb">
-
-        <section class="scr on">
-            <div class="glass intro">
-                <span class="intro-i">🌿</span>
-                <h1>Гид по <span class="gt">онлайн-казино</span></h1>
-                <p>
-                    Здесь мы простым языком разбираем бонусы, вейджер, вывод, безопасность, форматы игр и реальные различия между казино,
-                    чтобы человек мог выбрать платформу осознанно и под свои цели.
-                </p>
-
-                <div class="intro-tags">
-                    <div class="itag">🎯 Подбор под себя</div>
-                    <div class="itag">🛡️ Проверка и безопасность</div>
-                    <div class="itag">💸 Бонусы и вывод</div>
-                    <div class="itag">📱 Для мобильных и ПК</div>
-                </div>
-
-                <a href="/quiz/" class="cta" style="margin-bottom:10px">Пройти тест и подобрать казино →</a>
-                <a href="/" class="cta cta-green" style="display:block;text-align:center">Смотреть рейтинг казино →</a>
-
-                <p style="font-size:.72rem;color:var(--muted);margin-top:14px">
-                    18+. Информационный раздел. Мы не обещаем выигрыш и не подталкиваем к бездумной игре.
-                </p>
+<header class="hero" id="top">
+    <div class="hero-layout">
+        <div class="hero-left">
+            <div class="hero-badge">
+                <span class="pd"></span>
+                <span>Честный гид по выбору казино</span>
             </div>
-        </section>
 
-        <section class="scr on" style="display:block;margin-top:18px">
-            <div class="glass">
-                <div class="qc" style="text-align:left;min-height:auto">
-                    <div class="qn">С чего начать</div>
-                    <div class="qt" style="margin-bottom:10px">Полезные статьи, которые помогают выбрать казино осознанно</div>
-                    <p style="color:var(--muted);margin-bottom:20px">
-                        Эти материалы дают человеку пользу, снимают сомнения и мягко ведут дальше — в квиз, обзор или рейтинг.
+            <h1>
+                Выбирай казино<br>
+                <span class="gt">не наугад</span>, а под свой стиль игры
+            </h1>
+
+            <p>
+                Здесь мы простым языком разбираем бонусы, вейджер, вывод, безопасность, форматы игр и реальные различия между платформами,
+                чтобы человек мог выбрать казино осознанно и под свои цели.
+            </p>
+
+            <div class="hero-btns">
+                <a href="/quiz/" class="btn btn-glow">🎯 Подобрать казино</a>
+                <a href="/" class="btn btn-glow" style="background:linear-gradient(135deg,#059669,#34d399);box-shadow:0 4px 22px rgba(5,150,105,.3)">🏆 Смотреть рейтинг</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hs">
+                    <div class="hs-n" data-count="7">0</div>
+                    <div class="hs-l">казино в рейтинге</div>
+                </div>
+                <div class="hs">
+                    <div class="hs-n" data-count="50">0</div>
+                    <div class="hs-l">критериев оценки</div>
+                </div>
+                <div class="hs">
+                    <div class="hs-n">2 мин</div>
+                    <div class="hs-l">на прохождение квиза</div>
+                </div>
+            </div>
+
+            <div class="security-badges">
+                <div class="sl">🎯 Подбор под себя</div>
+                <div class="sl">🛡️ Безопасность</div>
+                <div class="sl">💸 Бонусы и вывод</div>
+                <div class="sl">📱 Мобильные и ПК</div>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="ios-f reveal d1">
+                <div class="sl">🌿 Весенний гид</div>
+                <div class="sh" style="text-align:left;margin-bottom:18px">
+                    <h2 style="font-size:1.75rem">Сначала понять условия, потом выбирать платформу</h2>
+                    <p style="margin:0;max-width:none">
+                        Это снижает хаос в выборе, повышает доверие и помогает человеку перейти в обзор уже с пониманием того,
+                        что ему действительно подходит.
                     </p>
+                </div>
 
-                    <div class="others-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px">
-                        <a href="/guide/kak-vybrat-kazino/" class="oc" style="text-align:left">
-                            <div class="oc-e">🎯</div>
-                            <div class="oc-n">Как выбрать онлайн-казино новичку</div>
-                            <div class="oc-b">На что смотреть в первую очередь: бонусы, вывод, поддержка, игры</div>
-                            <div class="oc-btn">Открыть →</div>
-                        </a>
-
-                        <a href="/guide/chto-takoe-vejdzher/" class="oc" style="text-align:left">
-                            <div class="oc-e">📐</div>
-                            <div class="oc-n">Что такое вейджер и как его понять</div>
-                            <div class="oc-b">Как увидеть реальные условия бонуса ещё до регистрации</div>
-                            <div class="oc-btn">Открыть →</div>
-                        </a>
-
-                        <a href="/guide/kak-proverit-kazino/" class="oc" style="text-align:left">
-                            <div class="oc-e">🛡️</div>
-                            <div class="oc-n">Как проверить казино перед регистрацией</div>
-                            <div class="oc-b">Чек-лист безопасности и тревожных сигналов</div>
-                            <div class="oc-btn">Открыть →</div>
-                        </a>
-
-                        <a href="/guide/kazino-s-bystrym-vyvodom/" class="oc" style="text-align:left">
-                            <div class="oc-e">⚡</div>
-                            <div class="oc-n">Казино с быстрым выводом</div>
-                            <div class="oc-b">Как понять, где выплаты действительно быстрые, а где только обещания</div>
-                            <div class="oc-btn">Открыть →</div>
-                        </a>
-
-                        <a href="/guide/kazino-dlya-novichkov/" class="oc" style="text-align:left">
-                            <div class="oc-e">🌱</div>
-                            <div class="oc-n">Казино для новичков</div>
-                            <div class="oc-b">Где проще начать и не потеряться в бонусах и правилах</div>
-                            <div class="oc-btn">Открыть →</div>
-                        </a>
-
-                        <a href="/guide/kazino-s-kriptovalyutoy/" class="oc" style="text-align:left">
-                            <div class="oc-e">₿</div>
-                            <div class="oc-n">Казино с криптовалютой</div>
-                            <div class="oc-b">Для тех, кому важны современные методы оплаты и быстрые переводы</div>
-                            <div class="oc-btn">Открыть →</div>
-                        </a>
+                <div class="trust-bar">
+                    <div class="cf">
+                        <div class="cfl">Формат</div>
+                        <div class="cfv">Честный разбор</div>
+                    </div>
+                    <div class="cf">
+                        <div class="cfl">Фокус</div>
+                        <div class="cfv">Польза + выбор</div>
+                    </div>
+                    <div class="cf">
+                        <div class="cfl">Данные</div>
+                        <div class="cfv">Актуально 2026</div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="scr on" style="display:block;margin-top:18px">
-            <div class="glass">
-                <div class="qc" style="text-align:left;min-height:auto">
-                    <div class="qn">Как это работает</div>
-                    <div class="qt" style="margin-bottom:10px">Мы ведём человека к выбору не через давление, а через понимание</div>
-                    <p style="color:var(--muted);margin-bottom:20px">
-                        Такой подход лучше для доверия, чище по конверсии и намного сильнее прогревает человека перед переходом в обзор или на платформу.
-                    </p>
-
-                    <div class="qo">
-                        <div class="opt" style="cursor:default">
-                            <span class="oi">1</span>
-                            <span class="ot"><strong>Даём ясность</strong><br>Объясняем бонусы, вывод, вейджер, безопасность и различия между платформами.</span>
-                        </div>
-
-                        <div class="opt" style="cursor:default">
-                            <span class="oi">2</span>
-                            <span class="ot"><strong>Снимаем сомнения</strong><br>Показываем, на что смотреть и каких ошибок лучше избегать.</span>
-                        </div>
-
-                        <div class="opt" style="cursor:default">
-                            <span class="oi">3</span>
-                            <span class="ot"><strong>Подбираем вариант</strong><br>Через квиз или рейтинг человек находит казино под свой опыт, игры и цели.</span>
-                        </div>
-
-                        <div class="opt" style="cursor:default">
-                            <span class="oi">4</span>
-                            <span class="ot"><strong>Ведём в обзор</strong><br>После этого он уже осознанно переходит в обзор, промокод или на сайт казино.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="scr on" style="display:block;margin-top:18px">
-            <div class="glass res">
-                <div class="res-i">🎯</div>
-                <div class="res-t">Не хочешь читать всё подряд?</div>
-                <div class="res-sub">
-                    Пройди короткий тест — он поможет подобрать более подходящее казино по твоим ответам: по бонусам, играм, опыту и скорости вывода.
-                </div>
-
-                <a href="/quiz/" class="cta" style="margin-bottom:10px">Подобрать казино за 2 минуты →</a>
-                <a href="/" class="cta cta-tg" style="display:block;text-align:center">Перейти к полному рейтингу →</a>
-            </div>
-        </section>
-
-        <section class="scr on" style="display:block;margin-top:18px">
-            <div class="glass">
-                <div class="qc" style="text-align:left;min-height:auto">
-                    <div class="qn">FAQ</div>
-                    <div class="qt" style="margin-bottom:10px">Частые вопросы</div>
-
-                    <div class="qo">
-                        <div class="opt" style="cursor:default;align-items:flex-start">
-                            <span class="oi">❓</span>
-                            <span class="ot">
-                                <strong>С чего лучше начать новичку?</strong><br>
-                                С гайда по выбору казино и короткого квиза. Так проще понять, какой формат подходит именно тебе.
-                            </span>
-                        </div>
-
-                        <div class="opt" style="cursor:default;align-items:flex-start">
-                            <span class="oi">💸</span>
-                            <span class="ot">
-                                <strong>Почему важно читать условия бонуса?</strong><br>
-                                Потому что размер бонуса сам по себе ничего не значит. Важны вейджер, сроки, ограничения и правила вывода.
-                            </span>
-                        </div>
-
-                        <div class="opt" style="cursor:default;align-items:flex-start">
-                            <span class="oi">🛡️</span>
-                            <span class="ot">
-                                <strong>Как понять, что казино надёжное?</strong><br>
-                                Смотри на репутацию, условия выплат, поддержку, прозрачность правил и общую логику платформы.
-                            </span>
-                        </div>
-
-                        <div class="opt" style="cursor:default;align-items:flex-start">
-                            <span class="oi">✅</span>
-                            <span class="ot">
-                                <strong>Вы обещаете выигрыш?</strong><br>
-                                Нет. Мы не обещаем выигрыш и не подталкиваем к бездумной игре. Наша задача — помочь выбрать платформу осознанно.
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        </div>
     </div>
-</div>
+</header>
 
-<footer class="ft">
-    <p>
-        © 2026 <a href="/">Paytaoff</a> ·
-        <a href="/about/">О проекте</a> ·
-        <a href="/responsible-gaming/">Ответственная игра</a> ·
-        <a href="/privacy/">Конфиденциальность</a> ·
-        <a href="/terms/">Условия</a>
-    </p>
+<section class="section" id="guide">
+    <div class="container">
+        <div class="ios-f reveal d1">
+            <div class="sh">
+                <div class="guide-sub">
+                    <div class="guide-sub-title">📚 С чего начать</div>
+                </div>
+                <h2>Полезные статьи, которые помогают выбрать казино осознанно</h2>
+                <p>Эти материалы дают пользу, снимают сомнения и мягко ведут дальше — в квиз, обзор или рейтинг.</p>
+            </div>
+
+            <div class="mg">
+                <a href="/guide/kak-vybrat-kazino/" class="mc reveal d1">
+                    <div class="mi">🎯</div>
+                    <h3>Как выбрать онлайн-казино новичку</h3>
+                    <p>На что смотреть в первую очередь: бонусы, вывод, поддержка, игры и надёжность.</p>
+                    <span class="mw">Открыть статью</span>
+                </a>
+
+                <a href="/guide/chto-takoe-vejdzher/" class="mc reveal d2">
+                    <div class="mi">📐</div>
+                    <h3>Что такое вейджер</h3>
+                    <p>Как понять реальные условия бонуса и не вестись только на красивый процент.</p>
+                    <span class="mw">Открыть статью</span>
+                </a>
+
+                <a href="/guide/kak-proverit-kazino/" class="mc reveal d3">
+                    <div class="mi">🛡️</div>
+                    <h3>Как проверить казино</h3>
+                    <p>Чек-лист безопасности: правила, поддержка, выплаты и тревожные сигналы.</p>
+                    <span class="mw">Открыть статью</span>
+                </a>
+
+                <a href="/guide/kazino-s-bystrym-vyvodom/" class="mc reveal d1">
+                    <div class="mi">⚡</div>
+                    <h3>Казино с быстрым выводом</h3>
+                    <p>Как понять, где выплаты действительно быстрые, а где это только обещание.</p>
+                    <span class="mw">Открыть статью</span>
+                </a>
+
+                <a href="/guide/kazino-dlya-novichkov/" class="mc reveal d2">
+                    <div class="mi">🌱</div>
+                    <h3>Казино для новичков</h3>
+                    <p>Где проще начать и не потеряться в бонусах, механиках и правилах.</p>
+                    <span class="mw">Открыть статью</span>
+                </a>
+
+                <a href="/guide/kazino-s-kriptovalyutoy/" class="mc reveal d3">
+                    <div class="mi">₿</div>
+                    <h3>Казино с криптовалютой</h3>
+                    <p>Для тех, кому важны современные методы оплаты, быстрые переводы и приватность.</p>
+                    <span class="mw">Открыть статью</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="help">
+    <div class="container">
+        <div class="ios-f reveal d2">
+            <div class="sh">
+                <div class="guide-sub">
+                    <div class="guide-sub-title">🧭 Как мы ведём человека к выбору</div>
+                </div>
+                <h2>Не через давление, а через пользу и понимание</h2>
+                <p>Так конверсия получается чище, доверие выше, а переход в обзор — осознаннее.</p>
+            </div>
+
+            <div class="gg">
+                <div class="gc reveal d1">
+                    <div class="gim gi1">1</div>
+                    <div class="gbd">
+                        <div class="gtg">Шаг 1</div>
+                        <h3>Даём ясность</h3>
+                        <ul class="g-tips">
+                            <li>объясняем бонусы</li>
+                            <li>разбираем вывод</li>
+                            <li>показываем реальные различия</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="gc reveal d2">
+                    <div class="gim gi2">2</div>
+                    <div class="gbd">
+                        <div class="gtg">Шаг 2</div>
+                        <h3>Снимаем сомнения</h3>
+                        <ul class="g-tips">
+                            <li>что проверять до регистрации</li>
+                            <li>каких ошибок избегать</li>
+                            <li>как не переоценить бонус</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="gc reveal d3">
+                    <div class="gim gi3">3</div>
+                    <div class="gbd">
+                        <div class="gtg">Шаг 3</div>
+                        <h3>Подбираем вариант</h3>
+                        <ul class="g-tips">
+                            <li>через квиз</li>
+                            <li>через рейтинг</li>
+                            <li>по играм, опыту и выводу</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="help-grid" style="margin-top:14px">
+                <div class="help-card reveal d1">
+                    <div class="help-icon">🎰</div>
+                    <h3>Для слотов и бонусов</h3>
+                    <p>Если человеку важны фриспины, приветственный пакет и большое число автоматов — ведём в квиз и обзор под этот интент.</p>
+                    <a class="help-link" href="/quiz/">Открыть тест →</a>
+                </div>
+
+                <div class="help-card reveal d2">
+                    <div class="help-icon">⚡</div>
+                    <h3>Для быстрого вывода</h3>
+                    <p>Если главный критерий — скорость выплат, тогда человек должен сначала прочитать гайд и только потом смотреть рейтинг.</p>
+                    <a class="help-link" href="/guide/kazino-s-bystrym-vyvodom/">Читать гайд →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="pb reveal d2">
+            <div class="pb-l">
+                <div class="pb-i">🎯</div>
+                <div class="pb-t">
+                    Не хочешь читать всё подряд?
+                    <small>Пройди короткий тест и получи более подходящий вариант по своим ответам.</small>
+                </div>
+            </div>
+            <div class="ct">
+                <a href="/quiz/" class="cbtn cbtn-gold">Пройти тест</a>
+                <a href="/" class="cbtn">Открыть рейтинг</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="faq">
+    <div class="container">
+        <div class="f-wrap ios-f reveal d3">
+            <div class="sh">
+                <div class="guide-sub">
+                    <div class="guide-sub-title">❓ Частые вопросы</div>
+                </div>
+                <h2>Коротко и по делу</h2>
+                <p>Эти блоки полезны и для доверия, и для SEO, и для удержания человека на странице.</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="fl">
+                    <div class="fi">
+                        <div class="fq" onclick="toggleFaq(this)">
+                            <span>С чего лучше начать новичку?</span>
+                            <div class="fic">+</div>
+                        </div>
+                        <div class="fa">
+                            <div class="fa-i">
+                                С гайда по выбору казино и короткого квиза. Так проще понять, какой формат подходит именно тебе, а не выбирать вслепую.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fi">
+                        <div class="fq" onclick="toggleFaq(this)">
+                            <span>Почему важно читать условия бонуса?</span>
+                            <div class="fic">+</div>
+                        </div>
+                        <div class="fa">
+                            <div class="fa-i">
+                                Потому что размер бонуса сам по себе ничего не значит. Важны вейджер, сроки, ограничения по играм и правила вывода.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fl">
+                    <div class="fi">
+                        <div class="fq" onclick="toggleFaq(this)">
+                            <span>Как понять, что казино мне подходит?</span>
+                            <div class="fic">+</div>
+                        </div>
+                        <div class="fa">
+                            <div class="fa-i">
+                                Смотри на свои цели: быстрый вывод, слоты, live-игры, криптовалюта, приложение, интерфейс, поддержка и бонусная политика.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fi">
+                        <div class="fq" onclick="toggleFaq(this)">
+                            <span>Вы обещаете выигрыш?</span>
+                            <div class="fic">+</div>
+                        </div>
+                        <div class="fa">
+                            <div class="fa-i">
+                                Нет. Мы не обещаем выигрыш и не подталкиваем к бездумной игре. Наша задача — помочь выбрать платформу осознанно и разобраться в условиях.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p style="text-align:center;color:var(--muted);font-size:.8rem;padding-bottom:34px">
+            © 2026 <a href="/">Paytaoff</a> ·
+            <a href="/about/">О проекте</a> ·
+            <a href="/responsible-gaming/">Ответственная игра</a> ·
+            <a href="/privacy/">Конфиденциальность</a> ·
+            <a href="/terms/">Условия</a>
+        </p>
+    </div>
 </footer>
 
-<script src="../script.js"></script>  
+<div id="stickyBar" style="display:none!important"></div>
+
+<button id="scrollTop" class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script src="/script.js"></script>
 </body>
 </html>
