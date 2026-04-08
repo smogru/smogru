@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <title>Гид по онлайн-казино — как выбрать казино честно и под себя | Paytaoff</title>
+    <meta name="description" content="Честный гид по онлайн-казино: как выбрать платформу, понять бонусы, проверить условия вывода и подобрать казино под себя.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#060810">
+
+    <meta property="og:title" content="Гид по онлайн-казино | Paytaoff">
+    <meta property="og:description" content="Разбираем бонусы, вейджер, вывод, безопасность и помогаем выбрать казино под твой стиль игры.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.paytaoff.ru/guide/">
+    <meta property="og:image" content="https://www.paytaoff.ru/android-chrome-512x512.png">
+
+    <style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+    --bg:#060810;
+    --bg2:#0c1020;
+    --text:#dce8f5;
+    --muted:#8a9bb5;
+    --white:#fff;
+    --purple:#7c3aed;
+    --purple-l:#a78bfa;
+    --indigo:#4f46e5;
+    --green:#34d399;
+    --green-l:#6ee7b7;
+    --amber:#f59e0b;
+    --red:#fb7185;
+    --card:rgba(124,58,237,.06);
+    --card-b:rgba(124,58,237,.12);
+    --glass:rgba(8,10,18,.74);
+    --glass-b:rgba(124,58,237,.12);
+    --nav-bg:rgba(6,8,16,.58);
+}
+html{scroll-behavior:smooth}
+body{
+    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
+}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif}
+a{text-decoration:none;color:inherit}
+
+.world{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.world::before{
+    content:"";
+    position:absolute;inset:0;
+    background:
+      radial-gradient(circle at 18% 18%, rgba(124,58,237,.16), transparent 32%),
+      radial-gradient(circle at 82% 22%, rgba(79,70,229,.12), transparent 28%),
+      radial-gradient(circle at 50% 78%, rgba(52,211,153,.08), transparent 25%),
+      linear-gradient(180deg,#060810 0%,#080b14 100%);
+}
+.orb{
+    position:absolute;border-radius:50%;filter:blur(80px);opacity:.45;
+    animation:float 12s ease-in-out infinite alternate;
+}
+.orb.o1{width:340px;height:340px;top:-80px;left:-60px;background:rgba(124,58,237,.22)}
+.orb.o2{width:280px;height:280px;right:-70px;top:18%;background:rgba(79,70,229,.18)}
+.orb.o3{width:260px;height:260px;left:42%;bottom:-80px;background:rgba(52,211,153,.10)}
+@keyframes float{
+    0%{transform:translate(0,0) scale(1)}
+    100%{transform:translate(24px,-18px) scale(1.08)}
+}
+
+.container{position:relative;z-index:1;width:min(1180px,calc(100% - 32px));margin:0 auto}
+
+.nav{
+    position:sticky;top:8px;z-index:1000;margin:8px auto 0;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:16px;padding:10px 14px;border-radius:22px;
+    background:var(--nav-bg);backdrop-filter:blur(16px) saturate(1.4);
+    border:1px solid var(--glass-b);box-shadow:0 10px 40px rgba(0,0,0,.22)
+}
+.nav-left,.nav-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.brand{
+    display:flex;align-items:center;gap:10px;font-weight:800
+}
+.brand img{width:34px;height:34px;border-radius:10px}
+.brand span{
+    background:linear-gradient(135deg,var(--purple-l),#fff);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent
+}
+.nav-link{
+    padding:9px 14px;border-radius:999px;
+    font-size:.85rem;font-weight:700;color:var(--muted);
+    transition:.25s ease;
+}
+.nav-link:hover{background:rgba(124,58,237,.1);color:var(--white)}
+.nav-chip{
+    padding:8px 12px;border-radius:999px;
+    background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.15);
+    color:#fca5a5;font-size:.78rem;font-weight:800;
+}
+
+.hero{padding:42px 0 28px}
+.hero-grid{
+    display:grid;grid-template-columns:1.08fr .92fr;gap:22px;align-items:stretch
+}
+.glass{
+    background:var(--glass);
+    border:1px solid var(--glass-b);
+    border-radius:28px;
+    box-shadow:0 12px 38px rgba(0,0,0,.18), 0 0 50px rgba(124,58,237,.04);
+    backdrop-filter:blur(16px) saturate(1.35);
+}
+.hero-main{padding:34px 30px}
+.kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:8px 12px;border-radius:999px;
+    background:rgba(124,58,237,.09);
+    border:1px solid rgba(124,58,237,.16);
+    color:var(--purple-l);font-size:.78rem;font-weight:800;margin-bottom:16px
+}
+.hero h1{
+    font-size:clamp(2rem,5.2vw,4rem);
+    line-height:1.03;font-weight:900;letter-spacing:-1.8px;
+    margin-bottom:14px;
+}
+.grad{
+    background:linear-gradient(135deg,var(--purple-l),#fff,var(--green-l));
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero p{
+    color:var(--muted);font-size:1rem;max-width:760px;margin-bottom:22px
+}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.badge{
+    padding:7px 12px;border-radius:999px;font-size:.76rem;font-weight:700;
+    background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.12);color:var(--purple-l)
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px}
+.btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:15px 18px;border-radius:16px;border:none;cursor:pointer;
+    font-weight:800;font-size:.95rem;transition:.25s ease;
+}
+.btn-primary{
+    background:linear-gradient(135deg,var(--purple),var(--indigo));
+    color:#fff;box-shadow:0 10px 30px rgba(124,58,237,.32)
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(124,58,237,.42)}
+.btn-green{
+    background:linear-gradient(135deg,#059669,#34d399);
+    color:#fff;box-shadow:0 10px 30px rgba(5,150,105,.28)
+}
+.btn-green:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(5,150,105,.38)}
+.btn-ghost{
+    color:var(--white);background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.08)
+}
+.btn-ghost:hover{background:rgba(255,255,255,.06);transform:translateY(-2px)}
+
+.hero-side{padding:24px;display:flex;flex-direction:column;gap:14px}
+.side-card{
+    padding:18px;border-radius:20px;background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.06)
+}
+.side-title{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--purple-l);font-weight:800;margin-bottom:10px}
+.side-big{font-size:1.25rem;font-weight:900;line-height:1.2;margin-bottom:6px}
+.side-text{font-size:.88rem;color:var(--muted)}
+.score-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat{
+    padding:14px;border-radius:18px;background:rgba(124,58,237,.05);border:1px solid rgba(124,58,237,.12)
+}
+.stat-v{font-size:1.3rem;font-weight:900}
+.stat-l{font-size:.72rem;color:var(--muted)}
+
+.section{padding:18px 0}
+.section-head{
+    display:flex;align-items:end;justify-content:space-between;gap:14px;
+    margin-bottom:18px
+}
+.section h2{
+    font-size:clamp(1.45rem,3vw,2.3rem);
+    line-height:1.08;font-weight:900;letter-spacing:-1px
+}
+.section-sub{color:var(--muted);max-width:760px}
+
+.cards{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:14px
+}
+.card{
+    display:flex;flex-direction:column;gap:12px;
+    padding:22px;border-radius:22px;background:var(--glass);
+    border:1px solid var(--glass-b);transition:.25s ease;
+}
+.card:hover{transform:translateY(-4px);border-color:rgba(124,58,237,.24)}
+.card-icon{
+    width:48px;height:48px;border-radius:16px;display:flex;align-items:center;justify-content:center;
+    background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.14);font-size:1.35rem
+}
+.card h3{font-size:1.15rem;font-weight:900;line-height:1.2}
+.card p{font-size:.92rem;color:var(--muted)}
+.card-link{
+    margin-top:auto;display:inline-flex;align-items:center;gap:8px;
+    color:var(--purple-l);font-weight:800;font-size:.9rem
+}
+
+.steps{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:14px
+}
+.step{
+    padding:20px;border-radius:22px;background:var(--glass);border:1px solid var(--glass-b)
+}
+.step-n{
+    width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg,var(--purple),var(--indigo));
+    color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:12px
+}
+.step h3{font-size:1rem;font-weight:900;margin-bottom:8px}
+.step p{font-size:.88rem;color:var(--muted)}
+
+.cta-box{
+    padding:28px;border-radius:28px;
+    background:
+      radial-gradient(circle at top right, rgba(124,58,237,.14), transparent 30%),
+      radial-gradient(circle at bottom left, rgba(52,211,153,.10), transparent 28%),
+      var(--glass);
+    border:1px solid rgba(124,58,237,.16)
+}
+.cta-box h2{margin-bottom:10px}
+.cta-box p{max-width:800px;color:var(--muted);margin-bottom:18px}
+.cta-actions{display:flex;flex-wrap:wrap;gap:10px}
+
+.faq{
+    display:grid;grid-template-columns:1fr 1fr;gap:14px
+}
+.faq-item{
+    padding:20px;border-radius:22px;background:var(--glass);border:1px solid var(--glass-b)
+}
+.faq-item h3{font-size:1rem;font-weight:900;margin-bottom:8px}
+.faq-item p{font-size:.9rem;color:var(--muted)}
+
+.footer{
+    padding:24px 0 34px;color:var(--muted);font-size:.78rem;text-align:center
+}
+.footer a{color:var(--purple-l);font-weight:700}
+
+.notice{
+    padding:16px 18px;border-radius:18px;
+    background:rgba(251,113,133,.06);border:1px solid rgba(251,113,133,.12);
+    color:#fecdd3;font-size:.85rem
+}
+
+@media (max-width: 980px){
+    .hero-grid,.cards,.steps,.faq{grid-template-columns:1fr}
+}
+@media (max-width: 640px){
+    .container{width:min(100% - 20px,1180px)}
+    .nav{padding:10px}
+    .hero{padding-top:24px}
+    .hero-main,.hero-side,.card,.step,.faq-item,.cta-box{padding:18px}
+    .hero-actions,.cta-actions{flex-direction:column}
+    .btn{width:100%}
+}
+    </style>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108420102', 'ym');
+
+        ym(108420102, 'init', {
+            ssr:true,
+            webvisor:true,
+            clickmap:true,
+            ecommerce:"dataLayer",
+            referrer: document.referrer,
+            url: location.href,
+            accurateTrackBounce:true,
+            trackLinks:true
+        });
+    </script>
+    <!-- /Yandex.Metrika counter -->
+</head>
+<body>
+<noscript><div><img src="https://mc.yandex.ru/watch/108420102" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+<div class="world">
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+</div>
+
+<div class="container">
+    <nav class="nav">
+        <div class="nav-left">
+            <a href="/" class="brand">
+                <img src="/avatar.png" alt="Paytaoff">
+                <span>Paytaoff</span>
+            </a>
+            <a href="/" class="nav-link">Рейтинг</a>
+            <a href="/quiz/" class="nav-link">Тест</a>
+            <a href="/guide/" class="nav-link">Гид</a>
+            <a href="/about/" class="nav-link">О проекте</a>
+        </div>
+        <div class="nav-right">
+            <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="nav-link">Telegram</a>
+            <div class="nav-chip">18+</div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-grid">
+            <div class="glass hero-main">
+                <div class="kicker">📘 Честный гид по выбору казино</div>
+                <h1>Выбирай казино <span class="grad">не наугад</span>, а под свой стиль игры</h1>
+                <p>
+                    Здесь мы простым языком разбираем бонусы, вейджер, вывод, безопасность, форматы игр и реальные различия между казино.
+                    Цель одна — чтобы человек понимал, <strong>куда идёт, на каких условиях играет и что ему действительно подходит</strong>.
+                </p>
+
+                <div class="hero-badges">
+                    <div class="badge">✅ Без лишней воды</div>
+                    <div class="badge">🎯 Подбор под себя</div>
+                    <div class="badge">💸 Бонусы и условия</div>
+                    <div class="badge">🛡️ Безопасность и проверка</div>
+                    <div class="badge">📱 Для мобильных и ПК</div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="/quiz/" class="btn btn-primary">🎯 Подобрать казино за 2 минуты</a>
+                    <a href="/" class="btn btn-green">🏆 Перейти к рейтингу</a>
+                    <a href="#articles" class="btn btn-ghost">📚 Читать гид</a>
+                </div>
+            </div>
+
+            <div class="glass hero-side">
+                <div class="side-card">
+                    <div class="side-title">зачем этот раздел</div>
+                    <div class="side-big">Чтобы человек сначала понял условия, а уже потом выбирал платформу</div>
+                    <div class="side-text">Это повышает доверие, снижает хаос в выборе и помогает подобрать более подходящий вариант без слепых кликов.</div>
+                </div>
+
+                <div class="score-grid">
+                    <div class="stat">
+                        <div class="stat-v">50+</div>
+                        <div class="stat-l">критериев оценки</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-v">7</div>
+                        <div class="stat-l">казино в рейтинге</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-v">2 мин</div>
+                        <div class="stat-l">на прохождение квиза</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-v">2026</div>
+                        <div class="stat-l">актуальные данные</div>
+                    </div>
+                </div>
+
+                <div class="notice">
+                    18+. Информационный раздел. Мы не обещаем выигрыш и не давим на решение — мы помогаем понять условия и выбрать платформу осознанно.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="articles">
+        <div class="section-head">
+            <div>
+                <h2>С чего начать</h2>
+                <div class="section-sub">Вот те статьи, с которых человек должен заходить в твою воронку. Они дают пользу, вызывают доверие и мягко ведут дальше в квиз или рейтинг.</div>
+            </div>
+        </div>
+
+        <div class="cards">
+            <a class="card" href="/guide/kak-vybrat-kazino/">
+                <div class="card-icon">🎯</div>
+                <h3>Как выбрать онлайн-казино новичку</h3>
+                <p>Пошагово разбираем, на что смотреть в первую очередь: бонусы, минимальный депозит, вывод, поддержка, игры и надёжность.</p>
+                <span class="card-link">Открыть статью →</span>
+            </a>
+
+            <a class="card" href="/guide/chto-takoe-vejdzher/">
+                <div class="card-icon">📐</div>
+                <h3>Что такое вейджер и как его понять</h3>
+                <p>Объясняем человеческим языком, почему красивый бонус не всегда выгоден и как заранее увидеть реальные условия.</p>
+                <span class="card-link">Открыть статью →</span>
+            </a>
+
+            <a class="card" href="/guide/kak-proverit-kazino/">
+                <div class="card-icon">🛡️</div>
+                <h3>Как проверить казино перед регистрацией</h3>
+                <p>Чек-лист безопасности: лицензия, репутация, скорость вывода, поддержка, правила бонусов и тревожные сигналы.</p>
+                <span class="card-link">Открыть статью →</span>
+            </a>
+
+            <a class="card" href="/guide/kazino-s-bystrym-vyvodom/">
+                <div class="card-icon">⚡</div>
+                <h3>Казино с быстрым выводом</h3>
+                <p>На что реально смотреть, если тебе важна скорость выплат, а не только красивая реклама на первом экране.</p>
+                <span class="card-link">Открыть статью →</span>
+            </a>
+
+            <a class="card" href="/guide/kazino-dlya-novichkov/">
+                <div class="card-icon">🌱</div>
+                <h3>Казино для новичков</h3>
+                <p>Разбираем, где проще начать, на какие функции обратить внимание и что помогает не потеряться в условиях.</p>
+                <span class="card-link">Открыть статью →</span>
+            </a>
+
+            <a class="card" href="/guide/kazino-s-kriptovalyutoy/">
+                <div class="card-icon">₿</div>
+                <h3>Казино с криптовалютой</h3>
+                <p>Для тех, кому важны анонимность, быстрые переводы и современные методы пополнения и вывода.</p>
+                <span class="card-link">Открыть статью →</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-head">
+            <div>
+                <h2>Как мы ведём человека к действию</h2>
+                <div class="section-sub">Не через давление, а через логику, пользу и понимание. Так конверсия часто получается чище и сильнее.</div>
+            </div>
+        </div>
+
+        <div class="steps">
+            <div class="step">
+                <div class="step-n">1</div>
+                <h3>Даём ясность</h3>
+                <p>Сначала объясняем простыми словами, как устроены бонусы, вывод, вейджер и проверка казино.</p>
+            </div>
+            <div class="step">
+                <div class="step-n">2</div>
+                <h3>Снимаем сомнения</h3>
+                <p>Показываем, на что смотреть и каких ошибок избегать, чтобы выбор ощущался безопаснее и увереннее.</p>
+            </div>
+            <div class="step">
+                <div class="step-n">3</div>
+                <h3>Подбираем вариант</h3>
+                <p>Через квиз или рейтинг человек находит казино под свой стиль: слоты, live, крипта, быстрый вывод, VIP.</p>
+            </div>
+            <div class="step">
+                <div class="step-n">4</div>
+                <h3>Ведём в обзор</h3>
+                <p>Уже после этого он переходит в обзор, промокод или на сайт казино — не на эмоциях, а с пониманием условий.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="cta-box">
+            <h2>Не хочешь читать всё подряд?</h2>
+            <p>
+                Пройди короткий тест — он подберёт более подходящее казино под твои ответы: по бонусам, скорости вывода, типу игр, опыту и устройству.
+                Это самый быстрый способ перевести интерес в конкретное решение.
+            </p>
+            <div class="cta-actions">
+                <a href="/quiz/" class="btn btn-primary">🚀 Пройти тест и подобрать казино</a>
+                <a href="/" class="btn btn-green">🏆 Посмотреть весь рейтинг</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-head">
+            <div>
+                <h2>Частые вопросы</h2>
+                <div class="section-sub">Эти блоки полезны и для доверия, и для SEO, и для удержания человека на сайте.</div>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="faq-item">
+                <h3>С чего лучше начать новичку?</h3>
+                <p>С гайда по выбору казино и короткого квиза. Так проще понять, какой формат подойдёт именно тебе, а не выбирать вслепую.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Почему важно читать условия бонуса?</h3>
+                <p>Потому что размер бонуса сам по себе ничего не значит. Важны вейджер, сроки, ограничения по играм и правила вывода.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Как понять, что казино мне подходит?</h3>
+                <p>Смотри на свои цели: быстрый вывод, слоты, live-игры, криптовалюта, приложение, русский интерфейс, поддержка и бонусная политика.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Вы обещаете выигрыш?</h3>
+                <p>Нет. Мы не обещаем выигрыш и не подталкиваем к бездумной игре. Наша задача — помочь выбрать платформу осознанно и разобраться в условиях.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>
+            © 2026 <a href="/">Paytaoff</a> ·
+            <a href="/about/">О проекте</a> ·
+            <a href="/responsible-gaming/">Ответственная игра</a> ·
+            <a href="/privacy/">Конфиденциальность</a> ·
+            <a href="/terms/">Условия</a>
+        </p>
+    </footer>
+</div>
+</body>
+</html>
