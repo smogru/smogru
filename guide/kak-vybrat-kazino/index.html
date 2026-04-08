@@ -27,19 +27,30 @@
     <link rel="stylesheet" href="/style.css">
 
     <style>
-        .desktop-only{display:flex}
-        .mobile-only{display:none}
-        .article-menu-fix{
+        .desktop-nav{
             display:flex;
             align-items:center;
-            gap:0;
+            gap:10px;
+            margin-left:16px;
+            flex:1;
+            min-width:0;
+            flex-wrap:nowrap;
         }
-        .article-menu-fix .i-link,
-        .article-menu-fix .i-age,
-        .article-menu-fix .theme-toggle,
-        .article-menu-fix .i-logo{
+        .desktop-nav .i-link{
+            white-space:nowrap;
             flex-shrink:0;
         }
+        .nav-right-pack{
+            display:flex;
+            align-items:center;
+            gap:10px;
+            margin-left:16px;
+            flex-shrink:0;
+        }
+        .mob-nav-wrap{
+            display:none;
+        }
+
         .article-breadcrumbs{
             display:flex;
             align-items:center;
@@ -59,8 +70,7 @@
             gap:18px;
             align-items:start;
         }
-        .article-content,
-        .article-aside{
+        .article-content,.article-aside{
             border-radius:30px;
         }
         .article-content .sh{
@@ -129,23 +139,38 @@
         .article-mini-card .cbtn{
             margin-top:12px;
         }
+
+        @media (max-width: 1100px){
+            .desktop-nav{
+                gap:8px;
+                margin-left:12px;
+            }
+            .desktop-nav .i-link{
+                font-size:.9rem;
+            }
+            .nav-right-pack{
+                gap:8px;
+                margin-left:12px;
+            }
+        }
+
         @media (max-width: 980px){
             .article-body{
                 grid-template-columns:1fr;
             }
         }
+
         @media (max-width: 768px){
-            .desktop-only{display:none!important}
-            .mobile-only{display:flex!important}
-            .article-menu-fix{
-                gap:6px;
+            .desktop-nav{
+                display:none;
             }
-            .article-menu-fix .i-div.desktop-only{
-                display:none!important;
-            }
-            .mob-nav-wrap.mobile-only{
-                display:flex!important;
+            .mob-nav-wrap{
+                display:flex;
                 align-items:center;
+            }
+            .nav-right-pack{
+                gap:8px;
+                margin-left:auto;
             }
         }
     </style>
@@ -185,56 +210,50 @@
 
 <div id="scrollProgress" style="position:fixed;top:0;left:0;right:0;height:3px;transform-origin:left center;transform:scaleX(0);z-index:10001;background:linear-gradient(90deg,#7c3aed,#4f46e5)"></div>
 
-<nav class="island article-menu-fix" id="island">
-    <a href="/" class="i-logo desktop-only">
+<nav class="island" id="island">
+    <a href="/" class="i-logo">
         <img src="/avatar.png" alt="Paytaoff" style="width:30px;height:30px;border-radius:10px;">
         <span>Paytaoff</span>
     </a>
 
-    <div class="i-div desktop-only"></div>
-
-    <div class="i-links desktop-only">
+    <div class="desktop-nav">
         <a href="/guide/" class="i-link active">Гид</a>
-        <a href="/">Рейтинг</a>
-        <a href="/quiz/">Тест</a>
-        <a href="/about/">О проекте</a>
-        <a href="/responsible-gaming/">Ответственная игра</a>
-        <a href="/privacy/">Конфиденциальность</a>
-        <a href="/terms/">Условия</a>
+        <a href="/" class="i-link">Рейтинг</a>
+        <a href="/quiz/" class="i-link">Тест</a>
+        <a href="/about/" class="i-link">О проекте</a>
+        <a href="/responsible-gaming/" class="i-link">Ответственная игра</a>
+        <a href="/privacy/" class="i-link">Конфиденциальность</a>
+        <a href="/terms/" class="i-link">Условия</a>
     </div>
 
-    <div class="i-div desktop-only"></div>
+    <div class="nav-right-pack">
+        <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="i-link">📱 Канал</a>
 
-    <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="i-link">📱 Канал</a>
+        <button type="button" class="theme-toggle" id="themeToggle" onclick="toggleTheme()">🌙</button>
 
-    <div class="i-div"></div>
+        <div class="i-age">18+</div>
 
-    <button type="button" class="theme-toggle" id="themeToggle" onclick="toggleTheme()">🌙</button>
+        <div class="mob-nav-wrap">
+            <button type="button" class="mob-nav-toggle" onclick="toggleMobNav()">
+                <span>☰</span>
+                <span class="mob-nav-label">Меню</span>
+            </button>
+            <div class="mob-nav-dropdown" id="mobNavDropdown">
+                <a href="#top">Статья</a>
+                <a href="#steps">Шаги</a>
+                <a href="#mistakes">Ошибки</a>
+                <a href="#faq">FAQ</a>
 
-    <div class="i-div"></div>
+                <div class="mob-nav-sep"></div>
 
-    <div class="i-age">18+</div>
-
-    <div class="i-div mobile-only"></div>
-
-    <div class="mob-nav-wrap mobile-only">
-        <button type="button" class="mob-nav-toggle" onclick="toggleMobNav()">
-            <span>☰</span>
-            <span class="mob-nav-label">Меню</span>
-        </button>
-        <div class="mob-nav-dropdown" id="mobNavDropdown">
-            <a href="#top">Статья</a>
-            <a href="#steps">Шаги</a>
-            <a href="#mistakes">Ошибки</a>
-            <a href="#faq">FAQ</a>
-            <div class="mob-nav-sep"></div>
-            <a href="/guide/">Гид</a>
-            <a href="/">Рейтинг</a>
-            <a href="/quiz/">Тест</a>
-            <a href="/about/">О проекте</a>
-            <a href="/responsible-gaming/">Ответственная игра</a>
-            <a href="/privacy/">Конфиденциальность</a>
-            <a href="/terms/">Условия</a>
+                <a href="/guide/">Гид</a>
+                <a href="/">Рейтинг</a>
+                <a href="/quiz/">Тест</a>
+                <a href="/about/">О проекте</a>
+                <a href="/responsible-gaming/">Ответственная игра</a>
+                <a href="/privacy/">Конфиденциальность</a>
+                <a href="/terms/">Условия</a>
+            </div>
         </div>
     </div>
 </nav>
@@ -410,7 +429,7 @@
 
             <aside class="ios-f article-aside reveal d2">
                 <div class="article-mini-card">
-                    <div class="sl">📌 Быстко по делу</div>
+                    <div class="sl">📌 Быстро по делу</div>
                     <h3>С чего начать выбор</h3>
                     <p>Сначала реши, что для тебя важнее: быстрый вывод, бонусы, слоты, live, крипта или мобильная версия.</p>
                 </div>
