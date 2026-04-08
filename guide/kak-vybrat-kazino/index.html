@@ -26,6 +26,130 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
 
+    <style>
+        .desktop-only{display:flex}
+        .mobile-only{display:none}
+        .article-menu-fix{
+            display:flex;
+            align-items:center;
+            gap:0;
+        }
+        .article-menu-fix .i-link,
+        .article-menu-fix .i-age,
+        .article-menu-fix .theme-toggle,
+        .article-menu-fix .i-logo{
+            flex-shrink:0;
+        }
+        .article-breadcrumbs{
+            display:flex;
+            align-items:center;
+            gap:8px;
+            flex-wrap:wrap;
+            margin-bottom:18px;
+            color:var(--muted);
+            font-size:.82rem;
+        }
+        .article-breadcrumbs a{
+            color:var(--purple-l);
+            font-weight:700;
+        }
+        .article-body{
+            display:grid;
+            grid-template-columns:minmax(0,1fr) 320px;
+            gap:18px;
+            align-items:start;
+        }
+        .article-content,
+        .article-aside{
+            border-radius:30px;
+        }
+        .article-content .sh{
+            text-align:left;
+            margin-bottom:22px;
+        }
+        .article-content .sh p{
+            max-width:none;
+        }
+        .article-text{
+            display:flex;
+            flex-direction:column;
+            gap:18px;
+            color:var(--text);
+        }
+        .article-text p{
+            color:var(--text);
+            opacity:.92;
+            line-height:1.75;
+            font-size:1rem;
+        }
+        .article-text h2{
+            font-family:'Space Grotesk',sans-serif;
+            font-size:1.6rem;
+            line-height:1.15;
+            margin-top:8px;
+        }
+        .article-text h3{
+            font-family:'Space Grotesk',sans-serif;
+            font-size:1.15rem;
+            line-height:1.2;
+        }
+        .article-list{
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+            padding-left:18px;
+            color:var(--text);
+        }
+        .article-note{
+            padding:16px 18px;
+            border-radius:18px;
+            background:rgba(124,58,237,.08);
+            border:1px solid rgba(124,58,237,.14);
+        }
+        .article-note strong{
+            color:var(--white);
+        }
+        .article-mini-card{
+            padding:18px;
+            border-radius:22px;
+            background:rgba(255,255,255,.03);
+            border:1px solid rgba(255,255,255,.06);
+            margin-bottom:12px;
+        }
+        .article-mini-card h3{
+            font-family:'Space Grotesk',sans-serif;
+            font-size:1rem;
+            margin-bottom:8px;
+        }
+        .article-mini-card p{
+            color:var(--muted);
+            font-size:.9rem;
+            line-height:1.6;
+        }
+        .article-mini-card .cbtn{
+            margin-top:12px;
+        }
+        @media (max-width: 980px){
+            .article-body{
+                grid-template-columns:1fr;
+            }
+        }
+        @media (max-width: 768px){
+            .desktop-only{display:none!important}
+            .mobile-only{display:flex!important}
+            .article-menu-fix{
+                gap:6px;
+            }
+            .article-menu-fix .i-div.desktop-only{
+                display:none!important;
+            }
+            .mob-nav-wrap.mobile-only{
+                display:flex!important;
+                align-items:center;
+            }
+        }
+    </style>
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function(m,e,t,r,i,k,a){
@@ -61,13 +185,25 @@
 
 <div id="scrollProgress" style="position:fixed;top:0;left:0;right:0;height:3px;transform-origin:left center;transform:scaleX(0);z-index:10001;background:linear-gradient(90deg,#7c3aed,#4f46e5)"></div>
 
-<nav class="island" id="island">
-    <a href="/" class="i-logo">
+<nav class="island article-menu-fix" id="island">
+    <a href="/" class="i-logo desktop-only">
         <img src="/avatar.png" alt="Paytaoff" style="width:30px;height:30px;border-radius:10px;">
         <span>Paytaoff</span>
     </a>
 
-    <div class="i-div"></div>
+    <div class="i-div desktop-only"></div>
+
+    <div class="i-links desktop-only">
+        <a href="/guide/" class="i-link active">Гид</a>
+        <a href="/">Рейтинг</a>
+        <a href="/quiz/">Тест</a>
+        <a href="/about/">О проекте</a>
+        <a href="/responsible-gaming/">Ответственная игра</a>
+        <a href="/privacy/">Конфиденциальность</a>
+        <a href="/terms/">Условия</a>
+    </div>
+
+    <div class="i-div desktop-only"></div>
 
     <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="i-link">📱 Канал</a>
 
@@ -79,7 +215,9 @@
 
     <div class="i-age">18+</div>
 
-    <div class="mob-nav-wrap">
+    <div class="i-div mobile-only"></div>
+
+    <div class="mob-nav-wrap mobile-only">
         <button type="button" class="mob-nav-toggle" onclick="toggleMobNav()">
             <span>☰</span>
             <span class="mob-nav-label">Меню</span>
@@ -94,6 +232,9 @@
             <a href="/">Рейтинг</a>
             <a href="/quiz/">Тест</a>
             <a href="/about/">О проекте</a>
+            <a href="/responsible-gaming/">Ответственная игра</a>
+            <a href="/privacy/">Конфиденциальность</a>
+            <a href="/terms/">Условия</a>
         </div>
     </div>
 </nav>
@@ -154,191 +295,140 @@
 
 <section class="section">
     <div class="container">
-        <div class="ios-f reveal d1">
-            <div class="sh">
-                <div class="guide-sub">
-                    <div class="guide-sub-title" style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.02em">🎯 Главное правило</div>
-                </div>
-                <h2>Не ищи “самое лучшее казино вообще” — ищи то, что подходит именно тебе</h2>
-                <p>
-                    Одному человеку важен быстрый вывод, другому — большой выбор слотов, третьему — live-казино, четвёртому — криптовалюта.
-                    Поэтому выбор всегда должен начинаться не с бренда, а с понимания своих целей.
-                </p>
-            </div>
-
-            <div class="help-grid" style="margin-top:14px">
-                <div class="help-card reveal d1">
-                    <div class="help-icon">⚡</div>
-                    <h3>Если важен быстрый вывод</h3>
-                    <p>Смотри на способы выплат, верификацию, ограничения и отзывы о реальной скорости вывода.</p>
+        <div class="article-body">
+            <div class="ios-f article-content reveal d1">
+                <div class="article-breadcrumbs">
+                    <a href="/">Главная</a>
+                    <span>•</span>
+                    <a href="/guide/">Гид</a>
+                    <span>•</span>
+                    <span>Как выбрать онлайн-казино</span>
                 </div>
 
-                <div class="help-card reveal d2">
-                    <div class="help-icon">🎰</div>
-                    <h3>Если важны слоты и бонусы</h3>
-                    <p>Проверяй размер пакета, вейджер, сроки использования бонуса и реальные ограничения по играм.</p>
+                <div class="sh">
+                    <div class="guide-sub">
+                        <div class="guide-sub-title" style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.02em">🎯 Главное правило</div>
+                    </div>
+                    <h2>Не ищи “самое лучшее казино вообще” — ищи то, что подходит именно тебе</h2>
+                    <p>
+                        Одному человеку важен быстрый вывод, другому — большой выбор слотов, третьему — live-казино, четвёртому — криптовалюта.
+                        Поэтому выбор всегда должен начинаться не с бренда, а с понимания своих целей.
+                    </p>
                 </div>
 
-                <div class="help-card reveal d3">
-                    <div class="help-icon">📱</div>
-                    <h3>Если играешь с телефона</h3>
-                    <p>Смотри на мобильную адаптацию, скорость загрузки, удобство меню и качество пополнения с телефона.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+                <div class="article-text">
+                    <p>
+                        Новички часто делают одинаковую ошибку: заходят на сайт казино, видят яркий бонус, красивую картинку и думают, что этого уже достаточно.
+                        Но на практике сильнее всего влияет совсем другое — насколько тебе подходит сама платформа, удобно ли с ней взаимодействовать,
+                        легко ли понять условия и нет ли неприятных сюрпризов после регистрации.
+                    </p>
 
-<section class="section" id="steps">
-    <div class="container">
-        <div class="ios-f reveal d2">
-            <div class="sh">
-                <div class="guide-sub">
-                    <div class="guide-sub-title" style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.02em">🧭 Пошагово</div>
-                </div>
-                <h2>5 шагов, по которым стоит выбирать казино</h2>
-                <p>Если идти по этой логике, шанс выбрать более подходящую платформу становится намного выше.</p>
-            </div>
+                    <div class="article-note">
+                        <strong>Коротко:</strong> правильный выбор казино — это не про “самый большой бонус”, а про совпадение платформы с твоими целями, опытом и стилем игры.
+                    </div>
 
-            <div class="gg">
-                <div class="gc reveal d1">
-                    <div class="gim gi1">1</div>
-                    <div class="gbd">
-                        <div class="gtg">Шаг 1</div>
-                        <h3>Определи, что для тебя главное</h3>
-                        <ul class="g-tips">
-                            <li>быстрый вывод</li>
-                            <li>бонусы</li>
-                            <li>слоты / live / ставки</li>
-                            <li>крипта / приложение / поддержка</li>
-                        </ul>
+                    <h2 id="steps">5 шагов, по которым стоит выбирать казино</h2>
+
+                    <h3>1. Определи, что для тебя главное</h3>
+                    <p>
+                        Первый вопрос — не “какое казино популярное?”, а “что мне вообще важно?”. Если ты не ответишь на это себе, то дальше сравнивать будет бессмысленно.
+                    </p>
+                    <ul class="article-list">
+                        <li>быстрый вывод денег</li>
+                        <li>хороший приветственный бонус</li>
+                        <li>много слотов и автоматов</li>
+                        <li>live-игры с дилером</li>
+                        <li>поддержка криптовалюты</li>
+                        <li>удобство с телефона</li>
+                        <li>понятная русская поддержка</li>
+                    </ul>
+
+                    <h3>2. Смотри не на бонус, а на условия бонуса</h3>
+                    <p>
+                        Бонус почти всегда выглядит красиво в рекламе. Но если ты не понимаешь, как он работает, он может оказаться намного слабее, чем кажется.
+                        Всегда смотри, есть ли вейджер, какие сроки на отыгрыш, есть ли лимиты на вывод и на какие игры этот бонус вообще распространяется.
+                    </p>
+
+                    <h3>3. Проверь способы пополнения и вывода</h3>
+                    <p>
+                        Даже если казино нравится по дизайну и играм, оно может оказаться неудобным именно для тебя, если там нет нужного метода оплаты
+                        или вывод идёт слишком тяжело. Особенно это важно, если ты хочешь играть с карты, через крипту или с телефона.
+                    </p>
+
+                    <h3>4. Посмотри на сами игры и интерфейс</h3>
+                    <p>
+                        Если тебе нужны слоты, а казино делает упор на ставки или live — ты просто не получишь того опыта, которого ожидал.
+                        То же самое касается интерфейса: если сайт неудобный, перегруженный и непонятный, впечатление от платформы будет хуже,
+                        даже если она в целом сильная.
+                    </p>
+
+                    <h3>5. Лучше сравнить 2–3 варианта, чем идти вслепую в один</h3>
+                    <p>
+                        Лучший подход для новичка — не выбирать моментально, а посмотреть хотя бы несколько вариантов: через рейтинг, через тест
+                        или через обзоры. Тогда видно разницу, и решение становится более осознанным.
+                    </p>
+
+                    <h2 id="mistakes">Каких ошибок лучше избегать</h2>
+
+                    <p>
+                        Есть несколько вещей, на которых люди чаще всего обжигаются в самом начале:
+                    </p>
+
+                    <ul class="article-list">
+                        <li>выбор только по красивому бонусу</li>
+                        <li>игнорирование условий вывода</li>
+                        <li>отсутствие понимания, во что именно хочется играть</li>
+                        <li>выбор без сравнения нескольких вариантов</li>
+                        <li>переоценка “известного бренда” без проверки, подходит ли он под твои цели</li>
+                    </ul>
+
+                    <div class="article-note">
+                        <strong>Лучший фильтр:</strong> если после прочтения условий тебе всё понятно, это уже хороший знак. Если правила выглядят запутанно, это повод быть внимательнее.
+                    </div>
+
+                    <h2>Что делать дальше</h2>
+                    <p>
+                        Если ты уже понимаешь, что тебе важно, тогда логично идти в рейтинг и смотреть платформы по нужным критериям.
+                        Если пока нет чёткого понимания, лучше пройти тест — он быстрее сузит выбор и направит в более подходящий вариант.
+                    </p>
+                </div>
+
+                <div class="pb reveal d2" style="margin-top:24px">
+                    <div class="pb-l">
+                        <div class="pb-i">🚀</div>
+                        <div class="pb-t">
+                            Не хочешь собирать всё вручную?
+                            <small>Пройди короткий тест — он подберёт более подходящее казино под твои цели.</small>
+                        </div>
+                    </div>
+                    <div class="ct">
+                        <a href="/quiz/" class="cbtn cbtn-gold">Пройти тест</a>
+                        <a href="/" class="cbtn">Открыть рейтинг</a>
                     </div>
                 </div>
-
-                <div class="gc reveal d2">
-                    <div class="gim gi2">2</div>
-                    <div class="gbd">
-                        <div class="gtg">Шаг 2</div>
-                        <h3>Проверь бонус, а не только цифру</h3>
-                        <ul class="g-tips">
-                            <li>какой вейджер</li>
-                            <li>есть ли сроки</li>
-                            <li>есть ли лимиты на вывод</li>
-                            <li>на все ли игры действует бонус</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="gc reveal d3">
-                    <div class="gim gi3">3</div>
-                    <div class="gbd">
-                        <div class="gtg">Шаг 3</div>
-                        <h3>Смотри на удобство пополнения и вывода</h3>
-                        <ul class="g-tips">
-                            <li>карта / крипта / электронные кошельки</li>
-                            <li>есть ли нужный способ оплаты</li>
-                            <li>насколько понятны условия выплат</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="gc reveal d1">
-                    <div class="gim gi1">4</div>
-                    <div class="gbd">
-                        <div class="gtg">Шаг 4</div>
-                        <h3>Оцени игры и интерфейс</h3>
-                        <ul class="g-tips">
-                            <li>есть ли нужные слоты или live</li>
-                            <li>удобно ли пользоваться с телефона</li>
-                            <li>не перегружен ли интерфейс</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="gc reveal d2">
-                    <div class="gim gi2">5</div>
-                    <div class="gbd">
-                        <div class="gtg">Шаг 5</div>
-                        <h3>Прочитай обзор или пройди тест</h3>
-                        <ul class="g-tips">
-                            <li>чтобы не выбирать вслепую</li>
-                            <li>сравнить 2–3 варианта</li>
-                            <li>найти более подходящий вариант под себя</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
 
-            <div class="pb reveal d2" style="margin-top:18px">
-                <div class="pb-l">
-                    <div class="pb-i">🚀</div>
-                    <div class="pb-t">
-                        Не хочешь собирать всё вручную?
-                        <small>Пройди короткий тест — он подберёт более подходящее казино под твои цели.</small>
-                    </div>
-                </div>
-                <div class="ct">
-                    <a href="/quiz/" class="cbtn cbtn-gold">Пройти тест</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section" id="mistakes">
-    <div class="container">
-        <div class="ios-f reveal d3">
-            <div class="sh">
-                <div class="guide-sub">
-                    <div class="guide-sub-title" style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.02em">⚠️ Ошибки</div>
-                </div>
-                <h2>Чего новичку лучше не делать</h2>
-                <p>Вот из-за чего люди чаще всего разочаровываются уже на старте.</p>
-            </div>
-
-            <div class="mg">
-                <div class="mc reveal d1">
-                    <div class="mi">💰</div>
-                    <h3>Смотреть только на размер бонуса</h3>
-                    <p>Большой процент к депозиту не означает, что условия хорошие. Иногда за красивой цифрой скрывается тяжёлый вейджер.</p>
+            <aside class="ios-f article-aside reveal d2">
+                <div class="article-mini-card">
+                    <div class="sl">📌 Быстко по делу</div>
+                    <h3>С чего начать выбор</h3>
+                    <p>Сначала реши, что для тебя важнее: быстрый вывод, бонусы, слоты, live, крипта или мобильная версия.</p>
                 </div>
 
-                <div class="mc reveal d2">
-                    <div class="mi">⚡</div>
-                    <h3>Не читать про вывод</h3>
-                    <p>Если не посмотреть на способы выплат и возможные ограничения заранее, потом это станет неприятным сюрпризом.</p>
+                <div class="article-mini-card">
+                    <div class="sl">🎁 Бонусы</div>
+                    <h3>Смотри не на процент, а на условия</h3>
+                    <p>Сам бонус ничего не значит без вейджера, сроков, ограничений по играм и правил вывода.</p>
+                    <a href="/guide/chto-takoe-vejdzher/" class="cbtn cbtn-gold">Что такое вейджер</a>
                 </div>
 
-                <div class="mc reveal d3">
-                    <div class="mi">📱</div>
-                    <h3>Игнорировать удобство платформы</h3>
-                    <p>Даже хороший бренд может не подойти, если сайт неудобный, долго грузится или раздражает с телефона.</p>
+                <div class="article-mini-card">
+                    <div class="sl">🛡️ Проверка</div>
+                    <h3>Не регистрируйся вслепую</h3>
+                    <p>Лучше сначала прочитать обзор или гайд, а уже потом принимать решение.</p>
+                    <a href="/guide/" class="cbtn">Открыть гид</a>
                 </div>
-
-                <div class="mc reveal d1">
-                    <div class="mi">🎲</div>
-                    <h3>Выбирать без понимания, во что играть</h3>
-                    <p>Если тебе нужны слоты, а казино сильнее в live или ставках, впечатление от платформы будет хуже просто из-за несоответствия.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <div class="pb reveal d2">
-            <div class="pb-l">
-                <div class="pb-i">🏆</div>
-                <div class="pb-t">
-                    Уже понимаешь, что тебе важно?
-                    <small>Тогда переходи в рейтинг и сравни варианты по своим критериям.</small>
-                </div>
-            </div>
-            <div class="ct">
-                <a href="/" class="cbtn">Открыть рейтинг</a>
-                <a href="/guide/" class="cbtn cbtn-gold">Вернуться в гид</a>
-            </div>
+            </aside>
         </div>
     </div>
 </section>
