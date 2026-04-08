@@ -140,6 +140,35 @@
             margin-top:12px;
         }
 
+        .focus-grid{
+            display:grid;
+            grid-template-columns:repeat(2,minmax(0,1fr));
+            gap:12px;
+            margin-top:18px;
+        }
+        .focus-card{
+            padding:18px;
+            border-radius:22px;
+            background:rgba(255,255,255,.03);
+            border:1px solid rgba(255,255,255,.06);
+            transition:.25s ease;
+        }
+        .focus-card:hover{
+            transform:translateY(-3px);
+            border-color:rgba(124,58,237,.18);
+        }
+        .focus-card h3{
+            font-family:'Space Grotesk',sans-serif;
+            font-size:1rem;
+            line-height:1.2;
+            margin-bottom:8px;
+        }
+        .focus-card p{
+            color:var(--muted);
+            font-size:.92rem;
+            line-height:1.65;
+        }
+
         @media (max-width: 1100px){
             .desktop-nav{
                 gap:8px;
@@ -156,6 +185,9 @@
 
         @media (max-width: 980px){
             .article-body{
+                grid-template-columns:1fr;
+            }
+            .focus-grid{
                 grid-template-columns:1fr;
             }
         }
@@ -284,7 +316,7 @@
 
         <div class="hero-right">
             <div class="ios-f reveal d1">
-                <div class="sl">📘 Чек-лист выбора</div>
+                <div class="sl">Чек-лист выбора</div>
                 <div class="sh" style="text-align:left;margin-bottom:18px">
                     <h2 style="font-size:1.75rem">Выбирай платформу по реальным критериям, а не по эмоции</h2>
                     <p style="margin:0;max-width:none">
@@ -326,13 +358,34 @@
 
                 <div class="sh">
                     <div class="guide-sub">
-                        <div class="guide-sub-title" style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.02em">🎯 Главное правило</div>
+                        <div class="guide-sub-title" style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.02em">Главный принцип</div>
                     </div>
-                    <h2>Не ищи “самое лучшее казино вообще” — ищи то, что подходит именно тебе</h2>
+                    <h2>Выбор должен строиться не вокруг бренда, а вокруг твоих реальных приоритетов</h2>
                     <p>
-                        Одному человеку важен быстрый вывод, другому — большой выбор слотов, третьему — live-казино, четвёртому — криптовалюта.
-                        Поэтому выбор всегда должен начинаться не с бренда, а с понимания своих целей.
+                        Вместо одного длинного объяснения лучше смотреть на выбор как на набор конкретных критериев. Тогда решение становится не эмоциональным, а осознанным.
                     </p>
+                </div>
+
+                <div class="focus-grid">
+                    <div class="focus-card">
+                        <h3>Не ищи универсально “лучшее” казино</h3>
+                        <p>Абсолютно лучшего варианта для всех не существует. Есть только те платформы, которые лучше подходят под конкретный стиль игры и цели человека.</p>
+                    </div>
+
+                    <div class="focus-card">
+                        <h3>Сначала определи, что важно именно тебе</h3>
+                        <p>Быстрый вывод, крупный бонус, live-игры, крипта, мобильная версия — выбор всегда должен начинаться с этого вопроса.</p>
+                    </div>
+
+                    <div class="focus-card">
+                        <h3>Смотри на условия, а не на обещания</h3>
+                        <p>Красивый баннер и громкая реклама мало что значат, если вывод сложный, бонус тяжёлый, а правила запутанные.</p>
+                    </div>
+
+                    <div class="focus-card">
+                        <h3>Выбирай то, с чем тебе будет удобно</h3>
+                        <p>Даже сильная платформа не подойдёт, если тебе неудобно пополнять баланс, искать игры или пользоваться сайтом с телефона.</p>
+                    </div>
                 </div>
 
                 <div class="article-text">
@@ -343,7 +396,7 @@
                     </p>
 
                     <div class="article-note">
-                        <strong>Коротко:</strong> правильный выбор казино — это не про “самый большой бонус”, а про совпадение платформы с твоими целями, опытом и стилем игры.
+                        <strong>Коротко:</strong> правильный выбор казино — это не про самый большой бонус, а про совпадение платформы с твоими целями, опытом и стилем игры.
                     </div>
 
                     <h2 id="steps">5 шагов, по которым стоит выбирать казино</h2>
@@ -398,7 +451,7 @@
                         <li>игнорирование условий вывода</li>
                         <li>отсутствие понимания, во что именно хочется играть</li>
                         <li>выбор без сравнения нескольких вариантов</li>
-                        <li>переоценка “известного бренда” без проверки, подходит ли он под твои цели</li>
+                        <li>переоценка известного бренда без проверки, подходит ли он под твои цели</li>
                     </ul>
 
                     <div class="article-note">
@@ -429,20 +482,20 @@
 
             <aside class="ios-f article-aside reveal d2">
                 <div class="article-mini-card">
-                    <div class="sl">📌 Быстро по делу</div>
+                    <div class="sl">Быстро по делу</div>
                     <h3>С чего начать выбор</h3>
                     <p>Сначала реши, что для тебя важнее: быстрый вывод, бонусы, слоты, live, крипта или мобильная версия.</p>
                 </div>
 
                 <div class="article-mini-card">
-                    <div class="sl">🎁 Бонусы</div>
+                    <div class="sl">Бонусы</div>
                     <h3>Смотри не на процент, а на условия</h3>
                     <p>Сам бонус ничего не значит без вейджера, сроков, ограничений по играм и правил вывода.</p>
                     <a href="/guide/chto-takoe-vejdzher/" class="cbtn cbtn-gold">Что такое вейджер</a>
                 </div>
 
                 <div class="article-mini-card">
-                    <div class="sl">🛡️ Проверка</div>
+                    <div class="sl">Проверка</div>
                     <h3>Не регистрируйся вслепую</h3>
                     <p>Лучше сначала прочитать обзор или гайд, а уже потом принимать решение.</p>
                     <a href="/guide/" class="cbtn">Открыть гид</a>
@@ -457,7 +510,7 @@
         <div class="f-wrap ios-f reveal d3">
             <div class="sh">
                 <div class="guide-sub">
-                    <div class="guide-sub-title" style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.02em">❓ FAQ</div>
+                    <div class="guide-sub-title" style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.02em">FAQ</div>
                 </div>
                 <h2>Частые вопросы по выбору казино</h2>
                 <p>Коротко и по делу — чтобы не искать ответы по кускам.</p>
