@@ -14,7 +14,7 @@
     <meta name="theme-color" content="#060810">
 
     <meta property="og:title" content="Pulga o'ynash uchun TOP 5 eng yaxshi onlayn kazino 2026 | Paytaoff">
-    <meta property="og:description" content="Pulga o'ynash uchun eng yaxshi 5 ta kazino: bonuslar, to'lov tezligi, o'yinlar va qulaylik bo'yicha solishtirish.">
+    <meta property="og:description" content="Bonuslar, to'lov tezligi, o'yinlar va qulaylik bo'yicha chiroyli va foydali TOP 5 sahifa.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.paytaoff.ru/uz/pulga-oynash-uchun-top-5-kazinolar/">
     <meta property="og:image" content="https://www.paytaoff.ru/android-chrome-512x512.png">
@@ -51,207 +51,480 @@
             display:none;
         }
 
-        .article-breadcrumbs{
+        .page-wrap{
+            width:min(1240px, calc(100% - 28px));
+            margin:0 auto;
+            position:relative;
+            z-index:2;
+        }
+
+        .crumbs{
             display:flex;
             align-items:center;
             gap:8px;
             flex-wrap:wrap;
-            margin-bottom:18px;
             color:var(--muted);
-            font-size:.82rem;
+            font-size:.84rem;
+            margin-bottom:16px;
         }
-        .article-breadcrumbs a{
+        .crumbs a{
             color:var(--purple-l);
             font-weight:700;
         }
 
-        .top5-grid{
-            display:grid;
-            grid-template-columns:repeat(2,minmax(0,1fr));
-            gap:14px;
-            margin-top:18px;
+        .hero-premium{
+            padding-top:104px;
+            padding-bottom:22px;
         }
-        .top5-card{
-            padding:22px;
-            border-radius:26px;
-            background:rgba(255,255,255,.03);
-            border:1px solid rgba(255,255,255,.06);
-            transition:.25s ease;
+        .hero-shell{
+            display:grid;
+            grid-template-columns:1.08fr .92fr;
+            gap:18px;
+            align-items:stretch;
+        }
+        .glass-premium{
+            background:rgba(255,255,255,.035);
+            border:1px solid rgba(255,255,255,.07);
+            border-radius:32px;
+            box-shadow:0 18px 48px rgba(0,0,0,.22);
+            backdrop-filter:blur(16px);
+            -webkit-backdrop-filter:blur(16px);
+        }
+        .hero-copy{
+            padding:30px;
             display:flex;
             flex-direction:column;
-            gap:12px;
+            justify-content:space-between;
         }
-        .top5-card:hover{
-            transform:translateY(-4px);
-            border-color:rgba(124,58,237,.18);
-        }
-        .top5-rank{
-            width:42px;
-            height:42px;
-            border-radius:14px;
-            display:flex;
+        .eyebrow{
+            display:inline-flex;
             align-items:center;
-            justify-content:center;
-            font-family:'Space Grotesk',sans-serif;
+            gap:8px;
+            padding:8px 12px;
+            border-radius:999px;
+            background:rgba(124,58,237,.08);
+            border:1px solid rgba(124,58,237,.16);
+            color:var(--purple-l);
+            font-size:.78rem;
             font-weight:800;
-            font-size:1.05rem;
-            color:#fff;
-            background:linear-gradient(135deg,#7c3aed,#4f46e5);
-            box-shadow:0 8px 20px rgba(124,58,237,.25);
+            margin-bottom:14px;
+            width:max-content;
         }
-        .top5-card h3{
+        .hero-copy h1{
             font-family:'Space Grotesk',sans-serif;
-            font-size:1.15rem;
-            line-height:1.2;
+            font-size:clamp(2.2rem, 5vw, 4.3rem);
+            line-height:1.02;
+            margin-bottom:14px;
+            letter-spacing:-.04em;
         }
-        .top5-card p{
+        .hero-copy h1 span{
+            background:linear-gradient(135deg,#c4b5fd,#ffffff,#86efac);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+        }
+        .hero-copy p{
             color:var(--muted);
-            line-height:1.65;
-            font-size:.95rem;
+            font-size:1rem;
+            line-height:1.72;
+            max-width:720px;
         }
-        .tag-row{
+        .hero-actions{
             display:flex;
             flex-wrap:wrap;
-            gap:8px;
+            gap:10px;
+            margin-top:22px;
         }
-        .mini-tag{
-            padding:7px 10px;
-            border-radius:999px;
-            font-size:.72rem;
-            font-weight:700;
-            color:var(--purple-l);
-            background:rgba(124,58,237,.08);
-            border:1px solid rgba(124,58,237,.14);
-        }
-
-        .hero-points{
+        .hero-stats{
             display:grid;
             grid-template-columns:repeat(3,minmax(0,1fr));
             gap:12px;
-            margin-top:18px;
+            margin-top:24px;
         }
-        .hero-point{
+        .hero-stat{
             padding:16px;
-            border-radius:20px;
+            border-radius:22px;
             background:rgba(255,255,255,.03);
             border:1px solid rgba(255,255,255,.06);
         }
-        .hero-point h3{
+        .hero-stat .n{
             font-family:'Space Grotesk',sans-serif;
-            font-size:.96rem;
-            margin-bottom:6px;
-            line-height:1.2;
+            font-size:1.3rem;
+            font-weight:800;
+            margin-bottom:4px;
         }
-        .hero-point p{
+        .hero-stat .l{
             color:var(--muted);
-            font-size:.88rem;
-            line-height:1.55;
+            font-size:.86rem;
+            line-height:1.5;
         }
 
-        .why-grid{
-            display:grid;
-            grid-template-columns:repeat(2,minmax(0,1fr));
-            gap:14px;
-            margin-top:18px;
+        .hero-feature{
+            position:relative;
+            overflow:hidden;
+            min-height:520px;
         }
-        .why-card{
-            padding:20px;
-            border-radius:24px;
-            background:rgba(255,255,255,.03);
-            border:1px solid rgba(255,255,255,.06);
-            transition:.25s ease;
+        .hero-feature img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            display:block;
         }
-        .why-card:hover{
-            transform:translateY(-3px);
-            border-color:rgba(124,58,237,.18);
+        .hero-overlay{
+            position:absolute;
+            inset:0;
+            background:
+                linear-gradient(180deg, rgba(5,8,16,.05) 0%, rgba(5,8,16,.42) 45%, rgba(5,8,16,.86) 100%);
+            display:flex;
+            flex-direction:column;
+            justify-content:flex-end;
+            padding:28px;
         }
-        .why-card h3{
+        .hero-overlay .topline{
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            width:max-content;
+            padding:8px 12px;
+            border-radius:999px;
+            background:rgba(255,255,255,.1);
+            border:1px solid rgba(255,255,255,.14);
+            font-size:.76rem;
+            font-weight:800;
+            margin-bottom:14px;
+        }
+        .hero-overlay h2{
             font-family:'Space Grotesk',sans-serif;
-            font-size:1.02rem;
+            font-size:1.85rem;
+            line-height:1.08;
+            margin-bottom:10px;
+        }
+        .hero-overlay p{
+            color:#d1d7e5;
+            line-height:1.7;
+            max-width:520px;
+        }
+
+        .section-premium{
+            padding:18px 0 6px;
+        }
+        .section-head{
+            margin-bottom:18px;
+        }
+        .section-kicker{
+            font-family:'Space Grotesk',sans-serif;
+            font-size:1rem;
+            font-weight:800;
+            color:var(--purple-l);
             margin-bottom:8px;
-            line-height:1.2;
         }
-        .why-card p{
+        .section-head h2{
+            font-family:'Space Grotesk',sans-serif;
+            font-size:clamp(1.7rem,3vw,2.8rem);
+            line-height:1.08;
+            margin-bottom:10px;
+            letter-spacing:-.03em;
+        }
+        .section-head p{
             color:var(--muted);
-            font-size:.94rem;
-            line-height:1.65;
+            max-width:760px;
+            line-height:1.75;
         }
 
-        .step-cards{
+        .top5-showcase{
+            display:grid;
+            grid-template-columns:1.15fr .85fr;
+            gap:16px;
+            align-items:stretch;
+        }
+        .top1-card{
+            position:relative;
+            overflow:hidden;
+            min-height:460px;
+        }
+        .top1-card img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            display:block;
+        }
+        .top1-overlay{
+            position:absolute;
+            inset:0;
+            padding:28px;
+            display:flex;
+            flex-direction:column;
+            justify-content:flex-end;
+            background:
+                linear-gradient(180deg, rgba(6,8,16,.12) 0%, rgba(6,8,16,.40) 42%, rgba(6,8,16,.92) 100%);
+        }
+        .rank-badge{
+            width:48px;
+            height:48px;
+            border-radius:16px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background:linear-gradient(135deg,#7c3aed,#4f46e5);
+            box-shadow:0 10px 22px rgba(124,58,237,.28);
+            color:#fff;
+            font-family:'Space Grotesk',sans-serif;
+            font-weight:900;
+            font-size:1.05rem;
+            margin-bottom:14px;
+        }
+        .top1-overlay h3{
+            font-family:'Space Grotesk',sans-serif;
+            font-size:2rem;
+            line-height:1.04;
+            margin-bottom:10px;
+        }
+        .top1-overlay p{
+            color:#d7def0;
+            line-height:1.72;
+            max-width:560px;
+            margin-bottom:14px;
+        }
+        .tag-list{
+            display:flex;
+            flex-wrap:wrap;
+            gap:8px;
+            margin-bottom:14px;
+        }
+        .tag{
+            padding:7px 11px;
+            border-radius:999px;
+            background:rgba(255,255,255,.08);
+            border:1px solid rgba(255,255,255,.12);
+            color:#eef2ff;
+            font-size:.73rem;
+            font-weight:700;
+        }
+
+        .top4-grid{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:14px;
+        }
+        .casino-card{
+            overflow:hidden;
+            position:relative;
+            min-height:222px;
+        }
+        .casino-card img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            display:block;
+        }
+        .casino-card .overlay{
+            position:absolute;
+            inset:0;
+            padding:18px;
+            background:
+                linear-gradient(180deg, rgba(8,10,18,.05) 0%, rgba(8,10,18,.34) 36%, rgba(8,10,18,.92) 100%);
+            display:flex;
+            flex-direction:column;
+            justify-content:flex-end;
+        }
+        .casino-card .rank-small{
+            width:38px;
+            height:38px;
+            border-radius:13px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#fff;
+            font-weight:900;
+            font-family:'Space Grotesk',sans-serif;
+            background:linear-gradient(135deg,#7c3aed,#4f46e5);
+            box-shadow:0 8px 18px rgba(124,58,237,.26);
+            margin-bottom:12px;
+        }
+        .casino-card h3{
+            font-family:'Space Grotesk',sans-serif;
+            font-size:1.14rem;
+            line-height:1.12;
+            margin-bottom:8px;
+        }
+        .casino-card p{
+            color:#d6deed;
+            line-height:1.6;
+            font-size:.9rem;
+            margin-bottom:12px;
+        }
+
+        .cards-row{
             display:grid;
             grid-template-columns:repeat(2,minmax(0,1fr));
             gap:14px;
-            margin-top:18px;
         }
-        .step-card{
-            padding:20px;
-            border-radius:24px;
-            background:rgba(255,255,255,.03);
-            border:1px solid rgba(255,255,255,.06);
+        .info-card{
+            padding:22px;
+            border-radius:28px;
+            background:rgba(255,255,255,.035);
+            border:1px solid rgba(255,255,255,.07);
+            box-shadow:0 16px 42px rgba(0,0,0,.16);
             transition:.25s ease;
         }
-        .step-card:hover{
-            transform:translateY(-3px);
-            border-color:rgba(124,58,237,.18);
+        .info-card:hover{
+            transform:translateY(-4px);
+            border-color:rgba(124,58,237,.16);
         }
-        .step-top{
+        .info-card h3{
+            font-family:'Space Grotesk',sans-serif;
+            font-size:1.08rem;
+            line-height:1.16;
+            margin-bottom:8px;
+        }
+        .info-card p{
+            color:var(--muted);
+            line-height:1.7;
+            font-size:.95rem;
+        }
+
+        .tips-grid{
+            display:grid;
+            grid-template-columns:repeat(2,minmax(0,1fr));
+            gap:14px;
+        }
+        .tip-card{
+            padding:22px;
+            border-radius:28px;
+            background:rgba(255,255,255,.035);
+            border:1px solid rgba(255,255,255,.07);
+            box-shadow:0 16px 42px rgba(0,0,0,.16);
+        }
+        .tip-top{
             display:flex;
             align-items:center;
             gap:10px;
             margin-bottom:10px;
         }
-        .step-num{
-            width:34px;
-            height:34px;
-            border-radius:12px;
+        .num{
+            width:36px;
+            height:36px;
+            border-radius:13px;
             display:flex;
             align-items:center;
             justify-content:center;
-            font-family:'Space Grotesk',sans-serif;
-            font-weight:800;
             color:#fff;
+            font-family:'Space Grotesk',sans-serif;
+            font-weight:900;
             background:linear-gradient(135deg,#7c3aed,#4f46e5);
-            box-shadow:0 8px 20px rgba(124,58,237,.25);
+            box-shadow:0 8px 18px rgba(124,58,237,.26);
+        }
+        .tip-top span{
+            color:var(--purple-l);
+            font-size:.78rem;
+            font-weight:800;
+            letter-spacing:.06em;
+            text-transform:uppercase;
+        }
+        .tip-card h3{
+            font-family:'Space Grotesk',sans-serif;
+            font-size:1.08rem;
+            margin-bottom:8px;
+            line-height:1.15;
+        }
+        .tip-card p{
+            color:var(--muted);
+            line-height:1.7;
+            font-size:.95rem;
+        }
+
+        .cta-band{
+            padding:24px;
+            border-radius:30px;
+            background:
+                radial-gradient(circle at top right, rgba(124,58,237,.15), transparent 28%),
+                radial-gradient(circle at bottom left, rgba(16,185,129,.12), transparent 28%),
+                rgba(255,255,255,.035);
+            border:1px solid rgba(255,255,255,.08);
+            box-shadow:0 18px 46px rgba(0,0,0,.18);
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:18px;
+        }
+        .cta-band h3{
+            font-family:'Space Grotesk',sans-serif;
+            font-size:1.3rem;
+            line-height:1.15;
+            margin-bottom:6px;
+        }
+        .cta-band p{
+            color:var(--muted);
+            line-height:1.7;
+            max-width:760px;
+        }
+        .cta-actions{
+            display:flex;
+            gap:10px;
+            flex-wrap:wrap;
             flex-shrink:0;
         }
-        .step-label{
-            font-size:.78rem;
-            color:var(--purple-l);
-            font-weight:800;
-            text-transform:uppercase;
-            letter-spacing:.06em;
-        }
-        .step-card h3{
-            font-family:'Space Grotesk',sans-serif;
-            font-size:1.04rem;
-            line-height:1.2;
-            margin-bottom:8px;
-        }
-        .step-card p{
-            color:var(--muted);
-            font-size:.94rem;
-            line-height:1.65;
-        }
 
-        .compare-note{
-            padding:18px;
-            border-radius:22px;
-            background:rgba(124,58,237,.08);
-            border:1px solid rgba(124,58,237,.14);
-            margin-top:18px;
-        }
-        .compare-note strong{
-            color:var(--white);
-        }
-
-        .faq-simple{
+        .faq-grid{
             display:grid;
             grid-template-columns:repeat(2,minmax(0,1fr));
             gap:14px;
-            margin-top:18px;
         }
-        .faq-simple .fi{
-            margin:0;
+        .fi{
+            border-radius:24px;
+            background:rgba(255,255,255,.035);
+            border:1px solid rgba(255,255,255,.07);
+            overflow:hidden;
+            box-shadow:0 16px 42px rgba(0,0,0,.14);
+        }
+        .fq{
+            padding:18px 20px;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:14px;
+            cursor:pointer;
+            font-weight:700;
+        }
+        .fic{
+            width:30px;
+            height:30px;
+            border-radius:10px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background:rgba(124,58,237,.10);
+            color:var(--purple-l);
+            font-weight:900;
+            flex-shrink:0;
+            transition:.2s ease;
+        }
+        .fa{
+            max-height:0;
+            overflow:hidden;
+            transition:max-height .25s ease;
+        }
+        .fa-i{
+            padding:0 20px 18px;
+            color:var(--muted);
+            line-height:1.7;
+            font-size:.95rem;
+        }
+        .fi.open .fa{
+            max-height:260px;
+        }
+        .fi.open .fic{
+            transform:rotate(45deg);
+        }
+
+        .footer-local{
+            padding:10px 0 34px;
+            color:var(--muted);
+            font-size:.82rem;
+            text-align:center;
+        }
+        .footer-local a{
+            color:var(--purple-l);
+            font-weight:700;
         }
 
         @media (max-width: 1180px){
@@ -269,14 +542,22 @@
         }
 
         @media (max-width: 980px){
-            .top5-grid,
-            .why-grid,
-            .step-cards,
-            .faq-simple{
+            .hero-shell,
+            .top5-showcase,
+            .cards-row,
+            .tips-grid,
+            .faq-grid{
                 grid-template-columns:1fr;
             }
-            .hero-points{
+            .top4-grid{
+                grid-template-columns:1fr 1fr;
+            }
+            .hero-stats{
                 grid-template-columns:1fr;
+            }
+            .cta-band{
+                flex-direction:column;
+                align-items:flex-start;
             }
         }
 
@@ -291,6 +572,26 @@
             .nav-right-pack{
                 gap:8px;
                 margin-left:auto;
+            }
+            .top4-grid{
+                grid-template-columns:1fr;
+            }
+            .hero-copy,
+            .hero-overlay,
+            .top1-overlay,
+            .info-card,
+            .tip-card,
+            .cta-band{
+                padding:18px;
+            }
+            .hero-premium{
+                padding-top:84px;
+            }
+            .hero-feature{
+                min-height:360px;
+            }
+            .top1-card{
+                min-height:360px;
             }
         }
     </style>
@@ -339,7 +640,7 @@
     <div class="desktop-nav">
         <a href="/uz/" class="i-link">Reyting</a>
         <a href="#top5" class="i-link active">TOP 5</a>
-        <a href="#why" class="i-link">Nega shu sahifa</a>
+        <a href="#why" class="i-link">Tanlov sababi</a>
         <a href="#tips" class="i-link">Maslahatlar</a>
         <a href="#faq" class="i-link">FAQ</a>
         <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="i-link">Kanal</a>
@@ -356,336 +657,311 @@
             </button>
             <div class="mob-nav-dropdown" id="mobNavDropdown">
                 <a href="#top5">TOP 5</a>
-                <a href="#why">Nega shu sahifa</a>
+                <a href="#why">Tanlov sababi</a>
                 <a href="#tips">Maslahatlar</a>
                 <a href="#faq">FAQ</a>
                 <div class="mob-nav-sep"></div>
                 <a href="/uz/">Reyting</a>
+                <a href="https://t.me/paytaoff" target="_blank" rel="noopener">Kanal</a>
                 <a href="/about/">Loyiha haqida</a>
                 <a href="/responsible-gaming/">Mas'uliyatli o'yin</a>
                 <a href="/privacy/">Maxfiylik</a>
                 <a href="/terms/">Shartlar</a>
-                <a href="https://t.me/paytaoff" target="_blank" rel="noopener">Kanal</a>
             </div>
         </div>
     </div>
 </nav>
 
-<header class="hero" id="top">
-    <div class="hero-layout">
-        <div class="hero-left">
-            <div class="hero-badge">
-                <span class="pd"></span>
-                <span>Aprel 2026 • O'zbekiston uchun tanlov</span>
-            </div>
-
-            <h1>
-                Pulga o'ynash uchun <br>
-                <span class="gt">TOP 5 eng yaxshi onlayn kazino</span>
-            </h1>
-
-            <p>
-                Bu sahifa pulga o'ynash uchun qulay, tushunarli va foydali variantlarni tez topish uchun tuzilgan.
-                Biz bonuslar, to'lov tezligi, o'yinlar va umumiy qulaylik bo'yicha eng kuchli 5 platformani ajratdik.
-            </p>
-
-            <div class="hero-btns">
-                <a href="#top5" class="btn btn-glow">TOP 5 ni ko'rish</a>
-                <a href="/uz/" class="btn btn-glow" style="background:linear-gradient(135deg,#059669,#34d399);box-shadow:0 4px 22px rgba(5,150,105,.3)">To'liq reyting</a>
-            </div>
-
-            <div class="hero-points">
-                <div class="hero-point">
-                    <h3>Aniq tanlov</h3>
-                    <p>Bu yerda faqat 5 ta variant bor — foydalanuvchi chalkashib ketmaydi va tezroq tanlaydi.</p>
-                </div>
-                <div class="hero-point">
-                    <h3>Pulga o'ynash uchun</h3>
-                    <p>Asosiy urg'u bonus, to'lov, qulaylik va real foydalanish tajribasiga berilgan.</p>
-                </div>
-                <div class="hero-point">
-                    <h3>O'zbekiston foydalanuvchisi uchun</h3>
-                    <p>Sahifa sodda, tushunarli va foydali formatda tuzilgan.</p>
-                </div>
-            </div>
+<main class="hero-premium">
+    <div class="page-wrap">
+        <div class="crumbs">
+            <a href="/uz/">Bosh sahifa</a>
+            <span>•</span>
+            <span>TOP 5 kazino</span>
         </div>
 
-        <div class="hero-right">
-            <div class="ios-f reveal d1">
-                <div class="sl">Qisqa xulosa</div>
-                <div class="sh" style="text-align:left;margin-bottom:18px">
-                    <h2 style="font-size:1.75rem">Agar maqsad pulga qulay o'ynash bo'lsa, eng katta bonus emas, eng to'g'ri shartlar muhim</h2>
-                    <p style="margin:0;max-width:none">
-                        Shuning uchun bu ro'yxatda biz faqat reklama bilan emas, foydalanuvchi nuqtai nazaridan qulay ko'ringan variantlarni oldik.
+        <section class="hero-shell">
+            <div class="glass-premium hero-copy">
+                <div>
+                    <div class="eyebrow">Aprel 2026 • O'zbekiston uchun tanlov</div>
+                    <h1>Pulga o'ynash uchun <span>TOP 5 eng yaxshi onlayn kazino</span></h1>
+                    <p>
+                        Bu sahifa pulga o'ynash uchun eng qulay va eng qiziqarli 5 ta variantni tez topish uchun tuzilgan.
+                        Bu yerda reklama uchun emas, foydalanuvchi uchun chiroyli va foydali tanlov jamlangan: bonuslar, to'lov, o'yinlar va umumiy qulaylik bo'yicha.
                     </p>
+
+                    <div class="hero-actions">
+                        <a href="#top5" class="btn btn-glow">TOP 5 ni ko'rish</a>
+                        <a href="/uz/" class="btn btn-glow" style="background:linear-gradient(135deg,#059669,#34d399);box-shadow:0 4px 22px rgba(5,150,105,.3)">To'liq reyting</a>
+                    </div>
                 </div>
 
-                <div class="trust-bar">
-                    <div class="cf">
-                        <div class="cfl">Bonus</div>
-                        <div class="cfv">shartlari bilan</div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="n">5</div>
+                        <div class="l">eng kuchli tanlov bir sahifada</div>
                     </div>
-                    <div class="cf">
-                        <div class="cfl">To'lov</div>
-                        <div class="cfv">tezligi bilan</div>
+                    <div class="hero-stat">
+                        <div class="n">2026</div>
+                        <div class="l">dolzarb ko'rinish va yangi format</div>
                     </div>
-                    <div class="cf">
-                        <div class="cfl">Tajriba</div>
-                        <div class="cfv">qulayligi bilan</div>
+                    <div class="hero-stat">
+                        <div class="n">UZ</div>
+                        <div class="l">O'zbekiston foydalanuvchisi uchun mos kontent</div>
                     </div>
                 </div>
             </div>
-        </div>
+
+            <div class="glass-premium hero-feature">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1400&q=80" alt="Premium kazino tanlovi">
+                <div class="hero-overlay">
+                    <div class="topline">Premium landing format</div>
+                    <h2>Ko'p variant orasida yo'qolmaslik uchun tayyor TOP 5</h2>
+                    <p>Foydalanuvchi sahifaga kirganda darrov visual, reyting va tanlov hissini olishi kerak. Shu sabab bu sahifa yirik kartalar va fotolar bilan qurildi.</p>
+                </div>
+            </div>
+        </section>
     </div>
-</header>
+</main>
 
-<section class="section" id="top5">
-    <div class="container">
-        <div class="ios-f reveal d1">
-            <div class="article-breadcrumbs">
-                <a href="/uz/">Bosh sahifa</a>
-                <span>•</span>
-                <span>TOP 5 kazino</span>
-            </div>
+<section class="section-premium" id="top5">
+    <div class="page-wrap">
+        <div class="section-head">
+            <div class="section-kicker">Asosiy tanlov</div>
+            <h2>Pulga o'ynash uchun eng qulay 5 ta kazino</h2>
+            <p>Bu sahifada foydalanuvchi ko'proq qaror qabul qilishi uchun ro'yxat maksimal darajada sodda, chiroyli va foydali formatga keltirildi.</p>
+        </div>
 
-            <div class="sh">
-                <div class="guide-sub">
-                    <div class="guide-sub-title" style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.02em">Asosiy ro'yxat</div>
-                </div>
-                <h2>Pulga o'ynash uchun 5 ta eng qulay variant</h2>
-                <p>Bu yerda eng ko'p qiziqish uyg'otadigan, foydalanuvchi uchun qulay va nisbatan tushunarli 5 platforma jamlangan.</p>
-            </div>
-
-            <div class="top5-grid">
-                <div class="top5-card reveal d1">
-                    <div class="top5-rank">1</div>
+        <div class="top5-showcase">
+            <article class="glass-premium top1-card">
+                <img src="https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=1400&q=80" alt="1win kazino">
+                <div class="top1-overlay">
+                    <div class="rank-badge">1</div>
                     <h3>1win</h3>
-                    <p>Katta o'yin tanlovi, kuchli bonuslar va qulay umumiy tajriba sabab ko'p foydalanuvchilar uchun universal variant bo'lib turadi.</p>
-                    <div class="tag-row">
-                        <span class="mini-tag">Bonuslar</span>
-                        <span class="mini-tag">Ko'p o'yin</span>
-                        <span class="mini-tag">Mobil qulay</span>
+                    <p>
+                        Universal va eng qulay variantlardan biri. O'yinlar ko'p, bonuslar kuchli, interfeys tushunarli va umumiy hissiyot “tayyor premium platforma”ga yaqin.
+                    </p>
+                    <div class="tag-list">
+                        <span class="tag">Universal tanlov</span>
+                        <span class="tag">Ko'p o'yin</span>
+                        <span class="tag">Bonuslar</span>
+                        <span class="tag">Mobil qulay</span>
                     </div>
                     <a href="/reviews/1win/" class="cbtn cbtn-gold">Batafsil ko'rish</a>
                 </div>
+            </article>
 
-                <div class="top5-card reveal d2">
-                    <div class="top5-rank">2</div>
-                    <h3>MELLSTROY</h3>
-                    <p>Agarda foydalanuvchiga katta promo, agressiv bonus formati va faol kazino hissi kerak bo'lsa, bu variant mos tushishi mumkin.</p>
-                    <div class="tag-row">
-                        <span class="mini-tag">Kuchli promo</span>
-                        <span class="mini-tag">Yirik bonus</span>
-                        <span class="mini-tag">Faol format</span>
+            <div class="top4-grid">
+                <article class="glass-premium casino-card">
+                    <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1200&q=80" alt="MELLSTROY kazino">
+                    <div class="overlay">
+                        <div class="rank-small">2</div>
+                        <h3>MELLSTROY</h3>
+                        <p>Katta promo va yirik bonuslar yoqadiganlar uchun energiyali variant.</p>
+                        <a href="/reviews/mellstroy/" class="cbtn cbtn-gold">Sharh</a>
                     </div>
-                    <a href="/reviews/mellstroy/" class="cbtn cbtn-gold">Batafsil ko'rish</a>
-                </div>
+                </article>
 
-                <div class="top5-card reveal d3">
-                    <div class="top5-rank">3</div>
-                    <h3>Lucky Bear</h3>
-                    <p>Bonus, kripto va qiziqarli promo usullarini yoqtiradiganlar uchun ko'proq mos keladigan variantlardan biri.</p>
-                    <div class="tag-row">
-                        <span class="mini-tag">Kripto</span>
-                        <span class="mini-tag">Bonuslar</span>
-                        <span class="mini-tag">Promo</span>
+                <article class="glass-premium casino-card">
+                    <img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?auto=format&fit=crop&w=1200&q=80" alt="Lucky Bear kazino">
+                    <div class="overlay">
+                        <div class="rank-small">3</div>
+                        <h3>Lucky Bear</h3>
+                        <p>Kripto, promo va faol bonus mexanikalari bilan ajralib turadi.</p>
+                        <a href="/reviews/luckybear/" class="cbtn cbtn-gold">Sharh</a>
                     </div>
-                    <a href="/reviews/luckybear/" class="cbtn cbtn-gold">Batafsil ko'rish</a>
-                </div>
+                </article>
 
-                <div class="top5-card reveal d1">
-                    <div class="top5-rank">4</div>
-                    <h3>Arkada</h3>
-                    <p>Yangi boshlayotgan yoki ortiqcha murakkabliksiz, sodda va zamonaviy ko'rinishdagi kazino qidirayotganlar uchun qulay variant.</p>
-                    <div class="tag-row">
-                        <span class="mini-tag">Sodda interfeys</span>
-                        <span class="mini-tag">Yangi foydalanuvchi</span>
-                        <span class="mini-tag">Qulay</span>
+                <article class="glass-premium casino-card">
+                    <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80" alt="Arkada kazino">
+                    <div class="overlay">
+                        <div class="rank-small">4</div>
+                        <h3>Arkada</h3>
+                        <p>Sodda interfeys va yangi foydalanuvchi uchun ancha yengil kirish hissi.</p>
+                        <a href="/reviews/arkada/" class="cbtn cbtn-gold">Sharh</a>
                     </div>
-                    <a href="/reviews/arkada/" class="cbtn cbtn-gold">Batafsil ko'rish</a>
-                </div>
+                </article>
 
-                <div class="top5-card reveal d2">
-                    <div class="top5-rank">5</div>
-                    <h3>CatCasino</h3>
-                    <p>Turnirlar, bonus faolligi va kazino ichidagi qo'shimcha dinamika yoqadigan foydalanuvchilar uchun qiziqarli variant.</p>
-                    <div class="tag-row">
-                        <span class="mini-tag">Turnirlar</span>
-                        <span class="mini-tag">Faollik</span>
-                        <span class="mini-tag">Sodiqlik</span>
+                <article class="glass-premium casino-card">
+                    <img src="https://images.unsplash.com/photo-1517232115160-ff93364542dd?auto=format&fit=crop&w=1200&q=80" alt="CatCasino kazino">
+                    <div class="overlay">
+                        <div class="rank-small">5</div>
+                        <h3>CatCasino</h3>
+                        <p>Turnirlar, dinamik faollik va kazino ichidagi event kayfiyatini yoqtiradiganlar uchun.</p>
+                        <a href="/reviews/catcasino/" class="cbtn cbtn-gold">Sharh</a>
                     </div>
-                    <a href="/reviews/catcasino/" class="cbtn cbtn-gold">Batafsil ko'rish</a>
-                </div>
-            </div>
-
-            <div class="compare-note">
-                <strong>Muhim:</strong> bu sahifa “hamma uchun eng yaxshi kazino” degani emas. Bu — pulga o'ynash uchun eng qulay ko'ringan 5 ta variantning qisqa va foydali tanlovi.
+                </article>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section" id="why">
-    <div class="container">
-        <div class="ios-f reveal d2">
-            <div class="sh">
-                <div class="guide-sub">
-                    <div class="guide-sub-title" style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.02em">Nega aynan shu 5 ta</div>
-                </div>
-                <h2>Biz tanlovni qanday qisqartirdik</h2>
-                <p>Foydalanuvchi ko'p variantdan charchab qolmasligi uchun biz umumiy reytingdan eng qulay 5 tasini ajratdik.</p>
+<section class="section-premium" id="why">
+    <div class="page-wrap">
+        <div class="section-head">
+            <div class="section-kicker">Nega aynan shu sahifa</div>
+            <h2>Bu yerda foydalanuvchi “qaysi birini bosaman?” deb qolib ketmasligi kerak</h2>
+            <p>Ko'p kazino ko'rsatilsa, odam chalkashadi. Bu sahifa esa aynan decision-page sifatida qurilgan: kamroq variant, kuchliroq vizual va osonroq tanlov.</p>
+        </div>
+
+        <div class="cards-row">
+            <div class="info-card">
+                <h3>Aniqroq qaror uchun qisqartirilgan ro'yxat</h3>
+                <p>Asosiy reyting katta va keng. Bu esa pulga o'ynash uchun eng qiziqarli 5 ta variantni ajratib beradi, shuning uchun foydalanuvchi tezroq qaror qiladi.</p>
             </div>
 
-            <div class="why-grid">
-                <div class="why-card">
-                    <h3>Shartlar tushunarli bo'lishi kerak</h3>
-                    <p>Faqat bonus katta bo'lgani uchun emas, foydalanuvchi uni tushunishi va undan foydalanishi mumkinligi uchun ham tanlov qilinadi.</p>
-                </div>
+            <div class="info-card">
+                <h3>Faqat chiroyli bonus emas, foydali tajriba</h3>
+                <p>Bu yerda bonus, o'yinlar, to'lov va umumiy qulaylik birga ko'riladi. Faqat “katta foiz” bilan foydalanuvchini chalg'itmaymiz.</p>
+            </div>
 
-                <div class="why-card">
-                    <h3>To'lov mavzusi muhim</h3>
-                    <p>Pulga o'ynash uchun foydalanuvchi birinchi navbatda to'lov, yechib olish va umumiy qulaylikni his qilishi kerak.</p>
-                </div>
+            <div class="info-card">
+                <h3>Mobil foydalanuvchi uchun ko'rinarli format</h3>
+                <p>Ko'p odam telefon orqali kiradi. Shu sabab kartalar yirik, tushunarli va scroll paytida zeriktirmaydigan ko'rinishda qilindi.</p>
+            </div>
 
-                <div class="why-card">
-                    <h3>Interfeys va mobil tajriba</h3>
-                    <p>Ko'p odam telefon orqali kiradi. Shuning uchun sahifa, menyu va to'ldirish jarayoni ham muhim mezon bo'ldi.</p>
-                </div>
-
-                <div class="why-card">
-                    <h3>Bir xil emas, turli ehtiyojlar uchun</h3>
-                    <p>Kimdir universal platforma qidiradi, kimdir bonus, kimdir turnir, kimdir esa sodda interfeys izlaydi — biz buni hisobga oldik.</p>
-                </div>
+            <div class="info-card">
+                <h3>O'zbekiston auditoriyasi uchun mos kayfiyat</h3>
+                <p>Sahifa lokal auditoriya uchun qulay, chiroyli va “haqiqiy сайт” hissini beradigan premium tuzilishda yozildi.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section" id="tips">
-    <div class="container">
-        <div class="ios-f reveal d3">
-            <div class="sh">
-                <div class="guide-sub">
-                    <div class="guide-sub-title" style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.02em">Maslahatlar</div>
+<section class="section-premium" id="tips">
+    <div class="page-wrap">
+        <div class="section-head">
+            <div class="section-kicker">Tanlashdan oldin</div>
+            <h2>Pulga o'ynashdan oldin 4 ta muhim nuqta</h2>
+            <p>Yaxshi sahifa faqat ro'yxat bermaydi. U foydalanuvchiga qanday tanlashni ham ko'rsatadi.</p>
+        </div>
+
+        <div class="tips-grid">
+            <div class="tip-card">
+                <div class="tip-top">
+                    <div class="num">1</div>
+                    <span>Birinchi nuqta</span>
                 </div>
-                <h2>Pulga o'ynashdan oldin nimaga qarash kerak</h2>
-                <p>Tez qaror qilish oson, lekin foydali qaror qilish uchun quyidagi 4 nuqtani tekshirish yaxshiroq.</p>
+                <h3>Bonus shartini o'qi</h3>
+                <p>Faqat foizga qaramang. Veyjer, muddat va o'yin cheklovlari bonusning haqiqiy foydasini belgilaydi.</p>
             </div>
 
-            <div class="step-cards">
-                <div class="step-card">
-                    <div class="step-top">
-                        <div class="step-num">1</div>
-                        <div class="step-label">Birinchi qadam</div>
-                    </div>
-                    <h3>Bonus shartini o'qi</h3>
-                    <p>Faqat foizga qaramang. Veyjer, muddat va o'yin cheklovlari bonusning haqiqiy foydasini belgilaydi.</p>
+            <div class="tip-card">
+                <div class="tip-top">
+                    <div class="num">2</div>
+                    <span>Ikkinchi nuqta</span>
                 </div>
-
-                <div class="step-card">
-                    <div class="step-top">
-                        <div class="step-num">2</div>
-                        <div class="step-label">Ikkinchi qadam</div>
-                    </div>
-                    <h3>To'lov usullarini ko'r</h3>
-                    <p>Sizga qulay usul bor-yo'qligi, chiqish tezligi va umuman pul bilan ishlash qanchalik qulayligi muhim.</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-top">
-                        <div class="step-num">3</div>
-                        <div class="step-label">Uchinchi qadam</div>
-                    </div>
-                    <h3>Qaysi o'yin uchun kelyapsan</h3>
-                    <p>Slotlar, live, promo, turnirlar yoki shunchaki universal kazino — maqsadga mos tanlov qilish kerak.</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-top">
-                        <div class="step-num">4</div>
-                        <div class="step-label">To'rtinchi qadam</div>
-                    </div>
-                    <h3>Bitta variantga yopishib qolma</h3>
-                    <p>Kamida 2–3 variantni taqqoslash foydalanuvchiga ancha to'g'ri qaror chiqarishga yordam beradi.</p>
-                </div>
+                <h3>To'lov qulayligini tekshir</h3>
+                <p>Pul bilan ishlash qulay bo'lmasa, foydalanuvchi tez soviydi. Shu sabab to'ldirish va yechish hissi juda muhim.</p>
             </div>
 
-            <div class="pb reveal d2" style="margin-top:18px">
-                <div class="pb-l">
-                    <div class="pb-i">🎯</div>
-                    <div class="pb-t">
-                        O'zingizga mos variantni tezroq topmoqchimisiz?
-                        <small>Unda umumiy reytingni ko'ring yoki asosiy sahifadan tanlovni davom ettiring.</small>
-                    </div>
+            <div class="tip-card">
+                <div class="tip-top">
+                    <div class="num">3</div>
+                    <span>Uchinchi nuqta</span>
                 </div>
-                <div class="ct">
-                    <a href="/uz/" class="cbtn cbtn-gold">Asosiy reyting</a>
-                    <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="cbtn">Kanal</a>
+                <h3>O'zing qaysi formatni xohlayotganingni bil</h3>
+                <p>Kimdir slotlar uchun kiradi, kimdir promo uchun, kimdir esa universal kazino qidiradi. Bir xil tanlov hamma uchun emas.</p>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-top">
+                    <div class="num">4</div>
+                    <span>To'rtinchi nuqta</span>
                 </div>
+                <h3>Bir nechta variantni solishtir</h3>
+                <p>Birinchi ko'rgan platformaga yopishib qolma. Kamida 2–3 variantni ko'rish foydalanuvchiga ko'proq ishonch beradi.</p>
+            </div>
+        </div>
+
+        <div class="cta-band" style="margin-top:18px;">
+            <div>
+                <h3>Ko'proq variant ko'rmoqchimisiz?</h3>
+                <p>Unda umumiy reytingni oching yoki kanalda yangilanib turadigan tanlovlarni kuzating.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="/uz/" class="cbtn cbtn-gold">To'liq reyting</a>
+                <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="cbtn">Kanalga o'tish</a>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section" id="faq">
-    <div class="container">
-        <div class="f-wrap ios-f reveal d3">
-            <div class="sh">
-                <div class="guide-sub">
-                    <div class="guide-sub-title" style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.02em">FAQ</div>
+<section class="section-premium" id="faq">
+    <div class="page-wrap">
+        <div class="section-head">
+            <div class="section-kicker">FAQ</div>
+            <h2>Tez-tez so'raladigan savollar</h2>
+            <p>Qisqa va foydali javoblar — foydalanuvchi oxirigacha ishonsa, konversiya ham yaxshi bo'ladi.</p>
+        </div>
+
+        <div class="faq-grid">
+            <div class="fi">
+                <div class="fq" onclick="toggleFaq(this)">
+                    <span>Bu 5 ta kazino nimaga qarab tanlangan?</span>
+                    <div class="fic">+</div>
                 </div>
-                <h2>Tez-tez so'raladigan savollar</h2>
-                <p>Qisqa va tushunarli javoblar.</p>
+                <div class="fa">
+                    <div class="fa-i">Asosiy mezonlar: bonuslar, to'lov bilan ishlash qulayligi, o'yinlar, mobil tajriba va umumiy premium hissiyot.</div>
+                </div>
             </div>
 
-            <div class="faq-simple">
-                <div class="fi">
-                    <div class="fq" onclick="toggleFaq(this)">
-                        <span>Bu 5 ta kazino nimaga qarab tanlangan?</span>
-                        <div class="fic">+</div>
-                    </div>
-                    <div class="fa">
-                        <div class="fa-i">Asosiy mezonlar: bonuslar, to'lov bilan bog'liq qulaylik, o'yinlar soni, mobil tajriba va umumiy foydalanish hissi.</div>
-                    </div>
+            <div class="fi">
+                <div class="fq" onclick="toggleFaq(this)">
+                    <span>Nega aynan 5 ta?</span>
+                    <div class="fic">+</div>
                 </div>
-
-                <div class="fi">
-                    <div class="fq" onclick="toggleFaq(this)">
-                        <span>Bu sahifa faqat O'zbekiston uchunmi?</span>
-                        <div class="fic">+</div>
-                    </div>
-                    <div class="fa">
-                        <div class="fa-i">Asosiy urg'u O'zbekiston foydalanuvchisi uchun qulay va tushunarli formatga berilgan.</div>
-                    </div>
+                <div class="fa">
+                    <div class="fa-i">Chunki foydalanuvchi tezroq tanlov qilishi uchun ro'yxat qisqa va aniq bo'lishi kerak. Juda uzun ro'yxat CTR va konversiyani ham pasaytiradi.</div>
                 </div>
+            </div>
 
-                <div class="fi">
-                    <div class="fq" onclick="toggleFaq(this)">
-                        <span>Qaysi biri yangi boshlovchi uchun qulayroq?</span>
-                        <div class="fic">+</div>
-                    </div>
-                    <div class="fa">
-                        <div class="fa-i">Odatda Arkada va 1win kabi qulayroq interfeysli variantlar yangi foydalanuvchi uchun osonroq ko'rinadi, lekin tanlov maqsadga bog'liq.</div>
-                    </div>
+            <div class="fi">
+                <div class="fq" onclick="toggleFaq(this)">
+                    <span>Qaysi biri yangi boshlovchi uchun qulayroq?</span>
+                    <div class="fic">+</div>
                 </div>
+                <div class="fa">
+                    <div class="fa-i">Odatda Arkada va 1win soddaroq va tez tushuniladigan variant sifatida ko'rinadi, lekin maqsadga qarab boshqasi ham mos tushishi mumkin.</div>
+                </div>
+            </div>
 
-                <div class="fi">
-                    <div class="fq" onclick="toggleFaq(this)">
-                        <span>Faqat bonusga qarab tanlash to'g'rimi?</span>
-                        <div class="fic">+</div>
-                    </div>
-                    <div class="fa">
-                        <div class="fa-i">Yo'q. Bonus katta ko'rinishi mumkin, lekin shartlar og'ir bo'lsa, foydasi kamayadi. Har doim shartlarni ham ko'rish kerak.</div>
-                    </div>
+            <div class="fi">
+                <div class="fq" onclick="toggleFaq(this)">
+                    <span>Faqat bonusga qarab tanlash to'g'rimi?</span>
+                    <div class="fic">+</div>
+                </div>
+                <div class="fa">
+                    <div class="fa-i">Yo'q. Bonus katta bo'lsa ham, shartlari og'ir bo'lishi mumkin. Har doim to'lov, qulaylik va o'yinlar bilan birga ko'rish kerak.</div>
+                </div>
+            </div>
+
+            <div class="fi">
+                <div class="fq" onclick="toggleFaq(this)">
+                    <span>Bu sahifa O'zbekiston uchun mosmi?</span>
+                    <div class="fic">+</div>
+                </div>
+                <div class="fa">
+                    <div class="fa-i">Ha, sahifaning tili, kayfiyati va tuzilmasi O'zbekiston auditoriyasi uchun qulay va tushunarli bo'lishi uchun moslashtirilgan.</div>
+                </div>
+            </div>
+
+            <div class="fi">
+                <div class="fq" onclick="toggleFaq(this)">
+                    <span>Sizlar yutuq va'da qilasizlarmi?</span>
+                    <div class="fic">+</div>
+                </div>
+                <div class="fa">
+                    <div class="fa-i">Yo'q. Bizning vazifamiz — foydalanuvchiga platformani to'g'ri tanlashga yordam berish, yutuqni va'da qilish emas.</div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<footer class="footer">
-    <div class="container">
-        <p style="text-align:center;color:var(--muted);font-size:.8rem;padding-bottom:34px">
+<footer class="footer-local">
+    <div class="page-wrap">
+        <p>
             © 2026 <a href="/uz/">Paytaoff</a> ·
             <a href="/about/">Loyiha haqida</a> ·
             <a href="/responsible-gaming/">Mas'uliyatli o'yin</a> ·
@@ -699,5 +975,27 @@
 <button id="scrollTop" class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script src="/script.js"></script>
+<script>
+if (typeof toggleMobNav !== 'function') {
+    function toggleMobNav() {
+        const el = document.getElementById('mobNavDropdown');
+        if (el) el.classList.toggle('open');
+    }
+}
+if (typeof toggleFaq !== 'function') {
+    function toggleFaq(el) {
+        const item = el.closest('.fi');
+        if (item) item.classList.toggle('open');
+    }
+}
+if (typeof toggleTheme !== 'function') {
+    function toggleTheme(){
+        const html = document.documentElement;
+        const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch(e){}
+    }
+}
+</script>
 </body>
 </html>
