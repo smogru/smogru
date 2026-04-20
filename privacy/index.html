@@ -65,9 +65,33 @@
   <div class="space-ring space-ring-1"></div>
   <div class="space-ring space-ring-2"></div>
 
-  <div id="starsLayer"></div>
-  <div id="stickyBar"></div>
-  <div id="easterEgg"></div>
+  <div class="nebula nebula-1"></div>
+  <div class="nebula nebula-2"></div>
+
+  <div class="bg-wrap">
+    <div class="bg-mesh"></div>
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+
+    <div class="orbit o1"><div class="od"></div></div>
+    <div class="orbit o2"><div class="od"></div></div>
+    <div class="orbit o3"><div class="od"></div></div>
+
+    <div class="shooting-star" style="top:15%;left:20%;--d:6s;animation-delay:0s"></div>
+    <div class="shooting-star" style="top:35%;left:50%;--d:8s;animation-delay:3s"></div>
+    <div class="shooting-star" style="top:60%;left:10%;--d:7s;animation-delay:5s"></div>
+    <div class="shooting-star" style="top:80%;left:70%;--d:9s;animation-delay:7s"></div>
+    <div class="shooting-star" style="top:25%;left:85%;--d:7.5s;animation-delay:2s"></div>
+    <div class="shooting-star" style="top:45%;left:40%;--d:6.5s;animation-delay:1s"></div>
+    <div class="shooting-star" style="top:70%;left:60%;--d:8.5s;animation-delay:4s"></div>
+    <div class="shooting-star" style="top:10%;left:70%;--d:7s;animation-delay:6s"></div>
+
+    <div id="starsLayer"></div>
+  </div>
+
+  <canvas id="pc"></canvas>
+  <div class="cg" id="cursorGlow"></div>
 
   <nav class="island" id="island">
     <div class="i-logo">
@@ -80,36 +104,36 @@
     <div class="i-div"></div>
 
     <div class="i-links">
-      <a href="/#top" class="i-link">Рейтинг</a>
-      <a href="/guide.html" class="i-link">Гид</a>
-      <a href="#contact" class="i-link">Помощь</a>
-      <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="i-link i-link-tg">Канал</a>
+      <a href="/#top" class="i-link">🏆 Рейтинг</a>
+      <a href="/guide.html" class="i-link">📖 Гид</a>
+      <a href="#contact" class="i-link">🛡️ Помощь</a>
+      <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="i-link i-link-tg">🎰 Канал</a>
     </div>
 
     <div class="i-div"></div>
 
-    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Сменить тему"></button>
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Сменить тему">🌙</button>
 
     <div class="i-div"></div>
 
-    <button class="share-btn" onclick="shareWebsite()">Поделиться</button>
+    <button class="share-btn" onclick="shareWebsite()">🔗 Поделиться</button>
 
     <div class="i-div"></div>
 
     <div class="lang-wrap" id="langWrap">
       <div class="lang-btn" onclick="toggleLang()">
-        <span></span>
+        <span>🇷🇺</span>
         <span>RU</span>
         <span class="lang-arrow">▼</span>
       </div>
 
       <div class="lang-dd">
-        <a href="/" class="active">Россия</a>
-        <a href="/ua/">Україна</a>
-        <a href="/by/">Беларусь</a>
-        <a href="/uz/">O'zbekiston</a>
-        <a href="/az/">Azərbaycan</a>
-        <a href="/kg/">Кыргызстан</a>
+        <a href="/" class="active">🇷🇺 Россия</a>
+        <a href="/ua/">🇺🇦 Україна</a>
+        <a href="/by/">🇧🇾 Беларусь</a>
+        <a href="/uz/">🇺🇿 O'zbekiston</a>
+        <a href="/az/">🇦🇿 Azərbaycan</a>
+        <a href="/kg/">🇰🇬 Кыргызстан</a>
       </div>
     </div>
 
@@ -124,22 +148,22 @@
       </button>
 
       <div class="mob-nav-dropdown" id="mobNavDropdown">
-        <a href="/#top" onclick="closeMobNav()">Рейтинг</a>
-        <a href="/guide.html" onclick="closeMobNav()">Гид</a>
-        <a href="#contact" onclick="closeMobNav()">Помощь</a>
-        <a href="https://t.me/paytaoff" target="_blank" rel="noopener" onclick="closeMobNav()">Канал</a>
+        <a href="/#top" onclick="closeMobNav()">🏆 Рейтинг</a>
+        <a href="/guide.html" onclick="closeMobNav()">📖 Гид</a>
+        <a href="#contact" onclick="closeMobNav()">🛡️ Помощь</a>
+        <a href="https://t.me/paytaoff" target="_blank" rel="noopener" onclick="closeMobNav()">🎰 Канал</a>
 
         <div class="mob-nav-sep"></div>
 
         <a href="/about/" onclick="closeMobNav()">ℹ️ О проекте</a>
         <a href="/responsible-gaming/" onclick="closeMobNav()">🛡️ Ответственная игра</a>
-        <a href="/privacy/" onclick="closeMobNav()">Конфиденциальность</a>
-        <a href="/terms/" onclick="closeMobNav()">Условия</a>
+        <a href="/privacy/" onclick="closeMobNav()">🔒 Конфиденциальность</a>
+        <a href="/terms/" onclick="closeMobNav()">📄 Условия</a>
 
         <div class="mob-nav-sep"></div>
 
-        <a href="javascript:void(0)" onclick="toggleTheme();closeMobNav()">Сменить тему</a>
-        <a href="javascript:void(0)" onclick="shareWebsite();closeMobNav()">Поделиться</a>
+        <a href="javascript:void(0)" onclick="toggleTheme();closeMobNav()">🎨 Сменить тему</a>
+        <a href="javascript:void(0)" onclick="shareWebsite();closeMobNav()">🔗 Поделиться</a>
       </div>
     </div>
   </nav>
@@ -169,7 +193,7 @@
         <div class="hero-trust" style="justify-content:center;margin-top:20px">
           <div class="ti"><span>📅</span> Апрель 2026</div>
           <div class="ti"><span>18+</span> Только совершеннолетние</div>
-          <div class="ti"><span>ℹ️</span> Аналитика и cookies</div>
+          <div class="ti"><span>🔒</span> Аналитика и cookies</div>
         </div>
       </div>
     </div>
@@ -177,7 +201,7 @@
 
   <section class="section">
     <div class="container">
-      <div class="ios-f reveal">
+      <div class="ios-f">
         <div class="sh reveal">
           <div class="sl">1. Общие положения</div>
           <h2>Что означает использование сайта</h2>
@@ -214,7 +238,7 @@
 
   <section class="section">
     <div class="container">
-      <div class="ios-f reveal">
+      <div class="ios-f">
         <div class="sh reveal">
           <div class="sl">2. Какие данные может получать сайт</div>
           <h2>Состав информации</h2>
@@ -246,7 +270,7 @@
 
   <section class="section">
     <div class="container">
-      <div class="ios-f reveal">
+      <div class="ios-f">
         <div class="sh reveal">
           <div class="sl">3. Для чего используется информация</div>
           <h2>Как используется получаемая информация</h2>
@@ -278,7 +302,7 @@
 
   <section class="section">
     <div class="container">
-      <div class="ios-f reveal">
+      <div class="ios-f">
         <div class="sh reveal">
           <div class="sl">4. Cookies и аналитика</div>
           <h2>Как работают технические инструменты сайта</h2>
@@ -310,7 +334,7 @@
 
   <section class="section">
     <div class="container">
-      <div class="ios-f reveal">
+      <div class="ios-f">
         <div class="sh reveal">
           <div class="sl">5. Партнёрские ссылки и внешние сайты</div>
           <h2>Где проходит граница нашей ответственности</h2>
@@ -347,7 +371,7 @@
 
   <section class="section">
     <div class="container">
-      <div class="ios-f reveal">
+      <div class="ios-f">
         <div class="sh reveal">
           <div class="sl">6. Ограничения и возраст</div>
           <h2>Возраст и информационный характер сайта</h2>
@@ -379,7 +403,7 @@
 
   <section class="section">
     <div class="container">
-      <div class="ios-f reveal">
+      <div class="ios-f">
         <div class="sh reveal">
           <div class="sl">7. Защита информации</div>
           <h2>Что мы делаем и чего не обещаем</h2>
@@ -409,9 +433,9 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="contact">
     <div class="container">
-      <div class="ios-f reveal">
+      <div class="ios-f">
         <div class="sh reveal">
           <div class="sl">8. Дополнительные положения</div>
           <h2>Обновления и вопросы</h2>
@@ -443,7 +467,7 @@
 
   <section class="section">
     <div class="container">
-      <div class="ios-f reveal">
+      <div class="ios-f">
         <div class="sh reveal">
           <div class="sl">Полезные страницы</div>
           <h2>Что посмотреть дальше</h2>
@@ -505,7 +529,7 @@
         <div class="fbt">
           <p>© 2026 Paytaoff</p>
           <div style="display:flex;gap:8px;align-items:center">
-            <button class="share-btn" onclick="shareWebsite()">Поделиться</button>
+            <button class="share-btn" onclick="shareWebsite()">🔗 Поделиться</button>
             <span class="fag">18+</span>
           </div>
         </div>
