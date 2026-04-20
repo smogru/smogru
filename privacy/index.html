@@ -1,488 +1,612 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+
   <title>Конфиденциальность — Paytaoff</title>
-  <meta
-    name="description"
-    content="Политика конфиденциальности Paytaoff: какие данные может получать сайт, как они используются, как работает аналитика и партнёрские ссылки."
-  />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://www.paytaoff.ru/privacy/" />
-</head>
-<body>
-  <header id="top">
-    <div class="container">
-      <div class="header-top">
-        <a href="/" aria-label="Paytaoff">Paytaoff</a>
+  <meta name="description" content="Политика конфиденциальности Paytaoff: какие данные может получать сайт, как используется аналитика, cookies, партнёрские ссылки и где проходят границы ответственности. 18+">
+  <meta name="theme-color" content="#060810">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://www.paytaoff.ru/privacy/">
 
-        <nav aria-label="Основная навигация">
-          <ul>
-            <li><a href="/">Рейтинг</a></li>
-            <li><a href="/guide/">Гид</a></li>
-            <li><a href="/help/">Помощь</a></li>
-            <li><a href="#">Канал</a></li>
-          </ul>
-        </nav>
-      </div>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
 
-      <div class="header-subnav">
-        <nav aria-label="Информационные страницы">
-          <ul>
-            <li><a href="/about/">ℹ️ О проекте</a></li>
-            <li><a href="/responsible-gaming/">🛡️ Ответственная игра</a></li>
-            <li><a href="/privacy/" aria-current="page">Конфиденциальность</a></li>
-            <li><a href="/terms/">Условия</a></li>
-          </ul>
-        </nav>
-      </div>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-      <!-- Мобильная верхняя панель -->
-      <div class="mobile-topbar" aria-label="Мобильная панель">
-        <a href="#site-menu">☰ Меню</a>
-        <a href="#">Канал</a>
-        <a href="#theme">Сменить тему</a>
-        <span>18+</span>
-      </div>
+  <link rel="stylesheet" href="../style.css">
 
-      <!-- Мобильное меню без JS: просто якорь -->
-      <nav id="site-menu" aria-label="Мобильное меню">
-        <ul>
-          <li><a href="/">Рейтинг</a></li>
-          <li><a href="/guide/">Гид</a></li>
-          <li><a href="/help/">Помощь</a></li>
-          <li><a href="/about/">О проекте</a></li>
-          <li><a href="/responsible-gaming/">Ответственная игра</a></li>
-          <li><a href="/privacy/" aria-current="page">Конфиденциальность</a></li>
-          <li><a href="/terms/">Условия</a></li>
-        </ul>
-      </nav>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) { return; }
+      }
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108420102', 'ym');
+
+    ym(108420102, 'init', {
+      ssr:true,
+      webvisor:true,
+      clickmap:true,
+      ecommerce:"dataLayer",
+      referrer: document.referrer,
+      url: location.href,
+      accurateTrackBounce:true,
+      trackLinks:true
+    });
+  </script>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/108420102" style="position:absolute; left:-9999px;" alt="">
     </div>
-  </header>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+</head>
 
-  <main>
-    <!-- HERO -->
-    <section class="page-hero">
-      <div class="container">
-        <nav aria-label="Хлебные крошки">
-          <a href="/">Главная</a>
-          <span> / </span>
-          <span>Конфиденциальность</span>
-        </nav>
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
 
-        <p>Конфиденциальность</p>
-        <h1>Политика конфиденциальности Paytaoff</h1>
-        <p>
-          На этой странице объясняем простым языком, какие данные может получать сайт,
-          зачем они используются и где проходят границы нашей ответственности.
+  <div class="comet comet-1"></div>
+  <div class="comet comet-2"></div>
+  <div class="comet comet-3"></div>
+  <div class="comet comet-4"></div>
+  <div class="comet comet-5"></div>
+
+  <div class="corner-glow corner-glow-tl"></div>
+  <div class="corner-glow corner-glow-br"></div>
+  <div class="space-ring space-ring-1"></div>
+  <div class="space-ring space-ring-2"></div>
+
+  <!-- НАВИГАЦИЯ -->
+  <nav class="island" id="island">
+    <div class="i-logo">
+      <a href="/" style="display:flex;align-items:center;gap:10px">
+        <img src="../avatar.png" alt="Paytaoff" class="i-avatar">
+        <span>Paytaoff</span>
+      </a>
+    </div>
+
+    <div class="i-div"></div>
+
+    <div class="i-links">
+      <a href="/#top" class="i-link">Рейтинг</a>
+      <a href="/guide.html" class="i-link">Гид</a>
+      <a href="#contact" class="i-link">Помощь</a>
+      <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="i-link i-link-tg">Канал</a>
+    </div>
+
+    <div class="i-div"></div>
+
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Сменить тему"></button>
+
+    <div class="i-div"></div>
+
+    <button class="share-btn" onclick="shareWebsite()">Поделиться</button>
+
+    <div class="i-div"></div>
+
+    <div class="lang-wrap" id="langWrap">
+      <div class="lang-btn" onclick="toggleLang()">
+        <span></span>
+        <span>RU</span>
+        <span class="lang-arrow">▼</span>
+      </div>
+
+      <div class="lang-dd">
+        <a href="/" class="active">Россия</a>
+        <a href="/ua/">Україна</a>
+        <a href="/by/">Беларусь</a>
+        <a href="/uz/">O'zbekiston</a>
+        <a href="/az/">Azərbaycan</a>
+        <a href="/kg/">Кыргызстан</a>
+      </div>
+    </div>
+
+    <div class="i-div"></div>
+
+    <div class="i-age">18+</div>
+
+    <div class="mob-nav-wrap" id="mobNavWrap">
+      <button class="mob-nav-toggle" id="mobNavToggle" onclick="toggleMobNav()">
+        <span>☰</span>
+        <span class="mob-nav-label">Меню</span>
+      </button>
+
+      <div class="mob-nav-dropdown" id="mobNavDropdown">
+        <a href="/#top" onclick="closeMobNav()">Рейтинг</a>
+        <a href="/guide.html" onclick="closeMobNav()">Гид</a>
+        <a href="#contact" onclick="closeMobNav()">Помощь</a>
+        <a href="https://t.me/paytaoff" target="_blank" rel="noopener" onclick="closeMobNav()">Канал</a>
+
+        <div class="mob-nav-sep"></div>
+
+        <a href="/about/" onclick="closeMobNav()">ℹ️ О проекте</a>
+        <a href="/responsible-gaming/" onclick="closeMobNav()">🛡️ Ответственная игра</a>
+        <a href="/privacy/" onclick="closeMobNav()">Конфиденциальность</a>
+        <a href="/terms/" onclick="closeMobNav()">Условия</a>
+
+        <div class="mob-nav-sep"></div>
+
+        <a href="javascript:void(0)" onclick="toggleTheme();closeMobNav()">Сменить тему</a>
+        <a href="javascript:void(0)" onclick="shareWebsite();closeMobNav()">Поделиться</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" style="min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:0 16px">
+    <div style="max-width:900px;margin:0 auto;width:100%">
+      <div class="ios-f reveal" style="text-align:center;padding:44px 34px">
+        <div class="hero-badge" style="margin:0 auto 18px">
+          <span class="pd"></span>
+          Конфиденциальность
+        </div>
+
+        <h1 style="font-size:clamp(30px,5vw,56px);font-weight:900;line-height:1.08;margin-bottom:14px;letter-spacing:-2px">
+          Политика <span class="gt">конфиденциальности</span>
+        </h1>
+
+        <p style="font-size:1.063rem;color:var(--muted);max-width:680px;margin:0 auto 24px;line-height:1.7">
+          Простым языком объясняем, какие данные может получать Paytaoff, зачем используется аналитика,
+          как работают cookies и где проходят границы нашей ответственности.
         </p>
 
-        <div class="hero-actions">
-          <a href="/">Смотреть рейтинг</a>
-          <a href="#">Наш канал</a>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <a href="/#top" class="btn btn-glow ripple"><span>Смотреть рейтинг</span></a>
+          <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="btn btn-ghost ripple"><span>Наш канал</span></a>
         </div>
 
-        <div class="hero-badges">
-          <span>Обновлено: апрель 2026</span>
-          <span>18+ Только для совершеннолетних</span>
-          <span>Яндекс.Метрика: 108420102</span>
+        <div class="hero-trust" style="justify-content:center;margin-top:20px">
+          <div class="ti"><span>📅</span> Актуально на 2026</div>
+          <div class="ti"><span>18+</span> Только для совершеннолетних</div>
+          <div class="ti"><span>✅</span> Яндекс.Метрика подключена</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- КАРТОЧКИ В СТИЛЕ "О ПРОЕКТЕ" -->
-    <section class="intro-cards">
-      <div class="container">
-        <h2>Коротко и по делу</h2>
-        <p>
-          Эти карточки можно оформить теми же цветами и расположением, что и на странице «О проекте».
-        </p>
-
-        <div class="cards-grid">
-          <article class="info-card">
-            <p>🔍 Что может собираться</p>
-            <h3>Технические и аналитические данные</h3>
-            <p>
-              Сайт может получать обезличенную техническую информацию о посещении,
-              устройстве, браузере, действиях на страницах и переходах по ссылкам.
-            </p>
-          </article>
-
-          <article class="info-card">
-            <p>🎯 Зачем это нужно</p>
-            <h3>Аналитика и улучшение сайта</h3>
-            <p>
-              Эти данные помогают понимать, какие страницы полезны пользователю,
-              где падает CTR, что улучшать в навигации, контенте и конверсии.
-            </p>
-          </article>
-
-          <article class="info-card">
-            <p>🛡️ Что важно</p>
-            <h3>Мы не продаём доступ к сайту</h3>
-            <p>
-              Paytaoff — информационный проект. Мы не принимаем ставки,
-              не обрабатываем депозиты и не являемся платёжным сервисом.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 1 -->
-    <section class="legal-section">
-      <div class="container">
-        <article class="section-card">
-          <p>1. Общие положения</p>
-          <h2>О чём эта страница</h2>
-          <p>
-            Политика конфиденциальности описывает, как Paytaoff относится к информации,
-            которую сайт может получать при посещении страниц, использовании навигации,
-            переходах по ссылкам, обращениях в поддержку и взаимодействии с материалами сайта.
-          </p>
-          <p>
-            Используя сайт, пользователь подтверждает, что ознакомился с этой политикой
-            и понимает её общий смысл. Если вы не согласны с её положениями,
-            пожалуйста, прекратите использование сайта.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- 2 -->
-    <section class="legal-section">
-      <div class="container">
-        <article class="section-card">
-          <p>2. Какие данные может получать сайт</p>
-          <h2>Состав информации</h2>
-          <p>
-            Мы стремимся не усложнять и не собирать лишнее. Ниже — основные категории данных,
-            которые могут быть получены в рамках обычной работы сайта.
-          </p>
-
-          <div class="cards-grid">
-            <article class="info-card">
-              <p>💻 Технические данные</p>
-              <h3>Браузер, устройство, IP, язык</h3>
-              <ul>
-                <li>тип браузера и устройства;</li>
-                <li>операционная система;</li>
-                <li>IP-адрес в обезличенном или техническом виде;</li>
-                <li>язык интерфейса и региональные настройки;</li>
-                <li>время посещения и технические параметры сессии.</li>
-              </ul>
-            </article>
-
-            <article class="info-card">
-              <p>📊 Поведение на сайте</p>
-              <h3>Просмотры и действия</h3>
-              <ul>
-                <li>какие страницы открывались;</li>
-                <li>по каким кнопкам были клики;</li>
-                <li>глубина просмотра;</li>
-                <li>источник перехода;</li>
-                <li>время на странице и прокрутка.</li>
-              </ul>
-            </article>
-
-            <article class="info-card">
-              <p>✉️ Контактные данные</p>
-              <h3>Только если вы сами их передаёте</h3>
-              <ul>
-                <li>сообщения, отправленные через Telegram или другие каналы связи;</li>
-                <li>имя пользователя или ник, если вы сами его указали;</li>
-                <li>иная информация, которую вы добровольно прислали нам.</li>
-              </ul>
-            </article>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- 3 -->
-    <section class="legal-section">
-      <div class="container">
-        <article class="section-card">
-          <p>3. Как используется информация</p>
-          <h2>Цели обработки</h2>
-          <p>
-            Мы используем получаемую информацию только в пределах разумных задач сайта:
-            для аналитики, улучшения контента, развития структуры страниц и повышения удобства пользователя.
-          </p>
-
-          <ul>
-            <li>анализ посещаемости и поведения на сайте;</li>
-            <li>улучшение структуры страниц, навигации и контента;</li>
-            <li>оценка кликабельности блоков, карточек и ссылок;</li>
-            <li>поиск технических ошибок и проблем адаптации;</li>
-            <li>ответы на сообщения и обработка обращений;</li>
-            <li>развитие SEO, CTR и общего качества проекта.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- 4 -->
-    <section class="legal-section">
-      <div class="container">
-        <article class="section-card">
-          <p>4. Cookies и аналитика</p>
-          <h2>Как работает аналитика на сайте</h2>
-          <p>
-            Для анализа посещаемости и поведения пользователей сайт может использовать cookies,
-            локальные данные браузера и системы веб-аналитики.
-          </p>
-
-          <div class="cards-grid">
-            <article class="info-card">
-              <p>🍪 Cookies</p>
-              <h3>Нужны для корректной работы</h3>
-              <p>
-                Cookies могут использоваться для сохранения технических настроек,
-                удобства навигации, повторного распознавания устройства и базовой аналитики.
-              </p>
-            </article>
-
-            <article class="info-card">
-              <p>📈 Яндекс.Метрика</p>
-              <h3>Используется для статистики</h3>
-              <p>
-                На сайте подключена Яндекс.Метрика с ID счётчика 108420102.
-                Она может собирать обезличенную статистику о посещениях, источниках трафика,
-                кликах, глубине просмотра и других метриках поведения.
-              </p>
-            </article>
-
-            <article class="info-card">
-              <p>⚙️ Управление</p>
-              <h3>Пользователь может ограничить cookies</h3>
-              <p>
-                При желании вы можете изменить настройки браузера и ограничить использование cookies,
-                но это может повлиять на корректность отдельных функций сайта.
-              </p>
-            </article>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- 5 -->
-    <section class="legal-section">
-      <div class="container">
-        <article class="section-card">
-          <p>5. Партнёрские ссылки и внешние сервисы</p>
-          <h2>Что важно понимать</h2>
-          <p>
-            На сайте могут размещаться партнёрские ссылки на внешние ресурсы.
-            При переходе по таким ссылкам пользователь покидает Paytaoff
-            и начинает взаимодействовать уже со сторонним сайтом.
-          </p>
-
-          <ul>
-            <li>мы можем получать комиссию по партнёрской модели;</li>
-            <li>это не означает передачу пользователю платного доступа к сайту;</li>
-            <li>условия обработки данных на сторонних сайтах регулируются их собственными правилами;</li>
-            <li>мы рекомендуем отдельно читать политику конфиденциальности и условия каждого внешнего сервиса.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- 6 -->
-    <section class="legal-section">
-      <div class="container">
-        <article class="section-card">
-          <p>6. Передача и защита информации</p>
-          <h2>Границы ответственности</h2>
-          <p>
-            Мы принимаем разумные меры для защиты сайта и данных в рамках обычной работы проекта,
-            однако ни один интернет-ресурс не может гарантировать абсолютную защиту от всех рисков.
-          </p>
-
-          <div class="cards-grid">
-            <article class="info-card">
-              <p>🔐 Защита</p>
-              <h3>Разумные технические меры</h3>
-              <p>
-                Мы стремимся поддерживать безопасную работу сайта,
-                следить за корректностью страниц и ограничивать лишний сбор информации.
-              </p>
-            </article>
-
-            <article class="info-card">
-              <p>⚠️ Ограничение</p>
-              <h3>Нет абсолютной гарантии</h3>
-              <p>
-                Пользователь понимает, что передача данных через интернет
-                всегда связана с определёнными техническими рисками.
-              </p>
-            </article>
-
-            <article class="info-card">
-              <p>🚫 Продажа данных</p>
-              <h3>Не наша модель</h3>
-              <p>
-                Мы не заявляем модель, основанную на продаже пользовательских данных как товарного актива.
-              </p>
-            </article>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- 7 -->
-    <section class="legal-section">
-      <div class="container">
-        <article class="section-card">
-          <p>7. Несовершеннолетние</p>
-          <h2>Сайт предназначен только для 18+</h2>
-          <p>
-            Paytaoff предназначен исключительно для совершеннолетних пользователей.
-            Если вам меньше 18 лет или возрастной порог в вашей юрисдикции выше,
-            вы обязаны покинуть сайт и не использовать его материалы.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- 8 -->
-    <section class="legal-section">
-      <div class="container">
-        <article class="section-card">
-          <p>8. Права пользователя</p>
-          <h2>Что вы можете сделать</h2>
-          <p>
-            Если у вас есть вопросы по этой политике или по тому,
-            как работает сайт, вы можете связаться с нами через доступные каналы связи.
-          </p>
-
-          <ul>
-            <li>уточнить общий порядок обработки информации;</li>
-            <li>задать вопрос по работе аналитики и страниц сайта;</li>
-            <li>обратиться по поводу неточной информации на странице;</li>
-            <li>предложить исправление или обновление материалов.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- 9 -->
-    <section class="legal-section">
-      <div class="container">
-        <article class="section-card">
-          <p>9. Изменения политики</p>
-          <h2>Мы можем обновлять эту страницу</h2>
-          <p>
-            Политика конфиденциальности может обновляться при изменении структуры сайта,
-            аналитических инструментов, каналов связи или логики работы отдельных разделов.
-          </p>
-          <p>
-            Актуальная версия всегда публикуется на этой странице.
-            Продолжение использования сайта после обновления означает согласие пользователя
-            с действующей редакцией политики.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq-section">
-      <div class="container">
-        <p>FAQ</p>
-        <h2>Частые вопросы</h2>
-
-        <div class="faq-list">
-          <details>
-            <summary>Собирает ли Paytaoff паспортные или платёжные данные?</summary>
-            <p>
-              Сайт Paytaoff не является казино и не обрабатывает депозиты или выводы средств.
-              Если такие данные вводятся на стороннем ресурсе, их обработка регулируется правилами этого ресурса.
-            </p>
-          </details>
-
-          <details>
-            <summary>Можно ли отключить cookies?</summary>
-            <p>
-              Да, пользователь может ограничить cookies через настройки браузера,
-              но это может повлиять на удобство работы некоторых функций сайта.
-            </p>
-          </details>
-
-          <details>
-            <summary>Зачем на сайте Яндекс.Метрика?</summary>
-            <p>
-              Она помогает понимать поведение аудитории, оценивать CTR,
-              улучшать страницы и исправлять слабые места в структуре и контенте.
-            </p>
-          </details>
-
-          <details>
-            <summary>Передаёт ли Paytaoff мои данные казино?</summary>
-            <p>
-              При переходе по внешней ссылке пользователь начинает взаимодействовать уже со сторонним сайтом.
-              Обработка данных на его стороне регулируется отдельной политикой этого сервиса.
-            </p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="bottom-cta">
-      <div class="container">
-        <article class="cta-card">
-          <p>Есть вопросы?</p>
-          <h2>Мы всегда на связи</h2>
-          <p>
-            Если тебе нужно уточнение по этой странице, работе сайта или безопасности —
-            напиши нам. Мы стараемся объяснять всё без воды и по-человечески.
-          </p>
-          <div class="hero-actions">
-            <a href="#">Написать нам</a>
-            <a href="/about/">О проекте</a>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+  <!-- БЫСТРЫЕ КАРТОЧКИ -->
+  <section class="section">
     <div class="container">
-      <div class="footer-top">
-        <div>
-          <a href="/" aria-label="Paytaoff">Paytaoff</a>
-          <p>Честные обзоры казино. 50+ критериев.</p>
-          <p>SSL</p>
-          <p>✅ Независимый</p>
+      <div class="ios-f">
+        <div class="sh reveal">
+          <div class="sl">Коротко и по делу</div>
+          <h2>Что важно знать сразу</h2>
+          <p>Этот блок удобно читается и на телефоне, и на компьютере</p>
         </div>
 
-        <div>
-          <h3>Навигация</h3>
-          <ul>
-            <li><a href="/">Рейтинг</a></li>
-            <li><a href="/guide/">Гид</a></li>
-            <li><a href="/help/">Помощь</a></li>
-            <li><a href="/quiz/">Подбор казино</a></li>
-          </ul>
-        </div>
+        <div class="help-grid">
+          <div class="help-card reveal shine-effect">
+            <div class="help-icon"></div>
+            <h3>Что может собираться</h3>
+            <p>Обезличенные технические данные, статистика посещений, клики, глубина просмотра и другие обычные сигналы аналитики.</p>
+          </div>
 
-        <div>
-          <h3>Информация</h3>
-          <ul>
-            <li><a href="/about/">О проекте</a></li>
-            <li><a href="/responsible-gaming/">Ответственная игра</a></li>
-            <li><a href="/privacy/" aria-current="page">Конфиденциальность</a></li>
-            <li><a href="/terms/">Условия</a></li>
-            <li><a href="#">Telegram</a></li>
-          </ul>
+          <div class="help-card reveal d1 shine-effect">
+            <div class="help-icon"></div>
+            <h3>Зачем это нужно</h3>
+            <p>Чтобы улучшать страницы, понимать поведение аудитории, усиливать CTR, структуру контента и удобство сайта.</p>
+          </div>
+
+          <div class="help-card reveal d2 shine-effect">
+            <div class="help-icon"></div>
+            <h3>Что важно</h3>
+            <p>Paytaoff — информационный ресурс. Мы не принимаем ставки, не проводим депозиты и не являемся казино.</p>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <p>⚠️ 18+ — Paytaoff — независимый информационный ресурс. Мы не казино. Партнёрские ссылки. Играйте ответственно.</p>
-      <p>© 2026 Paytaoff</p>
-      <p><a href="#top">↑ Наверх</a></p>
+  <!-- РАЗДЕЛ 1 -->
+  <section class="section">
+    <div class="container">
+      <div class="ios-f">
+        <div class="sh reveal">
+          <div class="sl">1. Общие положения</div>
+          <h2>О чём эта страница</h2>
+          <p>Прозрачно и без юридической каши</p>
+        </div>
+
+        <div class="calc reveal" style="margin-top:0">
+          <div class="calc-l" style="grid-template-columns:1fr">
+            <div>
+              <p style="color:var(--muted);line-height:1.85;margin:0 0 16px">
+                Настоящая политика конфиденциальности описывает, как Paytaoff относится к информации,
+                которую сайт может получать при посещении страниц, использовании навигации, переходах по ссылкам,
+                взаимодействии с материалами сайта и обращениях через доступные каналы связи.
+              </p>
+              <p style="color:var(--muted);line-height:1.85;margin:0">
+                Используя сайт, пользователь подтверждает, что ознакомился с этой политикой и понимает её общий смысл.
+                Если вы не согласны с её положениями, пожалуйста, прекратите использование сайта.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- РАЗДЕЛ 2 -->
+  <section class="section">
+    <div class="container">
+      <div class="ios-f">
+        <div class="sh reveal">
+          <div class="sl">2. Какие данные может получать сайт</div>
+          <h2>Состав информации</h2>
+          <p>Без лишнего, только по сути</p>
+        </div>
+
+        <div class="help-grid">
+          <div class="help-card reveal shine-effect">
+            <div class="help-icon"></div>
+            <h3>Технические данные</h3>
+            <p>Тип браузера, устройство, операционная система, язык интерфейса, источник перехода и IP-адрес в техническом или обезличенном виде.</p>
+          </div>
+
+          <div class="help-card reveal d1 shine-effect">
+            <div class="help-icon"></div>
+            <h3>Поведение на сайте</h3>
+            <p>Просмотренные страницы, глубина просмотра, прокрутка, время на странице, клики по кнопкам и переходы по ссылкам.</p>
+          </div>
+
+          <div class="help-card reveal d2 shine-effect">
+            <div class="help-icon"></div>
+            <h3>Контактные данные</h3>
+            <p>Только если пользователь сам передаёт их через Telegram или другой доступный канал связи.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- РАЗДЕЛ 3 -->
+  <section class="section">
+    <div class="container">
+      <div class="ios-f">
+        <div class="sh reveal">
+          <div class="sl">3. Как используется информация</div>
+          <h2>Цели обработки</h2>
+          <p>Сайт собирает сигналы не ради сбора, а ради качества</p>
+        </div>
+
+        <div class="calc reveal" style="margin-top:0">
+          <div class="calc-l" style="grid-template-columns:1fr">
+            <div>
+              <p style="color:var(--muted);line-height:1.85;margin:0 0 16px">
+                Получаемая информация может использоваться для анализа посещаемости, улучшения структуры страниц,
+                развития SEO и CTR, тестирования карточек и CTA, поиска технических ошибок и повышения удобства сайта.
+              </p>
+
+              <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px">
+                <div class="cpt" style="text-align:center">✅ Аналитика страниц</div>
+                <div class="cpt" style="text-align:center">✅ Улучшение UX</div>
+                <div class="cpt" style="text-align:center">✅ Рост CTR</div>
+                <div class="cpt" style="text-align:center">✅ Проверка ошибок</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- РАЗДЕЛ 4 -->
+  <section class="section">
+    <div class="container">
+      <div class="ios-f">
+        <div class="sh reveal">
+          <div class="sl">4. Cookies и аналитика</div>
+          <h2>Как работает аналитика на сайте</h2>
+          <p>Понятно и без перегруза</p>
+        </div>
+
+        <div class="help-grid">
+          <div class="help-card reveal shine-effect">
+            <div class="help-icon"></div>
+            <h3>Cookies</h3>
+            <p>Могут использоваться для сохранения технических настроек, корректной работы интерфейса и базовой аналитики.</p>
+          </div>
+
+          <div class="help-card reveal d1 shine-effect">
+            <div class="help-icon"></div>
+            <h3>Яндекс.Метрика</h3>
+            <p>На сайте подключена Метрика. Она помогает анализировать посещения, клики, глубину просмотра и поведение пользователей.</p>
+          </div>
+
+          <div class="help-card reveal d2 shine-effect">
+            <div class="help-icon"></div>
+            <h3>Управление</h3>
+            <p>Пользователь может ограничить cookies через настройки браузера, но это может повлиять на работу отдельных функций сайта.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- РАЗДЕЛ 5 -->
+  <section class="section">
+    <div class="container">
+      <div class="ios-f">
+        <div class="sh reveal">
+          <div class="sl">5. Партнёрские ссылки и внешние сервисы</div>
+          <h2>Что важно понимать</h2>
+          <p>Границы ответственности должны быть ясны</p>
+        </div>
+
+        <div class="calc reveal" style="margin-top:0">
+          <div class="calc-l" style="grid-template-columns:1fr">
+            <div>
+              <p style="color:var(--muted);line-height:1.85;margin:0 0 16px">
+                На сайте могут размещаться партнёрские ссылки на внешние ресурсы. При переходе по таким ссылкам пользователь
+                покидает Paytaoff и начинает взаимодействовать уже со сторонним сайтом.
+              </p>
+
+              <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px">
+                <div class="cpt" style="text-align:center">✅ Возможна партнёрская комиссия</div>
+                <div class="cpt" style="text-align:center">✅ Это не влияет на цену для пользователя</div>
+                <div class="cpt" style="text-align:center">✅ Мы не обрабатываем платежи</div>
+                <div class="cpt" style="text-align:center">✅ У внешних сайтов свои правила</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- РАЗДЕЛ 6 -->
+  <section class="section">
+    <div class="container">
+      <div class="ios-f">
+        <div class="sh reveal">
+          <div class="sl">6. Передача и защита информации</div>
+          <h2>Границы ответственности</h2>
+          <p>Честно, без лишних обещаний</p>
+        </div>
+
+        <div class="help-grid">
+          <div class="help-card reveal shine-effect">
+            <div class="help-icon"></div>
+            <h3>Разумные меры</h3>
+            <p>Мы стремимся поддерживать безопасную работу сайта, корректность страниц и минимизировать лишний сбор информации.</p>
+          </div>
+
+          <div class="help-card reveal d1 shine-effect">
+            <div class="help-icon"></div>
+            <h3>Нет абсолютной гарантии</h3>
+            <p>Ни один интернет-ресурс не может гарантировать полную защиту от всех технических рисков и внешних угроз.</p>
+          </div>
+
+          <div class="help-card reveal d2 shine-effect">
+            <div class="help-icon"></div>
+            <h3>Не наша модель</h3>
+            <p>Paytaoff не заявляет модель, основанную на продаже пользовательских данных как товарного актива.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- РАЗДЕЛ 7 -->
+  <section class="section">
+    <div class="container">
+      <div class="ios-f">
+        <div class="sh reveal">
+          <div class="sl">7. Возрастные ограничения</div>
+          <h2>Сайт только для 18+</h2>
+          <p>Это обязательное правило</p>
+        </div>
+
+        <div class="calc reveal" style="margin-top:0">
+          <div class="calc-l" style="grid-template-columns:1fr">
+            <div>
+              <p style="color:var(--muted);line-height:1.85;margin:0">
+                Paytaoff предназначен исключительно для совершеннолетних пользователей.
+                Если вам меньше 18 лет или возрастной порог в вашей юрисдикции выше,
+                вы обязаны покинуть сайт и не использовать его материалы.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- РАЗДЕЛ 8 -->
+  <section class="section">
+    <div class="container">
+      <div class="ios-f">
+        <div class="sh reveal">
+          <div class="sl">8. Права пользователя</div>
+          <h2>Что вы можете сделать</h2>
+          <p>Связь с пользователем должна быть понятной</p>
+        </div>
+
+        <div class="help-grid">
+          <div class="help-card reveal shine-effect">
+            <div class="help-icon"></div>
+            <h3>Задать вопрос</h3>
+            <p>Можно уточнить общий порядок работы сайта, аналитики и смысл этой страницы.</p>
+          </div>
+
+          <div class="help-card reveal d1 shine-effect">
+            <div class="help-icon"></div>
+            <h3>Сообщить об ошибке</h3>
+            <p>Если заметили неточность, устаревшие данные или логическую ошибку — можно написать нам.</p>
+          </div>
+
+          <div class="help-card reveal d2 shine-effect">
+            <div class="help-icon"></div>
+            <h3>Предложить улучшение</h3>
+            <p>Идеи по структуре, доверию, контенту и прозрачности сайта тоже приветствуются.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- РАЗДЕЛ 9 -->
+  <section class="section">
+    <div class="container">
+      <div class="ios-f">
+        <div class="sh reveal">
+          <div class="sl">9. Изменения политики</div>
+          <h2>Мы можем обновлять эту страницу</h2>
+          <p>Актуальная версия всегда должна быть на сайте</p>
+        </div>
+
+        <div class="calc reveal" style="margin-top:0">
+          <div class="calc-l" style="grid-template-columns:1fr">
+            <div>
+              <p style="color:var(--muted);line-height:1.85;margin:0 0 16px">
+                Политика конфиденциальности может обновляться при изменении структуры сайта,
+                аналитических инструментов, логики отдельных разделов или каналов связи.
+              </p>
+              <p style="color:var(--muted);line-height:1.85;margin:0">
+                Актуальная версия всегда публикуется на этой странице.
+                Продолжение использования сайта после обновления означает согласие пользователя
+                с действующей редакцией политики.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="ios-f">
+        <div class="sh reveal">
+          <div class="sl">FAQ</div>
+          <h2>Частые вопросы</h2>
+          <p>Короткие ответы на самое важное</p>
+        </div>
+
+        <div class="help-grid">
+          <div class="help-card reveal shine-effect">
+            <div class="help-icon"></div>
+            <h3>Собирает ли Paytaoff платёжные данные?</h3>
+            <p>Нет. Paytaoff не является казино и не обрабатывает депозиты или выводы средств.</p>
+          </div>
+
+          <div class="help-card reveal d1 shine-effect">
+            <div class="help-icon"></div>
+            <h3>Можно ли отключить cookies?</h3>
+            <p>Да, через настройки браузера. Но это может повлиять на работу отдельных функций сайта.</p>
+          </div>
+
+          <div class="help-card reveal d2 shine-effect">
+            <div class="help-icon"></div>
+            <h3>Зачем нужна Яндекс.Метрика?</h3>
+            <p>Она помогает понимать поведение аудитории, анализировать CTR и улучшать структуру страниц.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="cta reveal" style="padding:42px 28px">
+        <div class="hero-badge" style="margin:0 auto 16px">
+          <span class="pd"></span>
+          Нужна помощь?
+        </div>
+
+        <h2 style="font-size:clamp(28px,4vw,44px);font-weight:900;line-height:1.1;margin-bottom:12px">
+          Есть вопрос по этой странице?
+        </h2>
+
+        <p style="max-width:700px;margin:0 auto;color:rgba(255,255,255,.8);font-size:1.063rem;line-height:1.75">
+          Если тебе нужно уточнение по политике конфиденциальности, работе сайта или безопасности —
+          напиши нам. Мы стараемся объяснять всё просто и без лишней воды.
+        </p>
+
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px">
+          <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="cbtn ripple">Написать в Telegram →</a>
+          <a href="/about/" class="cbtn cbtn-gold ripple">О проекте →</a>
+        </div>
+
+        <div style="display:flex;gap:14px;justify-content:center;margin-top:20px;flex-wrap:wrap">
+          <div class="ti"><span>⚡</span> Быстрый ответ</div>
+          <div class="ti"><span>🔒</span> Безопаснее и понятнее</div>
+          <div class="ti"><span>✅</span> По-человечески</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ФУТЕР -->
+  <footer class="footer">
+    <div class="container">
+      <div class="fd">
+        <strong>⚠️ 18+</strong> — Paytaoff — независимый ресурс. Мы не казино. Партнёрские ссылки. Играйте ответственно.
+      </div>
+
+      <div class="f-wrap">
+        <div class="fg">
+          <div class="fa2">
+            <div class="fl2">
+              <img src="../avatar.png" alt="Paytaoff" class="i-avatar" style="animation:none">
+              <span>Paytaoff</span>
+            </div>
+
+            <p>Честные обзоры казино. 50+ критериев.</p>
+
+            <div class="security-badges" style="margin-top:12px;justify-content:flex-start">
+              <div class="security-badge ssl">SSL</div>
+              <div class="security-badge">✅ Независимый</div>
+            </div>
+          </div>
+
+          <div class="fcl">
+            <h4>Навигация</h4>
+            <ul class="fls">
+              <li><a href="/#top">Рейтинг</a></li>
+              <li><a href="/guide.html">Гид</a></li>
+              <li><a href="#contact">Помощь</a></li>
+              <li><a href="/quiz/">Подбор казино</a></li>
+            </ul>
+          </div>
+
+          <div class="fcl">
+            <h4>Информация</h4>
+            <ul class="fls">
+              <li><a href="/about/">О проекте</a></li>
+              <li><a href="/responsible-gaming/">Ответственная игра</a></li>
+              <li><a href="/privacy/">Конфиденциальность</a></li>
+              <li><a href="/terms/">Условия</a></li>
+              <li><a href="https://t.me/paytaoff" target="_blank">Telegram</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fbt">
+          <p>© 2026 Paytaoff</p>
+          <div style="display:flex;gap:8px;align-items:center">
+            <button class="share-btn" onclick="shareWebsite()">Поделиться</button>
+            <span class="fag">18+</span>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
+
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+  <div class="logo-tooltip" id="logoTooltip">Двойной клик = 🚀</div>
+
+  <script src="../script.js"></script>
 </body>
 </html>
