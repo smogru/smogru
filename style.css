@@ -713,3 +713,98 @@ body:hover .cg{opacity:1}
 }
 
 ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(124,58,237,.2);border-radius:3px}
+
+/* FAQ accordion */
+details.help-card {
+  position: relative;
+  overflow: hidden;
+}
+
+details.help-card summary {
+  list-style: none;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+  padding-right: 44px;
+}
+
+details.help-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  font-size: 1.18rem;
+  line-height: 1.45;
+}
+
+.faq-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.faq-text {
+  display: block;
+}
+
+details.help-card summary::after {
+  content: "⌄";
+  position: absolute;
+  right: 22px;
+  top: 26px;
+  font-size: 24px;
+  line-height: 1;
+  color: rgba(255,255,255,.78);
+  transition: transform .28s ease, color .28s ease, opacity .28s ease;
+  opacity: .9;
+}
+
+details.help-card[open] summary::after {
+  transform: rotate(180deg);
+  color: #9f72ff;
+}
+
+details.help-card p {
+  margin-top: 16px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+details.help-card[open] {
+  box-shadow:
+    0 0 0 1px rgba(159,114,255,.18) inset,
+    0 18px 50px rgba(90,50,180,.16);
+}
+
+details.help-card[open] summary {
+  color: #fff;
+}
+
+details.help-card:hover summary::after {
+  color: #b48cff;
+}
+
+@media (max-width: 768px) {
+  .faq-summary {
+    font-size: 1.05rem;
+    line-height: 1.45;
+  }
+
+  details.help-card summary {
+    padding-right: 38px;
+  }
+
+  details.help-card summary::after {
+    right: 18px;
+    top: 22px;
+    font-size: 22px;
+  }
+
+  .faq-icon {
+    font-size: 1.55rem;
+  }
+}
