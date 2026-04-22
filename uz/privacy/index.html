@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+
+  <title>Maxfiylik siyosati — Paytaoff O'zbekiston</title>
+  <meta name="description" content="Paytaoff maxfiylik siyosati: sayt qanday ma'lumotlarni olishi mumkin, cookies va analitika qanday ishlaydi, hamkorlik havolalari va javobgarlik chegaralari. 18+">
+  <meta name="theme-color" content="#060810">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://www.paytaoff.ru/uz/privacy/">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../style.css">
+
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) { return; }
+      }
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108420102', 'ym');
+
+    ym(108420102, 'init', {
+      ssr:true,
+      webvisor:true,
+      clickmap:true,
+      ecommerce:"dataLayer",
+      referrer: document.referrer,
+      url: location.href,
+      accurateTrackBounce:true,
+      trackLinks:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/108420102" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="comet comet-1"></div>
+  <div class="comet comet-2"></div>
+  <div class="comet comet-3"></div>
+  <div class="comet comet-4"></div>
+  <div class="comet comet-5"></div>
+  <div class="corner-glow corner-glow-tl"></div>
+  <div class="corner-glow corner-glow-br"></div>
+  <div class="space-ring space-ring-1"></div>
+  <div class="space-ring space-ring-2"></div>
+  <div class="nebula nebula-1"></div>
+  <div class="nebula nebula-2"></div>
+
+  <div class="bg-wrap">
+    <div class="bg-mesh"></div>
+    <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+    <div class="orbit o1"><div class="od"></div></div>
+    <div class="orbit o2"><div class="od"></div></div>
+    <div class="orbit o3"><div class="od"></div></div>
+    <div class="shooting-star" style="top:15%;left:20%;--d:6s;animation-delay:0s"></div>
+    <div class="shooting-star" style="top:35%;left:50%;--d:8s;animation-delay:3s"></div>
+    <div class="shooting-star" style="top:60%;left:10%;--d:7s;animation-delay:5s"></div>
+    <div class="shooting-star" style="top:80%;left:70%;--d:9s;animation-delay:7s"></div>
+    <div class="shooting-star" style="top:25%;left:85%;--d:7.5s;animation-delay:2s"></div>
+    <div class="shooting-star" style="top:45%;left:40%;--d:6.5s;animation-delay:1s"></div>
+    <div class="shooting-star" style="top:70%;left:60%;--d:8.5s;animation-delay:4s"></div>
+    <div class="shooting-star" style="top:10%;left:70%;--d:7s;animation-delay:6s"></div>
+    <div id="starsLayer"></div>
+  </div>
+
+  <canvas id="pc"></canvas>
+  <div class="cg" id="cursorGlow"></div>
+
+  <nav class="island" id="island">
+    <div class="i-logo"><a href="/uz/" style="display:flex;align-items:center;gap:10px"><img src="../../avatar.png" alt="Paytaoff" class="i-avatar"><span>Paytaoff</span></a></div>
+    <div class="i-div"></div>
+    <div class="i-links">
+      <a href="/uz/#top" class="i-link">🏆 Reyting</a>
+      <a href="/uz/guide.html" class="i-link">📖 Qo'llanma</a>
+      <a href="#contact" class="i-link">🛡️ Yordam</a>
+      <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="i-link i-link-tg">🎰 Kanal</a>
+    </div>
+    <div class="i-div"></div>
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Mavzuni almashtirish">🌙</button>
+    <div class="i-div"></div>
+    <button class="share-btn" onclick="shareWebsite()">🔗 Ulashish</button>
+    <div class="i-div"></div>
+    <div class="lang-wrap" id="langWrap">
+      <div class="lang-btn" onclick="toggleLang()"><span>🇺🇿</span><span>UZ</span><span class="lang-arrow">▼</span></div>
+      <div class="lang-dd">
+        <a href="/">🇷🇺 Россия</a>
+        <a href="/ua/">🇺🇦 Україна</a>
+        <a href="/by/">🇧🇾 Беларусь</a>
+        <a href="/uz/" class="active">🇺🇿 O'zbekiston</a>
+        <a href="/az/">🇦🇿 Azərbaycan</a>
+        <a href="/kg/">🇰🇬 Кыргызстан</a>
+      </div>
+    </div>
+    <div class="i-div"></div>
+    <div class="i-age">18+</div>
+    <div class="mob-nav-wrap" id="mobNavWrap">
+      <button class="mob-nav-toggle" id="mobNavToggle" onclick="toggleMobNav()"><span>☰</span><span class="mob-nav-label">Menyu</span></button>
+      <div class="mob-nav-dropdown" id="mobNavDropdown">
+        <a href="/uz/#top" onclick="closeMobNav()">🏆 Reyting</a>
+        <a href="/uz/guide.html" onclick="closeMobNav()">📖 Qo'llanma</a>
+        <a href="#contact" onclick="closeMobNav()">🛡️ Yordam</a>
+        <a href="https://t.me/paytaoff" target="_blank" rel="noopener" onclick="closeMobNav()">🎰 Kanal</a>
+        <div class="mob-nav-sep"></div>
+        <a href="/uz/about/" onclick="closeMobNav()">ℹ️ Loyiha haqida</a>
+        <a href="/uz/responsible-gaming/" onclick="closeMobNav()">🛡️ Mas'uliyatli o'yin</a>
+        <a href="/uz/privacy/" onclick="closeMobNav()">🔒 Maxfiylik</a>
+        <a href="/uz/terms/" onclick="closeMobNav()">📄 Shartlar</a>
+        <div class="mob-nav-sep"></div>
+        <a href="javascript:void(0)" onclick="toggleTheme();closeMobNav()">🎨 Mavzuni almashtirish</a>
+        <a href="javascript:void(0)" onclick="shareWebsite();closeMobNav()">🔗 Ulashish</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" style="min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:0 16px">
+    <div style="max-width:900px;margin:0 auto;width:100%">
+      <div class="ios-f" style="text-align:center;padding:44px 34px">
+        <div class="hero-badge" style="margin:0 auto 18px"><span class="pd"></span>Maxfiylik</div>
+        <h1 style="font-size:clamp(30px,5vw,56px);font-weight:900;line-height:1.08;margin-bottom:14px;letter-spacing:-2px">Maxfiylik <span class="gt">siyosati</span></h1>
+        <p style="font-size:1.063rem;color:var(--muted);max-width:720px;margin:0 auto 24px;line-height:1.7">Bu sahifada Paytaoff qanday ma'lumotlarni yig'ishi, ulardan qanday foydalanishi va foydalanuvchi ma'lumotlarini qanday himoya qilishi tushuntiriladi.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <a href="/uz/#top" class="btn btn-glow ripple"><span>Reytingni ko'rish</span></a>
+          <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="btn btn-ghost ripple"><span>Kanalimiz</span></a>
+        </div>
+        <div class="hero-trust" style="justify-content:center;margin-top:20px">
+          <div class="ti"><span>📅</span> So'nggi yangilanish: Mart 2026</div>
+          <div class="ti"><span>18+</span> Faqat kattalar uchun</div>
+          <div class="ti"><span>🔒</span> Ma'lumotlarni himoya qilish</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section"><div class="container"><div class="ios-f"><div class="sh reveal"><div class="sl">1. Umumiy qoidalar</div><h2>Bu sahifa nimani anglatadi</h2><p>Foydalanuvchi sayt bilan qanday munosabatda bo'lishini tushunishi uchun</p></div><div class="calc reveal" style="margin-top:0"><div class="calc-l" style="grid-template-columns:1fr"><div><p style="color:var(--muted);line-height:1.85;margin:0 0 16px">Ushbu Maxfiylik siyosati Paytaoff (keyingi o'rinlarda — «biz», «saytimiz») sayt foydalanuvchilari haqidagi ma'lumotlarni qanday yig'ishi, ulardan qanday foydalanishi va ularni qanday himoya qilishini tavsiflaydi.</p><p style="color:var(--muted);line-height:1.85;margin:0">Saytimizdan foydalanish orqali siz ushbu siyosat shartlariga rozilik bildirasiz. Agar rozi bo'lmasangiz — iltimos, saytni tark eting.</p></div></div></div></div></div></section>
+
+  <section class="section"><div class="container"><div class="ios-f"><div class="sh reveal"><div class="sl">2. Qanday ma'lumotlar yig'iladi</div><h2>Qaysi ma'lumotlarni olishimiz mumkin</h2><p>Bu yerda hammasi ochiq ko'rsatilgan</p></div><div class="help-grid">
+    <div class="help-card reveal shine-effect"><div class="help-icon">🤖</div><h3>2.1. Avtomatik yig'iladigan ma'lumotlar</h3><p>Saytga kirganingizda quyidagilar avtomatik tarzda yig'ilishi mumkin:</p><p style="margin-top:10px;color:var(--muted)">• IP-manzil (anonimlashtirilgan)<br>• Brauzer turi va versiyasi<br>• Operatsion tizim<br>• Kirilgan sahifalar<br>• Kirish sanasi va vaqti<br>• O'tish manbasi (referer)</p></div>
+    <div class="help-card reveal d1 shine-effect"><div class="help-icon">🍪</div><h3>2.2. Cookies</h3><p>Sayt cookies — brauzerda saqlanadigan kichik matn fayllaridan foydalanishi mumkin.</p><p style="margin-top:10px;color:var(--muted)">Cookies quyidagilar uchun kerak:<br>• Saytning to'g'ri ishlashi<br>• Foydalanuvchi sozlamalarini eslab qolish<br>• Trafikni tahlil qilish</p></div>
+    <div class="help-card reveal d2 shine-effect"><div class="help-icon">🚫</div><h3>2.3. Biz yig'maydigan ma'lumotlar</h3><p>Biz quyidagilarni yig'maymiz:</p><p style="margin-top:10px;color:var(--muted)">• Ism va familiya<br>• Elektron pochta manzillari (agar ularni o'zingiz yubormasangiz)<br>• To'lov ma'lumotlari<br>• Kazino login va parollari<br>• Moliyaviy tranzaksiya ma'lumotlari</p></div>
+  </div></div></div></section>
+
+  <section class="section"><div class="container"><div class="ios-f"><div class="sh reveal"><div class="sl">3. Ma'lumotlardan foydalanish</div><h2>Nima uchun bu ma'lumotlar kerak</h2><p>Faqat sayt sifati va xavfsizligi uchun</p></div><div class="calc reveal" style="margin-top:0"><div class="calc-l" style="grid-template-columns:1fr"><div><p style="color:var(--muted);line-height:1.85;margin:0 0 16px">Yig'ilgan ma'lumotlar quyidagilar uchun ishlatiladi:</p><p style="color:var(--muted);line-height:1.85;margin:0">• Sayt ishlashini va foydalanuvchi tajribasini yaxshilash<br>• Trafik va kontent ommabopligini tahlil qilish<br>• Sayt xavfsizligini ta'minlash<br>• Huquqiy majburiyatlarga rioya qilish</p><p style="color:var(--muted);line-height:1.85;margin:16px 0 0">Biz sizning shaxsiy ma'lumotlaringizni marketing maqsadlari uchun uchinchi shaxslarga sotmaymiz va bermaymiz.</p></div></div></div></div></div></section>
+
+  <section class="section"><div class="container"><div class="ios-f"><div class="sh reveal"><div class="sl">4. Uchinchi tomon servislar</div><h2>Tashqi servislar va havolalar</h2><p>Bunda ham shaffoflik muhim</p></div><div class="help-grid">
+    <div class="help-card reveal shine-effect"><div class="help-icon">📊</div><h3>Analitika servislar</h3><p>Sayt tashriflar bo'yicha anonim statistika yig'ish uchun uchinchi tomon analitika servislaridan foydalanishi mumkin.</p></div>
+    <div class="help-card reveal d1 shine-effect"><div class="help-icon">🔗</div><h3>Tashqi saytlar</h3><p>Bizning saytda tashqi saytlar, jumladan kazino saytlariga havolalar mavjud. Ularning maxfiylik siyosati uchun biz javobgar emasmiz.</p></div>
+    <div class="help-card reveal d2 shine-effect"><div class="help-icon">ℹ️</div><h3>Tavsiya</h3><p>Ro'yxatdan o'tishdan oldin tashqi saytlarning maxfiylik siyosati va shartlarini alohida o'qib chiqishni tavsiya qilamiz.</p></div>
+  </div></div></div></section>
+
+  <section class="section"><div class="container"><div class="ios-f"><div class="sh reveal"><div class="sl">5. Hamkorlik havolalari</div><h2>Affiliate-havolalar qanday ishlaydi</h2><p>Oddiy va ochiq tushuntirish</p></div><div class="calc reveal" style="margin-top:0"><div class="calc-l" style="grid-template-columns:1fr"><div><p style="color:var(--muted);line-height:1.85;margin:0 0 16px">Saytda hamkorlik (referal) havolalari bo'lishi mumkin. Bunday havolalar orqali o'tganda tashqi saytlar ro'yxatdan o'tishni kuzatish uchun o'z cookies fayllarini o'rnatishi mumkin. Bu affiliate marketingdagi standart amaliyot.</p><p style="color:var(--muted);line-height:1.85;margin:0">Biz cookies almashtirmaymiz, ko'rinmas zonali iframe ishlatmaymiz va kuzatuv bilan bog'liq boshqa manipulyatsiyalarni qo'llamaymiz.</p></div></div></div></div></div></section>
+
+  <section class="section"><div class="container"><div class="ios-f"><div class="sh reveal"><div class="sl">6. Ma'lumotlar xavfsizligi</div><h2>Biz nima qilamiz</h2><p>Foydalanuvchi ma'lumotlariga ehtiyotkor yondashamiz</p></div><div class="help-grid">
+    <div class="help-card reveal shine-effect"><div class="help-icon">🔐</div><h3>HTTPS va SSL</h3><p>Sayt HTTPS protokoli va SSL-shifrlash orqali ishlaydi.</p></div>
+    <div class="help-card reveal d1 shine-effect"><div class="help-icon">🧹</div><h3>Shaxsiy ma'lumotlarni saqlamaymiz</h3><p>Biz foydalanuvchilarning to'liq shaxsiy ma'lumotlarini saqlamaymiz.</p></div>
+    <div class="help-card reveal d2 shine-effect"><div class="help-icon">🔄</div><h3>Muntazam yangilanish</h3><p>Dasturiy ta'minotni muntazam yangilab turamiz va xavfsizlikka e'tibor beramiz.</p></div>
+  </div></div></div></section>
+
+  <section class="section"><div class="container"><div class="ios-f"><div class="sh reveal"><div class="sl">7. Foydalanuvchi huquqlari</div><h2>Siz nimalarga haqlisiz</h2><p>Bu yerda hammasi tushunarli bo'lishi kerak</p></div><div class="calc reveal" style="margin-top:0"><div class="calc-l" style="grid-template-columns:1fr"><div><p style="color:var(--muted);line-height:1.85;margin:0 0 16px">Siz quyidagilarga haqlisiz:</p><p style="color:var(--muted);line-height:1.85;margin:0 0 16px">• Biz saqlayotgan bo'lishimiz mumkin bo'lgan ma'lumotlar haqida so'rash<br>• Ma'lumotlaringizni o'chirishni so'rash<br>• Brauzer sozlamalarida cookies'ni o'chirish<br>• Saytdan foydalanishni to'xtatish</p><p style="color:var(--muted);line-height:1.85;margin:0 0 16px">Bu huquqlarni amalga oshirish uchun biz bilan Telegram orqali bog'laning.</p><a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="btn btn-glow ripple"><span>Yozish →</span></a></div></div></div></div></div></section>
+
+  <section class="section"><div class="container"><div class="ios-f"><div class="sh reveal"><div class="sl">8. Voyaga yetmaganlar</div><h2>Faqat 18+</h2><p>Bu majburiy qoidamiz</p></div><div class="help-grid">
+    <div class="help-card reveal shine-effect"><div class="help-icon">18+</div><h3>Yosh cheklovi</h3><p>Bizning sayt faqat 18 yoshdan oshgan foydalanuvchilar uchun mo'ljallangan.</p></div>
+    <div class="help-card reveal d1 shine-effect"><div class="help-icon">🚫</div><h3>Voyaga yetmaganlar uchun emas</h3><p>Agar siz 18 yoshga to'lmagan bo'lsangiz, saytni tark etishingiz kerak.</p></div>
+    <div class="help-card reveal d2 shine-effect"><div class="help-icon">🛡️</div><h3>Mas'uliyatli yondashuv</h3><p>Qimor bilan bog'liq kontent faqat ongli va mas'uliyatli yondashuvda ko'rib chiqilishi kerak.</p></div>
+  </div></div></div></section>
+
+  <section class="section" id="contact"><div class="container"><div class="ios-f"><div class="sh reveal"><div class="sl">9. Siyosatdagi o'zgarishlar</div><h2>Biz sahifani yangilashimiz mumkin</h2><p>Agar siyosat o'zgarsa, yangilangan versiya shu yerda bo'ladi</p></div><div class="calc reveal" style="margin-top:0"><div class="calc-l" style="grid-template-columns:1fr"><div><p style="color:var(--muted);line-height:1.85;margin:0 0 16px">Biz ushbu Maxfiylik siyosatini vaqti-vaqti bilan yangilash huquqini saqlab qolamiz. Saytdan foydalanishda davom etishingiz — amaldagi versiyaga rozilik bildirishingizni anglatadi.</p><p style="color:var(--muted);line-height:1.85;margin:0 0 16px">Agar savollar bo'lsa, Telegram orqali yozishingiz mumkin.</p><a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="btn btn-glow ripple"><span>Telegramda yozish →</span></a></div></div></div></div></div></section>
+
+  <footer class="footer"><div class="container"><div class="fd"><strong>⚠️ 18+</strong> — Paytaoff mustaqil resurs. Biz kazino emasmiz. Hamkorlik havolalari mavjud. Mas'uliyat bilan o'ynang.</div><div class="f-wrap"><div class="fg"><div class="fa2"><div class="fl2"><img src="../../avatar.png" alt="Paytaoff" class="i-avatar" style="animation:none"><span>Paytaoff</span></div><p>Halol kazino sharhlari. 50+ mezon.</p><div class="security-badges" style="margin-top:12px;justify-content:flex-start"><div class="security-badge ssl">SSL</div><div class="security-badge">✅ Mustaqil</div></div></div><div class="fcl"><h4>Navigatsiya</h4><ul class="fls"><li><a href="/uz/#top">Reyting</a></li><li><a href="/uz/guide.html">Qo'llanma</a></li><li><a href="#contact">Yordam</a></li><li><a href="/uz/quiz">Kazino tanlash</a></li></ul></div><div class="fcl"><h4>Ma'lumot</h4><ul class="fls"><li><a href="/uz/about/">Loyiha haqida</a></li><li><a href="/uz/responsible-gaming/">Mas'uliyatli o'yin</a></li><li><a href="/uz/privacy/">Maxfiylik</a></li><li><a href="/uz/terms/">Shartlar</a></li><li><a href="https://t.me/paytaoff" target="_blank" rel="noopener">Telegram</a></li></ul></div></div><div class="fbt"><p>© 2026 Paytaoff</p><div style="display:flex;gap:8px;align-items:center"><button class="share-btn" onclick="shareWebsite()">🔗 Ulashish</button><span class="fag">18+</span></div></div></div></div></footer>
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+  <div class="logo-tooltip" id="logoTooltip">Ikki marta bosish = 🚀</div>
+  <script src="../../script.js"></script>
+</body>
+</html>
