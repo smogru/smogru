@@ -394,76 +394,89 @@ const casinos={
     'arkada':{name:'Arkada Casino',emoji:'🎰',rating:'9.4',stars:'★★★★★',bonus:'200% gacha',promo:null,promoDesc:null,url:'https://grid-cyberlane.com/s98fda0f8',img:'../../img/arkada.png',btnClass:'',tags:['5000+ o‘yin','Uslubli','Katta bonus']},
     'catcasino':{name:'CatCasino',emoji:'🐱',rating:'9.2',stars:'★★★★★',bonus:'325% gacha',promo:null,promoDesc:null,url:'https://catchthecatthree.com/sb716b632',img:'../../img/catcasino.png',btnClass:'',tags:['4000+ o‘yin','Turnirlar','Loyallik']},
     'kometa':{name:'Kometa',emoji:'☄️',rating:'9.0',stars:'★★★★☆',bonus:'255% gacha',promo:null,promoDesc:null,url:'https://searing-path.com/s2e02d62f',img:'../../img/kometa.png',btnClass:'',tags:['3500+ o‘yin','Kosmos','Keshbek']},
-    'kent':{name:'Kent',emoji:'🎩',rating:'8.8',stars:'★★★★☆',bonus:'150% gacha',promo:null,promoDesc:null,url:'https://mealmenalc.com/s4882a91c',img:'../../img/kent.png',btnClass:'',tags:['3000+ o‘yin','VIP','Nafis']}
+    'kent':{name:'Kent',emoji:'🎩',rating:'8.8',stars:'★★★★☆',bonus:'150% gacha',promo:null,promoDesc:null,url:'https://mealmenalc.com/s4882a91c',img:'../../img/kent.png',btnClass:'',tags:['3000+ o‘yin','VIP','Nafis']},
+
+    'gama':{name:'Gama',emoji:'🎮',rating:'8.9',stars:'★★★★☆',bonus:'250 FS birinchi depozitga',promo:null,promoDesc:null,url:'https://preesiader.com/s6ymxhm48',img:'../../img/gama.png',btnClass:'',tags:['Yangi kazino','250 FS','Oddiy start','Slotlar']},
+    'daddy':{name:'Daddy',emoji:'💸',rating:'9.1',stars:'★★★★☆',bonus:'+50% + 200 FS',promo:null,promoDesc:null,url:'https://void-racer.com/squfnn5dq',img:'../../img/daddy.png',btnClass:'',tags:['Yangi kazino','Welcome bonus','200 FS','Mobil']},
+    'r7':{name:'R7',emoji:'🚀',rating:'9.0',stars:'★★★★☆',bonus:'+100% + 100 FS',promo:null,promoDesc:null,url:'https://cosmic-overdrive.com/s41994656',img:'../../img/r7.png',btnClass:'',tags:['Balans','100 FS','Tez start','Bonus']}
 };
 
 function addPoints(scoreMap, payload){
-    Object.entries(payload).forEach(([key,val])=>scoreMap[key]+=val);
+    Object.entries(payload).forEach(([key,val])=>{
+        if(scoreMap[key] !== undefined){
+            scoreMap[key]+=val;
+        }
+    });
 }
 
 function score(){
     let s={};Object.keys(casinos).forEach(k=>s[k]=0);const a=answers;
 
-    if(a[1]==='speed') addPoints(s,{luckybear:4,'1win':2,mellstroy:2,arkada:1});
-    if(a[1]==='bonus') addPoints(s,{mellstroy:4,luckybear:2,arkada:2,'1win':1});
-    if(a[1]==='games') addPoints(s,{arkada:3,catcasino:3,'1win':2,mellstroy:1});
-    if(a[1]==='safety') addPoints(s,{kent:4,'1win':2,arkada:2,catcasino:1});
+    if(a[1]==='speed') addPoints(s,{luckybear:4,'1win':2,mellstroy:2,arkada:1,r7:2});
+    if(a[1]==='bonus') addPoints(s,{mellstroy:4,luckybear:2,arkada:2,'1win':1,daddy:2,r7:1});
+    if(a[1]==='games') addPoints(s,{arkada:3,catcasino:3,'1win':2,mellstroy:1,gama:1});
+    if(a[1]==='safety') addPoints(s,{kent:4,'1win':2,arkada:2,catcasino:1,r7:1});
     if(a[1]==='vip') addPoints(s,{kent:4,mellstroy:3,'1win':1});
 
-    if(a[2]==='slots') addPoints(s,{arkada:3,catcasino:3,'1win':2,kometa:2});
-    if(a[2]==='live') addPoints(s,{'1win':3,mellstroy:2,kent:2});
+    if(a[2]==='slots') addPoints(s,{arkada:3,catcasino:3,'1win':2,kometa:2,gama:2,luckybear:1});
+    if(a[2]==='live') addPoints(s,{'1win':3,mellstroy:2,kent:2,r7:1});
     if(a[2]==='sports') addPoints(s,{'1win':6,mellstroy:1});
-    if(a[2]==='crash') addPoints(s,{luckybear:3,mellstroy:3,'1win':2});
-    if(a[2]==='table') addPoints(s,{kent:4,'1win':2,catcasino:1});
+    if(a[2]==='crash') addPoints(s,{luckybear:3,mellstroy:3,'1win':2,r7:2});
+    if(a[2]==='table') addPoints(s,{kent:4,'1win':2,catcasino:1,daddy:1});
 
-    if(a[3]==='card') addPoints(s,{arkada:2,catcasino:2,kent:2,'1win':1,kometa:1});
+    if(a[3]==='card') addPoints(s,{arkada:2,catcasino:2,kent:2,'1win':1,kometa:1,daddy:1,r7:1});
     if(a[3]==='crypto') addPoints(s,{mellstroy:4,luckybear:4,'1win':1});
-    if(a[3]==='ewallet') addPoints(s,{catcasino:2,'1win':2,arkada:1});
-    if(a[3]==='sbp') addPoints(s,{'1win':3,arkada:2,luckybear:1});
+    if(a[3]==='ewallet') addPoints(s,{catcasino:2,'1win':2,arkada:1,gama:1});
+    if(a[3]==='sbp') addPoints(s,{'1win':3,arkada:2,luckybear:1,r7:1});
 
-    if(a[4]==='mobile') addPoints(s,{'1win':2,luckybear:2,mellstroy:2});
+    if(a[4]==='mobile') addPoints(s,{'1win':2,luckybear:2,mellstroy:2,daddy:2,r7:1});
     if(a[4]==='pc') addPoints(s,{kent:2,catcasino:2,arkada:3});
-    if(a[4]==='both') addPoints(s,{'1win':2,arkada:2,mellstroy:1,luckybear:1});
+    if(a[4]==='both') addPoints(s,{'1win':2,arkada:2,mellstroy:1,luckybear:1,daddy:1,r7:1});
 
-    if(a[5]==='bigbonus') addPoints(s,{mellstroy:4,'1win':2,luckybear:2,arkada:1});
+    if(a[5]==='bigbonus') addPoints(s,{mellstroy:4,'1win':2,luckybear:2,arkada:1,daddy:2,r7:2});
     if(a[5]==='cashback') addPoints(s,{kometa:4,catcasino:2,kent:2});
-    if(a[5]==='freespins') addPoints(s,{mellstroy:3,'1win':2,luckybear:2,catcasino:1});
+    if(a[5]==='freespins') addPoints(s,{mellstroy:3,'1win':2,luckybear:2,catcasino:1,gama:3,daddy:1,r7:1});
     if(a[5]==='tournament') addPoints(s,{catcasino:4,'1win':2,arkada:1});
     if(a[5]==='wheel') addPoints(s,{luckybear:6,mellstroy:1});
 
-    if(a[6]==='instant') addPoints(s,{luckybear:4,mellstroy:3,'1win':2});
-    if(a[6]==='fast') addPoints(s,{arkada:2,kometa:2,'1win':2,luckybear:1});
-    if(a[6]==='normal') addPoints(s,{catcasino:2,kent:2,kometa:1});
+    if(a[6]==='instant') addPoints(s,{luckybear:4,mellstroy:3,'1win':2,r7:2,daddy:1});
+    if(a[6]==='fast') addPoints(s,{arkada:2,kometa:2,'1win':2,luckybear:1,r7:1});
+    if(a[6]==='normal') addPoints(s,{catcasino:2,kent:2,kometa:1,gama:1});
 
-    if(a[7]==='theme') addPoints(s,{kometa:3,luckybear:2,mellstroy:2});
+    if(a[7]==='theme') addPoints(s,{kometa:3,luckybear:2,mellstroy:2,gama:1});
     if(a[7]==='classic') addPoints(s,{kent:4,arkada:2});
-    if(a[7]==='modern') addPoints(s,{mellstroy:3,luckybear:2,'1win':2});
-    if(a[7]==='nocare') addPoints(s,{'1win':1,catcasino:1,arkada:1,luckybear:1});
+    if(a[7]==='modern') addPoints(s,{mellstroy:3,luckybear:2,'1win':2,daddy:2,r7:2,gama:1});
+    if(a[7]==='nocare') addPoints(s,{'1win':1,catcasino:1,arkada:1,luckybear:1,r7:1});
 
-    if(a[8]==='newbie') addPoints(s,{arkada:3,luckybear:2,'1win':2,catcasino:1});
-    if(a[8]==='medium') addPoints(s,{catcasino:2,kometa:2,'1win':2,mellstroy:2});
+    if(a[8]==='newbie') addPoints(s,{arkada:3,luckybear:2,'1win':2,catcasino:1,gama:3,daddy:2});
+    if(a[8]==='medium') addPoints(s,{catcasino:2,kometa:2,'1win':2,mellstroy:2,r7:2});
     if(a[8]==='pro') addPoints(s,{mellstroy:3,kent:3,luckybear:2,'1win':1});
 
-    if(a[9]==='small') addPoints(s,{arkada:3,luckybear:2,kometa:2});
-    if(a[9]==='medium') addPoints(s,{catcasino:3,'1win':2,mellstroy:2});
+    if(a[9]==='small') addPoints(s,{arkada:3,luckybear:2,kometa:2,gama:2,daddy:1});
+    if(a[9]==='medium') addPoints(s,{catcasino:3,'1win':2,mellstroy:2,r7:2});
     if(a[9]==='big') addPoints(s,{mellstroy:4,kent:3,'1win':2});
 
-    if(a[10]==='app') addPoints(s,{'1win':3,mellstroy:1,luckybear:1});
-    if(a[10]==='support') addPoints(s,{'1win':2,catcasino:2,arkada:2,kent:1});
-    if(a[10]==='promo') addPoints(s,{catcasino:3,kometa:2,luckybear:2,mellstroy:1});
+    if(a[10]==='app') addPoints(s,{'1win':3,mellstroy:1,luckybear:1,daddy:2,r7:1});
+    if(a[10]==='support') addPoints(s,{'1win':2,catcasino:2,arkada:2,kent:1,daddy:1});
+    if(a[10]==='promo') addPoints(s,{catcasino:3,kometa:2,luckybear:2,mellstroy:1,daddy:2,r7:1});
     if(a[10]==='stream') addPoints(s,{mellstroy:5,luckybear:2});
-    if(a[10]==='nothing') addPoints(s,{'1win':1,mellstroy:1,luckybear:1,catcasino:1});
+    if(a[10]==='nothing') addPoints(s,{'1win':1,mellstroy:1,luckybear:1,catcasino:1,daddy:1,r7:1,gama:1});
 
     if(a[2]==='sports' && a[4]!=='pc') addPoints(s,{'1win':2});
     if(a[3]==='crypto' && a[6]==='instant') addPoints(s,{luckybear:2,mellstroy:2});
     if(a[5]==='wheel' && (a[8]==='newbie' || a[8]==='medium')) addPoints(s,{luckybear:2});
     if(a[1]==='vip' && a[9]==='big') addPoints(s,{kent:3,mellstroy:2});
     if(a[10]==='stream' && a[8]==='pro') addPoints(s,{mellstroy:2,luckybear:1});
-    if(a[1]==='games' && a[2]==='slots') addPoints(s,{arkada:2,catcasino:2,'1win':1});
+    if(a[1]==='games' && a[2]==='slots') addPoints(s,{arkada:2,catcasino:2,'1win':1,gama:1});
     if(a[7]==='classic' && a[2]==='table') addPoints(s,{kent:3});
-    if(a[8]==='newbie' && a[9]==='small') addPoints(s,{arkada:2,luckybear:1});
+    if(a[8]==='newbie' && a[9]==='small') addPoints(s,{arkada:2,luckybear:1,gama:1,daddy:1});
     if(a[1]==='speed' && a[3]==='crypto') addPoints(s,{luckybear:2,mellstroy:1});
     if(a[1]==='safety' && a[10]==='support') addPoints(s,{kent:2,arkada:1,'1win':1});
+    if(a[1]==='bonus' && a[5]==='freespins') addPoints(s,{gama:2,daddy:2,luckybear:1});
+    if(a[4]==='mobile' && a[8]==='newbie') addPoints(s,{daddy:2,gama:1});
+    if(a[5]==='bigbonus' && a[9]==='medium') addPoints(s,{r7:2,daddy:1});
+    if(a[6]==='instant' && a[9]==='medium') addPoints(s,{r7:2});
+    if(a[7]==='modern' && a[1]==='bonus') addPoints(s,{daddy:2,r7:1});
 
     if(a[2]!=='sports') s['1win']=Math.max(0,s['1win']-1);
 
@@ -582,12 +595,14 @@ function showResult(){
     h+=`</div>`;
     h+=`<div class="winner-tags">${w.tags.map(t=>`<span class="winner-tag">✓ ${t}</span>`).join('')}</div>`;
     h+=`<div class="winner-bonus"><div class="winner-bonus-l">Bonus</div><div class="winner-bonus-v">${w.bonus}</div></div>`;
+
     if(w.promo){
         h+=`<div class="winner-promo" onclick="copyPromo('${w.promo}', this)">`;
         h+=`<div class="winner-promo-l">📋 Promokod — nusxalash uchun bosing</div>`;
         h+=`<div class="winner-promo-c">${w.promo}</div>`;
         h+=`<div class="winner-promo-d">${w.promoDesc}</div></div>`;
     }
+
     h+=`<a href="${w.url}" target="_blank" rel="noopener" class="winner-btn ${w.btnClass}">🏆 O‘tish — senga eng mos variant →</a>`;
     h+=`</div>`;
 
