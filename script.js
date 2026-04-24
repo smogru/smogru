@@ -280,3 +280,20 @@ if(!isM){
         });
     }
 }
+/* FAQ premium accordion */
+document.querySelectorAll('.faq-q').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    if (!item) return;
+
+    const isActive = item.classList.contains('active');
+
+    document.querySelectorAll('.faq-item').forEach((el) => {
+      el.classList.remove('active');
+    });
+
+    if (!isActive) {
+      item.classList.add('active');
+    }
+  });
+});
