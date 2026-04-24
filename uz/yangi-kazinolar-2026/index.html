@@ -48,6 +48,113 @@
       <img src="https://mc.yandex.ru/watch/108420102" style="position:absolute; left:-9999px;" alt="">
     </div>
   </noscript>
+
+  <style>
+    /* FAQ premium accordion — page only */
+    .faq-accordion{
+      display:grid;
+      gap:16px;
+      margin-top:10px;
+    }
+    .faq-item{
+      border:1px solid rgba(140,90,255,.14);
+      border-radius:28px;
+      background:linear-gradient(135deg, rgba(33,13,92,.88), rgba(15,10,64,.92));
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.02) inset,
+        0 20px 50px rgba(25,10,70,.28);
+      overflow:hidden;
+      transition:box-shadow .28s ease, border-color .28s ease, transform .28s ease;
+    }
+    .faq-item:hover{
+      border-color:rgba(159,114,255,.28);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.03) inset,
+        0 24px 60px rgba(55,25,120,.32);
+    }
+    .faq-item.active{
+      border-color:rgba(159,114,255,.32);
+      box-shadow:
+        0 0 0 1px rgba(159,114,255,.14) inset,
+        0 24px 70px rgba(70,30,150,.28);
+    }
+    .faq-q{
+      width:100%;
+      border:0;
+      background:transparent;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:24px 26px;
+      cursor:pointer;
+      text-align:left;
+      font:inherit;
+    }
+    .faq-q-left{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
+    .faq-q-icon{
+      font-size:1.45rem;
+      line-height:1;
+      flex-shrink:0;
+    }
+    .faq-q-text{
+      font-weight:800;
+      font-size:1.13rem;
+      line-height:1.45;
+      color:#eaeaff;
+    }
+    .faq-q-arrow{
+      width:34px;
+      height:34px;
+      flex-shrink:0;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      font-size:1.2rem;
+      font-weight:800;
+      color:rgba(255,255,255,.86);
+      background:rgba(255,255,255,.05);
+      transition:transform .28s ease, background .28s ease, color .28s ease;
+    }
+    .faq-item.active .faq-q-arrow{
+      transform:rotate(45deg);
+      background:rgba(159,114,255,.16);
+      color:#b58bff;
+    }
+    .faq-a{
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .35s ease, opacity .25s ease, padding .25s ease;
+      opacity:0;
+      padding:0 26px;
+    }
+    .faq-item.active .faq-a{
+      max-height:240px;
+      opacity:1;
+      padding:0 26px 24px;
+    }
+    .faq-a p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.82;
+      font-size:1rem;
+    }
+    @media (max-width: 768px){
+      .faq-q{padding:20px 20px}
+      .faq-q-left{gap:12px}
+      .faq-q-icon{font-size:1.25rem}
+      .faq-q-text{font-size:1rem;line-height:1.42}
+      .faq-q-arrow{width:30px;height:30px;font-size:1.05rem}
+      .faq-item.active .faq-a{padding:0 20px 20px}
+      .faq-a{padding:0 20px}
+    }
+  </style>
 </head>
 
 <body>
@@ -221,6 +328,7 @@
         </div>
 
         <div class="cc-wrap">
+          <!-- #1 -->
           <div class="cc-hero reveal shine-effect">
             <div class="glass-shine"></div>
             <div class="rk rk1">1</div>
@@ -276,6 +384,7 @@
           </div>
 
           <div class="cc-grid cc-grid-6">
+            <!-- #2 -->
             <div class="cc reveal d1 shine-effect">
               <div class="rk rk2">2</div>
               <div class="bb bb-fire">🔥 Yangi</div>
@@ -309,6 +418,7 @@
               <a href="/reviews/mellstroy/" class="crb">📖 Sharh</a>
             </div>
 
+            <!-- #3 -->
             <div class="cc reveal d2 shine-effect">
               <div class="rk rk3">3</div>
               <div class="bb bb-bear">🐻 Yangi</div>
@@ -348,6 +458,7 @@
               <a href="/reviews/luckybear/" class="crb">📖 Sharh</a>
             </div>
 
+            <!-- #4 -->
             <div class="cc reveal d3 shine-effect">
               <div class="rk rk4">4</div>
               <div class="casino-img-wrap">
@@ -380,6 +491,7 @@
               <a href="/reviews/arkada/" class="crb">📖 Sharh</a>
             </div>
 
+            <!-- #5 -->
             <div class="cc reveal d4 shine-effect">
               <div class="rk rk5">5</div>
               <div class="casino-img-wrap">
@@ -412,6 +524,7 @@
               <a href="/reviews/catcasino/" class="crb">📖 Sharh</a>
             </div>
 
+            <!-- #6 -->
             <div class="cc reveal d5 shine-effect">
               <div class="rk rk6">6</div>
               <div class="casino-img-wrap">
@@ -444,6 +557,7 @@
               <a href="/reviews/kometa/" class="crb">📖 Sharh</a>
             </div>
 
+            <!-- #7 -->
             <div class="cc reveal d5 shine-effect">
               <div class="rk rk7">7</div>
               <div class="casino-img-wrap">
@@ -484,6 +598,7 @@
           </div>
 
           <div class="cc-grid cc-grid-6">
+            <!-- #8 -->
             <div class="cc reveal d1 shine-effect">
               <div class="rk">8</div>
               <div class="bb">🆕 Fresh</div>
@@ -517,6 +632,7 @@
               <a href="/uz/quiz" class="crb">🎯 Quiz</a>
             </div>
 
+            <!-- #9 -->
             <div class="cc reveal d2 shine-effect">
               <div class="rk">9</div>
               <div class="bb">🔥 Hot bonus</div>
@@ -550,6 +666,7 @@
               <a href="/uz/quiz" class="crb">🎯 Quiz</a>
             </div>
 
+            <!-- #10 -->
             <div class="cc reveal d3 shine-effect">
               <div class="rk">10</div>
               <div class="bb">⚡ Top start</div>
@@ -597,73 +714,103 @@
           <p>Yangi kazino sahifasi bo'yicha eng muhim savollar va qisqa javoblar.</p>
         </div>
 
-        <div class="help-grid">
-          <details class="help-card reveal shine-effect" open>
-            <summary class="faq-summary">
-              <span class="faq-icon">❓</span>
-              <span class="faq-text">Bu sahifa nimasi bilan farq qiladi?</span>
-            </summary>
-            <p>
-              Bu sahifada asosiy reytingdagi barcha kazino saytlari saqlangan,
-              ularga qo'shimcha ravishda esa 3 ta yangi kazino qo'shilgan:
-              Gama, Daddy va R7.
-            </p>
-          </details>
+        <div class="faq-accordion reveal">
+          <div class="faq-item active">
+            <button class="faq-q" type="button">
+              <span class="faq-q-left">
+                <span class="faq-q-icon">❓</span>
+                <span class="faq-q-text">Bu sahifa nimasi bilan farq qiladi?</span>
+              </span>
+              <span class="faq-q-arrow">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Bu sahifada asosiy reytingdagi barcha kazino saytlari saqlangan,
+                ularga qo'shimcha ravishda esa 3 ta yangi kazino qo'shilgan:
+                Gama, Daddy va R7.
+              </p>
+            </div>
+          </div>
 
-          <details class="help-card reveal d1 shine-effect">
-            <summary class="faq-summary">
-              <span class="faq-icon">🆕</span>
-              <span class="faq-text">Qaysi kazinolar yangi qo'shilgan?</span>
-            </summary>
-            <p>
-              Pastki blokda yangi qo'shilgan 3 ta platforma bor:
-              Gama, Daddy va R7. Ular asosiy reytingga qo'shimcha variant sifatida kiritilgan.
-            </p>
-          </details>
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              <span class="faq-q-left">
+                <span class="faq-q-icon">🆕</span>
+                <span class="faq-q-text">Qaysi kazinolar yangi qo'shilgan?</span>
+              </span>
+              <span class="faq-q-arrow">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Pastki blokda yangi qo'shilgan 3 ta platforma bor:
+                Gama, Daddy va R7. Ular asosiy reytingga qo'shimcha variant sifatida kiritilgan.
+              </p>
+            </div>
+          </div>
 
-          <details class="help-card reveal d2 shine-effect">
-            <summary class="faq-summary">
-              <span class="faq-icon">🎁</span>
-              <span class="faq-text">Yangi kazinolar bonusliroq bo'ladimi?</span>
-            </summary>
-            <p>
-              Ko'pincha yangi platformalar foydalanuvchini jalb qilish uchun
-              kuchliroq start bonuslari, free spins yoki foizli takliflar beradi.
-            </p>
-          </details>
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              <span class="faq-q-left">
+                <span class="faq-q-icon">🎁</span>
+                <span class="faq-q-text">Yangi kazinolar bonusliroq bo'ladimi?</span>
+              </span>
+              <span class="faq-q-arrow">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Ko'pincha yangi platformalar foydalanuvchini jalb qilish uchun
+                kuchliroq start bonuslari, free spins yoki foizli takliflar beradi.
+              </p>
+            </div>
+          </div>
 
-          <details class="help-card reveal d3 shine-effect">
-            <summary class="faq-summary">
-              <span class="faq-icon">🎯</span>
-              <span class="faq-text">Qaysi biri menga mosligini qanday bilaman?</span>
-            </summary>
-            <p>
-              Agar ikkilanayotgan bo'lsangiz, quiz orqali o'zingizga mos kazino uslubini
-              tezroq aniqlashingiz mumkin. Bu tanlovni osonlashtiradi.
-            </p>
-          </details>
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              <span class="faq-q-left">
+                <span class="faq-q-icon">🎯</span>
+                <span class="faq-q-text">Qaysi biri menga mosligini qanday bilaman?</span>
+              </span>
+              <span class="faq-q-arrow">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Agar ikkilanayotgan bo'lsangiz, quiz orqali o'zingizga mos kazino uslubini
+                tezroq aniqlashingiz mumkin. Bu tanlovni osonlashtiradi.
+              </p>
+            </div>
+          </div>
 
-          <details class="help-card reveal d4 shine-effect">
-            <summary class="faq-summary">
-              <span class="faq-icon">📱</span>
-              <span class="faq-text">Telefon orqali foydalanish qulaymi?</span>
-            </summary>
-            <p>
-              Ha, ko'p onlayn kazino saytlar mobil versiyaga moslashgan.
-              Shuning uchun telefon orqali ko'rish, ro'yxatdan o'tish va foydalanish odatda qulay bo'ladi.
-            </p>
-          </details>
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              <span class="faq-q-left">
+                <span class="faq-q-icon">📱</span>
+                <span class="faq-q-text">Telefon orqali foydalanish qulaymi?</span>
+              </span>
+              <span class="faq-q-arrow">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Ha, ko'p onlayn kazino saytlar mobil versiyaga moslashgan.
+                Shuning uchun telefon orqali ko'rish, ro'yxatdan o'tish va foydalanish odatda qulay bo'ladi.
+              </p>
+            </div>
+          </div>
 
-          <details class="help-card reveal d5 shine-effect">
-            <summary class="faq-summary">
-              <span class="faq-icon">⚖️</span>
-              <span class="faq-text">Kazino tanlashda nimaga qarash kerak?</span>
-            </summary>
-            <p>
-              Bonus hajmi, o'yinlar soni, to'lov tezligi, mobil qulaylik va umumiy interfeys —
-              bularning hammasi tanlovda muhim rol o'ynaydi.
-            </p>
-          </details>
+          <div class="faq-item">
+            <button class="faq-q" type="button">
+              <span class="faq-q-left">
+                <span class="faq-q-icon">⚖️</span>
+                <span class="faq-q-text">Kazino tanlashda nimaga qarash kerak?</span>
+              </span>
+              <span class="faq-q-arrow">+</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Bonus hajmi, o'yinlar soni, to'lov tezligi, mobil qulaylik va umumiy interfeys —
+                bularning hammasi tanlovda muhim rol o'ynaydi.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -768,5 +915,23 @@
   <div class="logo-tooltip" id="logoTooltip">Ikki marta bosish = 🚀</div>
 
   <script src="../../script.js"></script>
+  <script>
+    document.querySelectorAll('.faq-q').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        if (!item) return;
+
+        const isActive = item.classList.contains('active');
+
+        document.querySelectorAll('.faq-item').forEach((el) => {
+          el.classList.remove('active');
+        });
+
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
