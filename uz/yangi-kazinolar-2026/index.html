@@ -51,11 +51,14 @@
 
   <style>
     /* FAQ premium accordion — page only */
-    .faq-accordion{
+    .faq-accordion-grid{
       display:grid;
-      gap:16px;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:18px;
+      align-items:start;
       margin-top:10px;
     }
+
     .faq-item{
       border:1px solid rgba(140,90,255,.14);
       border-radius:28px;
@@ -66,18 +69,21 @@
       overflow:hidden;
       transition:box-shadow .28s ease, border-color .28s ease, transform .28s ease;
     }
+
     .faq-item:hover{
       border-color:rgba(159,114,255,.28);
       box-shadow:
         0 0 0 1px rgba(255,255,255,.03) inset,
         0 24px 60px rgba(55,25,120,.32);
     }
+
     .faq-item.active{
       border-color:rgba(159,114,255,.32);
       box-shadow:
         0 0 0 1px rgba(159,114,255,.14) inset,
         0 24px 70px rgba(70,30,150,.28);
     }
+
     .faq-q{
       width:100%;
       border:0;
@@ -92,23 +98,27 @@
       text-align:left;
       font:inherit;
     }
+
     .faq-q-left{
       display:flex;
       align-items:center;
       gap:14px;
       min-width:0;
     }
+
     .faq-q-icon{
       font-size:1.45rem;
       line-height:1;
       flex-shrink:0;
     }
+
     .faq-q-text{
       font-weight:800;
       font-size:1.13rem;
       line-height:1.45;
       color:#eaeaff;
     }
+
     .faq-q-arrow{
       width:34px;
       height:34px;
@@ -122,37 +132,74 @@
       background:rgba(255,255,255,.05);
       transition:transform .28s ease, background .28s ease, color .28s ease;
     }
+
     .faq-item.active .faq-q-arrow{
       transform:rotate(45deg);
       background:rgba(159,114,255,.16);
       color:#b58bff;
     }
+
     .faq-a{
       max-height:0;
       overflow:hidden;
-      transition:max-height .35s ease, opacity .25s ease, padding .25s ease;
       opacity:0;
       padding:0 26px;
+      transition:max-height .35s ease, opacity .25s ease, padding .25s ease;
     }
+
     .faq-item.active .faq-a{
-      max-height:240px;
       opacity:1;
       padding:0 26px 24px;
     }
+
     .faq-a p{
       margin:0;
       color:var(--muted);
       line-height:1.82;
       font-size:1rem;
     }
+
+    @media (max-width: 1100px){
+      .faq-accordion-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+      }
+    }
+
     @media (max-width: 768px){
-      .faq-q{padding:20px 20px}
-      .faq-q-left{gap:12px}
-      .faq-q-icon{font-size:1.25rem}
-      .faq-q-text{font-size:1rem;line-height:1.42}
-      .faq-q-arrow{width:30px;height:30px;font-size:1.05rem}
-      .faq-item.active .faq-a{padding:0 20px 20px}
-      .faq-a{padding:0 20px}
+      .faq-accordion-grid{
+        grid-template-columns:1fr;
+      }
+
+      .faq-q{
+        padding:20px 20px;
+      }
+
+      .faq-q-left{
+        gap:12px;
+      }
+
+      .faq-q-icon{
+        font-size:1.25rem;
+      }
+
+      .faq-q-text{
+        font-size:1rem;
+        line-height:1.42;
+      }
+
+      .faq-q-arrow{
+        width:30px;
+        height:30px;
+        font-size:1.05rem;
+      }
+
+      .faq-a{
+        padding:0 20px;
+      }
+
+      .faq-item.active .faq-a{
+        padding:0 20px 20px;
+      }
     }
   </style>
 </head>
@@ -328,7 +375,6 @@
         </div>
 
         <div class="cc-wrap">
-          <!-- #1 -->
           <div class="cc-hero reveal shine-effect">
             <div class="glass-shine"></div>
             <div class="rk rk1">1</div>
@@ -384,7 +430,6 @@
           </div>
 
           <div class="cc-grid cc-grid-6">
-            <!-- #2 -->
             <div class="cc reveal d1 shine-effect">
               <div class="rk rk2">2</div>
               <div class="bb bb-fire">🔥 Yangi</div>
@@ -418,7 +463,6 @@
               <a href="/reviews/mellstroy/" class="crb">📖 Sharh</a>
             </div>
 
-            <!-- #3 -->
             <div class="cc reveal d2 shine-effect">
               <div class="rk rk3">3</div>
               <div class="bb bb-bear">🐻 Yangi</div>
@@ -458,7 +502,6 @@
               <a href="/reviews/luckybear/" class="crb">📖 Sharh</a>
             </div>
 
-            <!-- #4 -->
             <div class="cc reveal d3 shine-effect">
               <div class="rk rk4">4</div>
               <div class="casino-img-wrap">
@@ -491,7 +534,6 @@
               <a href="/reviews/arkada/" class="crb">📖 Sharh</a>
             </div>
 
-            <!-- #5 -->
             <div class="cc reveal d4 shine-effect">
               <div class="rk rk5">5</div>
               <div class="casino-img-wrap">
@@ -524,7 +566,6 @@
               <a href="/reviews/catcasino/" class="crb">📖 Sharh</a>
             </div>
 
-            <!-- #6 -->
             <div class="cc reveal d5 shine-effect">
               <div class="rk rk6">6</div>
               <div class="casino-img-wrap">
@@ -557,7 +598,6 @@
               <a href="/reviews/kometa/" class="crb">📖 Sharh</a>
             </div>
 
-            <!-- #7 -->
             <div class="cc reveal d5 shine-effect">
               <div class="rk rk7">7</div>
               <div class="casino-img-wrap">
@@ -598,7 +638,6 @@
           </div>
 
           <div class="cc-grid cc-grid-6">
-            <!-- #8 -->
             <div class="cc reveal d1 shine-effect">
               <div class="rk">8</div>
               <div class="bb">🆕 Fresh</div>
@@ -632,7 +671,6 @@
               <a href="/uz/quiz" class="crb">🎯 Quiz</a>
             </div>
 
-            <!-- #9 -->
             <div class="cc reveal d2 shine-effect">
               <div class="rk">9</div>
               <div class="bb">🔥 Hot bonus</div>
@@ -666,7 +704,6 @@
               <a href="/uz/quiz" class="crb">🎯 Quiz</a>
             </div>
 
-            <!-- #10 -->
             <div class="cc reveal d3 shine-effect">
               <div class="rk">10</div>
               <div class="bb">⚡ Top start</div>
@@ -714,7 +751,7 @@
           <p>Yangi kazino sahifasi bo'yicha eng muhim savollar va qisqa javoblar.</p>
         </div>
 
-        <div class="faq-accordion reveal">
+        <div class="faq-accordion-grid reveal">
           <div class="faq-item active">
             <button class="faq-q" type="button">
               <span class="faq-q-left">
@@ -916,20 +953,45 @@
 
   <script src="../../script.js"></script>
   <script>
-    document.querySelectorAll('.faq-q').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const item = btn.closest('.faq-item');
-        if (!item) return;
+    document.addEventListener('DOMContentLoaded', function () {
+      const faqItems = Array.from(document.querySelectorAll('#faq .faq-item'));
 
-        const isActive = item.classList.contains('active');
+      faqItems.forEach((item) => {
+        const btn = item.querySelector('.faq-q');
+        const answer = item.querySelector('.faq-a');
+        if (!btn || !answer) return;
 
-        document.querySelectorAll('.faq-item').forEach((el) => {
-          el.classList.remove('active');
-        });
-
-        if (!isActive) {
-          item.classList.add('active');
+        if (item.classList.contains('active')) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        } else {
+          answer.style.maxHeight = '0px';
         }
+
+        btn.addEventListener('click', function () {
+          const isActive = item.classList.contains('active');
+
+          faqItems.forEach((el) => {
+            el.classList.remove('active');
+            const elAnswer = el.querySelector('.faq-a');
+            if (elAnswer) elAnswer.style.maxHeight = '0px';
+          });
+
+          if (!isActive) {
+            item.classList.add('active');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          }
+        });
+      });
+
+      window.addEventListener('resize', function () {
+        faqItems.forEach((item) => {
+          const answer = item.querySelector('.faq-a');
+          if (!answer) return;
+
+          if (item.classList.contains('active')) {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          }
+        });
       });
     });
   </script>
