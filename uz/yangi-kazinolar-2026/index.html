@@ -50,155 +50,102 @@
   </noscript>
 
   <style>
-    /* FAQ premium accordion — page only */
-    .faq-accordion-grid{
+    /* FAQ v2 */
+    .faq-v2-grid{
       display:grid;
-      grid-template-columns:repeat(3, minmax(0, 1fr));
-      gap:18px;
-      align-items:start;
-      margin-top:10px;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:14px;
+      margin-top:26px;
     }
 
-    .faq-item{
-      border:1px solid rgba(140,90,255,.14);
-      border-radius:28px;
-      background:linear-gradient(135deg, rgba(33,13,92,.88), rgba(15,10,64,.92));
+    .faq-v2-item{
+      border:1px solid rgba(125, 80, 255, 0.18);
+      border-radius:24px;
+      background:linear-gradient(180deg, rgba(35,14,97,0.92), rgba(20,10,72,0.94));
       box-shadow:
-        0 0 0 1px rgba(255,255,255,.02) inset,
-        0 20px 50px rgba(25,10,70,.28);
+        0 0 0 1px rgba(255,255,255,0.02) inset,
+        0 18px 40px rgba(23, 7, 68, 0.22);
       overflow:hidden;
-      transition:box-shadow .28s ease, border-color .28s ease, transform .28s ease;
+      transition:border-color .25s ease, box-shadow .25s ease;
     }
 
-    .faq-item:hover{
-      border-color:rgba(159,114,255,.28);
+    .faq-v2-item:hover{
+      border-color:rgba(155, 110, 255, 0.34);
       box-shadow:
-        0 0 0 1px rgba(255,255,255,.03) inset,
-        0 24px 60px rgba(55,25,120,.32);
+        0 0 0 1px rgba(255,255,255,0.02) inset,
+        0 22px 48px rgba(35, 10, 96, 0.28);
     }
 
-    .faq-item.active{
-      border-color:rgba(159,114,255,.32);
-      box-shadow:
-        0 0 0 1px rgba(159,114,255,.14) inset,
-        0 24px 70px rgba(70,30,150,.28);
+    .faq-v2-item.active{
+      border-color:rgba(155, 110, 255, 0.40);
     }
 
-    .faq-q{
+    .faq-v2-btn{
       width:100%;
-      border:0;
+      border:none;
       background:transparent;
       color:#fff;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:18px;
-      padding:24px 26px;
+      gap:16px;
+      padding:22px 22px;
       cursor:pointer;
       text-align:left;
       font:inherit;
     }
 
-    .faq-q-left{
+    .faq-v2-title{
+      font-size:1.05rem;
+      font-weight:800;
+      line-height:1.45;
+      color:#eef1ff;
+    }
+
+    .faq-v2-icon{
+      min-width:32px;
+      width:32px;
+      height:32px;
+      border-radius:12px;
       display:flex;
       align-items:center;
-      gap:14px;
-      min-width:0;
-    }
-
-    .faq-q-icon{
-      font-size:1.45rem;
-      line-height:1;
-      flex-shrink:0;
-    }
-
-    .faq-q-text{
+      justify-content:center;
+      background:rgba(255,255,255,0.06);
+      color:#d7c7ff;
+      font-size:1.25rem;
       font-weight:800;
-      font-size:1.13rem;
-      line-height:1.45;
-      color:#eaeaff;
+      transition:transform .25s ease, background .25s ease, color .25s ease;
     }
 
-    .faq-q-arrow{
-      width:34px;
-      height:34px;
-      flex-shrink:0;
-      border-radius:50%;
-      display:grid;
-      place-items:center;
-      font-size:1.2rem;
-      font-weight:800;
-      color:rgba(255,255,255,.86);
-      background:rgba(255,255,255,.05);
-      transition:transform .28s ease, background .28s ease, color .28s ease;
-    }
-
-    .faq-item.active .faq-q-arrow{
+    .faq-v2-item.active .faq-v2-icon{
       transform:rotate(45deg);
-      background:rgba(159,114,255,.16);
-      color:#b58bff;
+      background:rgba(145, 95, 255, 0.16);
+      color:#ffffff;
     }
 
-    .faq-a{
+    .faq-v2-answer{
       max-height:0;
       overflow:hidden;
       opacity:0;
-      padding:0 26px;
-      transition:max-height .35s ease, opacity .25s ease, padding .25s ease;
+      padding:0 22px;
+      transition:max-height .28s ease, opacity .22s ease, padding .22s ease;
     }
 
-    .faq-item.active .faq-a{
+    .faq-v2-item.active .faq-v2-answer{
       opacity:1;
-      padding:0 26px 24px;
+      padding:0 22px 22px;
     }
 
-    .faq-a p{
+    .faq-v2-answer p{
       margin:0;
       color:var(--muted);
-      line-height:1.82;
-      font-size:1rem;
+      font-size:0.98rem;
+      line-height:1.8;
     }
 
-    @media (max-width: 1100px){
-      .faq-accordion-grid{
-        grid-template-columns:repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 768px){
-      .faq-accordion-grid{
+    @media (max-width: 900px){
+      .faq-v2-grid{
         grid-template-columns:1fr;
-      }
-
-      .faq-q{
-        padding:20px 20px;
-      }
-
-      .faq-q-left{
-        gap:12px;
-      }
-
-      .faq-q-icon{
-        font-size:1.25rem;
-      }
-
-      .faq-q-text{
-        font-size:1rem;
-        line-height:1.42;
-      }
-
-      .faq-q-arrow{
-        width:30px;
-        height:30px;
-        font-size:1.05rem;
-      }
-
-      .faq-a{
-        padding:0 20px;
-      }
-
-      .faq-item.active .faq-a{
-        padding:0 20px 20px;
       }
     }
   </style>
@@ -746,105 +693,112 @@
     <div class="container">
       <div class="ios-f">
         <div class="sh reveal">
-          <div class="sl">FAQ</div>
-          <h2>Ko'p so'raladigan savollar</h2>
-          <p>Yangi kazino sahifasi bo'yicha eng muhim savollar va qisqa javoblar.</p>
+          <div class="sl">❓ FAQ</div>
+          <h2>Tez-tez so'raladigan savollar</h2>
+          <p>Ommabop savollarga javoblar</p>
         </div>
 
-        <div class="faq-accordion-grid reveal">
-          <div class="faq-item active">
-            <button class="faq-q" type="button">
-              <span class="faq-q-left">
-                <span class="faq-q-icon">❓</span>
-                <span class="faq-q-text">Bu sahifa nimasi bilan farq qiladi?</span>
-              </span>
-              <span class="faq-q-arrow">+</span>
+        <div class="faq-v2-grid reveal">
+          <div class="faq-v2-item">
+            <button class="faq-v2-btn" type="button">
+              <span class="faq-v2-title">Kazinolarni qanday tanlaysiz?</span>
+              <span class="faq-v2-icon">+</span>
             </button>
-            <div class="faq-a">
+            <div class="faq-v2-answer">
               <p>
-                Bu sahifada asosiy reytingdagi barcha kazino saytlari saqlangan,
-                ularga qo'shimcha ravishda esa 3 ta yangi kazino qo'shilgan:
-                Gama, Daddy va R7.
+                Biz kazinolarni bonuslar, o'yinlar soni, to'lov tezligi, mobil qulaylik,
+                foydalanuvchi tajribasi va umumiy ishonchlilik bo'yicha baholaymiz.
               </p>
             </div>
           </div>
 
-          <div class="faq-item">
-            <button class="faq-q" type="button">
-              <span class="faq-q-left">
-                <span class="faq-q-icon">🆕</span>
-                <span class="faq-q-text">Qaysi kazinolar yangi qo'shilgan?</span>
-              </span>
-              <span class="faq-q-arrow">+</span>
+          <div class="faq-v2-item">
+            <button class="faq-v2-btn" type="button">
+              <span class="faq-v2-title">Veyjer nima?</span>
+              <span class="faq-v2-icon">+</span>
             </button>
-            <div class="faq-a">
+            <div class="faq-v2-answer">
               <p>
-                Pastki blokda yangi qo'shilgan 3 ta platforma bor:
-                Gama, Daddy va R7. Ular asosiy reytingga qo'shimcha variant sifatida kiritilgan.
+                Veyjer — bu bonusni yechib olishdan oldin uni ma'lum marta o'ynab chiqish talabi.
+                Masalan, x30 veyjer bonus summasini 30 marta aylantirish kerakligini anglatadi.
               </p>
             </div>
           </div>
 
-          <div class="faq-item">
-            <button class="faq-q" type="button">
-              <span class="faq-q-left">
-                <span class="faq-q-icon">🎁</span>
-                <span class="faq-q-text">Yangi kazinolar bonusliroq bo'ladimi?</span>
-              </span>
-              <span class="faq-q-arrow">+</span>
+          <div class="faq-v2-item">
+            <button class="faq-v2-btn" type="button">
+              <span class="faq-v2-title">Sharhlarga ishonish mumkinmi?</span>
+              <span class="faq-v2-icon">+</span>
             </button>
-            <div class="faq-a">
+            <div class="faq-v2-answer">
               <p>
-                Ko'pincha yangi platformalar foydalanuvchini jalb qilish uchun
-                kuchliroq start bonuslari, free spins yoki foizli takliflar beradi.
+                Sharhlar foydali, lekin faqat ularga tayanish yetarli emas.
+                Bonus shartlari, to'lov usullari, qo'llab-quvvatlash va sayt qulayligini ham albatta tekshirish kerak.
               </p>
             </div>
           </div>
 
-          <div class="faq-item">
-            <button class="faq-q" type="button">
-              <span class="faq-q-left">
-                <span class="faq-q-icon">🎯</span>
-                <span class="faq-q-text">Qaysi biri menga mosligini qanday bilaman?</span>
-              </span>
-              <span class="faq-q-arrow">+</span>
+          <div class="faq-v2-item">
+            <button class="faq-v2-btn" type="button">
+              <span class="faq-v2-title">To'lovlar qanchalik tez chiqadi?</span>
+              <span class="faq-v2-icon">+</span>
             </button>
-            <div class="faq-a">
+            <div class="faq-v2-answer">
               <p>
-                Agar ikkilanayotgan bo'lsangiz, quiz orqali o'zingizga mos kazino uslubini
-                tezroq aniqlashingiz mumkin. Bu tanlovni osonlashtiradi.
+                Bu kazino va to'lov usuliga bog'liq. Ba'zi platformalarda to'lovlar bir necha daqiqada,
+                boshqalarida esa 24–48 soat ichida amalga oshiriladi.
               </p>
             </div>
           </div>
 
-          <div class="faq-item">
-            <button class="faq-q" type="button">
-              <span class="faq-q-left">
-                <span class="faq-q-icon">📱</span>
-                <span class="faq-q-text">Telefon orqali foydalanish qulaymi?</span>
-              </span>
-              <span class="faq-q-arrow">+</span>
+          <div class="faq-v2-item">
+            <button class="faq-v2-btn" type="button">
+              <span class="faq-v2-title">SMOG promokodidan qanday foydalaniladi?</span>
+              <span class="faq-v2-icon">+</span>
             </button>
-            <div class="faq-a">
+            <div class="faq-v2-answer">
               <p>
-                Ha, ko'p onlayn kazino saytlar mobil versiyaga moslashgan.
-                Shuning uchun telefon orqali ko'rish, ro'yxatdan o'tish va foydalanish odatda qulay bo'ladi.
+                Promokod odatda ro'yxatdan o'tishda yoki birinchi depozit vaqtida maxsus maydonga kiritiladi.
+                Shundan keyin bonus yoki free spinlar faollashadi.
               </p>
             </div>
           </div>
 
-          <div class="faq-item">
-            <button class="faq-q" type="button">
-              <span class="faq-q-left">
-                <span class="faq-q-icon">⚖️</span>
-                <span class="faq-q-text">Kazino tanlashda nimaga qarash kerak?</span>
-              </span>
-              <span class="faq-q-arrow">+</span>
+          <div class="faq-v2-item">
+            <button class="faq-v2-btn" type="button">
+              <span class="faq-v2-title">O'ynash xavfsizmi?</span>
+              <span class="faq-v2-icon">+</span>
             </button>
-            <div class="faq-a">
+            <div class="faq-v2-answer">
               <p>
-                Bonus hajmi, o'yinlar soni, to'lov tezligi, mobil qulaylik va umumiy interfeys —
-                bularning hammasi tanlovda muhim rol o'ynaydi.
+                Faqat ishonchli platformalardan foydalanish kerak. Bonus qoidalari, to'lov siyosati,
+                sayt himoyasi va umumiy obro'sini tekshirish muhim. 18+ va mas'uliyatli o'yin tamoyiliga amal qiling.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-v2-item">
+            <button class="faq-v2-btn" type="button">
+              <span class="faq-v2-title">MELLSTROY nima?</span>
+              <span class="faq-v2-icon">+</span>
+            </button>
+            <div class="faq-v2-answer">
+              <p>
+                MELLSTROY — bonuslari va aktiv promo takliflari bilan ajralib turadigan yangi kazino platformalaridan biri.
+                U kuchli start bonusi va free spinlari bilan e'tibor tortadi.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-v2-item">
+            <button class="faq-v2-btn" type="button">
+              <span class="faq-v2-title">Yangi boshlovchi uchun qaysi biri yaxshiroq?</span>
+              <span class="faq-v2-icon">+</span>
+            </button>
+            <div class="faq-v2-answer">
+              <p>
+                Yangi foydalanuvchi uchun interfeysi sodda, bonuslari tushunarli va mobil versiyasi qulay bo'lgan
+                kazino ko'proq mos keladi. Shuning uchun reyting va quizdan foydalanish foydali.
               </p>
             </div>
           </div>
@@ -954,26 +908,23 @@
   <script src="../../script.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const faqItems = Array.from(document.querySelectorAll('#faq .faq-item'));
+      const faqItems = document.querySelectorAll('.faq-v2-item');
 
       faqItems.forEach((item) => {
-        const btn = item.querySelector('.faq-q');
-        const answer = item.querySelector('.faq-a');
-        if (!btn || !answer) return;
+        const btn = item.querySelector('.faq-v2-btn');
+        const answer = item.querySelector('.faq-v2-answer');
 
-        if (item.classList.contains('active')) {
-          answer.style.maxHeight = answer.scrollHeight + 'px';
-        } else {
-          answer.style.maxHeight = '0px';
-        }
+        if (!btn || !answer) return;
 
         btn.addEventListener('click', function () {
           const isActive = item.classList.contains('active');
 
           faqItems.forEach((el) => {
             el.classList.remove('active');
-            const elAnswer = el.querySelector('.faq-a');
-            if (elAnswer) elAnswer.style.maxHeight = '0px';
+            const elAnswer = el.querySelector('.faq-v2-answer');
+            if (elAnswer) {
+              elAnswer.style.maxHeight = null;
+            }
           });
 
           if (!isActive) {
@@ -984,11 +935,9 @@
       });
 
       window.addEventListener('resize', function () {
-        faqItems.forEach((item) => {
-          const answer = item.querySelector('.faq-a');
-          if (!answer) return;
-
-          if (item.classList.contains('active')) {
+        document.querySelectorAll('.faq-v2-item.active').forEach((item) => {
+          const answer = item.querySelector('.faq-v2-answer');
+          if (answer) {
             answer.style.maxHeight = answer.scrollHeight + 'px';
           }
         });
