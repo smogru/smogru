@@ -4,33 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
     <title>Qaysi kazino senga ko‘proq mos? Test — Paytaoff</title>
-    <meta name="description" content="10 ta savoldan iborat testdan o‘t va aynan senga mos onlayn kazinoni bilib ol. 2 daqiqada shaxsiy tavsiya. 18+">
+    <meta name="description" content="15 ta savoldan iborat testdan o‘t va aynan senga mos onlayn kazinoni bilib ol. Shaxsiy tavsiya. 18+">
     <link rel="icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <meta name="theme-color" content="#060810">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root,[data-theme="dark"]{
-    --bg:#060810;--text:#dce8f5;--muted:#8a9bb5;--white:#fff;
-    --purple:#7c3aed;--purple-l:#a78bfa;--indigo:#4f46e5;
-    --green:#34d399;--green-l:#6ee7b7;--amber:#f59e0b;--amber-l:#fcd34d;
-    --card:rgba(124,58,237,.06);--card-b:rgba(124,58,237,.12);
-    --glass:rgba(6,8,16,.6);--glass-b:rgba(124,58,237,.1);
-    --nav-bg:rgba(6,8,16,.5);
-}
-[data-theme="light"]{
-    --bg:#f5f0e8;--text:#2d3748;--muted:#64748b;--white:#1a1a2e;
-    --card:rgba(255,255,255,.9);--card-b:rgba(124,58,237,.2);
-    --glass:rgba(255,255,255,.85);--glass-b:rgba(124,58,237,.18);
-    --nav-bg:rgba(255,255,255,.75);
-}
+:root,[data-theme="dark"]{--bg:#060810;--text:#dce8f5;--muted:#8a9bb5;--white:#fff;--purple:#7c3aed;--purple-l:#a78bfa;--indigo:#4f46e5;--green:#34d399;--green-l:#6ee7b7;--amber:#f59e0b;--amber-l:#fcd34d;--card:rgba(124,58,237,.06);--card-b:rgba(124,58,237,.12);--glass:rgba(6,8,16,.6);--glass-b:rgba(124,58,237,.1);--nav-bg:rgba(6,8,16,.5)}
+[data-theme="light"]{--bg:#f5f0e8;--text:#2d3748;--muted:#64748b;--white:#1a1a2e;--card:rgba(255,255,255,.9);--card-b:rgba(124,58,237,.2);--glass:rgba(255,255,255,.85);--glass-b:rgba(124,58,237,.18);--nav-bg:rgba(255,255,255,.75)}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;min-height:100vh;min-height:100dvh;transition:background .5s,color .5s}
 h1,h2,h3{font-family:'Space Grotesk',sans-serif}
 a{text-decoration:none;color:inherit}
-
 .world{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
 .world-m{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 20% 20%,rgba(124,58,237,.12),transparent 50%),radial-gradient(ellipse 50% 60% at 80% 80%,rgba(79,70,229,.08),transparent 50%),linear-gradient(180deg,var(--bg),var(--bg))}
 .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5;animation:ob 12s ease-in-out infinite alternate}
@@ -46,7 +34,6 @@ a{text-decoration:none;color:inherit}
 .glow{position:fixed;width:300px;height:300px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(124,58,237,.06),transparent 70%);transform:translate(-50%,-50%);opacity:0;transition:opacity .4s}
 body:hover .glow{opacity:1}
 [data-theme="light"] .glow{display:none}
-
 .nav{position:fixed;top:8px;left:50%;transform:translateX(-50%);z-index:1000;padding:6px 16px;border-radius:100px;display:flex;align-items:center;gap:6px;background:var(--nav-bg);backdrop-filter:blur(16px) saturate(1.6);-webkit-backdrop-filter:blur(16px) saturate(1.6);border:1px solid var(--glass-b);box-shadow:0 4px 28px rgba(0,0,0,.25);max-width:97vw;transition:all .4s}
 .nav.scrolled{border-color:rgba(124,58,237,.2)}
 .nav-l{display:flex;align-items:center;gap:8px;padding:8px 14px;font-family:'Space Grotesk';font-weight:700;font-size:1rem;white-space:nowrap}
@@ -62,11 +49,9 @@ body:hover .glow{opacity:1}
 .nav-a{padding:6px 12px;border-radius:100px;font-size:.7rem;font-weight:700;color:#fca5a5;background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.12);flex-shrink:0}
 [data-theme="light"] .nav{border:2px solid rgba(124,58,237,.15)}
 [data-theme="light"] .nav-s{background:rgba(124,58,237,.12)}
-
 .qw{position:relative;z-index:1;min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:80px 16px 40px}
 .qb{width:100%;max-width:640px;transition:max-width .35s ease}
 .qb.result-wide{max-width:980px}
-
 .prog{margin-bottom:18px;opacity:0;transform:translateY(-10px);transition:all .4s}
 .prog.on{opacity:1;transform:translateY(0)}
 .prog-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
@@ -76,13 +61,11 @@ body:hover .glow{opacity:1}
 .prog-back:hover{color:var(--white)}
 .prog-bar{height:4px;border-radius:4px;background:rgba(124,58,237,.1);overflow:hidden}
 .prog-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--purple),var(--indigo),var(--green));transition:width .5s cubic-bezier(.22,1,.36,1)}
-
 .scr{display:none;width:100%;animation:fadeUp .5s ease both}
 .scr.on{display:block}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
 .glass{border-radius:24px;padding:32px 28px;background:var(--glass);backdrop-filter:blur(20px) saturate(1.6);-webkit-backdrop-filter:blur(20px) saturate(1.6);border:1px solid var(--glass-b);box-shadow:0 8px 32px rgba(0,0,0,.15),0 0 40px rgba(124,58,237,.05);transition:all .5s}
 [data-theme="light"] .glass{background:rgba(255,255,255,.92);border:2.5px solid rgba(124,58,237,.2);box-shadow:0 8px 32px rgba(0,0,0,.08)}
-
 .intro{text-align:center}
 .intro-i{font-size:3.5rem;display:block;margin-bottom:14px;animation:bounce 2s ease-in-out infinite}
 @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
@@ -93,7 +76,6 @@ body:hover .glow{opacity:1}
 .intro-tags{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
 .itag{padding:5px 12px;border-radius:100px;font-size:.688rem;font-weight:600;background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.1);color:var(--purple-l)}
 [data-theme="light"] .itag{background:rgba(124,58,237,.06);border:2px solid rgba(124,58,237,.18);color:#6d28d9}
-
 .tg-banner{display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:16px;background:linear-gradient(135deg,rgba(0,136,204,.08),rgba(0,170,255,.04));border:1px solid rgba(0,136,204,.15);margin-bottom:18px;transition:all .3s;text-align:left}
 .tg-banner:hover{transform:translateY(-2px);border-color:rgba(0,136,204,.3)}
 .tg-banner-icon{font-size:1.75rem;flex-shrink:0}
@@ -101,8 +83,7 @@ body:hover .glow{opacity:1}
 .tg-banner-title{font-weight:700;font-size:.813rem}
 .tg-banner-sub{font-size:.688rem;color:var(--muted)}
 .tg-banner-btn{padding:8px 16px;border-radius:100px;font-size:.688rem;font-weight:700;color:#fff;background:linear-gradient(135deg,#0088cc,#00aaff);white-space:nowrap;flex-shrink:0}
-
-.cta{display:block;width:100%;padding:16px;border-radius:16px;font-size:1rem;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--purple),var(--indigo));border:none;cursor:pointer;font-family:'Inter';transition:all .4s;position:relative;overflow:hidden;box-shadow:0 4px 22px rgba(124,58,237,.3)}
+.cta{display:block;width:100%;padding:16px;border-radius:16px;font-size:1rem;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--purple),var(--indigo));border:none;cursor:pointer;font-family:'Inter';transition:all .4s;position:relative;overflow:hidden;box-shadow:0 4px 22px rgba(124,58,237,.3);text-align:center}
 .cta:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(124,58,237,.45)}
 .cta::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(45deg,transparent,rgba(255,255,255,.1),transparent);transform:rotate(45deg);animation:shine 3s ease-in-out infinite}
 @keyframes shine{0%{transform:translateX(-100%) rotate(45deg)}100%{transform:translateX(100%) rotate(45deg)}}
@@ -111,7 +92,6 @@ body:hover .glow{opacity:1}
 .cta-tg{background:linear-gradient(135deg,#0088cc,#00aaff)!important;box-shadow:0 4px 22px rgba(0,136,204,.3)!important}
 .cta-bear{background:linear-gradient(135deg,#34d399,#f59e0b)!important;box-shadow:0 4px 22px rgba(34,197,94,.35)!important}
 .cta-bear:hover{box-shadow:0 10px 36px rgba(34,197,94,.45)!important}
-
 .qc{text-align:center;min-height:440px;display:flex;flex-direction:column;justify-content:center}
 .qn{font-size:.688rem;font-weight:600;color:var(--purple-l);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
 .qt{font-family:'Space Grotesk';font-size:clamp(1.25rem,4vw,1.75rem);font-weight:800;margin-bottom:20px;line-height:1.2;letter-spacing:-.5px}
@@ -128,12 +108,10 @@ body:hover .glow{opacity:1}
 [data-theme="light"] .opt:hover{background:rgba(124,58,237,.07);border-color:rgba(124,58,237,.22)}
 [data-theme="light"] .opt.selected{background:rgba(124,58,237,.1);border-color:rgba(124,58,237,.28)}
 [data-theme="light"] .oi{background:rgba(124,58,237,.06);border:2px solid rgba(124,58,237,.15)}
-
 .res{text-align:center}
 .res-i{font-size:3rem;margin-bottom:8px}
 .res-t{font-family:'Space Grotesk';font-size:clamp(1.25rem,4vw,1.75rem);font-weight:900;margin-bottom:6px;letter-spacing:-.5px}
 .res-sub{font-size:.813rem;color:var(--muted);margin-bottom:20px}
-
 .winner{border-radius:22px;padding:24px;background:rgba(124,58,237,.04);border:2px solid rgba(124,58,237,.18);margin-bottom:18px;position:relative;overflow:hidden;transition:all .3s}
 .winner:hover{border-color:rgba(124,58,237,.3);transform:translateY(-3px)}
 [data-theme="light"] .winner{background:rgba(255,255,255,.92);border:2.5px solid rgba(124,58,237,.22)}
@@ -163,13 +141,11 @@ body:hover .glow{opacity:1}
 .winner-btn::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(45deg,transparent,rgba(255,255,255,.1),transparent);transform:rotate(45deg);animation:shine 3s ease-in-out infinite}
 .winner-btn-mell{background:linear-gradient(135deg,#a78bfa,#f59e0b)!important;box-shadow:0 4px 22px rgba(167,139,250,.35)!important}
 .winner-btn-bear{background:linear-gradient(135deg,#34d399,#f59e0b)!important;box-shadow:0 4px 22px rgba(34,197,94,.35)!important}
-
 .special-promo{margin:14px 0 18px;padding:18px;border-radius:20px;background:linear-gradient(145deg,rgba(52,211,153,.08),rgba(245,158,11,.05));border:1.5px solid rgba(52,211,153,.16);text-align:center}
 .special-promo-k{font-size:.625rem;text-transform:uppercase;letter-spacing:.08em;color:var(--green-l);font-weight:700;margin-bottom:6px}
 .special-promo-t{font-family:'Space Grotesk';font-size:1.2rem;font-weight:900;margin-bottom:6px}
 .special-promo-s{font-size:.75rem;color:var(--muted);margin-bottom:12px}
 [data-theme="light"] .special-promo{background:rgba(255,255,255,.94);border:2px solid rgba(34,197,94,.2)}
-
 .others{margin-top:20px}
 .others-t{font-size:.813rem;font-weight:600;color:var(--muted);margin-bottom:12px;text-align:center}
 .others-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
@@ -183,54 +159,39 @@ body:hover .glow{opacity:1}
 .oc-r{font-size:.625rem;color:var(--amber);margin-bottom:4px}
 .oc-b{font-size:.625rem;font-weight:600;color:var(--purple-l);margin-bottom:6px}
 .oc-btn{display:block;padding:8px;border-radius:10px;font-size:.625rem;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--purple),var(--indigo))}
-
 .loading{text-align:center;padding:40px 20px}
 .loading-spinner{width:48px;height:48px;border:3px solid rgba(124,58,237,.1);border-top-color:var(--purple);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 16px}
 @keyframes spin{to{transform:rotate(360deg)}}
 .loading-t{font-weight:700;font-size:1rem;margin-bottom:6px}
 .loading-s{font-size:.75rem;color:var(--muted)}
-
 .ft{position:relative;z-index:1;text-align:center;padding:20px 16px 30px;font-size:.688rem;color:var(--muted)}
 .ft a{color:var(--purple-l);font-weight:600}
-
-@media(min-width:769px){
-    .winner{padding:28px 28px 24px}
-    .winner-img{aspect-ratio:1400/560}
-    .others-grid{grid-template-columns:repeat(3,1fr)}
-}
-
+@media(min-width:769px){.winner{padding:28px 28px 24px}.winner-img{aspect-ratio:1400/560}.others-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:768px){
     .orb,.glow{display:none!important}
     .world-m{background:linear-gradient(180deg,var(--bg),var(--bg))!important}
     [data-theme="light"] .world-m{background:linear-gradient(180deg,#f5f0e8,#efe8dc)!important}
-
     .glass{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(12,10,30,.85)!important;padding:20px 14px;border-radius:18px}
     [data-theme="light"] .glass{background:rgba(255,255,255,.95)!important}
-
     .nav{padding:4px 10px;gap:4px}
     .nav-l{padding:6px 8px;font-size:.813rem;gap:6px}
     .nav-l img{width:24px;height:24px}
     .nav-b,.tg-nav{padding:6px 10px;font-size:.625rem}
     .nav-a{padding:4px 8px;font-size:.563rem}
     .theme-btn{width:28px;height:28px;font-size:.75rem}
-
     .qw{padding:65px 14px 30px}
     .qb{min-height:520px}
     #s-intro .glass{margin-top:26px}
-
     .intro h1{font-size:1.5rem}
     .tg-banner{flex-wrap:wrap;gap:10px;padding:12px 14px}
     .tg-banner-btn{width:100%;text-align:center;padding:10px}
-
     .qc{min-height:360px}
     .qt{font-size:1.15rem;margin-bottom:16px}
     .qo{gap:6px}
-
     .opt{padding:10px 12px;min-height:42px;border-radius:12px;gap:10px}
     .oi{width:28px;height:28px;font-size:.95rem;border-radius:8px}
     .ot{font-size:.75rem;line-height:1.25}
     .chk{width:20px;height:20px;border-radius:6px;font-size:.6rem}
-
     .winner{padding:16px}
     .winner-img{margin-bottom:12px}
     .winner-head{gap:10px;margin-bottom:10px}
@@ -240,25 +201,17 @@ body:hover .glow{opacity:1}
     .winner-bonus-v{font-size:1rem}
     .winner-promo{padding:10px}
     .winner-promo-c{font-size:1.1rem}
-
     .special-promo{padding:14px;border-radius:16px}
     .special-promo-t{font-size:1rem}
-
     .others-grid{grid-template-columns:1fr 1fr;gap:6px}
     .oc{padding:10px;border-radius:12px}
     .oc-n{font-size:.7rem}
 }
-@media(max-width:400px){
-    .nav-b,.tg-nav{display:none}
-    .nav-s:nth-child(4),.nav-s:nth-child(6){display:none}
-    .glass{padding:18px 12px}
-    .others-grid{gap:5px}
-    .oc{padding:10px}
-}
+@media(max-width:400px){.nav-b,.tg-nav{display:none}.nav-s:nth-child(4),.nav-s:nth-child(6){display:none}.glass{padding:18px 12px}.others-grid{gap:5px}.oc{padding:10px}}
     </style>
 </head>
-<body>
 
+<body>
 <div class="world"><div class="world-m"></div><div class="orb ob1"></div><div class="orb ob2"></div><div class="orb ob3"></div><div id="dots"></div></div>
 <div class="glow" id="glow"></div>
 
@@ -277,105 +230,156 @@ body:hover .glow{opacity:1}
 <div class="qw">
     <div class="qb" id="quizBox">
         <div class="prog" id="prog">
-            <div class="prog-top"><div class="prog-t">⏱ Savol <span id="progN">1</span> / 10</div><div class="prog-back" id="backBtn" onclick="goBack()">← Orqaga</div></div>
+            <div class="prog-top">
+                <div class="prog-t">⏱ Savol <span id="progN">1</span> / 15</div>
+                <div class="prog-back" id="backBtn" onclick="goBack()">← Orqaga</div>
+            </div>
             <div class="prog-bar"><div class="prog-fill" id="progF" style="width:0%"></div></div>
         </div>
 
-        <div class="scr on" id="s-intro"><div class="glass intro">
-            <span class="intro-i">🎯</span>
-            <h1>Qaysi kazino<br><span class="gt">senga ko‘proq mos?</span></h1>
-            <p>10 ta savol — 2 daqiqada shaxsiy tavsiya</p>
-            <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="tg-banner">
-                <span class="tg-banner-icon">📱</span>
-                <span class="tg-banner-text"><span class="tg-banner-title">Paytaoff’ga obuna bo‘l</span><span class="tg-banner-sub">Har kuni bonuslar va promokodlar</span></span>
-                <span class="tg-banner-btn">Obuna bo‘lish</span>
-            </a>
-            <div class="intro-tags"><div class="itag">⏱ 2 daqiqa</div><div class="itag">🎯 10 ta savol</div><div class="itag">✅ Bepul</div><div class="itag">🔒 Anonim</div></div>
-            <button class="cta" onclick="start()">Testni boshlash →</button>
-            <p style="font-size:.6rem;color:var(--muted);margin-top:8px">18+. Axborot xarakteridagi sahifa.</p>
-        </div></div>
+        <div class="scr on" id="s-intro">
+            <div class="glass intro">
+                <span class="intro-i">🎯</span>
+                <h1>Qaysi kazino<br><span class="gt">senga ko‘proq mos?</span></h1>
+                <p>15 ta savol — shaxsiy tavsiya</p>
+                <a href="https://t.me/paytaoff" target="_blank" rel="noopener" class="tg-banner">
+                    <span class="tg-banner-icon">📱</span>
+                    <span class="tg-banner-text">
+                        <span class="tg-banner-title">Paytaoff’ga obuna bo‘l</span>
+                        <span class="tg-banner-sub">Har kuni bonuslar va promokodlar</span>
+                    </span>
+                    <span class="tg-banner-btn">Obuna bo‘lish</span>
+                </a>
+                <div class="intro-tags">
+                    <div class="itag">⏱ 3 daqiqa</div>
+                    <div class="itag">🎯 15 ta savol</div>
+                    <div class="itag">✅ Bepul</div>
+                    <div class="itag">🔒 Anonim</div>
+                </div>
+                <button class="cta" onclick="start()">Testni boshlash →</button>
+                <p style="font-size:.6rem;color:var(--muted);margin-top:8px">18+. Axborot xarakteridagi sahifa.</p>
+            </div>
+        </div>
 
-        <div class="scr" id="s-q1"><div class="glass qc"><div class="qn">Savol 1 / 10</div><div class="qt">Kazino tanlashda sen uchun eng muhimi nima?</div><div class="qo">
-            <div class="opt" onclick="ans(1,'speed')"><span class="oi">⚡</span><span class="ot">Pulni tez yechish</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(1,'bonus')"><span class="oi">🎁</span><span class="ot">Katta xush kelibsiz bonusi</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(1,'games')"><span class="oi">🎮</span><span class="ot">Juda ko‘p o‘yinlar tanlovi</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(1,'safety')"><span class="oi">🛡️</span><span class="ot">Ishonchlilik va xavfsizlik</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(1,'vip')"><span class="oi">👑</span><span class="ot">VIP-dastur va status</span><span class="chk">✓</span></div>
+        <div class="scr" id="s-q1"><div class="glass qc"><div class="qn">Savol 1 / 15</div><div class="qt">Kazino tanlashda sen uchun eng muhimi nima?</div><div class="qo">
+            <div class="opt" onclick="ans(1,'speed',this)"><span class="oi">⚡</span><span class="ot">Pulni tez yechish</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(1,'bonus',this)"><span class="oi">🎁</span><span class="ot">Katta xush kelibsiz bonusi</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(1,'games',this)"><span class="oi">🎮</span><span class="ot">Juda ko‘p o‘yinlar tanlovi</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(1,'safety',this)"><span class="oi">🛡️</span><span class="ot">Ishonchlilik va xavfsizlik</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(1,'vip',this)"><span class="oi">👑</span><span class="ot">VIP-dastur va status</span><span class="chk">✓</span></div>
         </div></div></div>
 
-        <div class="scr" id="s-q2"><div class="glass qc"><div class="qn">Savol 2 / 10</div><div class="qt">Odatda nimani o‘ynaysan?</div><div class="qo">
-            <div class="opt" onclick="ans(2,'slots')"><span class="oi">🎰</span><span class="ot">Slotlar va avtomatlar</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(2,'live')"><span class="oi">🎥</span><span class="ot">Dilerli live-kazino</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(2,'sports')"><span class="oi">⚽</span><span class="ot">Sport stavkalari</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(2,'crash')"><span class="oi">🚀</span><span class="ot">Crash-o‘yinlar (Aviator, Lucky Jet)</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(2,'table')"><span class="oi">🃏</span><span class="ot">Karta o‘yinlari</span><span class="chk">✓</span></div>
+        <div class="scr" id="s-q2"><div class="glass qc"><div class="qn">Savol 2 / 15</div><div class="qt">Odatda nimani o‘ynaysan?</div><div class="qo">
+            <div class="opt" onclick="ans(2,'slots',this)"><span class="oi">🎰</span><span class="ot">Slotlar va avtomatlar</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(2,'live',this)"><span class="oi">🎥</span><span class="ot">Dilerli live-kazino</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(2,'sports',this)"><span class="oi">⚽</span><span class="ot">Sport stavkalari</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(2,'crash',this)"><span class="oi">🚀</span><span class="ot">Crash-o‘yinlar</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(2,'table',this)"><span class="oi">🃏</span><span class="ot">Karta o‘yinlari</span><span class="chk">✓</span></div>
         </div></div></div>
 
-        <div class="scr" id="s-q3"><div class="glass qc"><div class="qn">Savol 3 / 10</div><div class="qt">Hisobni odatda nima bilan to‘ldirasan?</div><div class="qo">
-            <div class="opt" onclick="ans(3,'card')"><span class="oi">💳</span><span class="ot">Bank kartasi</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(3,'crypto')"><span class="oi">₿</span><span class="ot">Kriptovalyuta</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(3,'ewallet')"><span class="oi">📱</span><span class="ot">Elektron hamyon</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(3,'sbp')"><span class="oi">🏦</span><span class="ot">O‘tkazma / to‘lov</span><span class="chk">✓</span></div>
+        <div class="scr" id="s-q3"><div class="glass qc"><div class="qn">Savol 3 / 15</div><div class="qt">Hisobni odatda nima bilan to‘ldirasan?</div><div class="qo">
+            <div class="opt" onclick="ans(3,'card',this)"><span class="oi">💳</span><span class="ot">Bank kartasi</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(3,'crypto',this)"><span class="oi">₿</span><span class="ot">Kriptovalyuta</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(3,'ewallet',this)"><span class="oi">📱</span><span class="ot">Elektron hamyon</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(3,'sbp',this)"><span class="oi">🏦</span><span class="ot">O‘tkazma / to‘lov</span><span class="chk">✓</span></div>
         </div></div></div>
 
-        <div class="scr" id="s-q4"><div class="glass qc"><div class="qn">Savol 4 / 10</div><div class="qt">Qaysi qurilmadan o‘ynaysan?</div><div class="qo">
-            <div class="opt" onclick="ans(4,'mobile')"><span class="oi">📱</span><span class="ot">Faqat telefon</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(4,'pc')"><span class="oi">💻</span><span class="ot">Faqat kompyuter</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(4,'both')"><span class="oi">🔄</span><span class="ot">Telefon ham, kompyuter ham</span><span class="chk">✓</span></div>
+        <div class="scr" id="s-q4"><div class="glass qc"><div class="qn">Savol 4 / 15</div><div class="qt">Qaysi qurilmadan o‘ynaysan?</div><div class="qo">
+            <div class="opt" onclick="ans(4,'mobile',this)"><span class="oi">📱</span><span class="ot">Faqat telefon</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(4,'pc',this)"><span class="oi">💻</span><span class="ot">Faqat kompyuter</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(4,'both',this)"><span class="oi">🔄</span><span class="ot">Telefon ham, kompyuter ham</span><span class="chk">✓</span></div>
         </div></div></div>
 
-        <div class="scr" id="s-q5"><div class="glass qc"><div class="qn">Savol 5 / 10</div><div class="qt">Qaysi bonus turi ko‘proq yoqadi?</div><div class="qo">
-            <div class="opt" onclick="ans(5,'bigbonus')"><span class="oi">💎</span><span class="ot">Depozitga maksimal %</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(5,'cashback')"><span class="oi">💰</span><span class="ot">Yutqazish uchun keshbek</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(5,'freespins')"><span class="oi">🎰</span><span class="ot">Frispinlar</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(5,'tournament')"><span class="oi">🏆</span><span class="ot">Mukofotli turnirlar</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(5,'wheel')"><span class="oi">🎡</span><span class="ot">Omad g‘ildiragi</span><span class="chk">✓</span></div>
+        <div class="scr" id="s-q5"><div class="glass qc"><div class="qn">Savol 5 / 15</div><div class="qt">Qaysi bonus turi ko‘proq yoqadi?</div><div class="qo">
+            <div class="opt" onclick="ans(5,'bigbonus',this)"><span class="oi">💎</span><span class="ot">Depozitga maksimal %</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(5,'cashback',this)"><span class="oi">💰</span><span class="ot">Yutqazish uchun keshbek</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(5,'freespins',this)"><span class="oi">🎰</span><span class="ot">Frispinlar</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(5,'tournament',this)"><span class="oi">🏆</span><span class="ot">Mukofotli turnirlar</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(5,'wheel',this)"><span class="oi">🎡</span><span class="ot">Omad g‘ildiragi</span><span class="chk">✓</span></div>
         </div></div></div>
 
-        <div class="scr" id="s-q6"><div class="glass qc"><div class="qn">Savol 6 / 10</div><div class="qt">Pulni qanchalik tez yechish kerak?</div><div class="qo">
-            <div class="opt" onclick="ans(6,'instant')"><span class="oi">⚡</span><span class="ot">Darhol (15 daqiqagacha)</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(6,'fast')"><span class="oi">🕐</span><span class="ot">Bir kun ichida</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(6,'normal')"><span class="oi">📅</span><span class="ot">2–3 kun kutishim mumkin</span><span class="chk">✓</span></div>
+        <div class="scr" id="s-q6"><div class="glass qc"><div class="qn">Savol 6 / 15</div><div class="qt">Pulni qanchalik tez yechish kerak?</div><div class="qo">
+            <div class="opt" onclick="ans(6,'instant',this)"><span class="oi">⚡</span><span class="ot">Darhol</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(6,'fast',this)"><span class="oi">🕐</span><span class="ot">Bir kun ichida</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(6,'normal',this)"><span class="oi">📅</span><span class="ot">2–3 kun kutishim mumkin</span><span class="chk">✓</span></div>
         </div></div></div>
 
-        <div class="scr" id="s-q7"><div class="glass qc"><div class="qn">Savol 7 / 10</div><div class="qt">Dizayn va atmosfera sen uchun muhimmi?</div><div class="qo">
-            <div class="opt" onclick="ans(7,'theme')"><span class="oi">🎨</span><span class="ot">Ha, o‘ziga xos uslub bo‘lsin</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(7,'classic')"><span class="oi">🎩</span><span class="ot">Klassika va nafislik</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(7,'modern')"><span class="oi">🔥</span><span class="ot">Zamonaviy va trend</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(7,'nocare')"><span class="oi">🤷</span><span class="ot">Asosiysi — qulay funksiyalar</span><span class="chk">✓</span></div>
+        <div class="scr" id="s-q7"><div class="glass qc"><div class="qn">Savol 7 / 15</div><div class="qt">Dizayn va atmosfera sen uchun muhimmi?</div><div class="qo">
+            <div class="opt" onclick="ans(7,'theme',this)"><span class="oi">🎨</span><span class="ot">Ha, o‘ziga xos uslub bo‘lsin</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(7,'classic',this)"><span class="oi">🎩</span><span class="ot">Klassika va nafislik</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(7,'modern',this)"><span class="oi">🔥</span><span class="ot">Zamonaviy va trend</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(7,'nocare',this)"><span class="oi">🤷</span><span class="ot">Asosiysi — qulay funksiyalar</span><span class="chk">✓</span></div>
         </div></div></div>
 
-        <div class="scr" id="s-q8"><div class="glass qc"><div class="qn">Savol 8 / 10</div><div class="qt">Sening tajribang qanday?</div><div class="qo">
-            <div class="opt" onclick="ans(8,'newbie')"><span class="oi">🌱</span><span class="ot">Yangi boshlovchi</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(8,'medium')"><span class="oi">🎯</span><span class="ot">O‘rta — ba’zan o‘ynayman</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(8,'pro')"><span class="oi">💎</span><span class="ot">Tajribali — muntazam o‘ynayman</span><span class="chk">✓</span></div>
+        <div class="scr" id="s-q8"><div class="glass qc"><div class="qn">Savol 8 / 15</div><div class="qt">Sening tajribang qanday?</div><div class="qo">
+            <div class="opt" onclick="ans(8,'newbie',this)"><span class="oi">🌱</span><span class="ot">Yangi boshlovchi</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(8,'medium',this)"><span class="oi">🎯</span><span class="ot">O‘rta — ba’zan o‘ynayman</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(8,'pro',this)"><span class="oi">💎</span><span class="ot">Tajribali — muntazam o‘ynayman</span><span class="chk">✓</span></div>
         </div></div></div>
 
-        <div class="scr" id="s-q9"><div class="glass qc"><div class="qn">Savol 9 / 10</div><div class="qt">Depozit miqdori qancha?</div><div class="qo">
-            <div class="opt" onclick="ans(9,'small')"><span class="oi">🪙</span><span class="ot">Minimal (100 000 so‘mgacha)</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(9,'medium')"><span class="oi">💵</span><span class="ot">O‘rta (100 000–1 000 000 so‘m)</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(9,'big')"><span class="oi">💰</span><span class="ot">Katta (1 000 000+ so‘m)</span><span class="chk">✓</span></div>
+        <div class="scr" id="s-q9"><div class="glass qc"><div class="qn">Savol 9 / 15</div><div class="qt">Depozit miqdori qancha?</div><div class="qo">
+            <div class="opt" onclick="ans(9,'small',this)"><span class="oi">🪙</span><span class="ot">Minimal</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(9,'medium',this)"><span class="oi">💵</span><span class="ot">O‘rta</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(9,'big',this)"><span class="oi">💰</span><span class="ot">Katta</span><span class="chk">✓</span></div>
         </div></div></div>
 
-        <div class="scr" id="s-q10"><div class="glass qc"><div class="qn">Savol 10 / 10</div><div class="qt">Yana nima muhim?</div><div class="qo">
-            <div class="opt" onclick="ans(10,'app')"><span class="oi">📲</span><span class="ot">Mobil ilova</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(10,'support')"><span class="oi">💬</span><span class="ot">O‘zbekcha / ruscha yordam 24/7</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(10,'promo')"><span class="oi">🎁</span><span class="ot">Doimiy promolar</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(10,'stream')"><span class="oi">📺</span><span class="ot">Strimerlar bilan aloqa</span><span class="chk">✓</span></div>
-            <div class="opt" onclick="ans(10,'nothing')"><span class="oi">✅</span><span class="ot">Yuqoridagilarning barchasi</span><span class="chk">✓</span></div>
+        <div class="scr" id="s-q10"><div class="glass qc"><div class="qn">Savol 10 / 15</div><div class="qt">Yana nima muhim?</div><div class="qo">
+            <div class="opt" onclick="ans(10,'app',this)"><span class="oi">📲</span><span class="ot">Mobil ilova</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(10,'support',this)"><span class="oi">💬</span><span class="ot">O‘zbekcha / ruscha yordam 24/7</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(10,'promo',this)"><span class="oi">🎁</span><span class="ot">Doimiy promolar</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(10,'stream',this)"><span class="oi">📺</span><span class="ot">Strimerlar bilan aloqa</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(10,'nothing',this)"><span class="oi">✅</span><span class="ot">Yuqoridagilarning barchasi</span><span class="chk">✓</span></div>
         </div></div></div>
 
-        <div class="scr" id="s-loading"><div class="glass loading">
-            <div class="loading-spinner"></div>
-            <div class="loading-t">Javoblaring tahlil qilinmoqda...</div>
-            <div class="loading-s">Senga mos eng yaxshi kazino tanlanmoqda</div>
-        </div></div>
+        <div class="scr" id="s-q11"><div class="glass qc"><div class="qn">Savol 11 / 15</div><div class="qt">Yangi kazinolarni sinab ko‘rish senga qiziqmi?</div><div class="qo">
+            <div class="opt" onclick="ans(11,'new_yes',this)"><span class="oi">🆕</span><span class="ot">Ha, yangi platformalarni yoqtiraman</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(11,'new_maybe',this)"><span class="oi">🤔</span><span class="ot">Agar bonusi yaxshi bo‘lsa</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(11,'new_no',this)"><span class="oi">🛡️</span><span class="ot">Yo‘q, ko‘proq tanilganini xohlayman</span><span class="chk">✓</span></div>
+        </div></div></div>
+
+        <div class="scr" id="s-q12"><div class="glass qc"><div class="qn">Savol 12 / 15</div><div class="qt">Startda qanday taklif kuchliroq ko‘rinadi?</div><div class="qo">
+            <div class="opt" onclick="ans(12,'start_fs',this)"><span class="oi">🎰</span><span class="ot">Ko‘p frispinlar</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(12,'start_percent',this)"><span class="oi">📈</span><span class="ot">% bonus + FS birga</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(12,'start_max',this)"><span class="oi">🔥</span><span class="ot">Maksimal katta bonus</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(12,'start_safe',this)"><span class="oi">✅</span><span class="ot">Oddiy va tushunarli bonus</span><span class="chk">✓</span></div>
+        </div></div></div>
+
+        <div class="scr" id="s-q13"><div class="glass qc"><div class="qn">Savol 13 / 15</div><div class="qt">Qaysi format senga yaqinroq?</div><div class="qo">
+            <div class="opt" onclick="ans(13,'simple',this)"><span class="oi">🌱</span><span class="ot">Oddiy, tez va bosh og‘ritmaydigan</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(13,'modern_fast',this)"><span class="oi">⚡</span><span class="ot">Zamonaviy, mobil va tez</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(13,'balanced',this)"><span class="oi">⚖️</span><span class="ot">Balans: bonus ham, qulaylik ham</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(13,'big_platform',this)"><span class="oi">🏆</span><span class="ot">Katta universal platforma</span><span class="chk">✓</span></div>
+        </div></div></div>
+
+        <div class="scr" id="s-q14"><div class="glass qc"><div class="qn">Savol 14 / 15</div><div class="qt">Bonus shartlari qanday bo‘lgani yaxshi?</div><div class="qo">
+            <div class="opt" onclick="ans(14,'easy_rules',this)"><span class="oi">📄</span><span class="ot">Oddiy va tushunarli</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(14,'max_bonus_rules',this)"><span class="oi">💎</span><span class="ot">Katta bonus bo‘lsa, shartlari murakkab bo‘lsa ham mayli</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(14,'balanced_rules',this)"><span class="oi">⚖️</span><span class="ot">O‘rtacha, balansli bo‘lsin</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(14,'trusted_rules',this)"><span class="oi">🛡️</span><span class="ot">Asosiysi ishonch va barqarorlik</span><span class="chk">✓</span></div>
+        </div></div></div>
+
+        <div class="scr" id="s-q15"><div class="glass qc"><div class="qn">Savol 15 / 15</div><div class="qt">Bugun qanday tanlov qilarding?</div><div class="qo">
+            <div class="opt" onclick="ans(15,'top_reliable',this)"><span class="oi">🏆</span><span class="ot">Eng kuchli va universal variant</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(15,'max_bonus_final',this)"><span class="oi">🔥</span><span class="ot">Eng katta bonusli variant</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(15,'fs_final',this)"><span class="oi">🎰</span><span class="ot">Frispin va slotlar uchun variant</span><span class="chk">✓</span></div>
+            <div class="opt" onclick="ans(15,'new_final',this)"><span class="oi">🆕</span><span class="ot">Yangi kazino sinab ko‘raman</span><span class="chk">✓</span></div>
+        </div></div></div>
+
+        <div class="scr" id="s-loading">
+            <div class="glass loading">
+                <div class="loading-spinner"></div>
+                <div class="loading-t">Javoblaring tahlil qilinmoqda...</div>
+                <div class="loading-s">Senga mos eng yaxshi kazino tanlanmoqda</div>
+            </div>
+        </div>
 
         <div class="scr" id="s-result"></div>
     </div>
 </div>
 
-<footer class="ft"><p>© 2026 <a href="/uz/">Paytaoff</a> · <strong style="color:#f87171">18+</strong> · <a href="/uz/responsible-gaming/">Mas'uliyatli o‘yin</a> · <a href="/uz/about/">Loyiha haqida</a></p></footer>
+<footer class="ft">
+    <p>© 2026 <a href="/uz/">Paytaoff</a> · <strong style="color:#f87171">18+</strong> · <a href="/uz/responsible-gaming/">Mas'uliyatli o‘yin</a> · <a href="/uz/about/">Loyiha haqida</a></p>
+</footer>
 
 <script>
 !function(){const e=document.getElementById('dots');for(let i=0;i<40;i++){const d=document.createElement('div');d.className='dot';d.style.cssText=`position:absolute;left:${Math.random()*100}%;top:${Math.random()*100}%;width:${1+Math.random()*1.5}px;height:${1+Math.random()*1.5}px;--d:${3+Math.random()*4}s;--o:${.2+Math.random()*.4};animation-delay:${Math.random()*5}s;border-radius:50%`;e.appendChild(d)}}();
@@ -384,7 +388,7 @@ addEventListener('mousemove',e=>{const g=document.getElementById('glow');if(g){g
 function toggleTheme(){const h=document.documentElement;const n=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',n);localStorage.setItem('theme',n);document.getElementById('themeBtn').textContent=n==='dark'?'🌙':'☀️'}
 (function(){const s=localStorage.getItem('theme');if(s){document.documentElement.setAttribute('data-theme',s);const b=document.getElementById('themeBtn');if(b)b.textContent=s==='dark'?'🌙':'☀️'}})();
 
-const totalQ=10;
+const totalQ=15;
 let answers={},history=[];
 
 const casinos={
@@ -395,7 +399,6 @@ const casinos={
     'catcasino':{name:'CatCasino',emoji:'🐱',rating:'9.2',stars:'★★★★★',bonus:'325% gacha',promo:null,promoDesc:null,url:'https://catchthecatthree.com/sb716b632',img:'../../img/catcasino.png',btnClass:'',tags:['4000+ o‘yin','Turnirlar','Loyallik']},
     'kometa':{name:'Kometa',emoji:'☄️',rating:'9.0',stars:'★★★★☆',bonus:'255% gacha',promo:null,promoDesc:null,url:'https://searing-path.com/s2e02d62f',img:'../../img/kometa.png',btnClass:'',tags:['3500+ o‘yin','Kosmos','Keshbek']},
     'kent':{name:'Kent',emoji:'🎩',rating:'8.8',stars:'★★★★☆',bonus:'150% gacha',promo:null,promoDesc:null,url:'https://mealmenalc.com/s4882a91c',img:'../../img/kent.png',btnClass:'',tags:['3000+ o‘yin','VIP','Nafis']},
-
     'gama':{name:'Gama',emoji:'🎮',rating:'8.9',stars:'★★★★☆',bonus:'250 FS birinchi depozitga',promo:null,promoDesc:null,url:'https://preesiader.com/s6ymxhm48',img:'../../img/gama.png',btnClass:'',tags:['Yangi kazino','250 FS','Oddiy start','Slotlar']},
     'daddy':{name:'Daddy',emoji:'💸',rating:'9.1',stars:'★★★★☆',bonus:'+50% + 200 FS',promo:null,promoDesc:null,url:'https://void-racer.com/squfnn5dq',img:'../../img/daddy.png',btnClass:'',tags:['Yangi kazino','Welcome bonus','200 FS','Mobil']},
     'r7':{name:'R7',emoji:'🚀',rating:'9.0',stars:'★★★★☆',bonus:'+100% + 100 FS',promo:null,promoDesc:null,url:'https://cosmic-overdrive.com/s41994656',img:'../../img/r7.png',btnClass:'',tags:['Balans','100 FS','Tez start','Bonus']}
@@ -412,62 +415,88 @@ function addPoints(scoreMap, payload){
 function score(){
     let s={};Object.keys(casinos).forEach(k=>s[k]=0);const a=answers;
 
-    if(a[1]==='speed') addPoints(s,{luckybear:4,'1win':2,mellstroy:2,arkada:1,r7:2});
-    if(a[1]==='bonus') addPoints(s,{mellstroy:4,luckybear:2,arkada:2,'1win':1,daddy:2,r7:1});
-    if(a[1]==='games') addPoints(s,{arkada:3,catcasino:3,'1win':2,mellstroy:1,gama:1});
-    if(a[1]==='safety') addPoints(s,{kent:4,'1win':2,arkada:2,catcasino:1,r7:1});
-    if(a[1]==='vip') addPoints(s,{kent:4,mellstroy:3,'1win':1});
+    addPoints(s,{'1win':2,mellstroy:1,luckybear:1});
 
-    if(a[2]==='slots') addPoints(s,{arkada:3,catcasino:3,'1win':2,kometa:2,gama:2,luckybear:1});
-    if(a[2]==='live') addPoints(s,{'1win':3,mellstroy:2,kent:2,r7:1});
-    if(a[2]==='sports') addPoints(s,{'1win':6,mellstroy:1});
-    if(a[2]==='crash') addPoints(s,{luckybear:3,mellstroy:3,'1win':2,r7:2});
+    if(a[1]==='speed') addPoints(s,{luckybear:4,'1win':3,mellstroy:2,arkada:1,r7:2});
+    if(a[1]==='bonus') addPoints(s,{mellstroy:5,luckybear:2,arkada:2,'1win':1,daddy:2,r7:1});
+    if(a[1]==='games') addPoints(s,{arkada:3,catcasino:3,'1win':3,mellstroy:1,gama:1});
+    if(a[1]==='safety') addPoints(s,{kent:4,'1win':3,arkada:2,catcasino:1,r7:1});
+    if(a[1]==='vip') addPoints(s,{kent:4,mellstroy:4,'1win':2});
+
+    if(a[2]==='slots') addPoints(s,{arkada:3,catcasino:3,'1win':2,kometa:2,gama:2,luckybear:3});
+    if(a[2]==='live') addPoints(s,{'1win':4,mellstroy:2,kent:2,r7:1});
+    if(a[2]==='sports') addPoints(s,{'1win':7,mellstroy:1});
+    if(a[2]==='crash') addPoints(s,{luckybear:4,mellstroy:4,'1win':3,r7:2});
     if(a[2]==='table') addPoints(s,{kent:4,'1win':2,catcasino:1,daddy:1});
 
-    if(a[3]==='card') addPoints(s,{arkada:2,catcasino:2,kent:2,'1win':1,kometa:1,daddy:1,r7:1});
-    if(a[3]==='crypto') addPoints(s,{mellstroy:4,luckybear:4,'1win':1});
+    if(a[3]==='card') addPoints(s,{arkada:2,catcasino:2,kent:2,'1win':2,kometa:1,daddy:1,r7:1});
+    if(a[3]==='crypto') addPoints(s,{mellstroy:5,luckybear:4,'1win':2});
     if(a[3]==='ewallet') addPoints(s,{catcasino:2,'1win':2,arkada:1,gama:1});
-    if(a[3]==='sbp') addPoints(s,{'1win':3,arkada:2,luckybear:1,r7:1});
+    if(a[3]==='sbp') addPoints(s,{'1win':4,arkada:2,luckybear:1,r7:1});
 
-    if(a[4]==='mobile') addPoints(s,{'1win':2,luckybear:2,mellstroy:2,daddy:2,r7:1});
+    if(a[4]==='mobile') addPoints(s,{'1win':3,luckybear:2,mellstroy:2,daddy:2,r7:1});
     if(a[4]==='pc') addPoints(s,{kent:2,catcasino:2,arkada:3});
-    if(a[4]==='both') addPoints(s,{'1win':2,arkada:2,mellstroy:1,luckybear:1,daddy:1,r7:1});
+    if(a[4]==='both') addPoints(s,{'1win':3,arkada:2,mellstroy:2,luckybear:2,daddy:1,r7:1});
 
-    if(a[5]==='bigbonus') addPoints(s,{mellstroy:4,'1win':2,luckybear:2,arkada:1,daddy:2,r7:2});
+    if(a[5]==='bigbonus') addPoints(s,{mellstroy:5,'1win':2,luckybear:2,arkada:1,daddy:2,r7:2});
     if(a[5]==='cashback') addPoints(s,{kometa:4,catcasino:2,kent:2});
-    if(a[5]==='freespins') addPoints(s,{mellstroy:3,'1win':2,luckybear:2,catcasino:1,gama:3,daddy:1,r7:1});
+    if(a[5]==='freespins') addPoints(s,{mellstroy:3,'1win':2,luckybear:4,catcasino:1,gama:3,daddy:1,r7:1});
     if(a[5]==='tournament') addPoints(s,{catcasino:4,'1win':2,arkada:1});
-    if(a[5]==='wheel') addPoints(s,{luckybear:6,mellstroy:1});
+    if(a[5]==='wheel') addPoints(s,{luckybear:7,mellstroy:1});
 
-    if(a[6]==='instant') addPoints(s,{luckybear:4,mellstroy:3,'1win':2,r7:2,daddy:1});
-    if(a[6]==='fast') addPoints(s,{arkada:2,kometa:2,'1win':2,luckybear:1,r7:1});
+    if(a[6]==='instant') addPoints(s,{luckybear:4,mellstroy:3,'1win':3,r7:2,daddy:1});
+    if(a[6]==='fast') addPoints(s,{arkada:2,kometa:2,'1win':3,luckybear:1,r7:1});
     if(a[6]==='normal') addPoints(s,{catcasino:2,kent:2,kometa:1,gama:1});
 
-    if(a[7]==='theme') addPoints(s,{kometa:3,luckybear:2,mellstroy:2,gama:1});
+    if(a[7]==='theme') addPoints(s,{kometa:3,luckybear:3,mellstroy:2,gama:1});
     if(a[7]==='classic') addPoints(s,{kent:4,arkada:2});
-    if(a[7]==='modern') addPoints(s,{mellstroy:3,luckybear:2,'1win':2,daddy:2,r7:2,gama:1});
-    if(a[7]==='nocare') addPoints(s,{'1win':1,catcasino:1,arkada:1,luckybear:1,r7:1});
+    if(a[7]==='modern') addPoints(s,{mellstroy:4,luckybear:2,'1win':2,daddy:2,r7:2,gama:1});
+    if(a[7]==='nocare') addPoints(s,{'1win':2,catcasino:1,arkada:1,luckybear:1,r7:1});
 
-    if(a[8]==='newbie') addPoints(s,{arkada:3,luckybear:2,'1win':2,catcasino:1,gama:3,daddy:2});
-    if(a[8]==='medium') addPoints(s,{catcasino:2,kometa:2,'1win':2,mellstroy:2,r7:2});
-    if(a[8]==='pro') addPoints(s,{mellstroy:3,kent:3,luckybear:2,'1win':1});
+    if(a[8]==='newbie') addPoints(s,{arkada:3,luckybear:3,'1win':2,catcasino:1,gama:3,daddy:2});
+    if(a[8]==='medium') addPoints(s,{catcasino:2,kometa:2,'1win':3,mellstroy:2,r7:2});
+    if(a[8]==='pro') addPoints(s,{mellstroy:4,kent:3,luckybear:2,'1win':2});
 
-    if(a[9]==='small') addPoints(s,{arkada:3,luckybear:2,kometa:2,gama:2,daddy:1});
-    if(a[9]==='medium') addPoints(s,{catcasino:3,'1win':2,mellstroy:2,r7:2});
-    if(a[9]==='big') addPoints(s,{mellstroy:4,kent:3,'1win':2});
+    if(a[9]==='small') addPoints(s,{arkada:3,luckybear:3,kometa:2,gama:2,daddy:1});
+    if(a[9]==='medium') addPoints(s,{catcasino:3,'1win':3,mellstroy:2,r7:2});
+    if(a[9]==='big') addPoints(s,{mellstroy:5,kent:3,'1win':3});
 
-    if(a[10]==='app') addPoints(s,{'1win':3,mellstroy:1,luckybear:1,daddy:2,r7:1});
-    if(a[10]==='support') addPoints(s,{'1win':2,catcasino:2,arkada:2,kent:1,daddy:1});
-    if(a[10]==='promo') addPoints(s,{catcasino:3,kometa:2,luckybear:2,mellstroy:1,daddy:2,r7:1});
-    if(a[10]==='stream') addPoints(s,{mellstroy:5,luckybear:2});
-    if(a[10]==='nothing') addPoints(s,{'1win':1,mellstroy:1,luckybear:1,catcasino:1,daddy:1,r7:1,gama:1});
+    if(a[10]==='app') addPoints(s,{'1win':4,mellstroy:1,luckybear:1,daddy:2,r7:1});
+    if(a[10]==='support') addPoints(s,{'1win':3,catcasino:2,arkada:2,kent:1,daddy:1});
+    if(a[10]==='promo') addPoints(s,{catcasino:3,kometa:2,luckybear:3,mellstroy:2,daddy:2,r7:1});
+    if(a[10]==='stream') addPoints(s,{mellstroy:6,luckybear:2});
+    if(a[10]==='nothing') addPoints(s,{'1win':2,mellstroy:2,luckybear:2,catcasino:1,daddy:1,r7:1,gama:1});
+
+    if(a[11]==='new_yes') addPoints(s,{gama:4,daddy:4,r7:4,luckybear:1});
+    if(a[11]==='new_maybe') addPoints(s,{daddy:3,r7:3,gama:2,mellstroy:1});
+    if(a[11]==='new_no') addPoints(s,{'1win':4,mellstroy:3,luckybear:3,kent:2});
+
+    if(a[12]==='start_fs') addPoints(s,{gama:4,luckybear:4,daddy:2,r7:1});
+    if(a[12]==='start_percent') addPoints(s,{r7:4,daddy:4,mellstroy:2});
+    if(a[12]==='start_max') addPoints(s,{mellstroy:6,'1win':2,luckybear:2});
+    if(a[12]==='start_safe') addPoints(s,{'1win':3,gama:3,r7:2,arkada:1});
+
+    if(a[13]==='simple') addPoints(s,{gama:4,luckybear:2,arkada:2});
+    if(a[13]==='modern_fast') addPoints(s,{daddy:4,r7:3,mellstroy:2,'1win':2});
+    if(a[13]==='balanced') addPoints(s,{r7:4,'1win':3,kometa:2});
+    if(a[13]==='big_platform') addPoints(s,{'1win':6,mellstroy:2,luckybear:2});
+
+    if(a[14]==='easy_rules') addPoints(s,{gama:4,daddy:3,arkada:2});
+    if(a[14]==='max_bonus_rules') addPoints(s,{mellstroy:6,luckybear:2,'1win':1});
+    if(a[14]==='balanced_rules') addPoints(s,{r7:4,kometa:2,'1win':2});
+    if(a[14]==='trusted_rules') addPoints(s,{'1win':5,kent:3,arkada:2});
+
+    if(a[15]==='top_reliable') addPoints(s,{'1win':7,kent:2,arkada:1});
+    if(a[15]==='max_bonus_final') addPoints(s,{mellstroy:7,daddy:2,r7:1});
+    if(a[15]==='fs_final') addPoints(s,{luckybear:6,gama:3,daddy:1});
+    if(a[15]==='new_final') addPoints(s,{gama:4,daddy:4,r7:4});
 
     if(a[2]==='sports' && a[4]!=='pc') addPoints(s,{'1win':2});
     if(a[3]==='crypto' && a[6]==='instant') addPoints(s,{luckybear:2,mellstroy:2});
     if(a[5]==='wheel' && (a[8]==='newbie' || a[8]==='medium')) addPoints(s,{luckybear:2});
     if(a[1]==='vip' && a[9]==='big') addPoints(s,{kent:3,mellstroy:2});
     if(a[10]==='stream' && a[8]==='pro') addPoints(s,{mellstroy:2,luckybear:1});
-    if(a[1]==='games' && a[2]==='slots') addPoints(s,{arkada:2,catcasino:2,'1win':1,gama:1});
+    if(a[1]==='games' && a[2]==='slots') addPoints(s,{arkada:2,catcasino:2,'1win':1,gama:1,luckybear:1});
     if(a[7]==='classic' && a[2]==='table') addPoints(s,{kent:3});
     if(a[8]==='newbie' && a[9]==='small') addPoints(s,{arkada:2,luckybear:1,gama:1,daddy:1});
     if(a[1]==='speed' && a[3]==='crypto') addPoints(s,{luckybear:2,mellstroy:1});
@@ -477,6 +506,12 @@ function score(){
     if(a[5]==='bigbonus' && a[9]==='medium') addPoints(s,{r7:2,daddy:1});
     if(a[6]==='instant' && a[9]==='medium') addPoints(s,{r7:2});
     if(a[7]==='modern' && a[1]==='bonus') addPoints(s,{daddy:2,r7:1});
+    if(a[11]==='new_yes' && a[12]==='start_fs') addPoints(s,{gama:2});
+    if(a[11]==='new_yes' && a[13]==='modern_fast') addPoints(s,{daddy:2,r7:1});
+    if(a[12]==='start_percent' && a[13]==='balanced') addPoints(s,{r7:3});
+    if(a[14]==='trusted_rules' && a[15]==='top_reliable') addPoints(s,{'1win':3});
+    if(a[12]==='start_max' && a[15]==='max_bonus_final') addPoints(s,{mellstroy:3});
+    if(a[12]==='start_fs' && a[15]==='fs_final') addPoints(s,{luckybear:2,gama:2});
 
     if(a[2]!=='sports') s['1win']=Math.max(0,s['1win']-1);
 
@@ -512,11 +547,11 @@ function start(){
     history=['s-intro'];
 }
 
-function ans(q,val){
+function ans(q,val,el){
     answers[q]=val;
     const opts=document.querySelectorAll(`#s-q${q} .opt`);
     opts.forEach(o=>o.classList.remove('selected'));
-    event.currentTarget.classList.add('selected');
+    if(el) el.classList.add('selected');
     history.push(`s-q${q}`);
 
     setTimeout(()=>{
