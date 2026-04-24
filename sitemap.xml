@@ -1,102 +1,257 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Главная -->
+  <!-- Main RU pages -->
   <url>
     <loc>https://www.paytaoff.ru/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
   </url>
 
-  <!-- Языковые версии -->
   <url>
-    <loc>https://www.paytaoff.ru/ua/</loc>
-    <lastmod>2026-03-01</lastmod>
+    <loc>https://www.paytaoff.ru/guide.html</loc>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.paytaoff.ru/by/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.paytaoff.ru/uz/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.paytaoff.ru/az/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.paytaoff.ru/kg/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.80</priority>
   </url>
 
-  <!-- Обзоры казино -->
   <url>
-    <loc>https://www.paytaoff.ru/reviews/1win/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.paytaoff.ru/reviews/arkada/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.paytaoff.ru/reviews/catcasino/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.paytaoff.ru/reviews/kometa/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.paytaoff.ru/reviews/kent/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.paytaoff.ru/quiz/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
 
-  <!-- Информационные страницы -->
   <url>
     <loc>https://www.paytaoff.ru/about/</loc>
-    <lastmod>2026-03-01</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.60</priority>
   </url>
+
   <url>
     <loc>https://www.paytaoff.ru/responsible-gaming/</loc>
-    <lastmod>2026-03-01</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.55</priority>
   </url>
+
   <url>
     <loc>https://www.paytaoff.ru/privacy/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.45</priority>
   </url>
+
   <url>
     <loc>https://www.paytaoff.ru/terms/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.45</priority>
+  </url>
+
+
+  <!-- RU reviews -->
+  <url>
+    <loc>https://www.paytaoff.ru/reviews/1win/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/reviews/mellstroy/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/reviews/luckybear/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/reviews/arkada/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/reviews/catcasino/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/reviews/kometa/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/reviews/kent/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/reviews/gama/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/reviews/daddy/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/reviews/r7/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+
+
+  <!-- UZ main pages -->
+  <url>
+    <loc>https://www.paytaoff.ru/uz/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/uz/guide.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/uz/quiz/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/uz/yangi-kazinolar-2026/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/uz/about/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.62</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/uz/responsible-gaming/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.58</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/uz/privacy/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.48</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/uz/terms/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.48</priority>
+  </url>
+
+
+  <!-- UZ reviews -->
+  <url>
+    <loc>https://www.paytaoff.ru/uz/reviews/1win/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/uz/reviews/mellstroy/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/uz/reviews/luckybear/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/uz/reviews/arkada/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/uz/reviews/catcasino/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.74</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/uz/reviews/kometa/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/uz/reviews/kent/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/uz/reviews/gama/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/uz/reviews/daddy/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
+  </url>
+
+  <url>
+    <loc>https://www.paytaoff.ru/uz/reviews/r7/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.76</priority>
   </url>
 
 </urlset>
