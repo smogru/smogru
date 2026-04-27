@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="/style.css">
 
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
@@ -142,67 +142,125 @@
       font-size: .95rem;
     }
 
-    .faq-clean {
+    .casino-hidden {
+      display: none !important;
+    }
+
+    .faq-grid-3 {
       display: grid;
-      gap: 14px;
-      margin-top: 20px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 24px;
     }
 
-    .faq-clean details {
+    .faq-card {
       border-radius: 24px;
-      border: 1px solid rgba(140,90,255,.15);
-      background: linear-gradient(135deg, rgba(33,13,92,.78), rgba(15,10,64,.86));
+      background: linear-gradient(135deg, rgba(33,13,92,.78), rgba(15,10,64,.88));
+      border: 1px solid rgba(140,90,255,.16);
       overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.16);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
     }
 
-    .faq-clean summary {
-      cursor: pointer;
-      list-style: none;
-      padding: 20px 22px;
+    .faq-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(160,120,255,.24);
+      box-shadow: 0 14px 36px rgba(124,58,237,.14);
+    }
+
+    .faq-q {
+      width: 100%;
+      background: transparent;
+      border: none;
       color: #fff;
-      font-weight: 850;
+      padding: 22px 22px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 14px;
+      gap: 16px;
+      text-align: left;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 850;
+      font-size: 1rem;
     }
 
-    .faq-clean summary::-webkit-details-marker {
-      display: none;
+    .faq-q-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
-    .faq-clean summary::after {
-      content: "+";
-      width: 32px;
-      height: 32px;
-      display: grid;
-      place-items: center;
-      border-radius: 12px;
-      background: rgba(255,255,255,.06);
-      color: #d8c9ff;
+    .faq-icon {
+      font-size: 1.2rem;
       flex-shrink: 0;
-      transition: transform .25s ease;
     }
 
-    .faq-clean details[open] summary::after {
+    .faq-plus {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.07);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #d9c8ff;
+      flex-shrink: 0;
+      transition: transform .3s ease, background .3s ease;
+    }
+
+    .faq-card.active .faq-plus {
       transform: rotate(45deg);
+      background: rgba(124,58,237,.28);
     }
 
-    .faq-clean p {
-      margin: 0;
-      padding: 0 22px 20px;
-      color: var(--muted);
+    .faq-a-wrap {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows .38s ease;
+    }
+
+    .faq-card.active .faq-a-wrap {
+      grid-template-rows: 1fr;
+    }
+
+    .faq-a-inner {
+      overflow: hidden;
+    }
+
+    .faq-a {
+      padding: 0 22px 22px;
+      color: var(--muted, #aeb7d0);
       line-height: 1.75;
+      font-size: .96rem;
+      opacity: 0;
+      transform: translateY(-6px);
+      transition: opacity .28s ease, transform .28s ease;
     }
 
-    .casino-hidden {
-      display: none !important;
+    .faq-card.active .faq-a {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1100px) {
+      .faq-grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 1000px) {
       .all-casino-intro,
       .list-info-grid {
         grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .faq-grid-3 {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -286,7 +344,7 @@
   <nav class="island" id="island">
     <div class="i-logo">
       <a href="/uz/" style="display:flex;align-items:center;gap:10px">
-        <img src="../../avatar.png" alt="Paytaoff" class="i-avatar">
+        <img src="/avatar.png" alt="Paytaoff" class="i-avatar">
         <span>Paytaoff</span>
       </a>
     </div>
@@ -857,36 +915,114 @@
       <div class="ios-f">
         <div class="sh reveal">
           <div class="sl">❓ FAQ</div>
-          <h2>Barcha onlayn kazinolar bo'yicha savollar</h2>
-          <p>Eng ko'p so'raladigan savollarga qisqa va tushunarli javoblar.</p>
+          <h2>Tez-tez so'raladigan savollar</h2>
+          <p>Barcha onlayn kazinolar bo'yicha eng muhim savollarga qisqa javoblar.</p>
         </div>
 
-        <div class="faq-clean reveal">
-          <details>
-            <summary>Barcha onlayn kazinolar ichidan qaysi biri yaxshi?</summary>
-            <p>Universal tanlov sifatida 1win kuchli. Bonus bo'yicha MELLSTROY, frispinlar bo'yicha Lucky Bear, yangi kazino bo'yicha Gama, Daddy va R7 ko'rib chiqilishi mumkin.</p>
-          </details>
+        <div class="faq-grid-3 reveal">
+          <div class="faq-card">
+            <button class="faq-q" type="button">
+              <span class="faq-q-left">
+                <span class="faq-icon">🎰</span>
+                <span>Kazinolarni qanday tanlaysiz?</span>
+              </span>
+              <span class="faq-plus">+</span>
+            </button>
+            <div class="faq-a-wrap">
+              <div class="faq-a-inner">
+                <div class="faq-a">
+                  Biz kazino saytlarini bonus, qulaylik, o'yinlar soni, mobil moslashuv, to'lov tezligi va umumiy foydalanuvchi tajribasi bo'yicha solishtiramiz.
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <details>
-            <summary>Yangi kazinolar yaxshimi yoki eski tanilgan kazinolar?</summary>
-            <p>Yangi kazinolar ko'pincha kuchli start bonusi beradi, lekin tanilgan platformalarda barqarorlik va ko'proq tajriba bo'lishi mumkin. Tanlashda shartlarni solishtirish kerak.</p>
-          </details>
+          <div class="faq-card">
+            <button class="faq-q" type="button">
+              <span class="faq-q-left">
+                <span class="faq-icon">🎁</span>
+                <span>Bonuslar qanchalik muhim?</span>
+              </span>
+              <span class="faq-plus">+</span>
+            </button>
+            <div class="faq-a-wrap">
+              <div class="faq-a-inner">
+                <div class="faq-a">
+                  Bonus muhim, lekin faqat bonusga qarab tanlash noto'g'ri. Veyjer, muddat, minimal depozit va maksimal yechish limitini ham tekshirish kerak.
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <details>
-            <summary>Bonusli kazino tanlashda nimaga qarash kerak?</summary>
-            <p>Bonus miqdoridan tashqari veyjer, muddat, minimal depozit, maksimal yechish limiti va faqat qaysi o'yinlarda amal qilishini tekshiring.</p>
-          </details>
+          <div class="faq-card">
+            <button class="faq-q" type="button">
+              <span class="faq-q-left">
+                <span class="faq-icon">📱</span>
+                <span>Telefon orqali o'ynash qulaymi?</span>
+              </span>
+              <span class="faq-plus">+</span>
+            </button>
+            <div class="faq-a-wrap">
+              <div class="faq-a-inner">
+                <div class="faq-a">
+                  Ha, ko'p kazino saytlar mobil qurilmalarda yaxshi ishlaydi. Ayniqsa ro'yxatdan o'tish, depozit va pul yechish jarayoni sodda bo'lsa, foydalanish ancha qulay bo'ladi.
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <details>
-            <summary>Telefon orqali onlayn kazino o'ynash mumkinmi?</summary>
-            <p>Ha, ko'p kazino saytlari mobil versiyada ishlaydi. Lekin ro'yxatdan o'tish, depozit, o'yin oynasi va pul yechish sahifasi qulay bo'lishi muhim.</p>
-          </details>
+          <div class="faq-card">
+            <button class="faq-q" type="button">
+              <span class="faq-q-left">
+                <span class="faq-icon">🛡️</span>
+                <span>O'ynash xavfsizmi?</span>
+              </span>
+              <span class="faq-plus">+</span>
+            </button>
+            <div class="faq-a-wrap">
+              <div class="faq-a-inner">
+                <div class="faq-a">
+                  Har doim ehtiyotkor bo'lish kerak. Bonus shartlarini, to'lov qoidalarini va platforma haqidagi sharhlarni ko'rib chiqib, keyin qaror qilish ma'qul.
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <details>
-            <summary>Paytaoff kazino hisoblanadimi?</summary>
-            <p>Yo'q. Paytaoff kazino emas. Biz kazino saytlarini solishtiradigan mustaqil axborot resursimiz. Saytda hamkorlik havolalari bo'lishi mumkin.</p>
-          </details>
+          <div class="faq-card">
+            <button class="faq-q" type="button">
+              <span class="faq-q-left">
+                <span class="faq-icon">💳</span>
+                <span>To'lovlar qanchalik tez chiqadi?</span>
+              </span>
+              <span class="faq-plus">+</span>
+            </button>
+            <div class="faq-a-wrap">
+              <div class="faq-a-inner">
+                <div class="faq-a">
+                  Bu kazino va tanlangan to'lov usuliga bog'liq. Ba'zi platformalarda yechish juda tez ishlaydi, boshqalarida esa tekshiruv sabab ko'proq vaqt ketishi mumkin.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-q" type="button">
+              <span class="faq-q-left">
+                <span class="faq-icon">🆕</span>
+                <span>Yangi kazinolar yaxshiroqmi?</span>
+              </span>
+              <span class="faq-plus">+</span>
+            </button>
+            <div class="faq-a-wrap">
+              <div class="faq-a-inner">
+                <div class="faq-a">
+                  Yangi kazino ko'pincha kuchli start bonuslari bilan jalb qiladi. Lekin foydalanuvchi uchun eng muhim narsa — qulaylik, ishonch va bonus shartlarining adolatli bo'lishidir.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -931,7 +1067,7 @@
         <div class="fg">
           <div class="fa2">
             <div class="fl2">
-              <img src="../../avatar.png" alt="Paytaoff" class="i-avatar" style="animation:none">
+              <img src="/avatar.png" alt="Paytaoff" class="i-avatar" style="animation:none">
               <span>Paytaoff</span>
             </div>
 
@@ -979,7 +1115,7 @@
   <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
   <div class="logo-tooltip" id="logoTooltip">Ikki marta bosish = 🚀</div>
 
-  <script src="../../script.js"></script>
+  <script src="/script.js"></script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -1003,6 +1139,22 @@
               card.classList.add('casino-hidden');
             }
           });
+        });
+      });
+
+      const faqCards = document.querySelectorAll('.faq-card');
+
+      faqCards.forEach((card) => {
+        const btn = card.querySelector('.faq-q');
+
+        btn.addEventListener('click', function () {
+          const isActive = card.classList.contains('active');
+
+          faqCards.forEach((item) => item.classList.remove('active'));
+
+          if (!isActive) {
+            card.classList.add('active');
+          }
         });
       });
     });
