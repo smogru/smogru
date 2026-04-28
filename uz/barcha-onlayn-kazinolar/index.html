@@ -151,27 +151,28 @@
       display: grid;
       grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 16px;
-      margin-top: 26px;
+      margin-top: 28px;
+      align-items: start;
     }
 
     .faq-card {
       border-radius: 24px;
-      background: linear-gradient(135deg, rgba(33,13,92,.78), rgba(15,10,64,.90));
-      border: 1px solid rgba(140,90,255,.18);
+      background: linear-gradient(135deg, rgba(33,13,92,.82), rgba(15,10,64,.92));
+      border: 1px solid rgba(140,90,255,.20);
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,.16);
+      box-shadow: 0 12px 34px rgba(0,0,0,.18);
       transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
     }
 
     .faq-card:hover {
       transform: translateY(-2px);
-      border-color: rgba(160,120,255,.30);
-      box-shadow: 0 16px 38px rgba(124,58,237,.16);
+      border-color: rgba(165,130,255,.34);
+      box-shadow: 0 18px 44px rgba(124,58,237,.18);
     }
 
     .faq-q {
       width: 100%;
-      min-height: 112px;
+      min-height: 118px;
       background: transparent;
       border: none;
       color: #fff;
@@ -179,38 +180,49 @@
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      gap: 12px;
+      gap: 10px;
       text-align: left;
       cursor: pointer;
       font: inherit;
-      font-weight: 900;
-      font-size: .9rem;
-      line-height: 1.32;
     }
 
     .faq-q-left {
       display: flex;
       align-items: flex-start;
       gap: 10px;
+      min-width: 0;
     }
 
     .faq-icon {
-      font-size: 1.2rem;
+      width: 26px;
+      height: 26px;
+      display: grid;
+      place-items: center;
+      font-size: 1.15rem;
       flex-shrink: 0;
       line-height: 1;
-      margin-top: 2px;
+      margin-top: 1px;
+    }
+
+    .faq-title {
+      display: block;
+      font-weight: 950;
+      font-size: .94rem;
+      line-height: 1.25;
+      letter-spacing: -.2px;
+      color: #fff;
     }
 
     .faq-plus {
-      width: 32px;
-      height: 32px;
-      border-radius: 12px;
-      background: rgba(255,255,255,.07);
+      width: 34px;
+      height: 34px;
+      border-radius: 13px;
+      background: rgba(255,255,255,.075);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.25rem;
-      font-weight: 900;
+      font-weight: 950;
       color: #d9c8ff;
       flex-shrink: 0;
       transition: transform .3s ease, background .3s ease;
@@ -218,7 +230,7 @@
 
     .faq-card.active .faq-plus {
       transform: rotate(45deg);
-      background: rgba(124,58,237,.32);
+      background: rgba(124,58,237,.34);
     }
 
     .faq-a-wrap {
@@ -238,7 +250,7 @@
     .faq-a {
       padding: 0 16px 18px;
       color: var(--muted, #aeb7d0);
-      line-height: 1.7;
+      line-height: 1.65;
       font-size: .86rem;
       opacity: 0;
       transform: translateY(-8px);
@@ -250,7 +262,6 @@
       transform: translateY(0);
     }
 
-    /* LIGHT THEME FIXES */
     [data-theme="light"] .seo-note {
       background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(248,245,255,.88));
       border: 1.5px solid rgba(124,58,237,.22);
@@ -304,7 +315,7 @@
       box-shadow: 0 14px 34px rgba(60,45,100,.09);
     }
 
-    [data-theme="light"] .faq-q {
+    [data-theme="light"] .faq-title {
       color: #263246;
     }
 
@@ -365,7 +376,10 @@
       .faq-q {
         min-height: auto;
         padding: 18px;
-        font-size: .95rem;
+      }
+
+      .faq-title {
+        font-size: .98rem;
       }
 
       .faq-a {
@@ -1015,103 +1029,103 @@
         <div class="sh reveal">
           <div class="sl">❓ FAQ</div>
           <h2>Tez-tez so'raladigan savollar</h2>
-          <p>Barcha onlayn kazinolar bo'yicha foydalanuvchiga kerak bo'ladigan eng muhim javoblar.</p>
+          <p>Barcha onlayn kazinolar bo'yicha eng kerakli savollar va qisqa javoblar.</p>
         </div>
 
         <div class="faq-grid-5 reveal">
           <div class="faq-card">
             <button class="faq-q" type="button">
-              <span class="faq-q-left"><span class="faq-icon">🎰</span><span>Kazinoni qanday tanlash kerak?</span></span>
+              <span class="faq-q-left"><span class="faq-icon">🎰</span><span class="faq-title">Kazino qanday tanlanadi?</span></span>
               <span class="faq-plus">+</span>
             </button>
             <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">
-              Avval bonusga emas, umumiy qulaylikka qarang: o'yinlar soni, mobil versiya, to'lov usullari, pul yechish shartlari va foydalanuvchi uchun tushunarli interfeys muhim.
+              Avval bonusga emas, umumiy qulaylikka qarang: o'yinlar soni, mobil versiya, to'lov usullari, pul yechish shartlari va interfeys tushunarli bo'lishi muhim.
             </div></div></div>
           </div>
 
           <div class="faq-card">
             <button class="faq-q" type="button">
-              <span class="faq-q-left"><span class="faq-icon">🎁</span><span>Bonus katta bo'lsa, kazino yaxshimi?</span></span>
+              <span class="faq-q-left"><span class="faq-icon">🎁</span><span class="faq-title">Bonus katta bo'lsa yaxshimi?</span></span>
               <span class="faq-plus">+</span>
             </button>
             <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">
-              Har doim ham emas. Katta bonus yaxshi ko'rinadi, lekin veyjer, minimal depozit, bonus muddati va maksimal yechish limitini tekshirish kerak.
+              Har doim ham emas. Bonus katta bo'lishi yaxshi, lekin veyjer, minimal depozit, bonus muddati va maksimal yechish limitini ham tekshirish kerak.
             </div></div></div>
           </div>
 
           <div class="faq-card">
             <button class="faq-q" type="button">
-              <span class="faq-q-left"><span class="faq-icon">⚡</span><span>Pulni tez yechish mumkinmi?</span></span>
+              <span class="faq-q-left"><span class="faq-icon">⚡</span><span class="faq-title">Pul tez yechiladimi?</span></span>
               <span class="faq-plus">+</span>
             </button>
             <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">
-              Bu kazino va to'lov usuliga bog'liq. Ba'zi platformalarda yechish tezroq ishlaydi, ayrimlarida esa tekshiruv yoki limitlar sabab vaqt ko'proq ketishi mumkin.
+              Bu kazino va to'lov usuliga bog'liq. Ba'zi platformalarda yechish tez ishlaydi, ayrimlarida esa tekshiruv yoki limitlar sabab ko'proq vaqt ketadi.
             </div></div></div>
           </div>
 
           <div class="faq-card">
             <button class="faq-q" type="button">
-              <span class="faq-q-left"><span class="faq-icon">📱</span><span>Telefondan o'ynash qulaymi?</span></span>
+              <span class="faq-q-left"><span class="faq-icon">📱</span><span class="faq-title">Telefondan o'ynash qulaymi?</span></span>
               <span class="faq-plus">+</span>
             </button>
             <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">
-              Ha, ko'p kazino saytlar mobil qurilmalarda yaxshi ishlaydi. Eng muhimi — sahifa tez ochilishi, tugmalar qulay bo'lishi va depozit/yechish jarayoni oddiy bo'lishi.
+              Ha, ko'p kazino saytlar telefonda yaxshi ishlaydi. Muhimi — sahifa tez ochilishi, tugmalar qulay bo'lishi va depozit/yechish jarayoni oddiy bo'lishi.
             </div></div></div>
           </div>
 
           <div class="faq-card">
             <button class="faq-q" type="button">
-              <span class="faq-q-left"><span class="faq-icon">🛡️</span><span>Xavfsiz kazino qanday bilinadi?</span></span>
+              <span class="faq-q-left"><span class="faq-icon">🛡️</span><span class="faq-title">Xavfsiz kazino qanday bilinadi?</span></span>
               <span class="faq-plus">+</span>
             </button>
             <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">
-              Xavfsiz tanlov uchun shartlar ochiq yozilganmi, to'lov qoidalari tushunarlimi, sharhlar bormi va sayt foydalanuvchini chalg'itmaydimi — shularni tekshirish kerak.
+              Shartlar ochiq yozilganmi, to'lov qoidalari tushunarlimi, sharhlar bormi va sayt foydalanuvchini chalg'itmaydimi — shularni tekshirish kerak.
             </div></div></div>
           </div>
 
           <div class="faq-card">
             <button class="faq-q" type="button">
-              <span class="faq-q-left"><span class="faq-icon">🆕</span><span>Yangi kazinolar yaxshiroqmi?</span></span>
+              <span class="faq-q-left"><span class="faq-icon">🆕</span><span class="faq-title">Yangi kazino yaxshimi?</span></span>
               <span class="faq-plus">+</span>
             </button>
             <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">
-              Yangi kazinolar ko'pincha kuchli start bonuslari beradi. Lekin ularni tanlashda bonus shartlari, to'lov usullari va umumiy qulaylikni alohida tekshirish kerak.
+              Yangi kazinolar ko'pincha kuchli start bonuslari beradi. Lekin bonus shartlari, to'lov usullari va umumiy qulaylikni alohida tekshirish kerak.
             </div></div></div>
           </div>
 
           <div class="faq-card">
             <button class="faq-q" type="button">
-              <span class="faq-q-left"><span class="faq-icon">🎯</span><span>Qaysi kazino menga mos?</span></span>
+              <span class="faq-q-left"><span class="faq-icon">🎯</span><span class="faq-title">Qaysi kazino menga mos?</span></span>
               <span class="faq-plus">+</span>
             </button>
             <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">
-              Agar aniq tanlay olmasangiz, Paytaoff quizidan o'ting. U javoblaringizga qarab bonus, o'yin turi, mobil qulaylik va tajribangiz bo'yicha mos variantni ko'rsatadi.
+              Agar aniq tanlay olmasangiz, Paytaoff quizidan o'ting. U javoblaringizga qarab bonus, o'yin turi, mobil qulaylik va tajriba bo'yicha mos variantni ko'rsatadi.
             </div></div></div>
           </div>
 
           <div class="faq-card">
             <button class="faq-q" type="button">
-              <span class="faq-q-left"><span class="faq-icon">💎</span><span>Top kazino nimasi bilan farq qiladi?</span></span>
+              <span class="faq-q-left"><span class="faq-icon">💎</span><span class="faq-title">Top kazino nimasi bilan kuchli?</span></span>
               <span class="faq-plus">+</span>
             </button>
             <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">
-              Top kazino odatda keng o'yin tanlovi, kuchli bonus, qulay mobil versiya, tushunarli shartlar va foydalanuvchi uchun yaxshi navigatsiya bilan ajralib turadi.
+              Top kazino odatda keng o'yin tanlovi, kuchli bonus, qulay mobil versiya, tushunarli shartlar va yaxshi navigatsiya bilan ajralib turadi.
             </div></div></div>
           </div>
 
           <div class="faq-card">
             <button class="faq-q" type="button">
-              <span class="faq-q-left"><span class="faq-icon">🎰</span><span>Frispinli kazino kimga mos?</span></span>
+              <span class="faq-q-left"><span class="faq-icon">🎰</span><span class="faq-title">Frispin kimga mos?</span></span>
               <span class="faq-plus">+</span>
             </button>
             <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">
-              Frispinli kazino ko'proq slot o'ynashni yoqtiradigan foydalanuvchilarga mos. Lekin frispinlar qaysi o'yinlarda ishlashi va qanday shart bilan berilishini tekshirish muhim.
+              Frispinli kazino slot o'ynashni yoqtiradigan foydalanuvchilarga mos. Lekin frispin qaysi o'yinlarda ishlashi va qanday shart bilan berilishini tekshirish muhim.
             </div></div></div>
           </div>
 
           <div class="faq-card">
             <button class="faq-q" type="button">
-              <span class="faq-q-left"><span class="faq-icon">⚠️</span><span>Paytaoff kazino hisoblanadimi?</span></span>
+              <span class="faq-q-left"><span class="faq-icon">⚠️</span><span class="faq-title">Paytaoff kazino hisoblanadimi?</span></span>
               <span class="faq-plus">+</span>
             </button>
             <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">
